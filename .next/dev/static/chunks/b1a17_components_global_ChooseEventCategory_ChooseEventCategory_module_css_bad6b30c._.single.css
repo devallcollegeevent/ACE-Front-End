@@ -1,0 +1,153 @@
+/* [project]/src/components/global/ChooseEventCategory/ChooseEventCategory.module.css [app-client] (css) */
+.ChooseEventCategory-module__6vSXjG__categoriesroot {
+  padding: 28px 50px;
+}
+
+.ChooseEventCategory-module__6vSXjG__title {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ChooseEventCategory-module__6vSXjG__grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  display: grid;
+}
+
+.ChooseEventCategory-module__6vSXjG__card {
+  cursor: pointer;
+  border: 1px solid #0000000f;
+  border-radius: 16px;
+  height: 160px;
+  transition: transform .25s, box-shadow .25s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ChooseEventCategory-module__6vSXjG__card:hover {
+  transform: translateY(-6px)scale(1.02);
+  box-shadow: 0 20px 45px #0000002e;
+}
+
+.ChooseEventCategory-module__6vSXjG__card:after {
+  content: "";
+  opacity: 0;
+  background: #ffffff2e;
+  transition: opacity .25s;
+  position: absolute;
+  inset: 0;
+}
+
+.ChooseEventCategory-module__6vSXjG__card:hover:after {
+  opacity: 1;
+}
+
+.ChooseEventCategory-module__6vSXjG__left {
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  display: flex;
+}
+
+.ChooseEventCategory-module__6vSXjG__left img {
+  object-fit: contain;
+  width: 75%;
+  max-width: 90px;
+  transition: transform .25s;
+}
+
+.ChooseEventCategory-module__6vSXjG__card:hover .ChooseEventCategory-module__6vSXjG__left img {
+  transform: scale(1.08);
+}
+
+.ChooseEventCategory-module__6vSXjG__right {
+  color: #111;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+}
+
+.ChooseEventCategory-module__6vSXjG__conference {
+  background: #ffe3bf;
+}
+
+.ChooseEventCategory-module__6vSXjG__hackathon {
+  background: #bde6ff;
+}
+
+.ChooseEventCategory-module__6vSXjG__webinar {
+  background: #ead7ff;
+}
+
+.ChooseEventCategory-module__6vSXjG__athletics {
+  background: #ffd4d4;
+}
+
+.ChooseEventCategory-module__6vSXjG__concerts {
+  background: #c9e7ff;
+}
+
+.ChooseEventCategory-module__6vSXjG__tournaments {
+  background: #ffeab5;
+}
+
+.ChooseEventCategory-module__6vSXjG__jobfairs {
+  background: #ffd0e4;
+}
+
+.ChooseEventCategory-module__6vSXjG__explore {
+  background: #e3d8ff;
+}
+
+@media (max-width: 1200px) {
+  .ChooseEventCategory-module__6vSXjG__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .ChooseEventCategory-module__6vSXjG__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ChooseEventCategory-module__6vSXjG__right {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ChooseEventCategory-module__6vSXjG__card {
+    height: 150px;
+  }
+
+  .ChooseEventCategory-module__6vSXjG__right {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ChooseEventCategory-module__6vSXjG__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ChooseEventCategory-module__6vSXjG__card {
+    height: 140px;
+  }
+
+  .ChooseEventCategory-module__6vSXjG__left img {
+    width: 65%;
+  }
+
+  .ChooseEventCategory-module__6vSXjG__right {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=b1a17_components_global_ChooseEventCategory_ChooseEventCategory_module_css_bad6b30c._.single.css.map*/

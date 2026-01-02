@@ -1,0 +1,65 @@
+"use client";
+
+import { useState } from "react";
+import "./DeleteConfirmModal.css";
+
+export default function DeleteConfirmModal({
+  open,
+  onClose,
+  onConfirm,
+  userEmail,
+}) {
+  const [email, setEmail] = useState("");
+
+  if (!open) return null;
+
+  const isMatch =
+    email.trim().toLowerCase() === userEmail?.toLowerCase();
+
+  return (
+    <div className="delete-overlay">
+      <div className="delete-modal">
+        <img
+          src="/images/logo.png"
+          alt="logo"
+          className="delete-logo"
+        />
+
+        <p className="delete-text">
+          Please type your email to confirm deletion
+          <br />
+          <strong>{userEmail}</strong>
+        </p>
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="delete-input"
+        />
+
+        <div className="delete-btn-row">
+          <button
+            className="delete-cancel-btn"
+            onClick={onClose}
+          >
+            Cancel
+          </button>
+
+          <button
+            className="delete-confirm-btn"
+            disabled={!isMatch}
+            onClick={onConfirm}
+            style={{
+              opacity: isMatch ? 1 : 0.5,
+              cursor: isMatch ? "pointer" : "not-allowed",
+            }}
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

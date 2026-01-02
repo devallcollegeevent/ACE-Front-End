@@ -1,0 +1,622 @@
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/src/lib/utils/secureId.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// Encode (hide real id)
+__turbopack_context__.s([
+    "decodeId",
+    ()=>decodeId,
+    "encodeId",
+    ()=>encodeId
+]);
+const encodeId = (id)=>{
+    return encodeURIComponent(btoa(id));
+};
+const decodeId = (encoded)=>{
+    try {
+        return atob(decodeURIComponent(encoded));
+    } catch  {
+        return null;
+    }
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/components/global/CommonEventDetails/CommonEventDetails.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>EventSlider
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2f$secureId$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils/secureId.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/const-value/config-icons/page.js [app-client] (ecmascript)");
+(()=>{
+    const e = new Error("Cannot find module './EventSlider.css'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+;
+/* ===== HELPERS (SAFE, UI CHANGE ILLA) ===== */ const safeText = (v)=>v !== undefined && v !== null && String(v).trim() !== "" ? v : "no data";
+const getBannerImage = (event)=>event?.bannerImage || event?.bannerImages?.[0] || "https://cloudinary-marketing-res.cloudinary.com/images/w_1000,c_scale/v1679921049/Image_URL_header/Image_URL_header-png?_i=AA";
+const getEventDateTime = (event)=>event?.calendars?.[0]?.startDate || event?.createdAt || null;
+const isPaidEvent = (event)=>event?.tickets?.some((t)=>t.isPaid) || !!event?.paymentLink;
+const getTicketPrice = (event)=>event?.tickets?.[0]?.price || "no data";
+function EventSlider({ title, data = [], des }) {
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const sliderRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const slideLeft = ()=>{
+        sliderRef.current?.scrollBy({
+            left: -350,
+            behavior: "smooth"
+        });
+    };
+    const slideRight = ()=>{
+        sliderRef.current?.scrollBy({
+            left: 350,
+            behavior: "smooth"
+        });
+    };
+    const handleClick = (eventId)=>{
+        router.push(`/events/${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2f$secureId$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["encodeId"])(eventId)}`);
+    };
+    const formatDateTime = (iso)=>{
+        if (!iso) return {
+            date: "no data",
+            time: "no data"
+        };
+        const d = new Date(iso);
+        return {
+            date: d.toLocaleDateString("en-IN", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            }),
+            time: d.toLocaleTimeString("en-IN", {
+                hour: "2-digit",
+                minute: "2-digit"
+            })
+        };
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "container-fluid mt-4 px-5",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "d-flex justify-content-between align-items-center mb-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
+                                className: "fw-bold mb-0",
+                                children: title
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                lineNumber: 79,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mt-4",
+                                children: des
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                lineNumber: 80,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                        lineNumber: 78,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "btn btn btn-outline-primary rounded-pill px-4",
+                        children: "See all"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                        lineNumber: 82,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                lineNumber: 77,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
+                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                lineNumber: 87,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "d-flex justify-content-end gap-2 mb-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "btn btn-light rounded-circle",
+                        onClick: slideLeft,
+                        children: "❮"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                        lineNumber: 91,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "btn btn-light rounded-circle",
+                        onClick: slideRight,
+                        children: "❯"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                lineNumber: 90,
+                columnNumber: 7
+            }, this),
+            data.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-center text-muted py-4",
+                children: "No events found"
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                lineNumber: 101,
+                columnNumber: 9
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "d-flex gap-3 overflow-hidden",
+                ref: sliderRef,
+                style: {
+                    scrollBehavior: "smooth"
+                },
+                children: data.map((event, index)=>{
+                    const { date, time } = formatDateTime(getEventDateTime(event));
+                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "card event-card",
+                        onClick: ()=>handleClick(event.identity),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: getBannerImage(event),
+                                className: "event-img",
+                                alt: "Event"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                lineNumber: 120,
+                                columnNumber: 17
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "card-body p-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "d-flex justify-content-between align-items-center mt-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "fw-semibold ellipsis",
+                                                children: safeText(event.title)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                lineNumber: 129,
+                                                columnNumber: 21
+                                            }, this),
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SAVEICON"]
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                        lineNumber: 128,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-sm text-muted mt-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "d-flex justify-content-between",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "ellipsis",
+                                                        children: [
+                                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LOCATION_ICON"],
+                                                            " ",
+                                                            safeText(event.org?.city)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                        lineNumber: 138,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        children: [
+                                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TICKET_ICON"],
+                                                            " ",
+                                                            isPaidEvent(event) ? getTicketPrice(event) : "Free"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                        lineNumber: 143,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                lineNumber: 137,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "d-flex justify-content-between mt-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "event-date",
+                                                        children: [
+                                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DATEICON"],
+                                                            " ",
+                                                            date,
+                                                            " / ",
+                                                            time
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                        lineNumber: 152,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: event.mode === "ONLINE" ? "mode-online" : "mode-offline",
+                                                        children: [
+                                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MODE_ICON"],
+                                                            " ",
+                                                            safeText(event.mode)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                        lineNumber: 156,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                lineNumber: 151,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                        lineNumber: 136,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "d-flex justify-content-between align-items-center mt-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "view-badge",
+                                                children: [
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VIEW_ICON"],
+                                                    " ",
+                                                    safeText(event.views)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                lineNumber: 170,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "badge-paid",
+                                                children: isPaidEvent(event) ? "Paid" : "Free"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                                lineNumber: 175,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                        lineNumber: 169,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                                lineNumber: 126,
+                                columnNumber: 17
+                            }, this)
+                        ]
+                    }, event.identity ?? index, true, {
+                        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                        lineNumber: 114,
+                        columnNumber: 15
+                    }, this);
+                })
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+                lineNumber: 103,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/CommonEventDetails/CommonEventDetails.js",
+        lineNumber: 75,
+        columnNumber: 5
+    }, this);
+}
+_s(EventSlider, "s8GBKeEEFmvuIffJDSTtMqCt2ZE=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
+_c = EventSlider;
+var _c;
+__turbopack_context__.k.register(_c, "EventSlider");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/lib/axiosPublic.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+;
+const apiPublic = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
+    baseURL: ("TURBOPACK compile-time value", "http://3.6.238.72:5000/api")
+});
+console.log("API BASE URL =>", ("TURBOPACK compile-time value", "http://3.6.238.72:5000/api"));
+const __TURBOPACK__default__export__ = apiPublic;
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/lib/axiosPrivate.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$auth$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/auth.js [app-client] (ecmascript)");
+;
+;
+const apiPrivate = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
+    baseURL: ("TURBOPACK compile-time value", "http://3.6.238.72:5000/api")
+});
+apiPrivate.interceptors.request.use((config)=>{
+    const token = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$auth$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getToken"])();
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
+apiPrivate.interceptors.response.use((res)=>res, (err)=>{
+    if (err.response?.status === 401) {
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$auth$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["clearToken"])();
+        if (("TURBOPACK compile-time value", "object") !== "undefined") {
+        // window.location.href = "/auth/user/login";
+        }
+    }
+    return Promise.reject(err);
+});
+const __TURBOPACK__default__export__ = apiPrivate;
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/lib/api/endpoints.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "API_ENDPOINTS",
+    ()=>API_ENDPOINTS
+]);
+const API_ENDPOINTS = {
+    /* ================= EVENTS ================= */ EVENTS: {
+        ALL: "/v1/events",
+        SINGLE: (eventId)=>`/v1/events/${eventId}`
+    },
+    /* ================= AUTH ================= */ AUTH: {
+        SIGNUP: "/v1/auth/signup",
+        LOGIN: "/v1/auth/login",
+        GOOGLE_LOGIN: "/v1/auth/google-login",
+        FORGOT_PASSWORD: "/v1/auth/forgot-password",
+        VERIFY_OTP: "/v1/auth/verify-otp",
+        RESEND_OTP: "/v1/auth/resend-otp",
+        RESET_PASSWORD: "/v1/auth/reset-password",
+        ORG_VERIFY: "/v1/auth/org/verify"
+    },
+    /* ================= USERS ================= */ USER: {
+        ALL: "/v1/users",
+        SINGLE: (userId)=>`/v1/users/${userId}`,
+        UPDATE: (userId)=>`/v1/user/${userId}`,
+        DELETE: (userId)=>`/v1/user/${userId}`
+    },
+    /* ================= ORGANIZATIONS ================= */ ORGANIZER: {
+        ALL: "/v1/organizations",
+        PROFILE: (orgId)=>`/v1/organizations/${orgId}`,
+        UPDATE: (orgId)=>`/v1/organizations/${orgId}`,
+        DELETE: (orgId)=>`/v1/organizations/${orgId}`,
+        EVENTS: (orgId)=>`/v1/organization/${orgId}/events`
+    },
+    /* ================= MASTER DATA ================= */ MASTER: {
+        ORG_CATEGORIES: "/v1/master/org-categories",
+        ACCOMMODATIONS: "/v1/master/accommodations",
+        EVENT_TYPES: (categoryId)=>`/v1/master/event-types/${categoryId}`,
+        CATEGORIES: "/v1/master/categories",
+        CERTIFICATIONS: "/v1/master/certifications",
+        PERKS: "/v1/master/perks"
+    }
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/lib/api/apiHelper.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "handleApi",
+    ()=>handleApi
+]);
+const handleApi = async (promise)=>{
+    try {
+        const res = await promise;
+        return res.data;
+    } catch (err) {
+        return err.response?.data || err;
+    }
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/lib/api/event.api.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "createEventApi",
+    ()=>createEventApi,
+    "deleteEventApi",
+    ()=>deleteEventApi,
+    "getAccommodationsApi",
+    ()=>getAccommodationsApi,
+    "getAllEventsApi",
+    ()=>getAllEventsApi,
+    "getCertificationsApi",
+    ()=>getCertificationsApi,
+    "getEventByIdApi",
+    ()=>getEventByIdApi,
+    "getEventBySlugApi",
+    ()=>getEventBySlugApi,
+    "getEventCategoriesApi",
+    ()=>getEventCategoriesApi,
+    "getEventTypesApi",
+    ()=>getEventTypesApi,
+    "getOrgCategoriesApi",
+    ()=>getOrgCategoriesApi,
+    "getOrganizerEventsApi",
+    ()=>getOrganizerEventsApi,
+    "getPerksApi",
+    ()=>getPerksApi
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/axiosPublic.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPrivate$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/axiosPrivate.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api/endpoints.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api/apiHelper.js [app-client] (ecmascript)");
+;
+;
+;
+;
+const getAllEventsApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].EVENTS.ALL));
+const getEventByIdApi = (eventId)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].EVENTS.SINGLE(eventId)));
+const getEventBySlugApi = (slug)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`/v1/events/${slug}`));
+const getOrganizerEventsApi = (orgId)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPrivate$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].ORGANIZER.EVENTS(orgId)));
+const deleteEventApi = (eventId)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPrivate$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].delete(`/event/delete/${eventId}`));
+const getOrgCategoriesApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].MASTER.ORG_CATEGORIES));
+const getEventCategoriesApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].MASTER.CATEGORIES));
+const getEventTypesApi = (categoryId)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].MASTER.EVENT_TYPES(categoryId)));
+const getAccommodationsApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].MASTER.ACCOMMODATIONS));
+const getCertificationsApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].MASTER.CERTIFICATIONS));
+const getPerksApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPublic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].MASTER.PERKS));
+const createEventApi = (orgId, formData)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axiosPrivate$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].ORGANIZER.EVENTS(orgId), formData));
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/app/events/[id]/page.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>EventDetailsPage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$CommonEventDetails$2f$CommonEventDetails$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/CommonEventDetails/CommonEventDetails.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$event$2e$api$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api/event.api.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2f$secureId$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils/secureId.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$LoadingContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/context/LoadingContext.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+;
+;
+function EventDetailsPage() {
+    _s();
+    const { id } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const [event, setEvent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const { setLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$LoadingContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLoading"])();
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "EventDetailsPage.useEffect": ()=>{
+            if (!id) return;
+            const realEventId = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2f$secureId$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["decodeId"])(id);
+            if (!realEventId) {
+                router.replace("/");
+                return;
+            }
+            const fetchEvent = {
+                "EventDetailsPage.useEffect.fetchEvent": async ()=>{
+                    setLoading(true);
+                    try {
+                        const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$event$2e$api$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getEventByIdApi"])(realEventId);
+                        if (res?.status) {
+                            setEvent(res.data);
+                        } else {
+                            router.replace("/");
+                        }
+                    } catch (err) {
+                        router.replace("/");
+                    } finally{
+                        setLoading(false);
+                    }
+                }
+            }["EventDetailsPage.useEffect.fetchEvent"];
+            fetchEvent();
+        }
+    }["EventDetailsPage.useEffect"], [
+        id,
+        router,
+        setLoading
+    ]);
+    if (!event) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$CommonEventDetails$2f$CommonEventDetails$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+        event: event,
+        onBack: ()=>router.back()
+    }, void 0, false, {
+        fileName: "[project]/src/app/events/[id]/page.js",
+        lineNumber: 52,
+        columnNumber: 5
+    }, this);
+}
+_s(EventDetailsPage, "YOeEEojhSeQVmF073r46uNbhdpA=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$LoadingContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLoading"]
+    ];
+});
+_c = EventDetailsPage;
+var _c;
+__turbopack_context__.k.register(_c, "EventDetailsPage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+]);
+
+//# sourceMappingURL=src_7c9b27e9._.js.map

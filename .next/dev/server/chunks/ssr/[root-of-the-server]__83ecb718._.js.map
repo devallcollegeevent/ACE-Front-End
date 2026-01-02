@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/components/ClientLayout.js"],"sourcesContent":["\"use client\";\r\n\r\nimport { usePathname } from \"next/navigation\";\r\nimport Navbar from \"@/components/global/Navbar/Navbar\";\r\n\r\nexport default function ClientLayout({ children }) {\r\n  const pathname = usePathname();\r\n\r\n  // ❌ Navbar vendam for auth pages\r\n  const hideNavbar =\r\n    pathname.startsWith(\"/auth\") ||\r\n    pathname.startsWith(\"/login\") ||\r\n    pathname.startsWith(\"/signup\");\r\n\r\n  return (\r\n    <>\r\n      {!hideNavbar && <Navbar />}\r\n      {children}\r\n    </>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;;;;;;AAFA;;;;AAKe,SAAS,aAAa,EAAE,QAAQ,EAAE;IAC/C,MAAM,WAAW,IAAA,iJAAW;IAE5B,iCAAiC;IACjC,MAAM,aACJ,SAAS,UAAU,CAAC,YACpB,SAAS,UAAU,CAAC,aACpB,SAAS,UAAU,CAAC;IAEtB,qBACE;;YACG,CAAC,4BAAc,8OAAC;;;;;YAChB;;;AAGP"}}]
+}

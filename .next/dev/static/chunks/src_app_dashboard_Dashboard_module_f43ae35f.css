@@ -1,0 +1,21 @@
+/* [project]/src/app/dashboard/Dashboard.module.css [app-client] (css) */
+.Dashboard-module__8Mmpzq__container {
+  background: #f3f3f3;
+  height: 100vh;
+  display: flex;
+}
+
+.Dashboard-module__8Mmpzq__main {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+
+.Dashboard-module__8Mmpzq__content {
+  background: #fff;
+  border-radius: 18px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=src_app_dashboard_Dashboard_module_f43ae35f.css.map*/

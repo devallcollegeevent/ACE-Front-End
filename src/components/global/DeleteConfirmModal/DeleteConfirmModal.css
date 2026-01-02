@@ -1,0 +1,51 @@
+/* OVERLAY */
+.delete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1055;
+}
+
+/* MODAL */
+.delete-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  animation: scaleIn 0.2s ease;
+}
+
+/* HEADER */
+.delete-modal h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* BODY */
+.delete-modal p {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* ACTIONS */
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ANIMATION */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,231 @@
+/* [project]/src/components/global/SpotlightCarousel/SpotlightCarousel.module.css [app-client] (css) */
+.SpotlightCarousel-module__JlpA1G__title {
+  text-align: center;
+  color: #1c1c1c;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.SpotlightCarousel-module__JlpA1G__wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.SpotlightCarousel-module__JlpA1G__track {
+  width: 100%;
+  transition: transform 2.2s;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__slide {
+  box-sizing: border-box;
+  background: #edf7ff;
+  gap: 70px;
+  min-width: 100%;
+  padding: 40px 10%;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__left {
+  width: 40%;
+}
+
+.SpotlightCarousel-module__JlpA1G__image {
+  object-fit: cover;
+  border-radius: 16px;
+  width: 100%;
+  height: 270px;
+}
+
+.SpotlightCarousel-module__JlpA1G__right {
+  flex-direction: column;
+  width: 60%;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__header h3 {
+  color: #1c1c1c;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.SpotlightCarousel-module__JlpA1G__share {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+.SpotlightCarousel-module__JlpA1G__meta {
+  margin-top: 12px;
+}
+
+.SpotlightCarousel-module__JlpA1G__meta p {
+  color: #555;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 14px;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__startsIn {
+  color: #444;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.SpotlightCarousel-module__JlpA1G__countdown {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__pill {
+  border: 2px solid #888;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 60px;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__num {
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.SpotlightCarousel-module__JlpA1G__cta {
+  color: #fff;
+  cursor: pointer;
+  background: #7f2bff;
+  border: none;
+  border-radius: 25px;
+  margin-left: 20px;
+  padding: 10px 22px;
+  font-weight: 600;
+  transition: background .25s;
+}
+
+.SpotlightCarousel-module__JlpA1G__cta:hover {
+  background: #5d00c7;
+}
+
+.SpotlightCarousel-module__JlpA1G__controls {
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 32px;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__controls button {
+  cursor: pointer;
+  background: #cce8ff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  transition: background .25s;
+}
+
+.SpotlightCarousel-module__JlpA1G__controls button:hover {
+  background: #b5ddff;
+}
+
+.SpotlightCarousel-module__JlpA1G__dots {
+  gap: 8px;
+  display: flex;
+}
+
+.SpotlightCarousel-module__JlpA1G__dot {
+  cursor: pointer;
+  background: #b5b5b5;
+  border-radius: 10px;
+  width: 13px;
+  height: 7px;
+}
+
+.SpotlightCarousel-module__JlpA1G__activeDot {
+  background: #555;
+}
+
+@media (max-width: 1000px) {
+  .SpotlightCarousel-module__JlpA1G__slide {
+    gap: 40px;
+    padding: 30px 6%;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__left {
+    width: 45%;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__right {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .SpotlightCarousel-module__JlpA1G__slide {
+    text-align: center;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__left, .SpotlightCarousel-module__JlpA1G__right {
+    width: 100%;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__image {
+    height: 220px;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__header {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__countdown {
+    justify-content: center;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__cta {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .SpotlightCarousel-module__JlpA1G__title {
+    font-size: 22px;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__image {
+    height: 200px;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__pill {
+    width: 60px;
+    height: 52px;
+  }
+
+  .SpotlightCarousel-module__JlpA1G__num {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=src_components_global_SpotlightCarousel_SpotlightCarousel_module_css_bad6b30c._.single.css.map*/

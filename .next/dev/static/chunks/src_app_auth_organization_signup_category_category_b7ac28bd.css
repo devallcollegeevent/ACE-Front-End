@@ -1,0 +1,93 @@
+/* [project]/src/app/auth/organization/signup/category/category.css [app-client] (css) */
+.org-cat-shell {
+  text-align: center;
+  min-height: 100vh;
+  padding: 60px 24px;
+  font-family: Poppins, sans-serif;
+}
+
+.org-stepper {
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.step {
+  opacity: .4;
+  font-weight: 600;
+}
+
+.step.active {
+  opacity: 1;
+  color: #7f00ff;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 32px;
+}
+
+.category-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  display: grid;
+}
+
+.category-card {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 16px;
+  padding: 24px 12px;
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px #00000014;
+}
+
+.category-card.active {
+  border-color: #7f00ff;
+  box-shadow: 0 10px 30px #7f00ff33;
+}
+
+.category-card .icon {
+  margin-bottom: 12px;
+}
+
+.continue-btn {
+  color: #fff;
+  cursor: pointer;
+  background: #7f00ff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 36px;
+  font-weight: 700;
+  transition: background .2s, transform .2s;
+}
+
+.continue-btn:hover {
+  background: #6a00d6;
+  transform: translateY(-2px);
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-text a {
+  color: #7f00ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=src_app_auth_organization_signup_category_category_b7ac28bd.css.map*/

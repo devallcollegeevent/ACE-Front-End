@@ -1,0 +1,80 @@
+/* PAGE */
+.explore-page {
+  min-height: 100vh;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-position: center;
+  font-family: Inter, sans-serif;
+}
+
+/* HEADER */
+.explore-header {
+  text-align: center;
+}
+
+.close-btn {
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+/* GRID – DESKTOP 4 */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 5%;
+}
+
+/* CARD */
+.explore-card {
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box img {
+  width: 159px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.explore-card p {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .explore-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,181 @@
+.card {
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.field{
+  padding-top: 15px;
+}
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.field span {
+  color: red;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.input {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.uploadBox {
+  border: 1px dashed #ccc;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.fileUpload {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewRow {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.previewImg {
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+.previewImg img{
+    width: 150px;
+}
+
+.iconInput {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iconInput .input {
+  padding-left: 44px;
+}
+
+.checkRow {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.ticketHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.addBtn {
+  background: #7f00ff;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.empty {
+  color: #7f00ff;
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 14px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primaryBtn {
+  background: #7f00ff;
+  color: #fff;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 26px;
+}
+
+.outlineBtn {
+  border: 2px solid #7f00ff;
+  background: #fff;
+  padding: 12px 40px;
+  border-radius: 26px;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  width: 600px;
+}
+
+.switchRow {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.switchRow span {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.active {
+  color: #7f00ff;
+  font-weight: 700;
+}
+
+.successModal {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+}

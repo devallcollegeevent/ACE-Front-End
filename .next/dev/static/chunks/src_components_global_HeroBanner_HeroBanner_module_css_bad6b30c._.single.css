@@ -1,0 +1,74 @@
+/* [project]/src/components/global/HeroBanner/HeroBanner.module.css [app-client] (css) */
+.HeroBanner-module__DFaC7q__center {
+  text-align: center;
+  width: 100%;
+}
+
+.HeroBanner-module__DFaC7q__title {
+  color: #1c1c1c;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding-top: 80px;
+  font-family: Poppins, sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  display: flex;
+}
+
+.HeroBanner-module__DFaC7q__title span {
+  background: linear-gradient(90deg, #7f2bff, #ff7a00);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: 12s ease-in-out infinite HeroBanner-module__DFaC7q__loopGradient;
+}
+
+.HeroBanner-module__DFaC7q__subtitle {
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@keyframes HeroBanner-module__DFaC7q__loopGradient {
+  0% {
+    -webkit-text-fill-color: #1c1c1c;
+  }
+
+  30% {
+    -webkit-text-fill-color: transparent;
+  }
+
+  60% {
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    -webkit-text-fill-color: #1c1c1c;
+  }
+}
+
+@media (max-width: 900px) {
+  .HeroBanner-module__DFaC7q__title {
+    padding-top: 70px;
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  .HeroBanner-module__DFaC7q__title {
+    gap: 6px;
+    padding-top: 60px;
+    font-size: 32px;
+  }
+
+  .HeroBanner-module__DFaC7q__subtitle {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=src_components_global_HeroBanner_HeroBanner_module_css_bad6b30c._.single.css.map*/

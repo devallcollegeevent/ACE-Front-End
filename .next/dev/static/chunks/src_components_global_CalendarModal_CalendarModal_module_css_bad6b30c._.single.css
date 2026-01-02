@@ -1,0 +1,150 @@
+/* [project]/src/components/global/CalendarModal/CalendarModal.module.css [app-client] (css) */
+.CalendarModal-module__AouC0q__backdrop {
+  z-index: 100;
+  background: #00000073;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.CalendarModal-module__AouC0q__modal {
+  background: #fff;
+  border-radius: 14px;
+  width: 95%;
+  max-width: 1100px;
+  padding: 30px;
+  position: relative;
+}
+
+.CalendarModal-module__AouC0q__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.CalendarModal-module__AouC0q__req {
+  color: red;
+}
+
+.CalendarModal-module__AouC0q__label {
+  margin: 20px 0 8px;
+  font-weight: 600;
+  display: block;
+}
+
+.CalendarModal-module__AouC0q__field {
+  flex-direction: column;
+  gap: 6px;
+  display: flex;
+}
+
+.CalendarModal-module__AouC0q__field label span {
+  color: red;
+}
+
+.CalendarModal-module__AouC0q__input {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  height: 46px;
+  padding: 0 14px;
+}
+
+.CalendarModal-module__AouC0q__rowsContainer {
+  max-height: 300px;
+  margin-top: 20px;
+  padding-right: 6px;
+  overflow-y: auto;
+}
+
+.CalendarModal-module__AouC0q__rowGrid {
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 16px;
+  margin-top: 20px;
+  display: grid;
+}
+
+.CalendarModal-module__AouC0q__deleteIcon {
+  cursor: pointer;
+  align-items: flex-end;
+  display: flex;
+}
+
+.CalendarModal-module__AouC0q__addRow {
+  text-align: right;
+  color: #7b2cff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.CalendarModal-module__AouC0q__toggleRow {
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.CalendarModal-module__AouC0q__switch {
+  width: 46px;
+  height: 24px;
+  position: relative;
+}
+
+.CalendarModal-module__AouC0q__switch input {
+  opacity: 0;
+}
+
+.CalendarModal-module__AouC0q__slider {
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 30px;
+  position: absolute;
+  inset: 0;
+}
+
+.CalendarModal-module__AouC0q__slider:before {
+  content: "";
+  background: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  transition: all .3s;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+}
+
+.CalendarModal-module__AouC0q__switch input:checked + .CalendarModal-module__AouC0q__slider {
+  background: #7b2cff;
+}
+
+.CalendarModal-module__AouC0q__switch input:checked + .CalendarModal-module__AouC0q__slider:before {
+  transform: translateX(20px);
+}
+
+.CalendarModal-module__AouC0q__actions {
+  justify-content: flex-end;
+  margin-top: 30px;
+  display: flex;
+}
+
+.CalendarModal-module__AouC0q__save {
+  color: #fff;
+  cursor: pointer;
+  background: #7b2cff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 50px;
+}
+
+.CalendarModal-module__AouC0q__close {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+/*# sourceMappingURL=src_components_global_CalendarModal_CalendarModal_module_css_bad6b30c._.single.css.map*/

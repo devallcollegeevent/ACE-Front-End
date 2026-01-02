@@ -1,0 +1,73 @@
+/* ============================= */
+/* SIGNUP PAGE ONLY STYLES */
+/* ============================= */
+.auth-shell {
+  min-height: 100vh;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-position: center;
+  font-family: Inter, sans-serif;
+}
+/* Signup card little wider feel */
+.signup-card {
+  max-width: 480px;
+}
+
+/* Extra spacing between fields */
+.signup-field {
+  margin-bottom: 16px;
+}
+
+/* Confirm password spacing */
+.signup-confirm {
+  margin-top: 6px;
+}
+
+/* Signup button tweak */
+.signup-btn {
+  margin-top: 6px;
+}
+
+/* Footer text spacing */
+.signup-footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--tx-sub-title);
+}
+
+.signup-footer a {
+  color: var(--tx-link);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+}
+
+/* Password strength hint (future ready) */
+.signup-password-hint {
+  font-size: 12px;
+  color: #777;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.Switch-to-Organizer {
+  color: var(--hover, #5606a6);
+  text-align: right;
+  cursor: pointer;
+  /* BL melody */
+  font-family: "BL Melody";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.organization-sections {
+  display: flex;
+  justify-content: end;
+}
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .signup-card {
+    width: 100%;
+    padding: 0 8px;
+  }
+}

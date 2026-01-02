@@ -1,0 +1,137 @@
+/* [project]/src/app/dashboard/components/ProfileHeader/ProfileHeader.module.css [app-client] (css) */
+.ProfileHeader-module__iIKcgW__wrapper {
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.ProfileHeader-module__iIKcgW__cover {
+  background: linear-gradient(135deg, #7f00ff, #9a33ff);
+  height: 120px;
+}
+
+.ProfileHeader-module__iIKcgW__content {
+  align-items: center;
+  gap: 20px;
+  margin-top: -50px;
+  padding: 0 24px 20px;
+  display: flex;
+}
+
+.ProfileHeader-module__iIKcgW__left {
+  flex-shrink: 0;
+}
+
+.ProfileHeader-module__iIKcgW__avatar {
+  object-fit: cover;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+}
+
+.ProfileHeader-module__iIKcgW__avatarFallback {
+  color: #fff;
+  background: #7f00ff;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 96px;
+  font-size: 36px;
+  font-weight: 800;
+  display: flex;
+}
+
+.ProfileHeader-module__iIKcgW__right {
+  flex: 1;
+}
+
+.ProfileHeader-module__iIKcgW__name {
+  margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ProfileHeader-module__iIKcgW__role {
+  color: #666;
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ProfileHeader-module__iIKcgW__stats {
+  color: #555;
+  gap: 20px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  display: flex;
+}
+
+.ProfileHeader-module__iIKcgW__stats span {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ProfileHeader-module__iIKcgW__stats span:hover {
+  color: #7f00ff;
+}
+
+.ProfileHeader-module__iIKcgW__rank {
+  color: #888;
+  font-size: 13px;
+}
+
+/* [project]/src/app/dashboard/Dashboard.module.css [app-client] (css) */
+.Dashboard-module__8Mmpzq__container {
+  background: #f3f3f3;
+  height: 100vh;
+  display: flex;
+}
+
+.Dashboard-module__8Mmpzq__main {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+
+.Dashboard-module__8Mmpzq__content {
+  background: #fff;
+  border-radius: 18px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* [project]/src/app/dashboard/components/Topbar/Topbar.module.css [app-client] (css) */
+.Topbar-module__cumiLa__topbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+}
+
+.Topbar-module__cumiLa__title {
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Topbar-module__cumiLa__right {
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.Topbar-module__cumiLa__userName {
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=src_app_dashboard_925a7586._.css.map*/

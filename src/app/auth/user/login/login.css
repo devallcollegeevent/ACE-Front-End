@@ -1,0 +1,47 @@
+.auth-shell {
+  min-height: 100vh;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-position: center;
+  font-family: Inter, sans-serif;
+}
+.login-forgot {
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.login-forgot a {
+  color: var(--tx-link);
+  font-weight: 600;
+}
+
+.login-divider {
+  text-align: center;
+  color: #999;
+  margin: 18px 0;
+}
+.login-google {
+  display: flex;
+  justify-content: center;
+}
+.auth-divider {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+.Switch-to-Organizer {
+  color: var(--hover, #5606a6);
+  text-align: right;
+  cursor: pointer;
+  /* BL melody */
+  font-family: "BL Melody";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.organization-sections {
+  display: flex;
+  justify-content: end;
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/app/dashboard/page.js"],"sourcesContent":["\"use client\";\r\n\r\nimport { usePathname } from \"next/navigation\";\r\nimport ProfileHeader from \"./components/ProfileHeader/ProfileHeader\";\r\n\r\nexport default function DashboardLayout({ children }) {\r\n  const pathname = usePathname();\r\n\r\n  // ❌ space/create pages la header vendam\r\n  const hideProfileHeader =\r\n    pathname.startsWith(\"/dashboardlayout/space/create\");\r\n\r\n  return (\r\n    <>\r\n      {/* PROFILE HEADER */}\r\n      {!hideProfileHeader && <ProfileHeader/>}\r\n\r\n      {/* PAGE CONTENT */}\r\n      <main>{children}</main>\r\n    </>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;AACA;;;AAHA;;;AAKe,SAAS,gBAAgB,EAAE,QAAQ,EAAE;;IAClD,MAAM,WAAW,IAAA,oJAAW;IAE5B,wCAAwC;IACxC,MAAM,oBACJ,SAAS,UAAU,CAAC;IAEtB,qBACE;;YAEG,CAAC,mCAAqB,6LAAC,qLAAa;;;;;0BAGrC,6LAAC;0BAAM;;;;;;;;AAGb;GAhBwB;;QACL,oJAAW;;;KADN"}}]
+}

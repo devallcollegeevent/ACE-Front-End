@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/app/dashboard/Dashboard.module.css"],"sourcesContent":[".container {\r\n  display: flex;\r\n  height: 100vh;\r\n  background: #f3f3f3;\r\n}\r\n\r\n.main {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.content {\r\n  margin: 20px;\r\n  padding: 20px;\r\n  background: #ffffff;\r\n  border-radius: 18px;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;AAMA"}}]
+}

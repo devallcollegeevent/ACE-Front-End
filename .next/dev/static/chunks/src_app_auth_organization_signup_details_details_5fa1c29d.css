@@ -1,0 +1,77 @@
+/* [project]/src/app/auth/organization/signup/details/details.css [app-client] (css) */
+.org-details-shell {
+  text-align: center;
+  min-height: 100vh;
+  padding: 60px 24px;
+  font-family: Poppins, sans-serif;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 32px;
+}
+
+.org-stepper {
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.step {
+  opacity: .4;
+  font-weight: 600;
+}
+
+.step.active {
+  opacity: 1;
+  color: #7f00ff;
+}
+
+.details-form {
+  flex-direction: column;
+  gap: 14px;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.details-form label {
+  text-align: left;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.details-form input, .details-form select {
+  border: 1px solid #e6e6e9;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  transition: border-color .25s, box-shadow .25s;
+}
+
+.details-form input:focus, .details-form select:focus {
+  border-color: #7f00ff;
+  outline: none;
+  box-shadow: 0 4px 14px #7f00ff26;
+}
+
+.continue-btn {
+  color: #fff;
+  cursor: pointer;
+  background: #7f00ff;
+  border: none;
+  border-radius: 40px;
+  margin-top: 20px;
+  padding: 14px;
+  font-weight: 700;
+  transition: background .2s, transform .2s;
+}
+
+.continue-btn:hover {
+  background: #6a00d6;
+  transform: translateY(-2px);
+}
+
+/*# sourceMappingURL=src_app_auth_organization_signup_details_details_5fa1c29d.css.map*/

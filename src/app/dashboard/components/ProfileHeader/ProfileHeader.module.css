@@ -1,0 +1,86 @@
+.wrapper {
+  width: 100%;
+  background: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+/* COVER */
+.cover {
+  height: 120px;
+  background: #3D3D3D;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: -40px;
+}
+
+/* AVATAR */
+.avatar,
+.avatarFallback {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.avatarFallback {
+  background: #7f00ff;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 17px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  color: #222;
+}
+
+.role {
+  font-size: 14px;
+  color: #777;
+  margin-left: 6px;
+}
+
+.followInfo {
+  display: flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.followInfo span {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #7f00ff;
+}
+
+.rank {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}

@@ -1,0 +1,25 @@
+/* EMPTY STATE WRAPPER */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* IMAGE */
+.empty-state img {
+  max-width: 260px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* TITLE */
+.empty-state h6 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* SUBTITLE */
+.empty-state p {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 0;
+}

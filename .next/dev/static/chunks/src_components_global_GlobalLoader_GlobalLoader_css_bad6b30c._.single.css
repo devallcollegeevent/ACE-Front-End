@@ -1,0 +1,34 @@
+/* [project]/src/components/global/GlobalLoader/GlobalLoader.css [app-client] (css) */
+.global-loader-overlay {
+  z-index: 99999;
+  background: #00000073;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.global-spinner {
+  border: 6px solid #e0e0e0;
+  border-top-color: #6f42c1;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: .8s linear infinite spin;
+}
+
+.global-loader-overlay p {
+  color: #fff;
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=src_components_global_GlobalLoader_GlobalLoader_css_bad6b30c._.single.css.map*/

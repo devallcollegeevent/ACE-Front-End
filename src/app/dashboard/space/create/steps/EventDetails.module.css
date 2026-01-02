@@ -1,0 +1,141 @@
+.card {
+  background: #f5f5f5;
+  padding: 24px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  border: 1px solid #e6e6e6;
+}
+
+.cardTitle {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.field label span {
+  color: red;
+}
+
+.input,
+.textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.input {
+  height: 44px;
+}
+
+.textarea {
+  min-height: 120px;
+}
+
+.tagRow {
+  display: flex;
+  gap: 10px;
+}
+
+.tagList {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #efe6ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.modeSwitch {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.modeBtn {
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.active {
+  border-color: #7b2cff;
+  background: #f3ecff;
+  color: #7b2cff;
+}
+
+.btnPrimary {
+  background: #7b2cff;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btnOutline {
+  border: 2px solid #7b2cff;
+  background: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btnSmall {
+  background: #7b2cff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.muted {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}

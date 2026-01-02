@@ -1,0 +1,1 @@
+export default function SubscribeBox(){return <div>SubscribeBox</div>}

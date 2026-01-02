@@ -1,0 +1,90 @@
+/* [project]/src/components/ui/Modal/Modal.css [app-client] (css) */
+.modalBackdrop {
+  z-index: 999999;
+  background: #0000008c;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 520px;
+  max-width: 90%;
+  padding: 20px;
+  position: relative;
+}
+
+.modalHeader {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.switchRow {
+  gap: 12px;
+  margin: 16px 0;
+  display: flex;
+}
+
+.switchRow span {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+
+.switchRow .active {
+  color: #fff;
+  background: #000;
+}
+
+.grid2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  display: grid;
+}
+
+.input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.modalFooter {
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.primaryBtn {
+  color: #fff;
+  cursor: pointer;
+  background: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+}
+
+.outlineBtn {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px 22px;
+}
+
+/*# sourceMappingURL=src_components_ui_Modal_Modal_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,197 @@
+.profileWrapper {
+  width: 100%;
+}
+
+/* ================= VIEW MODE ================= */
+.viewBox {
+  background: #ffffff;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.viewBox label {
+  font-size: 13px;
+  color: #888888;
+}
+
+.viewBox p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.editIcon {
+  width: 22px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ================= EDIT MODE ================= */
+.editBox {
+  background: #ffffff;
+  padding: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left label {
+  font-size: 13px;
+  color: #666666;
+}
+
+.left input {
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.changePassword {
+  color: #7a12ff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= UPLOAD ================= */
+.uploadBox {
+  border: 2px dashed #dddddd;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  background: #fafafa;
+  color: #777777;
+  cursor: pointer;
+}
+
+/* ================= BUTTONS ================= */
+.btnRow {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cancelBtn {
+  padding: 8px 40px;
+  border-radius: 25px;
+  border: 1px solid #333333;
+  background: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.saveBtn {
+  padding: 10px 36px;
+  border-radius: 25px;
+  border: none;
+  background: #7a12ff;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background: #6510d8;
+}
+
+/* ================= OTP ================= */
+.otpBox {
+  background: #ffffff;
+  padding: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.otpInputs {
+  margin: 30px 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.otpInputs input {
+  width: 50px;
+  height: 55px;
+  border-radius: 12px;
+  border: 2px solid #dddddd;
+  font-size: 20px;
+  text-align: center;
+}
+
+.resend span {
+  color: #7a12ff;
+  cursor: pointer;
+}
+
+/* ================= PASSWORD ================= */
+.passwordBox {
+  background: #ffffff;
+  padding: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.inputWrapper {
+  position: relative;
+  max-width: 420px;
+  margin: 20px auto;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 12px 45px 12px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999999;
+  cursor: pointer;
+}
+
+/* ================= SUCCESS ================= */
+.successBox {
+  background: #ffffff;
+  padding: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #7a12ff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .editBox {
+    gap: 20px;
+  }
+
+  .btnRow {
+    gap: 15px;
+  }
+}

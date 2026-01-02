@@ -1,0 +1,143 @@
+/* [project]/src/components/global/OrganizerCarousel/OrganizerCarousel.module.css [app-client] (css) */
+.OrganizerCarousel-module__lSNBea__topOrganizersroot {
+  padding: 28px 50px;
+}
+
+.OrganizerCarousel-module__lSNBea__header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.OrganizerCarousel-module__lSNBea__title {
+  color: #1c1c1c;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.OrganizerCarousel-module__lSNBea__sub {
+  color: #666;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.OrganizerCarousel-module__lSNBea__more {
+  color: #7f00ff;
+  font-weight: 600;
+}
+
+.OrganizerCarousel-module__lSNBea__leaderboardBtn {
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #7f00ff, #5d00c7);
+  border: none;
+  border-radius: 28px;
+  padding: 12px 24px;
+  font-weight: 700;
+}
+
+.OrganizerCarousel-module__lSNBea__list {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 24px;
+  width: 100%;
+  display: grid;
+}
+
+.OrganizerCarousel-module__lSNBea__card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform .25s;
+}
+
+.OrganizerCarousel-module__lSNBea__card:hover {
+  transform: translateY(-6px);
+}
+
+.OrganizerCarousel-module__lSNBea__avatarWrap {
+  background: #eef2ff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.OrganizerCarousel-module__lSNBea__avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.OrganizerCarousel-module__lSNBea__avatarFallback {
+  color: #fff;
+  text-transform: uppercase;
+  background: #1c1c1c;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+}
+
+.OrganizerCarousel-module__lSNBea__name {
+  color: #1c1c1c;
+  text-align: center;
+  word-break: break-word;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.OrganizerCarousel-module__lSNBea__events {
+  color: #666;
+  text-align: center;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+@media (max-width: 992px) {
+  .OrganizerCarousel-module__lSNBea__topOrganizersroot {
+    padding: 24px;
+  }
+
+  .OrganizerCarousel-module__lSNBea__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .OrganizerCarousel-module__lSNBea__topOrganizersroot {
+    padding: 20px 16px;
+  }
+
+  .OrganizerCarousel-module__lSNBea__title {
+    font-size: 18px;
+  }
+
+  .OrganizerCarousel-module__lSNBea__list {
+    gap: 16px;
+  }
+
+  .OrganizerCarousel-module__lSNBea__avatarWrap {
+    width: 64px;
+    height: 64px;
+  }
+
+  .OrganizerCarousel-module__lSNBea__name {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=src_components_global_OrganizerCarousel_OrganizerCarousel_module_css_bad6b30c._.single.css.map*/

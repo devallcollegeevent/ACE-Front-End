@@ -1,0 +1,3929 @@
+module.exports = [
+"[project]/src/const-value/config-icons/page.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "ADDICON",
+    ()=>ADDICON,
+    "DATEICON",
+    ()=>DATEICON,
+    "DELETICON",
+    ()=>DELETICON,
+    "EDITICON",
+    ()=>EDITICON,
+    "EMAILICON",
+    ()=>EMAILICON,
+    "EMAILTEXT",
+    ()=>EMAILTEXT,
+    "FACEBOOKICON",
+    ()=>FACEBOOKICON,
+    "FOOTER_FACEBOOK",
+    ()=>FOOTER_FACEBOOK,
+    "FOOTER_INSTA",
+    ()=>FOOTER_INSTA,
+    "FOOTER_LINKEDIN",
+    ()=>FOOTER_LINKEDIN,
+    "FOOTER_WHATSAPP",
+    ()=>FOOTER_WHATSAPP,
+    "FOOTER_X",
+    ()=>FOOTER_X,
+    "IMAGEICON",
+    ()=>IMAGEICON,
+    "INSTAGRAMICON",
+    ()=>INSTAGRAMICON,
+    "LINKEDINICON",
+    ()=>LINKEDINICON,
+    "LINKICON",
+    ()=>LINKICON,
+    "LOCATION_ICON",
+    ()=>LOCATION_ICON,
+    "LOCKICON",
+    ()=>LOCKICON,
+    "MODE_ICON",
+    ()=>MODE_ICON,
+    "PHONEICON",
+    ()=>PHONEICON,
+    "SAVEDICON",
+    ()=>SAVEDICON,
+    "SAVEICON",
+    ()=>SAVEICON,
+    "SHAREICON",
+    ()=>SHAREICON,
+    "TELEGRAMICON",
+    ()=>TELEGRAMICON,
+    "TICKET_ICON",
+    ()=>TICKET_ICON,
+    "VIDEOICON",
+    ()=>VIDEOICON,
+    "VIEW_ICON",
+    ()=>VIEW_ICON,
+    "WEBSITEICON",
+    ()=>WEBSITEICON,
+    "WHATICON",
+    ()=>WHATICON,
+    "WHATSAPP",
+    ()=>WHATSAPP,
+    "WHATSAPPICON",
+    ()=>WHATSAPPICON,
+    "XICON",
+    ()=>XICON,
+    "YOUTUBEICON",
+    ()=>YOUTUBEICON
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+;
+const LOCATION_ICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "28",
+    height: "28",
+    viewBox: "0 0 12 14",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+        d: "M0 5.67715C0 2.5498 2.49282 0 5.58568 0C8.67854 0 11.1714 2.5498 11.1714 5.67715C11.1714 7.18695 10.7411 8.80808 9.98046 10.2086C9.22077 11.6074 8.11081 12.8229 6.72229 13.472C6.00098 13.8091 5.17038 13.8091 4.44907 13.472C3.06055 12.8229 1.9506 11.6074 1.1909 10.2086C0.430275 8.80808 0 7.18695 0 5.67715ZM5.58568 0.957545C3.03761 0.957545 0.957545 3.06254 0.957545 5.67715C0.957545 7.01585 1.34224 8.48092 2.03236 9.75163C2.72341 11.0241 3.69997 12.0648 4.85453 12.6045C5.31888 12.8215 5.85248 12.8215 6.31683 12.6045C7.47139 12.0648 8.44795 11.0241 9.139 9.75163C9.82912 8.48092 10.2138 7.01585 10.2138 5.67715C10.2138 3.06254 8.13375 0.957545 5.58568 0.957545ZM5.58568 4.14936C4.79242 4.14936 4.14936 4.79242 4.14936 5.58568C4.14936 6.37894 4.79242 7.022 5.58568 7.022C6.37894 7.022 7.022 6.37894 7.022 5.58568C7.022 4.79242 6.37894 4.14936 5.58568 4.14936ZM3.19182 5.58568C3.19182 4.26359 4.26359 3.19182 5.58568 3.19182C6.90777 3.19182 7.97954 4.26359 7.97954 5.58568C7.97954 6.90777 6.90777 7.97954 5.58568 7.97954C4.26359 7.97954 3.19182 6.90777 3.19182 5.58568Z",
+        fill: "#1C1C1C"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 9,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 2,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const WHATICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "28",
+    height: "28",
+    viewBox: "0 0 28 28",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M20.9307 1.42277e-06C19.7327 -3.64864e-05 18.7337 -6.80983e-05 17.9407 0.106553C17.1036 0.219092 16.3479 0.466653 15.7406 1.07395C15.1333 1.68124 14.8858 2.43697 14.7732 3.27403C14.6666 4.06707 14.6666 5.06601 14.6667 6.26397V6.40266C14.6666 7.60062 14.6666 8.59961 14.7732 9.39264C14.8858 10.2297 15.1333 10.9854 15.7406 11.5927C16.3479 12.2 17.1036 12.4476 17.9407 12.5601C18.7337 12.6667 19.7327 12.6667 20.9306 12.6667H21.0693C22.2673 12.6667 23.2663 12.6667 24.0593 12.5601C24.8964 12.4476 25.6521 12.2 26.2594 11.5927C26.8667 10.9854 27.1142 10.2297 27.2268 9.39264C27.3334 8.5996 27.3334 7.60064 27.3333 6.40266V6.26401C27.3334 5.06604 27.3334 4.06707 27.2268 3.27403C27.1142 2.43697 26.8667 1.68124 26.2594 1.07395C25.6521 0.466653 24.8964 0.219092 24.0593 0.106553C23.2663 -6.80983e-05 22.2673 -3.64864e-05 21.0694 1.42277e-06H20.9307ZM17.1548 2.48816C17.3286 2.3144 17.5919 2.17144 18.2072 2.08872C18.8512 2.00213 19.7147 2 21 2C22.2854 2 23.1488 2.00213 23.7928 2.08872C24.4081 2.17144 24.6714 2.3144 24.8452 2.48816C25.0189 2.66191 25.1619 2.92525 25.2446 3.54053C25.3312 4.18458 25.3333 5.04799 25.3333 6.33334C25.3333 7.61868 25.3312 8.4821 25.2446 9.12615C25.1619 9.74143 25.0189 10.0048 24.8452 10.1785C24.6714 10.3523 24.4081 10.4952 23.7928 10.578C23.1488 10.6645 22.2854 10.6667 21 10.6667C19.7147 10.6667 18.8512 10.6645 18.2072 10.578C17.5919 10.4952 17.3286 10.3523 17.1548 10.1785C16.9811 10.0048 16.8381 9.74143 16.7554 9.12615C16.6688 8.4821 16.6667 7.61868 16.6667 6.33334C16.6667 5.04799 16.6688 4.18458 16.7554 3.54053C16.8381 2.92525 16.9811 2.66191 17.1548 2.48816Z",
+            fill: "#646464"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 26,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M6.26401 14.6667C5.06605 14.6666 4.06707 14.6666 3.27403 14.7732C2.43697 14.8858 1.68124 15.1333 1.07395 15.7406C0.466653 16.3479 0.219092 17.1036 0.106553 17.9407C-6.80983e-05 18.7337 -3.64864e-05 19.7327 1.42277e-06 20.9306V21.0693C-3.64864e-05 22.2673 -6.80983e-05 23.2663 0.106553 24.0593C0.219092 24.8964 0.466653 25.6521 1.07395 26.2594C1.68124 26.8667 2.43697 27.1142 3.27403 27.2268C4.06707 27.3334 5.06604 27.3334 6.26401 27.3333H6.40266C7.60064 27.3334 8.5996 27.3334 9.39264 27.2268C10.2297 27.1142 10.9854 26.8667 11.5927 26.2594C12.2 25.6521 12.4476 24.8964 12.5601 24.0593C12.6667 23.2663 12.6667 22.2673 12.6667 21.0694V20.9307C12.6667 19.7327 12.6667 18.7337 12.5601 17.9407C12.4476 17.1036 12.2 16.3479 11.5927 15.7406C10.9854 15.1333 10.2297 14.8858 9.39264 14.7732C8.59961 14.6666 7.60066 14.6666 6.4027 14.6667H6.26401ZM2.48816 17.1548C2.66191 16.9811 2.92525 16.8381 3.54053 16.7554C4.18458 16.6688 5.04799 16.6667 6.33334 16.6667C7.61868 16.6667 8.4821 16.6688 9.12615 16.7554C9.74143 16.8381 10.0048 16.9811 10.1785 17.1548C10.3523 17.3286 10.4952 17.5919 10.578 18.2072C10.6645 18.8512 10.6667 19.7147 10.6667 21C10.6667 22.2854 10.6645 23.1488 10.578 23.7928C10.4952 24.4081 10.3523 24.6714 10.1785 24.8452C10.0048 25.0189 9.74143 25.1619 9.12615 25.2446C8.4821 25.3312 7.61868 25.3333 6.33334 25.3333C5.04799 25.3333 4.18458 25.3312 3.54053 25.2446C2.92525 25.1619 2.66191 25.0189 2.48816 24.8452C2.3144 24.6714 2.17144 24.4081 2.08872 23.7928C2.00213 23.1488 2 22.2854 2 21C2 19.7147 2.00213 18.8512 2.08872 18.2072C2.17144 17.5919 2.3144 17.3286 2.48816 17.1548Z",
+            fill: "#646464"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 32,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M4.20229e-06 6.33334C4.20229e-06 2.83553 2.83553 4.20229e-06 6.33334 4.20229e-06C9.83114 4.20229e-06 12.6667 2.83553 12.6667 6.33334C12.6667 9.83114 9.83114 12.6667 6.33334 12.6667C2.83553 12.6667 4.20229e-06 9.83114 4.20229e-06 6.33334ZM6.33334 2C3.9401 2 2 3.9401 2 6.33334C2 8.72657 3.9401 10.6667 6.33334 10.6667C8.72657 10.6667 10.6667 8.72657 10.6667 6.33334C10.6667 3.9401 8.72657 2 6.33334 2Z",
+            fill: "#646464"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 38,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M14.6667 21C14.6667 17.5022 17.5022 14.6667 21 14.6667C24.4978 14.6667 27.3333 17.5022 27.3333 21C27.3333 24.4978 24.4978 27.3333 21 27.3333C17.5022 27.3333 14.6667 24.4978 14.6667 21ZM21 16.6667C18.6068 16.6667 16.6667 18.6068 16.6667 21C16.6667 23.3932 18.6068 25.3333 21 25.3333C23.3932 25.3333 25.3333 23.3932 25.3333 21C25.3333 18.6068 23.3932 16.6667 21 16.6667Z",
+            fill: "#646464"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 44,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 19,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const SAVEICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "15",
+    height: "19",
+    viewBox: "0 0 15 19",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M12.6667 0H2.11111C0.95 0 0.0105558 0.95 0.0105558 2.11111L0 19L7.38889 15.8333L14.7778 19V2.11111C14.7778 0.95 13.8278 0 12.6667 0ZM12.6667 15.8333L7.38889 13.5322L2.11111 15.8333V3.16667C2.11111 2.58611 2.58611 2.11111 3.16667 2.11111H11.6111C12.1917 2.11111 12.6667 2.58611 12.6667 3.16667V15.8333Z",
+        fill: "#1C1C1C"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 60,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 53,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const DATEICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "28",
+    height: "28",
+    viewBox: "0 0 15 15",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M9.93329 8.18422C10.2561 8.18422 10.5178 7.92251 10.5178 7.59967C10.5178 7.27683 10.2561 7.01512 9.93329 7.01512C9.61045 7.01512 9.34873 7.27683 9.34873 7.59967C9.34873 7.92251 9.61045 8.18422 9.93329 8.18422Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 74,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M9.93329 10.5224C10.2561 10.5224 10.5178 10.2607 10.5178 9.93789C10.5178 9.61505 10.2561 9.35333 9.93329 9.35333C9.61045 9.35333 9.34873 9.61505 9.34873 9.93789C9.34873 10.2607 9.61045 10.5224 9.93329 10.5224Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 78,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M7.59507 7.59967C7.59507 7.92251 7.33336 8.18422 7.01052 8.18422C6.68768 8.18422 6.42596 7.92251 6.42596 7.59967C6.42596 7.27683 6.68768 7.01512 7.01052 7.01512C7.33336 7.01512 7.59507 7.27683 7.59507 7.59967Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 82,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M7.59507 9.93789C7.59507 10.2607 7.33336 10.5224 7.01052 10.5224C6.68768 10.5224 6.42596 10.2607 6.42596 9.93789C6.42596 9.61505 6.68768 9.35333 7.01052 9.35333C7.33336 9.35333 7.59507 9.61505 7.59507 9.93789Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 86,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M4.08775 8.18422C4.41059 8.18422 4.6723 7.92251 4.6723 7.59967C4.6723 7.27683 4.41059 7.01512 4.08775 7.01512C3.76491 7.01512 3.50319 7.27683 3.50319 7.59967C3.50319 7.92251 3.76491 8.18422 4.08775 8.18422Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 90,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M4.08775 10.5224C4.41059 10.5224 4.6723 10.2607 4.6723 9.93789C4.6723 9.61505 4.41059 9.35333 4.08775 9.35333C3.76491 9.35333 3.50319 9.61505 3.50319 9.93789C3.50319 10.2607 3.76491 10.5224 4.08775 10.5224Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 94,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M4.08775 1.02344C4.32988 1.02344 4.52616 1.21972 4.52616 1.46185V1.9077C4.91314 1.90026 5.33947 1.90026 5.80836 1.90027H8.2126C8.68151 1.90026 9.1079 1.90026 9.49487 1.9077V1.46185C9.49487 1.21972 9.69116 1.02344 9.93329 1.02344C10.1754 1.02344 10.3717 1.21972 10.3717 1.46185V1.94533C10.5237 1.95692 10.6675 1.97148 10.8037 1.98978C11.489 2.08193 12.0438 2.27607 12.4812 2.71353C12.9187 3.15098 13.1128 3.7057 13.205 4.39104C13.2945 5.05697 13.2945 5.90786 13.2945 6.98211V8.2172C13.2945 9.29146 13.2945 10.1424 13.205 10.8083C13.1128 11.4936 12.9187 12.0484 12.4812 12.4858C12.0438 12.9233 11.489 13.1174 10.8037 13.2096C10.1378 13.2991 9.28689 13.2991 8.21263 13.2991H5.80844C4.73418 13.2991 3.88326 13.2991 3.21733 13.2096C2.53199 13.1174 1.97728 12.9233 1.53982 12.4858C1.10236 12.0484 0.90822 11.4936 0.816078 10.8083C0.726546 10.1424 0.726553 9.29147 0.726563 8.2172V6.98214C0.726553 5.90787 0.726546 5.05697 0.816078 4.39104C0.90822 3.7057 1.10236 3.15098 1.53982 2.71353C1.97728 2.27607 2.53199 2.08193 3.21733 1.98978C3.35349 1.97148 3.49738 1.95692 3.64933 1.94533V1.46185C3.64933 1.21972 3.84562 1.02344 4.08775 1.02344ZM3.33417 2.8588C2.74606 2.93787 2.40722 3.08615 2.15983 3.33354C1.91244 3.58093 1.76416 3.91976 1.68509 4.50787C1.6717 4.60748 1.6605 4.71233 1.65114 4.82304H12.3699C12.3605 4.71233 12.3493 4.60748 12.3359 4.50788C12.2569 3.91976 12.1086 3.58093 11.8612 3.33354C11.6138 3.08615 11.275 2.93787 10.6869 2.8588C10.0861 2.77803 9.29427 2.7771 8.17963 2.7771H5.84141C4.72677 2.7771 3.9349 2.77803 3.33417 2.8588ZM1.60339 7.01512C1.60339 6.5159 1.60358 6.08142 1.61104 5.69987H12.41C12.4175 6.08142 12.4176 6.5159 12.4176 7.01512V8.18422C12.4176 9.29886 12.4167 10.0907 12.3359 10.6915C12.2569 11.2796 12.1086 11.6184 11.8612 11.8658C11.6138 12.1132 11.275 12.2615 10.6869 12.3405C10.0861 12.4213 9.29427 12.4222 8.17963 12.4222H5.84141C4.72677 12.4222 3.93489 12.4213 3.33417 12.3405C2.74606 12.2615 2.40722 12.1132 2.15983 11.8658C1.91244 11.6184 1.76416 11.2796 1.68509 10.6915C1.60432 10.0907 1.60339 9.29886 1.60339 8.18422V7.01512Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 98,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 67,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const SHAREICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "78",
+    height: "78",
+    viewBox: "0 0 78 78",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            filter: "url(#filter0_d_10180_28314)",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                cx: "36.6311",
+                cy: "36.6272",
+                r: "33.1076",
+                fill: "#E9D4FF"
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 116,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 115,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M43.7249 39.0117C43.0265 39.0163 42.3378 39.1756 41.7083 39.478C41.0788 39.7805 40.5242 40.2187 40.0842 40.7611L34.0559 37.9833C34.3393 37.1154 34.3393 36.1798 34.0559 35.3119L40.0842 32.5341C40.7953 33.3923 41.7867 33.9716 42.8834 34.1699C43.9801 34.3682 45.1116 34.1727 46.0782 33.6179C47.0448 33.0632 47.7844 32.1848 48.1664 31.1379C48.5484 30.0909 48.5483 28.9426 48.1661 27.8957C47.7839 26.8488 47.0442 25.9706 46.0775 25.416C45.1108 24.8614 43.9793 24.6662 42.8826 24.8647C41.7859 25.0632 40.7946 25.6427 40.0837 26.5009C39.3727 27.3592 38.9877 28.441 38.9967 29.5554C39.0003 29.837 39.028 30.1178 39.0795 30.3947L32.8384 33.267C32.173 32.6164 31.3304 32.1766 30.4162 32.0027C29.5019 31.8289 28.5567 31.9287 27.6989 32.2896C26.8412 32.6506 26.109 33.2566 25.5942 34.0318C25.0793 34.8071 24.8047 35.717 24.8047 36.6476C24.8047 37.5782 25.0793 38.4881 25.5942 39.2634C26.109 40.0386 26.8412 40.6446 27.6989 41.0056C28.5567 41.3666 29.5019 41.4663 30.4162 41.2925C31.3304 41.1186 32.173 40.6788 32.8384 40.0282L39.0795 42.9006C39.028 43.1774 39.0003 43.4582 38.9967 43.7398C38.9967 44.6749 39.274 45.5891 39.7936 46.3666C40.3131 47.1441 41.0515 47.7502 41.9155 48.108C42.7795 48.4659 43.7301 48.5595 44.6473 48.3771C45.5645 48.1946 46.4069 47.7443 47.0682 47.0831C47.7294 46.4218 48.1797 45.5794 48.3622 44.6622C48.5446 43.745 48.451 42.7944 48.0931 41.9304C47.7352 41.0665 47.1292 40.328 46.3517 39.8085C45.5741 39.289 44.66 39.0117 43.7249 39.0117ZM43.7249 27.1914C44.1924 27.1914 44.6495 27.33 45.0383 27.5898C45.427 27.8495 45.7301 28.2188 45.909 28.6507C46.0879 29.0827 46.1347 29.558 46.0435 30.0166C45.9523 30.4752 45.7271 30.8964 45.3965 31.2271C45.0659 31.5577 44.6447 31.7828 44.1861 31.8741C43.7275 31.9653 43.2522 31.9185 42.8202 31.7395C42.3882 31.5606 42.019 31.2576 41.7592 30.8688C41.4995 30.4801 41.3608 30.023 41.3608 29.5554C41.3608 28.9284 41.6099 28.3271 42.0532 27.8838C42.4966 27.4404 43.0979 27.1914 43.7249 27.1914ZM29.5405 39.0117C29.0729 39.0117 28.6159 38.873 28.2271 38.6133C27.8383 38.3535 27.5353 37.9843 27.3564 37.5523C27.1775 37.1203 27.1306 36.645 27.2219 36.1864C27.3131 35.7278 27.5382 35.3066 27.8688 34.976C28.1995 34.6453 28.6207 34.4202 29.0793 34.329C29.5379 34.2377 30.0132 34.2846 30.4452 34.4635C30.8772 34.6424 31.2464 34.9454 31.5061 35.3342C31.7659 35.723 31.9046 36.18 31.9046 36.6476C31.9046 37.2746 31.6555 37.8759 31.2121 38.3193C30.7688 38.7626 30.1675 39.0117 29.5405 39.0117ZM43.7249 46.1039C43.2573 46.1039 42.8002 45.9652 42.4115 45.7054C42.0227 45.4457 41.7197 45.0765 41.5408 44.6445C41.3618 44.2125 41.315 43.7372 41.4062 43.2786C41.4975 42.82 41.7226 42.3988 42.0532 42.0681C42.3839 41.7375 42.8051 41.5124 43.2637 41.4212C43.7223 41.3299 44.1976 41.3768 44.6296 41.5557C45.0615 41.7346 45.4308 42.0376 45.6905 42.4264C45.9503 42.8152 46.0889 43.2722 46.0889 43.7398C46.0889 44.3668 45.8399 44.9681 45.3965 45.4114C44.9532 45.8548 44.3519 46.1039 43.7249 46.1039Z",
+            fill: "black"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 118,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("filter", {
+                id: "filter0_d_10180_28314",
+                x: "0.00365639",
+                y: "-0.000249863",
+                width: "77.658",
+                height: "77.6541",
+                filterUnits: "userSpaceOnUse",
+                colorInterpolationFilters: "sRGB",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feFlood", {
+                        floodOpacity: "0",
+                        result: "BackgroundImageFix"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 132,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feColorMatrix", {
+                        in: "SourceAlpha",
+                        type: "matrix",
+                        values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
+                        result: "hardAlpha"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 133,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feMorphology", {
+                        radius: "1.09993",
+                        operator: "erode",
+                        in: "SourceAlpha",
+                        result: "effect1_dropShadow_10180_28314"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 139,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feOffset", {
+                        dx: "2.19986",
+                        dy: "2.19986"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 145,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feGaussianBlur", {
+                        stdDeviation: "3.40979"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 146,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feComposite", {
+                        in2: "hardAlpha",
+                        operator: "out"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 147,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feColorMatrix", {
+                        type: "matrix",
+                        values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 148,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feBlend", {
+                        mode: "normal",
+                        in2: "BackgroundImageFix",
+                        result: "effect1_dropShadow_10180_28314"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 152,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feBlend", {
+                        mode: "normal",
+                        in: "SourceGraphic",
+                        in2: "effect1_dropShadow_10180_28314",
+                        result: "shape"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 157,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 123,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 122,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 108,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const PHONEICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "29",
+    viewBox: "0 0 20 29",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M19.4201 22.9751L17.0108 18.9842C16.9356 18.8593 16.7969 18.6281 16.5194 18.5194C16.1494 18.3783 15.8095 18.5657 15.6639 18.6454L13.2488 19.9646C12.8533 20.1784 12.414 20.3773 12.1435 20.2316C11.9898 20.1495 11.8718 19.9495 11.7331 19.6964L9.06594 14.8256L6.55488 9.89417C6.42888 9.64676 6.32599 9.42825 6.34445 9.2537C6.37626 8.94674 6.78841 8.69705 7.18669 8.49355L9.63825 7.23974C9.78683 7.16402 10.1336 6.98597 10.225 6.60443C10.2926 6.3212 10.1799 6.07317 10.1192 5.93909L8.17871 1.69787C7.95962 1.2198 7.6596 0.565464 7.03587 0.226689C6.28959 -0.178523 5.40402 0.055008 4.87568 0.196652C3.72304 0.503613 2.70219 0.81751 1.88305 1.55107C0.489255 2.80138 0.203674 4.81821 0.0452924 6.6108C-0.10386 8.29699 0.115799 10.2936 0.697908 12.5452C1.18928 14.4487 1.94071 16.31 2.93325 18.0812C3.83619 19.8952 4.94836 21.5635 6.24264 23.0421C7.79763 24.8168 9.2809 26.0862 10.7775 26.9244C12.0602 27.6435 13.5146 28.3765 14.9957 28.3765C15.3274 28.3765 15.6604 28.3407 15.9934 28.2586C17.0617 27.995 17.8953 27.3291 18.7981 26.5499C19.212 26.1915 19.9057 25.5926 19.9912 24.7486C20.0618 24.0399 19.6906 23.4248 19.4201 22.9751ZM18.1785 25.833C17.3704 26.5313 16.6316 27.1256 15.7668 27.3383C14.2823 27.7047 12.6511 26.8885 11.24 26.0989C9.85843 25.3243 8.41677 24.0861 6.95487 22.4178C5.77965 21.0756 4.76 19.568 3.91891 17.9309C3.90806 17.8905 3.89213 17.8517 3.8715 17.8153C3.83754 17.7566 3.804 17.6976 3.7709 17.6384C3.7394 17.5754 3.70837 17.5122 3.67781 17.4488C3.65928 17.4108 3.63577 17.3754 3.60788 17.3436C2.73039 15.7262 2.0604 14.0348 1.61472 12.3081C1.05978 10.1612 0.84878 8.27269 0.988704 6.69403C1.13092 5.08184 1.37832 3.27595 2.51537 2.25625C3.17785 1.66256 4.08652 1.38684 5.11895 1.11226C5.65022 0.970618 6.20166 0.852133 6.58377 1.05907C6.90403 1.23304 7.10575 1.6296 7.31732 2.09207L9.26651 6.36511C9.25035 6.37377 9.23069 6.38478 9.20696 6.39693L6.75539 7.65017C6.34554 7.86002 5.49235 8.29642 5.40218 9.15488C5.35306 9.62252 5.55999 10.0283 5.71087 10.3243L8.24451 15.2991L10.9024 20.1519C11.0625 20.4433 11.2811 20.8433 11.695 21.0664C12.4488 21.4733 13.2962 21.0155 13.7009 20.797L16.1172 19.4778C16.2015 19.4316 16.2386 19.4177 16.1981 19.472L18.6086 23.4653C18.8711 23.9 19.085 24.2896 19.0479 24.6538C19.0051 25.0861 18.5946 25.4735 18.1785 25.833Z",
+        fill: "#FEF9FF"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 176,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 169,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const TICKET_ICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 20 20",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M16.1862 3.96417C16.0544 3.04763 15.3485 2.28864 14.4296 2.07503C13.6464 1.89248 12.8511 1.75765 12.064 1.67205C11.6861 1.63267 11.3293 1.88187 11.2437 2.25682C11.1172 2.81357 10.6165 3.18776 10.0022 3.18928C9.3841 3.18776 8.88341 2.81281 8.75691 2.25682C8.67131 1.88187 8.31454 1.63267 7.93656 1.67205C7.1503 1.75689 6.35496 1.89248 5.57173 2.07503C4.65291 2.28864 3.94694 3.04763 3.81514 3.96417C3.2387 7.9697 3.2387 12.0313 3.81514 16.0368C3.94694 16.9534 4.65291 17.7123 5.57173 17.926C6.35496 18.1085 7.1503 18.2433 7.93732 18.3289C8.3153 18.3698 8.67207 18.1191 8.75767 17.7442C8.88416 17.1874 9.38486 16.8125 9.99917 16.811C10.6173 16.8125 11.118 17.1874 11.2445 17.7442C11.3232 18.0918 11.633 18.3335 11.9822 18.3335C12.0095 18.3335 12.0368 18.332 12.064 18.3289C12.8503 18.2441 13.6457 18.1085 14.4289 17.926C15.3477 17.7123 16.0537 16.9534 16.1855 16.0368C16.7619 12.0313 16.7627 7.9697 16.1862 3.96417ZM14.0865 16.4496C13.5532 16.5739 13.0147 16.6746 12.4776 16.7496C12.011 15.8709 11.0725 15.2975 9.99917 15.2952C8.92886 15.2983 7.99034 15.8709 7.52374 16.7496C6.98745 16.6738 6.44812 16.5739 5.91486 16.4496C5.59975 16.3762 5.35888 16.1239 5.31494 15.8202C5.17935 14.8764 5.07709 13.9295 5.00741 12.9812H6.27997C6.69809 12.9812 7.03744 12.6418 7.03744 12.2237C7.03744 11.8056 6.69809 11.4662 6.27997 11.4662H4.92484C4.83773 9.03395 4.96726 6.5964 5.31494 4.1793C5.35888 3.87631 5.59975 3.62331 5.91486 3.54983C6.44812 3.42561 6.98669 3.32486 7.52374 3.24987C7.99034 4.1293 8.92886 4.70195 10.0022 4.70423C11.0725 4.70195 12.011 4.12855 12.4776 3.24987C13.0139 3.32562 13.5532 3.42561 14.0865 3.54983C14.4016 3.62331 14.6425 3.87555 14.6864 4.1793C15.0341 6.59564 15.1644 9.0332 15.0765 11.4662H13.7214C13.3033 11.4662 12.9639 11.8056 12.9639 12.2237C12.9639 12.6418 13.3033 12.9812 13.7214 12.9812H14.994C14.9243 13.9295 14.822 14.8764 14.6864 15.8202C14.6425 16.1232 14.4016 16.3762 14.0865 16.4496Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 190,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M10.5768 11.6133H9.41927C8.95927 11.6133 8.58594 11.9866 8.58594 12.4466C8.58594 12.9066 8.95927 13.2799 9.41927 13.2799H10.5768C11.0368 13.2799 11.4101 12.9066 11.4101 12.4466C11.4101 11.9866 11.0368 11.6133 10.5768 11.6133Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 194,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 183,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const MODE_ICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "8",
+    height: "8",
+    viewBox: "0 0 8 8",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+        cx: "4",
+        cy: "4",
+        r: "4",
+        fill: "#1DA339"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 208,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 201,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const VIEW_ICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "15",
+    viewBox: "0 0 8 6",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M0 2.85833C0.520217 1.20173 2.0678 0 3.89632 0C5.72483 0 7.27242 1.20173 7.79263 2.85833C7.27242 4.51494 5.72483 5.71667 3.89632 5.71667C2.0678 5.71667 0.520217 4.51494 0 2.85833ZM5.52965 2.85833C5.52965 3.29152 5.35757 3.70697 5.05126 4.01328C4.74495 4.31958 4.3295 4.49167 3.89632 4.49167C3.46313 4.49167 3.04769 4.31958 2.74138 4.01328C2.43507 3.70697 2.26298 3.29152 2.26298 2.85833C2.26298 2.42515 2.43507 2.0097 2.74138 1.70339C3.04769 1.39708 3.46313 1.225 3.89632 1.225C4.3295 1.225 4.74495 1.39708 5.05126 1.70339C5.35757 2.0097 5.52965 2.42515 5.52965 2.85833Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 219,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M3.89583 3.50065C4.05054 3.50065 4.19892 3.43919 4.30831 3.3298C4.41771 3.2204 4.47917 3.07203 4.47917 2.91732C4.47917 2.76261 4.41771 2.61424 4.30831 2.50484C4.19892 2.39544 4.05054 2.33398 3.89583 2.33398C3.74112 2.33398 3.59275 2.39544 3.48335 2.50484C3.37396 2.61424 3.3125 2.76261 3.3125 2.91732C3.3125 3.07203 3.37396 3.2204 3.48335 3.3298C3.59275 3.43919 3.74112 3.50065 3.89583 3.50065Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 225,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 212,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const EMAILICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M21.896 7.37135C21.341 7.96935 19.807 9.54835 17.577 11.2684C15.239 13.0724 12.591 14.5264 12.479 14.5874C12.33 14.6694 12.165 14.7104 12 14.7104C11.835 14.7104 11.67 14.6694 11.52 14.5874C11.409 14.5264 8.761 13.0724 6.422 11.2684C4.192 9.54835 2.658 7.96935 2.102 7.37035L1.513 6.74035C1.244 8.12735 1 9.95135 1 12.0014C1 16.4594 2.156 19.8534 2.206 19.9954C2.318 20.3194 2.589 20.5634 2.923 20.6414C3.101 20.6834 7.343 21.6644 12.001 21.6644C16.82 21.6644 20.915 20.6814 21.087 20.6394C21.417 20.5594 21.683 20.3174 21.795 19.9964C21.844 19.8554 23.001 16.4864 23.001 12.0004C23.001 9.93335 22.759 8.11435 22.492 6.73535L21.898 7.37135H21.896Z",
+            fill: "#FAFAFA"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 240,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M3.56813 6.00691C3.97713 6.44691 5.47512 8.00891 7.64612 9.68291C9.29212 10.9529 11.1461 12.0649 12.0021 12.5589C12.8581 12.0639 14.7161 10.9509 16.3571 9.68391C18.5291 8.00991 20.0261 6.44791 20.4331 6.00891L21.9261 4.41191C21.8521 4.16891 21.8031 4.02691 21.7941 4.00091C21.6821 3.68191 21.4161 3.44191 21.0881 3.36191C20.9161 3.31991 16.8311 2.33691 12.0011 2.33691C7.25712 2.33691 3.09413 3.31891 2.91913 3.36091C2.58613 3.44091 2.31812 3.68391 2.20712 4.00691C2.19812 4.03391 2.15012 4.17391 2.07812 4.41391L3.56813 6.00891V6.00691Z",
+            fill: "#FAFAFA"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 244,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 233,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const EMAILTEXT = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "29",
+    height: "29",
+    viewBox: "0 0 29 29",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M13.8864 7.24561C9.88796 7.24561 6.64062 10.4929 6.64062 14.4914C6.64062 18.4899 9.88796 21.7372 13.8864 21.7372C17.8849 21.7372 21.1322 18.4899 21.1322 14.4914C21.1322 10.4929 17.8849 7.24561 13.8864 7.24561ZM13.8864 9.66088C16.5529 9.66088 18.717 11.825 18.717 14.4914C18.717 17.1579 16.5529 19.322 13.8864 19.322C11.22 19.322 9.0559 17.1579 9.0559 14.4914C9.0559 11.825 11.22 9.66088 13.8864 9.66088Z",
+            fill: "white"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 259,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M23.2503 20.5297L23.3626 20.5285C24.5231 20.4995 25.6293 20.0261 26.4529 19.2037C27.3019 18.3535 27.7789 17.2026 27.7789 16.001V13.2839C27.7789 6.66603 22.4557 1.29205 15.8583 1.20873L15.7026 1.20752H14.4949C7.16337 1.20752 1.21094 7.15995 1.21094 14.4915C1.21094 21.8231 7.16337 27.7755 14.4949 27.7755C15.1615 27.7755 15.7026 27.2345 15.7026 26.5679C15.7026 25.9012 15.1615 25.3602 14.4949 25.3602C8.4966 25.3602 3.62621 20.4898 3.62621 14.4915C3.62621 8.49318 8.4966 3.62279 14.4949 3.62279H15.7026C21.0379 3.62279 25.3636 7.94854 25.3636 13.2839V16.001C25.3636 16.5614 25.1414 17.0988 24.7441 17.4949C24.348 17.8922 23.8106 18.1144 23.2503 18.1144M23.2503 18.1144C22.6899 18.1144 22.1525 17.8922 21.7564 17.4949C21.3591 17.0988 21.1369 16.5614 21.1369 16.001V9.66097C21.1369 9.01488 20.6297 8.48714 19.9909 8.45454L19.9293 8.45333C19.2627 8.45333 18.7216 8.99435 18.7216 9.66097C18.7216 9.66097 18.7216 13.2054 18.7216 16.001C18.7216 17.2026 19.1987 18.3535 20.0476 19.2037C20.8978 20.0527 22.0487 20.5297 23.2503 20.5297",
+            fill: "white"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 265,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 252,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const WHATSAPP = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "25",
+    height: "24",
+    viewBox: "0 0 25 24",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M12.0159 0C5.37953 0 -0.000875384 5.33833 -0.000875384 11.9241C-0.000875384 13.9497 0.508586 15.8575 1.40687 17.5283C1.59811 17.8841 1.64857 18.3022 1.5189 18.6847L0.421175 21.9226C0.0619402 22.9822 1.06041 24.0001 2.12675 23.6614L5.65073 22.5419C6.00648 22.4289 6.39129 22.47 6.72687 22.6335C8.32288 23.4108 10.118 23.8481 12.0159 23.8481C18.6531 23.8481 24.0332 18.5091 24.0332 11.9241C24.0332 5.33833 18.6531 0 12.0159 0ZM17.9913 16.4525C17.7086 17.1533 16.4301 17.7929 15.8659 17.8224C15.3024 17.8523 15.2863 18.2592 12.2138 16.9245C9.14172 15.5894 7.29344 12.3433 7.14771 12.1342C7.00188 11.9259 5.95766 10.4378 6.014 8.94027C6.07071 7.44244 6.8908 6.73579 7.1835 6.44188C7.47588 6.14754 7.81109 6.09481 8.01577 6.09148C8.25771 6.08754 8.41442 6.08427 8.59347 6.09088C8.77236 6.09765 9.04108 6.05345 9.27373 6.67219C9.50628 7.29087 10.0629 8.81148 10.1341 8.96644C10.2052 9.12156 10.2493 9.30116 10.1397 9.50032C10.0297 9.69992 9.97344 9.82461 9.81395 9.99661C9.65359 10.1686 9.47661 10.3814 9.33356 10.5129C9.17401 10.6585 9.00736 10.8174 9.17511 11.1286C9.34274 11.4397 9.9211 12.4594 10.8022 13.2998C11.9346 14.3801 12.9112 14.7384 13.2117 14.9016C13.513 15.0658 13.6929 15.0475 13.8797 14.8509C14.0657 14.6542 14.6796 13.9905 14.8958 13.6942C15.1119 13.3971 15.3144 13.4553 15.592 13.567C15.8695 13.6791 17.3491 14.4716 17.6504 14.6352C17.9515 14.7985 18.1528 14.8827 18.2247 15.0122C18.2967 15.1423 18.2739 15.7516 17.9913 16.4525Z",
+        fill: "#0cd445ff"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 282,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 275,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const DELETICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "24",
+    viewBox: "0 0 20 24",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M19 4H15.9C15.6679 2.87141 15.0538 1.85735 14.1613 1.12872C13.2687 0.40009 12.1522 0.00145452 11 0L9 0C7.8478 0.00145452 6.73132 0.40009 5.83875 1.12872C4.94618 1.85735 4.3321 2.87141 4.1 4H1C0.734784 4 0.48043 4.10536 0.292893 4.29289C0.105357 4.48043 0 4.73478 0 5C0 5.26522 0.105357 5.51957 0.292893 5.70711C0.48043 5.89464 0.734784 6 1 6H2V19C2.00159 20.3256 2.52888 21.5964 3.46622 22.5338C4.40356 23.4711 5.67441 23.9984 7 24H13C14.3256 23.9984 15.5964 23.4711 16.5338 22.5338C17.4711 21.5964 17.9984 20.3256 18 19V6H19C19.2652 6 19.5196 5.89464 19.7071 5.70711C19.8946 5.51957 20 5.26522 20 5C20 4.73478 19.8946 4.48043 19.7071 4.29289C19.5196 4.10536 19.2652 4 19 4ZM9 2H11C11.6203 2.00076 12.2251 2.19338 12.7316 2.55144C13.2381 2.90951 13.6214 3.41549 13.829 4H6.171C6.37858 3.41549 6.7619 2.90951 7.26839 2.55144C7.77487 2.19338 8.37973 2.00076 9 2ZM16 19C16 19.7956 15.6839 20.5587 15.1213 21.1213C14.5587 21.6839 13.7956 22 13 22H7C6.20435 22 5.44129 21.6839 4.87868 21.1213C4.31607 20.5587 4 19.7956 4 19V6H16V19Z",
+        fill: "#E63434"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 297,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 290,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const ADDICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            clipPath: "url(#clip0_11587_61881)",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C23.9966 8.81846 22.7312 5.76821 20.4815 3.51852C18.2318 1.26883 15.1815 0.00344108 12 0ZM12 22C10.0222 22 8.08879 21.4135 6.4443 20.3147C4.79981 19.2159 3.51809 17.6541 2.76121 15.8268C2.00433 13.9996 1.8063 11.9889 2.19215 10.0491C2.578 8.10929 3.53041 6.32746 4.92894 4.92893C6.32746 3.53041 8.10929 2.578 10.0491 2.19215C11.9889 1.8063 13.9996 2.00433 15.8268 2.7612C17.6541 3.51808 19.2159 4.79981 20.3147 6.4443C21.4135 8.08879 22 10.0222 22 12C21.9971 14.6513 20.9426 17.1931 19.0679 19.0679C17.1931 20.9426 14.6513 21.9971 12 22ZM17 12C17 12.2652 16.8946 12.5196 16.7071 12.7071C16.5196 12.8946 16.2652 13 16 13H13V16C13 16.2652 12.8946 16.5196 12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071C11.1054 16.5196 11 16.2652 11 16V13H8.00001C7.73479 13 7.48043 12.8946 7.2929 12.7071C7.10536 12.5196 7.00001 12.2652 7.00001 12C7.00001 11.7348 7.10536 11.4804 7.2929 11.2929C7.48043 11.1054 7.73479 11 8.00001 11H11V8C11 7.73478 11.1054 7.48043 11.2929 7.29289C11.4804 7.10536 11.7348 7 12 7C12.2652 7 12.5196 7.10536 12.7071 7.29289C12.8946 7.48043 13 7.73478 13 8V11H16C16.2652 11 16.5196 11.1054 16.7071 11.2929C16.8946 11.4804 17 11.7348 17 12Z",
+                fill: "#437041"
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 313,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 312,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
+                id: "clip0_11587_61881",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                    width: "24",
+                    height: "24",
+                    fill: "white"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 320,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 319,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 318,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 305,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const WHATSAPPICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "30",
+    height: "31",
+    viewBox: "0 0 30 31",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+        d: "M25.0116 4.37637C22.2597 1.55563 18.5998 0.00143112 14.7002 0C6.66477 0 0.125117 6.69409 0.122321 14.9223C0.120923 17.5527 0.792643 20.1201 2.06828 22.3828L0 30.1166L7.72791 28.0414C9.85698 29.2307 12.2545 29.8568 14.6939 29.8576H14.7002C22.7343 29.8576 29.2747 23.1627 29.2774 14.9345C29.2788 10.9467 27.7641 7.19784 25.0116 4.37709V4.37637ZM14.7002 27.3373H14.6953C12.5215 27.3367 10.3889 26.7384 8.52828 25.6085L8.0858 25.3395L3.49979 26.571L4.7237 21.9935L4.43572 21.5241C3.22299 19.5492 2.58203 17.2665 2.58343 14.9231C2.58622 8.08442 8.02148 2.52021 14.7052 2.52021C17.9414 2.52164 20.9834 3.81323 23.2711 6.15813C25.5589 8.50232 26.8177 11.6193 26.8164 14.9331C26.8135 21.7724 21.3783 27.3367 14.7002 27.3367V27.3373ZM21.3461 18.0479C20.9819 17.8612 19.1912 16.9595 18.857 16.835C18.5229 16.7105 18.2804 16.6483 18.0378 17.0218C17.7953 17.3954 17.0971 18.2354 16.8845 18.4837C16.672 18.7327 16.4595 18.7635 16.0954 18.5767C15.7313 18.3899 14.5576 17.9964 13.166 16.7262C12.0833 15.7373 11.3521 14.5166 11.1397 14.1431C10.9272 13.7696 11.1173 13.5678 11.299 13.3824C11.4625 13.215 11.6632 12.9467 11.8456 12.7291C12.0281 12.5116 12.0882 12.3556 12.2098 12.1073C12.3314 11.8583 12.2706 11.6408 12.1797 11.454C12.0888 11.2672 11.3605 9.43178 11.0565 8.68548C10.7608 7.95848 10.4603 8.05723 10.2373 8.04507C10.0248 8.03433 9.78225 8.03219 9.539 8.03219C9.29575 8.03219 8.90148 8.12521 8.56739 8.49874C8.23331 8.87222 7.29245 9.77455 7.29245 11.6093C7.29245 13.444 8.59748 15.2179 8.7799 15.4669C8.96231 15.7159 11.3486 19.4819 15.0022 21.0976C15.8711 21.4819 16.5497 21.7116 17.0788 21.8833C17.9512 22.1674 18.7452 22.1274 19.3729 22.0314C20.0726 21.9241 21.5279 21.1291 21.8312 20.2583C22.1346 19.3874 22.1346 18.6404 22.0437 18.4851C21.9529 18.3298 21.7096 18.2361 21.3455 18.0493L21.3461 18.0479Z",
+        fill: "#25D366"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 334,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 327,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const INSTAGRAMICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 18 18",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            clipPath: "url(#clip0_12439_44823)",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M6.00048 9C6.00048 7.34321 7.34321 5.99976 9 5.99976C10.6568 5.99976 12.0002 7.34321 12.0002 9C12.0002 10.6568 10.6568 12.0002 9 12.0002C7.34321 12.0002 6.00048 10.6568 6.00048 9ZM4.37861 9C4.37861 11.5524 6.4476 13.6214 9 13.6214C11.5524 13.6214 13.6214 11.5524 13.6214 9C13.6214 6.4476 11.5524 4.37861 9 4.37861C6.4476 4.37861 4.37861 6.4476 4.37861 9ZM12.7243 4.19537C12.7243 4.40897 12.7875 4.6178 12.9061 4.79546C13.0247 4.97311 13.1933 5.1116 13.3906 5.19342C13.588 5.27525 13.8051 5.29672 14.0146 5.25513C14.2241 5.21354 14.4166 5.11076 14.5677 4.95978C14.7188 4.8088 14.8218 4.6164 14.8635 4.40692C14.9053 4.19744 14.884 3.98028 14.8023 3.7829C14.7206 3.58552 14.5823 3.4168 14.4047 3.29805C14.2272 3.17931 14.0184 3.11589 13.8048 3.1158H13.8043C13.518 3.11593 13.2435 3.2297 13.041 3.43212C12.8385 3.63454 12.7246 3.90905 12.7243 4.19537ZM5.364 16.3258C4.48654 16.2858 4.00961 16.1397 3.69266 16.0162C3.27247 15.8526 2.97266 15.6578 2.65745 15.343C2.34223 15.0282 2.14711 14.7287 1.98425 14.3085C1.8607 13.9917 1.71454 13.5146 1.67465 12.6372C1.63102 11.6885 1.6223 11.4035 1.6223 9.00007C1.6223 6.59664 1.63174 6.31246 1.67465 5.36299C1.71461 4.48553 1.86185 4.00939 1.98425 3.69166C2.14783 3.27146 2.34266 2.97166 2.65745 2.65644C2.97223 2.34122 3.27175 2.1461 3.69266 1.98324C4.00946 1.85969 4.48654 1.71353 5.364 1.67364C6.31267 1.63001 6.59765 1.6213 9 1.6213C11.4024 1.6213 11.6876 1.63073 12.6371 1.67364C13.5145 1.7136 13.9907 1.86084 14.3084 1.98324C14.7286 2.1461 15.0284 2.34166 15.3436 2.65644C15.6588 2.97122 15.8532 3.27146 16.0168 3.69166C16.1404 4.00846 16.2865 4.48553 16.3264 5.36299C16.3701 6.31246 16.3788 6.59664 16.3788 9.00007C16.3788 11.4035 16.3701 11.6877 16.3264 12.6372C16.2865 13.5146 16.1396 13.9915 16.0168 14.3085C15.8532 14.7287 15.6584 15.0285 15.3436 15.343C15.0288 15.6575 14.7286 15.8526 14.3084 16.0162C13.9916 16.1397 13.5145 16.2859 12.6371 16.3258C11.6884 16.3694 11.4034 16.3781 9 16.3781C6.59657 16.3781 6.31238 16.3694 5.364 16.3258ZM5.28948 0.054504C4.33138 0.098136 3.67668 0.250056 3.10493 0.472536C2.5128 0.702288 2.01154 1.01052 1.51063 1.51063C1.00973 2.01074 0.702288 2.5128 0.472536 3.10493C0.250056 3.67704 0.098136 4.33138 0.054504 5.28948C0.010152 6.2491 0 6.55589 0 9C0 11.4441 0.010152 11.7509 0.054504 12.7105C0.098136 13.6687 0.250056 14.323 0.472536 14.8951C0.702288 15.4868 1.0098 15.9895 1.51063 16.4894C2.01146 16.9893 2.5128 17.2971 3.10493 17.5275C3.67776 17.7499 4.33138 17.9019 5.28948 17.9455C6.2496 17.9891 6.55589 18 9 18C11.4441 18 11.7509 17.9898 12.7105 17.9455C13.6687 17.9019 14.323 17.7499 14.8951 17.5275C15.4868 17.2971 15.9885 16.9895 16.4894 16.4894C16.9903 15.9893 17.2971 15.4868 17.5275 14.8951C17.7499 14.323 17.9026 13.6686 17.9455 12.7105C17.9891 11.7502 17.9993 11.4441 17.9993 9C17.9993 6.55589 17.9891 6.2491 17.9455 5.28948C17.9019 4.3313 17.7499 3.67668 17.5275 3.10493C17.2971 2.51316 16.9895 2.01154 16.4894 1.51063C15.9893 1.00973 15.4868 0.702288 14.8958 0.472536C14.323 0.250056 13.6686 0.097416 12.7112 0.054504C11.7516 0.010872 11.4448 0 9.00072 0C6.55661 0 6.2496 0.010152 5.28948 0.054504Z",
+                    fill: "url(#paint0_radial_12439_44823)"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 352,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M6.00048 9C6.00048 7.34321 7.34321 5.99976 9 5.99976C10.6568 5.99976 12.0002 7.34321 12.0002 9C12.0002 10.6568 10.6568 12.0002 9 12.0002C7.34321 12.0002 6.00048 10.6568 6.00048 9ZM4.37861 9C4.37861 11.5524 6.4476 13.6214 9 13.6214C11.5524 13.6214 13.6214 11.5524 13.6214 9C13.6214 6.4476 11.5524 4.37861 9 4.37861C6.4476 4.37861 4.37861 6.4476 4.37861 9ZM12.7243 4.19537C12.7243 4.40897 12.7875 4.6178 12.9061 4.79546C13.0247 4.97311 13.1933 5.1116 13.3906 5.19342C13.588 5.27525 13.8051 5.29672 14.0146 5.25513C14.2241 5.21354 14.4166 5.11076 14.5677 4.95978C14.7188 4.8088 14.8218 4.6164 14.8635 4.40692C14.9053 4.19744 14.884 3.98028 14.8023 3.7829C14.7206 3.58552 14.5823 3.4168 14.4047 3.29805C14.2272 3.17931 14.0184 3.11589 13.8048 3.1158H13.8043C13.518 3.11593 13.2435 3.2297 13.041 3.43212C12.8385 3.63454 12.7246 3.90905 12.7243 4.19537ZM5.364 16.3258C4.48654 16.2858 4.00961 16.1397 3.69266 16.0162C3.27247 15.8526 2.97266 15.6578 2.65745 15.343C2.34223 15.0282 2.14711 14.7287 1.98425 14.3085C1.8607 13.9917 1.71454 13.5146 1.67465 12.6372C1.63102 11.6885 1.6223 11.4035 1.6223 9.00007C1.6223 6.59664 1.63174 6.31246 1.67465 5.36299C1.71461 4.48553 1.86185 4.00939 1.98425 3.69166C2.14783 3.27146 2.34266 2.97166 2.65745 2.65644C2.97223 2.34122 3.27175 2.1461 3.69266 1.98324C4.00946 1.85969 4.48654 1.71353 5.364 1.67364C6.31267 1.63001 6.59765 1.6213 9 1.6213C11.4024 1.6213 11.6876 1.63073 12.6371 1.67364C13.5145 1.7136 13.9907 1.86084 14.3084 1.98324C14.7286 2.1461 15.0284 2.34166 15.3436 2.65644C15.6588 2.97122 15.8532 3.27146 16.0168 3.69166C16.1404 4.00846 16.2865 4.48553 16.3264 5.36299C16.3701 6.31246 16.3788 6.59664 16.3788 9.00007C16.3788 11.4035 16.3701 11.6877 16.3264 12.6372C16.2865 13.5146 16.1396 13.9915 16.0168 14.3085C15.8532 14.7287 15.6584 15.0285 15.3436 15.343C15.0288 15.6575 14.7286 15.8526 14.3084 16.0162C13.9916 16.1397 13.5145 16.2859 12.6371 16.3258C11.6884 16.3694 11.4034 16.3781 9 16.3781C6.59657 16.3781 6.31238 16.3694 5.364 16.3258ZM5.28948 0.054504C4.33138 0.098136 3.67668 0.250056 3.10493 0.472536C2.5128 0.702288 2.01154 1.01052 1.51063 1.51063C1.00973 2.01074 0.702288 2.5128 0.472536 3.10493C0.250056 3.67704 0.098136 4.33138 0.054504 5.28948C0.010152 6.2491 0 6.55589 0 9C0 11.4441 0.010152 11.7509 0.054504 12.7105C0.098136 13.6687 0.250056 14.323 0.472536 14.8951C0.702288 15.4868 1.0098 15.9895 1.51063 16.4894C2.01146 16.9893 2.5128 17.2971 3.10493 17.5275C3.67776 17.7499 4.33138 17.9019 5.28948 17.9455C6.2496 17.9891 6.55589 18 9 18C11.4441 18 11.7509 17.9898 12.7105 17.9455C13.6687 17.9019 14.323 17.7499 14.8951 17.5275C15.4868 17.2971 15.9885 16.9895 16.4894 16.4894C16.9903 15.9893 17.2971 15.4868 17.5275 14.8951C17.7499 14.323 17.9026 13.6686 17.9455 12.7105C17.9891 11.7502 17.9993 11.4441 17.9993 9C17.9993 6.55589 17.9891 6.2491 17.9455 5.28948C17.9019 4.3313 17.7499 3.67668 17.5275 3.10493C17.2971 2.51316 16.9895 2.01154 16.4894 1.51063C15.9893 1.00973 15.4868 0.702288 14.8958 0.472536C14.323 0.250056 13.6686 0.097416 12.7112 0.054504C11.7516 0.010872 11.4448 0 9.00072 0C6.55661 0 6.2496 0.010152 5.28948 0.054504Z",
+                    fill: "url(#paint1_radial_12439_44823)"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 356,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 351,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("radialGradient", {
+                    id: "paint0_radial_12439_44823",
+                    cx: "0",
+                    cy: "0",
+                    r: "1",
+                    gradientUnits: "userSpaceOnUse",
+                    gradientTransform: "translate(2.39141 18.085) scale(23.4975 23.4975)",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
+                            offset: "0.09",
+                            stopColor: "#FA8F21"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 370,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
+                            offset: "0.78",
+                            stopColor: "#D82D7E"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 371,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0))
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 362,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("radialGradient", {
+                    id: "paint1_radial_12439_44823",
+                    cx: "0",
+                    cy: "0",
+                    r: "1",
+                    gradientUnits: "userSpaceOnUse",
+                    gradientTransform: "translate(10.9162 18.8914) scale(18.5193)",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
+                            offset: "0.64",
+                            stopColor: "#8C3AAA",
+                            stopOpacity: "0"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 381,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
+                            offset: "1",
+                            stopColor: "#8C3AAA"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 382,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0))
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 373,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
+                    id: "clip0_12439_44823",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                        width: "18",
+                        height: "18",
+                        fill: "white"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 385,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 384,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 361,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 344,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const FACEBOOKICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "28",
+    height: "28",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            clipPath: "url(#clip0_12439_44817)",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M12.0012 23.6508C18.4351 23.6508 23.6508 18.4351 23.6508 12.0012C23.6508 5.56727 18.4351 0.351562 12.0012 0.351562C5.56727 0.351562 0.351562 5.56727 0.351562 12.0012C0.351562 18.4351 5.56727 23.6508 12.0012 23.6508Z",
+                    fill: "white"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 400,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M11.9992 2.62891C17.1742 2.62891 21.3694 6.82412 21.3694 11.9992C21.3694 17.1742 17.1742 21.3694 11.9992 21.3694C6.82412 21.3694 2.62891 17.1742 2.62891 11.9992C2.62891 6.82412 6.82412 2.62891 11.9992 2.62891Z",
+                    fill: "url(#paint0_linear_12439_44817)"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 404,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M13.2156 21.2922V14.0545H15.2561L15.5266 11.5071H13.2156L13.2191 10.2321C13.2191 9.56768 13.2822 9.21184 14.2365 9.21184H15.5122V6.66406H13.4713C11.0198 6.66406 10.1571 7.89974 10.1571 9.97807V11.5073H8.62891V14.0549H10.1571V21.1896C10.7524 21.3082 11.3679 21.3709 11.9981 21.3709C12.4052 21.3709 12.8119 21.3446 13.2156 21.2922Z",
+                    fill: "white"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 410,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 399,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("linearGradient", {
+                    id: "paint0_linear_12439_44817",
+                    x1: "11.9992",
+                    y1: "2.45817",
+                    x2: "11.9992",
+                    y2: "22.1685",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
+                            stopColor: "#00B2FF"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 424,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
+                            offset: "1",
+                            stopColor: "#006AFF"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 425,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0))
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 416,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
+                    id: "clip0_12439_44817",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                        width: "24",
+                        height: "24",
+                        fill: "white"
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 428,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 427,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 415,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 392,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const FOOTER_FACEBOOK = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "39",
+    height: "39",
+    viewBox: "0 0 39 39",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M19.0633 3.17383C10.2908 3.17383 3.17969 10.2849 3.17969 19.0574C3.17969 27.0198 9.04549 33.5956 16.6887 34.744V23.2665H12.7591V19.0908H16.6887V16.3127C16.6887 11.7128 18.9298 9.69403 22.753 9.69403C24.5844 9.69403 25.5517 9.82904 26.0107 9.89099V13.5347H23.4026C21.7793 13.5347 21.2123 15.0738 21.2123 16.8083V19.0908H25.9694L25.3246 23.2665H21.2139V34.7774C28.9667 33.7275 34.9468 27.0977 34.9468 19.0574C34.9468 10.2849 27.8358 3.17383 19.0633 3.17383Z",
+        fill: "#FEF9FF"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 441,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 434,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const FOOTER_INSTA = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "39",
+    height: "39",
+    viewBox: "0 0 39 39",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M18.9265 3.42773C4.5615 3.42773 3.4375 4.55252 3.4375 18.9167V19.1976C3.4375 33.5618 4.5615 34.6866 18.9265 34.6866H19.2074C33.5724 34.6866 34.6964 33.5618 34.6964 19.1976V19.0572C34.6964 4.56243 33.5617 3.42773 19.0669 3.42773H18.9265ZM28.44 8.11656C29.3035 8.11422 30.0052 8.8114 30.0075 9.67493C30.0099 10.5385 29.3127 11.2401 28.4492 11.2425C27.5856 11.2448 26.884 10.5476 26.8817 9.68409C26.8793 8.82056 27.5765 8.11891 28.44 8.11656ZM19.0486 11.2425C23.3639 11.2323 26.8715 14.7236 26.8817 19.0389C26.8918 23.3541 23.4005 26.8617 19.0852 26.8719C14.77 26.882 11.2624 23.3908 11.2522 19.0755C11.2421 14.7602 14.7333 11.2526 19.0486 11.2425ZM19.0562 14.3683C16.4665 14.3746 14.3719 16.4796 14.3781 19.0694C14.3844 21.6584 16.4886 23.7522 19.0776 23.746C21.6674 23.7397 23.762 21.6355 23.7558 19.0465C23.7495 16.4567 21.6453 14.3621 19.0562 14.3683Z",
+        fill: "#FEF9FF"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 455,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 448,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const FOOTER_X = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "39",
+    height: "39",
+    viewBox: "0 0 39 39",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M8.2645 3.04883C5.38719 3.04883 3.05469 5.38134 3.05469 8.25864V29.0979C3.05469 31.9752 5.38719 34.3077 8.2645 34.3077H29.1037C31.981 34.3077 34.3136 31.9752 34.3136 29.0979V8.25864C34.3136 5.38134 31.981 3.04883 29.1037 3.04883H8.2645ZM9.81698 9.74716H15.7245L19.9197 15.7085L25.0103 9.74716H26.871L20.7599 16.9019L28.2955 27.6094H22.3894L17.5212 20.693L11.6137 27.6094H9.75302L16.681 19.4996L9.81698 9.74716ZM12.6661 11.2357L23.1657 26.1208H25.4464L14.9468 11.2357H12.6661Z",
+        fill: "#FEF9FF"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 469,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 462,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const FOOTER_LINKEDIN = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "39",
+    height: "39",
+    viewBox: "0 0 39 39",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M30.9751 3.42773H7.15879C5.10464 3.42773 3.4375 5.09487 3.4375 7.14903V30.9653C3.4375 33.0195 5.10464 34.6866 7.15879 34.6866H30.9751C33.0292 34.6866 34.6964 33.0195 34.6964 30.9653V7.14903C34.6964 5.09487 33.0292 3.42773 30.9751 3.42773ZM13.1129 15.3359V29.4768H8.64731V15.3359H13.1129ZM8.64731 11.2201C8.64731 10.1782 9.54042 9.3818 10.8801 9.3818C12.2198 9.3818 13.0608 10.1782 13.1129 11.2201C13.1129 12.2621 12.2793 13.1031 10.8801 13.1031C9.54042 13.1031 8.64731 12.2621 8.64731 11.2201ZM29.4866 29.4768H25.021C25.021 29.4768 25.021 22.585 25.021 22.0342C25.021 20.5457 24.2767 19.0572 22.4161 19.0274H22.3566C20.5555 19.0274 19.8112 20.5606 19.8112 22.0342C19.8112 22.7115 19.8112 29.4768 19.8112 29.4768H15.3456V15.3359H19.8112V17.2412C19.8112 17.2412 21.2476 15.3359 24.1353 15.3359C27.09 15.3359 29.4866 17.3677 29.4866 21.4835V29.4768Z",
+        fill: "#FEF9FF"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 483,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 476,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const FOOTER_WHATSAPP = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "18",
+    height: "18",
+    viewBox: "0 0 18 18",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M8.81007 0C3.94342 0 -0.00220445 3.91477 -0.00220445 8.74432C-0.00220445 10.2298 0.371401 11.6288 1.03014 12.8541C1.17039 13.115 1.20739 13.4216 1.1123 13.7021L0.307299 16.0766C0.0438605 16.8536 0.77607 17.6001 1.55806 17.3517L4.14231 16.5307C4.40319 16.4478 4.68538 16.478 4.93148 16.5979C6.10188 17.1679 7.41831 17.4886 8.81007 17.4886C13.6774 17.4886 17.6228 13.5733 17.6228 8.74432C17.6228 3.91477 13.6774 0 8.81007 0ZM13.1921 12.0652C12.9848 12.5791 12.0472 13.0482 11.6334 13.0698C11.2202 13.0917 11.2084 13.3901 8.95524 12.4113C6.70237 11.4322 5.34696 9.05173 5.24009 8.89843C5.13315 8.74568 4.36739 7.65441 4.4087 6.5562C4.45029 5.45779 5.05169 4.93958 5.26634 4.72405C5.48075 4.50819 5.72657 4.46953 5.87667 4.46708C6.05409 4.4642 6.16901 4.46179 6.30032 4.46664C6.4315 4.47161 6.62856 4.4392 6.79917 4.89294C6.96971 5.34664 7.37789 6.46175 7.4301 6.57539C7.48227 6.68915 7.51456 6.82085 7.43419 6.9669C7.35357 7.11328 7.3123 7.20471 7.19534 7.33085C7.07773 7.45699 6.94795 7.61301 6.84305 7.70946C6.72605 7.81624 6.60384 7.93272 6.72685 8.161C6.84978 8.38911 7.27391 9.13692 7.92006 9.75318C8.75049 10.5454 9.46664 10.8082 9.68702 10.9279C9.908 11.0482 10.0399 11.0349 10.1769 10.8907C10.3133 10.7464 10.7635 10.2597 10.922 10.0424C11.0805 9.82454 11.229 9.86721 11.4326 9.94911C11.6361 10.0313 12.7211 10.6125 12.9421 10.7325C13.1629 10.8523 13.3105 10.914 13.3632 11.009C13.416 11.1043 13.3993 11.5511 13.1921 12.0652Z",
+        fill: "#FAFAFA"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 497,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 490,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const XICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "18",
+    height: "16",
+    viewBox: "0 0 18 16",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            clipPath: "url(#clip0_12439_44838)",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M14.176 -0.0996094H16.9362L10.9061 6.76184L18 16.0987H12.4456L8.0951 10.4359L3.11724 16.0987H0.355428L6.80519 8.75964L0 -0.0996094H5.69542L9.62784 5.0764L14.176 -0.0996094ZM13.2074 14.454H14.7367L4.86443 1.45874H3.22319L13.2074 14.454Z",
+                fill: "black"
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 513,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 512,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
+                id: "clip0_12439_44838",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                    width: "18",
+                    height: "16",
+                    fill: "white"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 520,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 519,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 518,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 505,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const YOUTUBEICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "26",
+    height: "18",
+    viewBox: "0 0 26 18",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            clipPath: "url(#clip0_12439_44846)",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M25.2088 2.81048C24.9143 1.70588 24.0428 0.834707 22.9343 0.535963C20.9297 -5.04077e-08 12.887 0 12.887 0C12.887 0 4.84842 -5.04077e-08 2.83977 0.535963C1.73529 0.830478 0.863792 1.70197 0.56526 2.81048C0.0292969 4.815 0.0292969 8.99995 0.0292969 8.99995C0.0292969 8.99995 0.0292969 13.1851 0.56526 15.1895C0.859775 16.2942 1.73116 17.1654 2.83977 17.464C4.84831 18 12.887 18 12.887 18C12.887 18 20.9296 18 22.9343 17.464C24.0388 17.1695 24.91 16.2981 25.2088 15.1895C25.7447 13.185 25.7447 9.00005 25.7447 9.00005C25.7447 9.00005 25.7447 4.81489 25.2088 2.81048Z",
+                    fill: "#FF0000"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 535,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M10.3184 12.8561L16.9988 8.99829L10.3184 5.14062V12.8561Z",
+                    fill: "white"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 541,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 534,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
+                id: "clip0_12439_44846",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                    width: "25.7732",
+                    height: "18",
+                    fill: "white"
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 550,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 549,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 548,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 527,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const TELEGRAMICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37259 18.6274 0 12 0C5.37259 0 0 5.37259 0 12C0 18.6274 5.37259 24 12 24Z",
+            fill: "#34AADF"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 564,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+                    clipPath: "url(#clip0_12439_44855)",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                            d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37259 18.6274 0 12 0C5.37259 0 0 5.37259 0 12C0 18.6274 5.37259 24 12 24Z",
+                            fill: "#34AADF"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 576,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                            d: "M4.99383 11.8969C4.99383 11.8969 10.9938 9.43447 13.0747 8.56739C13.8724 8.22059 16.5776 7.11074 16.5776 7.11074C16.5776 7.11074 17.8262 6.62522 17.7221 7.80439C17.6874 8.28995 17.41 9.98935 17.1325 11.8275C16.7163 14.4287 16.2655 17.2726 16.2655 17.2726C16.2655 17.2726 16.1961 18.0703 15.6065 18.209C15.0169 18.3477 14.0458 17.7235 13.8724 17.5847C13.7337 17.4807 11.2713 15.92 10.3695 15.157C10.1268 14.9489 9.84932 14.5327 10.4042 14.0472C11.6528 12.9027 13.1441 11.4807 14.0458 10.579C14.462 10.1628 14.8782 9.19168 13.1441 10.3708C10.6817 12.0703 8.25394 13.6657 8.25394 13.6657C8.25394 13.6657 7.69901 14.0125 6.65857 13.7003C5.61807 13.3882 4.4042 12.972 4.4042 12.972C4.4042 12.972 3.57188 12.4518 4.99383 11.8969Z",
+                            fill: "white"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 580,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0))
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 575,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
+                        id: "clip0_12439_44855",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                            width: "24",
+                            height: "24",
+                            fill: "white"
+                        }, void 0, false, {
+                            fileName: "[project]/src/const-value/config-icons/page.js",
+                            lineNumber: 587,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/src/const-value/config-icons/page.js",
+                        lineNumber: 586,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                }, void 0, false, {
+                    fileName: "[project]/src/const-value/config-icons/page.js",
+                    lineNumber: 585,
+                    columnNumber: 7
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 568,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 557,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const LINKEDINICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 28 28",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M23.575 23.2858H19.4754V16.9443C19.4754 15.4321 19.448 13.4855 17.3431 13.4855C15.2079 13.4855 14.8812 15.1331 14.8812 16.8342V23.2854H10.7816V10.2447H14.7172V12.0269H14.7723C15.1662 11.3617 15.7353 10.8145 16.4191 10.4435C17.1029 10.0726 17.8758 9.89175 18.6554 9.92033C22.8106 9.92033 23.5767 12.6199 23.5767 16.1319L23.575 23.2858ZM6.15584 8.46213C5.6853 8.46221 5.2253 8.32448 4.83402 8.06633C4.44273 7.80819 4.13776 7.44124 3.95762 7.01188C3.77747 6.58252 3.73026 6.11004 3.82197 5.65419C3.91369 5.19833 4.1402 4.77958 4.47286 4.45088C4.80552 4.12218 5.22939 3.8983 5.69087 3.80754C6.15234 3.71679 6.63069 3.76324 7.06544 3.94102C7.50019 4.11881 7.8718 4.41993 8.13329 4.80633C8.39477 5.19272 8.53439 5.64703 8.53448 6.1118C8.53453 6.42039 8.47304 6.72598 8.35353 7.0111C8.23403 7.29623 8.05885 7.55531 7.83797 7.77356C7.6171 7.99181 7.35484 8.16494 7.06622 8.28309C6.7776 8.40123 6.46826 8.46207 6.15584 8.46213ZM8.20564 23.2858H4.10175V10.2447H8.20564V23.2858ZM25.6188 0.00186194H2.0417C1.50657 -0.00410304 0.990903 0.200027 0.608064 0.569395C0.225225 0.938763 0.00653101 1.44315 0 1.97172V25.3565C0.00630749 25.8853 0.224873 26.3901 0.607699 26.7598C0.990525 27.1296 1.5063 27.3341 2.0417 27.3285H25.6188C26.1553 27.3351 26.6725 27.1312 27.0568 26.7614C27.4412 26.3917 27.6612 25.8864 27.6686 25.3565V1.97003C27.661 1.44041 27.4408 0.935454 27.0564 0.566095C26.6721 0.196736 26.155 -0.00681101 25.6188 0.000174017",
+        fill: "#0A66C2"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 602,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 595,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const VIDEOICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "21",
+    height: "21",
+    viewBox: "0 0 21 21",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M9.23774 18.4947C7.33016 18.4928 5.46987 17.9009 3.91184 16.8002C2.3538 15.6996 1.17427 14.1441 0.534898 12.3468C-0.104471 10.5496 -0.172386 8.5986 0.340461 6.76125C0.853309 4.9239 1.92182 3.29011 3.39955 2.0838C4.87728 0.877486 6.69191 0.157692 8.59474 0.0230643C10.4976 -0.111563 12.3955 0.345566 14.0283 1.3318C15.6612 2.31803 16.9491 3.7851 17.7155 5.53194C18.4819 7.27878 18.6894 9.2199 18.3094 11.0893C18.2752 11.2572 18.1756 11.4047 18.0326 11.4993C17.8896 11.5938 17.7149 11.6277 17.5469 11.5934C17.379 11.5592 17.2315 11.4596 17.1369 11.3166C17.0424 11.1736 17.0085 10.9989 17.0428 10.8309C17.3829 9.15595 17.1744 7.41597 16.4482 5.86875C15.722 4.32153 14.5168 3.04937 13.011 2.24074C11.5052 1.43211 9.77904 1.13001 8.08815 1.37921C6.39725 1.6284 4.83159 2.41563 3.62312 3.62427C2.41465 4.83292 1.62763 6.39868 1.37867 8.08961C1.12971 9.78054 1.43205 11.5067 2.24089 13.0123C3.04973 14.518 4.32205 15.7231 5.86938 16.449C7.4167 17.175 9.15671 17.3832 10.8316 17.0429C10.9148 17.026 11.0004 17.0255 11.0837 17.0417C11.167 17.0578 11.2462 17.0902 11.317 17.137C11.3878 17.1837 11.4486 17.244 11.4961 17.3143C11.5436 17.3846 11.5768 17.4635 11.5937 17.5467C11.6107 17.6298 11.6111 17.7154 11.595 17.7987C11.5788 17.882 11.5465 17.9613 11.4997 18.032C11.4529 18.1028 11.3926 18.1637 11.3223 18.2111C11.252 18.2586 11.1731 18.2918 11.09 18.3087C10.4803 18.4325 9.85982 18.4948 9.23774 18.4947Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 617,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M7.51474 13.4968C7.11574 13.4966 6.7331 13.3382 6.45065 13.0564C6.16819 12.7746 6.00895 12.3923 6.00781 11.9933V6.48227C6.00838 6.21351 6.08081 5.94978 6.21762 5.71843C6.35442 5.48708 6.5506 5.29653 6.78584 5.16653C7.02107 5.03653 7.2868 4.9718 7.55547 4.97907C7.82414 4.98633 8.08598 5.06532 8.31384 5.20784L12.7167 7.96337C12.9332 8.09898 13.1117 8.28739 13.2355 8.51091C13.3592 8.73444 13.4242 8.98574 13.4242 9.24124C13.4242 9.49674 13.3592 9.74805 13.2355 9.97157C13.1117 10.1951 12.9332 10.3835 12.7167 10.5191L8.31384 13.2746C8.07352 13.422 7.79665 13.499 7.51474 13.4968ZM7.51474 6.26958C7.47768 6.26972 7.44125 6.27919 7.40882 6.29714C7.37555 6.31521 7.3478 6.34198 7.32854 6.37458C7.30929 6.40719 7.29923 6.44441 7.29946 6.48227V11.9933C7.29942 12.0318 7.30969 12.0696 7.32922 12.1028C7.34874 12.136 7.37681 12.1633 7.41048 12.1819C7.44416 12.2006 7.48222 12.2099 7.5207 12.2088C7.55918 12.2077 7.59667 12.1964 7.62927 12.1759L12.0321 9.42035C12.0628 9.40085 12.0882 9.37389 12.1057 9.34197C12.1233 9.31006 12.1325 9.27422 12.1325 9.2378C12.1325 9.20137 12.1233 9.16554 12.1057 9.13362C12.0882 9.10171 12.0628 9.07475 12.0321 9.05524L7.62927 6.29972C7.59471 6.27903 7.555 6.26858 7.51474 6.26958Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 621,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M16.1302 20.2176C15.9589 20.2176 15.7946 20.1495 15.6735 20.0284C15.5524 19.9073 15.4844 19.743 15.4844 19.5717V12.6829C15.4844 12.5117 15.5524 12.3474 15.6735 12.2263C15.7946 12.1052 15.9589 12.0371 16.1302 12.0371C16.3015 12.0371 16.4658 12.1052 16.5869 12.2263C16.708 12.3474 16.776 12.5117 16.776 12.6829V19.5717C16.776 19.743 16.708 19.9073 16.5869 20.0284C16.4658 20.1495 16.3015 20.2176 16.1302 20.2176Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 625,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M19.5737 16.7721H12.6849C12.5136 16.7721 12.3493 16.7041 12.2282 16.583C12.1071 16.4618 12.0391 16.2976 12.0391 16.1263C12.0391 15.955 12.1071 15.7907 12.2282 15.6696C12.3493 15.5485 12.5136 15.4805 12.6849 15.4805H19.5737C19.745 15.4805 19.9093 15.5485 20.0304 15.6696C20.1515 15.7907 20.2195 15.955 20.2195 16.1263C20.2195 16.2976 20.1515 16.4618 20.0304 16.583C19.9093 16.7041 19.745 16.7721 19.5737 16.7721Z",
+            fill: "#1C1C1C"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 629,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 610,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const WEBSITEICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M23.109 15.134L14.297 11.135C13.387 10.827 12.399 11.056 11.722 11.733C11.029 12.425 10.819 13.423 11.178 14.445L15.122 23.12C15.36 23.643 15.885 23.988 16.469 23.999H16.488C17.059 23.999 17.573 23.682 17.83 23.17L19.606 19.617L23.16 17.841C23.674 17.583 23.999 17.046 23.989 16.472C23.979 15.897 23.634 15.371 23.11 15.134H23.109ZM22.712 16.946L18.861 18.871L16.936 22.722C16.85 22.893 16.691 23 16.5 23C16.309 22.997 16.112 22.881 16.033 22.706L12.106 14.073C11.891 13.456 12.008 12.861 12.43 12.44C12.71 12.159 13.08 12.007 13.478 12.007C13.655 12.007 13.838 12.037 14.02 12.1L22.695 16.044C22.869 16.123 22.984 16.298 22.987 16.489C22.99 16.68 22.883 16.86 22.712 16.946ZM12 0C11.995 0 11.99 0 11.984 0C11.984 0 11.984 0 11.983 0C5.374 0.009 0 5.389 0 12C0 18.611 5.383 24 12 24C12.174 24 12.348 23.996 12.521 23.989C12.797 23.977 13.011 23.744 13 23.468C12.988 23.193 12.75 22.972 12.48 22.989C12.388 22.993 12.295 22.996 12.203 22.997C11.635 22.427 9.466 20.127 8.114 16.999H9.501C9.777 16.999 10.001 16.775 10.001 16.499C10.001 16.223 9.777 15.999 9.501 15.999H7.723C7.286 14.754 7.001 13.405 7.001 11.999C7.001 10.593 7.286 9.244 7.724 7.999H16.281C16.463 8.517 16.619 9.054 16.738 9.604C16.789 9.838 16.996 9.999 17.226 9.999C17.261 9.999 17.296 9.996 17.332 9.988C17.602 9.93 17.773 9.664 17.715 9.394C17.612 8.917 17.484 8.452 17.338 7.999H22.248C22.734 9.239 23.001 10.589 23.001 11.999C23.001 12.159 22.998 12.318 22.991 12.477C22.979 12.753 23.193 12.986 23.469 12.998C23.751 13.024 23.979 12.797 23.99 12.52C23.998 12.347 24.001 12.173 24.001 11.998C24 5.383 18.617 0 12 0ZM1 12C1 10.59 1.267 9.24 1.753 8H6.658C6.256 9.246 6 10.591 6 12C6 13.409 6.256 14.754 6.658 16H1.753C1.267 14.76 1 13.41 1 12ZM7.019 17C8.085 19.669 9.742 21.785 10.762 22.93C7.025 22.51 3.848 20.21 2.203 17H7.019ZM7.019 7H2.203C3.848 3.79 7.025 1.49 10.763 1.07C9.743 2.215 8.085 4.331 7.019 7ZM8.115 7C9.339 4.171 11.232 2.016 12 1.21C12.77 2.017 14.665 4.173 15.888 7H8.115ZM16.975 7C15.907 4.328 14.253 2.214 13.235 1.07C16.973 1.49 20.15 3.79 21.796 7H16.975Z",
+        fill: "#1C1C1C"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 644,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 637,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const EDITICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("mask", {
+            id: "mask0_12609_42402",
+            style: "mask-type:alpha",
+            maskUnits: "userSpaceOnUse",
+            x: "0",
+            y: "0",
+            width: "24",
+            height: "24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                width: "24",
+                height: "24",
+                fill: "#D9D9D9"
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 668,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 659,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
+            mask: "url(#mask0_12609_42402)",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M5 20.9996C4.45 20.9996 3.97917 20.8038 3.5875 20.4121C3.19583 20.0204 3 19.5496 3 18.9996V4.99961C3 4.44961 3.19583 3.97878 3.5875 3.58711C3.97917 3.19544 4.45 2.99961 5 2.99961H13.925L11.925 4.99961H5V18.9996H19V12.0496L21 10.0496V18.9996C21 19.5496 20.8042 20.0204 20.4125 20.4121C20.0208 20.8038 19.55 20.9996 19 20.9996H5ZM9 14.9996V10.7496L18.175 1.57461C18.375 1.37461 18.6 1.22461 18.85 1.12461C19.1 1.02461 19.35 0.974609 19.6 0.974609C19.8667 0.974609 20.1208 1.02461 20.3625 1.12461C20.6042 1.22461 20.825 1.37461 21.025 1.57461L22.425 2.99961C22.6083 3.19961 22.75 3.42044 22.85 3.66211C22.95 3.90378 23 4.14961 23 4.39961C23 4.64961 22.9542 4.89544 22.8625 5.13711C22.7708 5.37878 22.625 5.59961 22.425 5.79961L13.25 14.9996H9ZM11 12.9996H12.4L18.2 7.19961L17.5 6.49961L16.775 5.79961L11 11.5746V12.9996Z",
+                fill: "#3D3D3D"
+            }, void 0, false, {
+                fileName: "[project]/src/const-value/config-icons/page.js",
+                lineNumber: 671,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 670,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 652,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const LINKICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "28",
+    height: "16",
+    viewBox: "0 0 28 16",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M12.6 16H7C5.06333 16 3.4125 15.22 2.0475 13.66C0.6825 12.1 0 10.2133 0 8C0 5.78667 0.6825 3.9 2.0475 2.34C3.4125 0.78 5.06333 0 7 0H12.6V3.2H7C5.83333 3.2 4.84167 3.66667 4.025 4.6C3.20833 5.53333 2.8 6.66667 2.8 8C2.8 9.33333 3.20833 10.4667 4.025 11.4C4.84167 12.3333 5.83333 12.8 7 12.8H12.6V16ZM8.4 9.6V6.4H19.6V9.6H8.4ZM15.4 16V12.8H21C22.1667 12.8 23.1583 12.3333 23.975 11.4C24.7917 10.4667 25.2 9.33333 25.2 8C25.2 6.66667 24.7917 5.53333 23.975 4.6C23.1583 3.66667 22.1667 3.2 21 3.2H15.4V0H21C22.9367 0 24.5875 0.78 25.9525 2.34C27.3175 3.9 28 5.78667 28 8C28 10.2133 27.3175 12.1 25.9525 13.66C24.5875 15.22 22.9367 16 21 16H15.4Z",
+        fill: "#8B8B8B"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 687,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 680,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const IMAGEICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "22",
+    height: "22",
+    viewBox: "0 0 22 22",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M7.75 9.5C6.23 9.5 5 8.27 5 6.75C5 5.23 6.23 4 7.75 4C9.27 4 10.5 5.23 10.5 6.75C10.5 8.27 9.27 9.5 7.75 9.5ZM7.75 5.5C7.06 5.5 6.5 6.06 6.5 6.75C6.5 7.44 7.06 8 7.75 8C8.44 8 9 7.44 9 6.75C9 6.06 8.44 5.5 7.75 5.5Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 702,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M13.75 21.5H7.75C2.32 21.5 0 19.18 0 13.75V7.75C0 2.32 2.32 0 7.75 0H11.75C12.16 0 12.5 0.34 12.5 0.75C12.5 1.16 12.16 1.5 11.75 1.5H7.75C3.14 1.5 1.5 3.14 1.5 7.75V13.75C1.5 18.36 3.14 20 7.75 20H13.75C18.36 20 20 18.36 20 13.75V8.75C20 8.34 20.34 8 20.75 8C21.16 8 21.5 8.34 21.5 8.75V13.75C21.5 19.18 19.18 21.5 13.75 21.5Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 706,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M16.75 7.49994C16.34 7.49994 16 7.15994 16 6.74994V0.749939C16 0.449939 16.18 0.169939 16.46 0.0599391C16.74 -0.0500609 17.06 0.0099391 17.28 0.219939L19.28 2.21994C19.57 2.50994 19.57 2.98994 19.28 3.27994C18.99 3.56994 18.51 3.56994 18.22 3.27994L17.5 2.55994V6.74994C17.5 7.15994 17.16 7.49994 16.75 7.49994Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 710,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M14.7495 3.49945C14.5595 3.49945 14.3695 3.42945 14.2195 3.27945C13.9295 2.98945 13.9295 2.50945 14.2195 2.21945L16.2195 0.219453C16.5095 -0.0705469 16.9895 -0.0705469 17.2795 0.219453C17.5695 0.509453 17.5695 0.989453 17.2795 1.27945L15.2795 3.27945C15.1295 3.42945 14.9395 3.49945 14.7495 3.49945Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 714,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M1.41932 18.4505C1.17932 18.4505 0.939316 18.3305 0.799316 18.1205C0.569316 17.7805 0.659317 17.3105 0.999317 17.0805L5.92932 13.7705C7.00932 13.0505 8.49932 13.1305 9.47932 13.9605L9.80932 14.2505C10.3093 14.6805 11.1593 14.6805 11.6493 14.2505L15.8093 10.6805C16.8693 9.77055 18.5393 9.77055 19.6093 10.6805L21.2393 12.0805C21.5493 12.3505 21.5893 12.8205 21.3193 13.1405C21.0493 13.4505 20.5693 13.4905 20.2593 13.2205L18.6293 11.8205C18.1293 11.3905 17.2893 11.3905 16.7893 11.8205L12.6293 15.3905C11.5693 16.3005 9.89932 16.3005 8.82932 15.3905L8.49932 15.1005C8.03932 14.7105 7.27933 14.6705 6.76933 15.0205L1.84932 18.3305C1.70932 18.4105 1.55932 18.4505 1.41932 18.4505Z",
+            fill: "#3D3D3D"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 718,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 695,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const LOCKICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M6.5 12C6.23486 11.9997 5.98066 11.8943 5.79319 11.7068C5.60571 11.5193 5.50026 11.2651 5.5 11V7.5C5.5 5.77609 6.18482 4.12279 7.40381 2.90381C8.62279 1.68482 10.2761 1 12 1C13.7239 1 15.3772 1.68482 16.5962 2.90381C17.8152 4.12279 18.5 5.77609 18.5 7.5V11C18.4997 11.2651 18.3943 11.5193 18.2068 11.7068C18.0193 11.8943 17.7651 11.9997 17.5 12H6.5ZM16.5 10V7.5C16.5 6.30653 16.0259 5.16193 15.182 4.31802C14.3381 3.47411 13.1935 3 12 3C10.8065 3 9.66193 3.47411 8.81802 4.31802C7.97411 5.16193 7.5 6.30653 7.5 7.5V10H16.5Z",
+            fill: "#7F00FF"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 733,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0)),
+        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+            d: "M18 9.25H6C5.27088 9.25074 4.57184 9.54071 4.05627 10.0563C3.54071 10.5718 3.25074 11.2709 3.25 12V20C3.25074 20.7291 3.54071 21.4282 4.05627 21.9437C4.57184 22.4593 5.27088 22.7493 6 22.75H18C18.7291 22.7493 19.4282 22.4593 19.9437 21.9437C20.4593 21.4282 20.7493 20.7291 20.75 20V12C20.7493 11.2709 20.4593 10.5718 19.9437 10.0563C19.4282 9.54071 18.7291 9.25074 18 9.25ZM12.75 16C12.75 16.1989 12.671 16.3897 12.5303 16.5303C12.3897 16.671 12.1989 16.75 12 16.75C11.8011 16.75 11.6103 16.671 11.4697 16.5303C11.329 16.3897 11.25 16.1989 11.25 16V15C11.25 14.8011 11.329 14.6103 11.4697 14.4697C11.6103 14.329 11.8011 14.25 12 14.25C12.1989 14.25 12.3897 14.329 12.5303 14.4697C12.671 14.6103 12.75 14.8011 12.75 15V16Z",
+            fill: "#7F00FF"
+        }, void 0, false, {
+            fileName: "[project]/src/const-value/config-icons/page.js",
+            lineNumber: 737,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    ]
+}, void 0, true, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 726,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+const SAVEDICON = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "15",
+    height: "19",
+    viewBox: "0 0 15 19",
+    fill: "none",
+    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+        d: "M12.6667 0H2.11111C0.95 0 0.0105558 0.95 0.0105558 2.11111L0 19L7.38889 15.8333L14.7778 19V2.11111C14.7778 0.95 13.8278 0 12.6667 0ZM12.6667 15.8333L7.38889 13.5322L2.11111 15.8333V3.16667C2.11111 2.58611 2.58611 2.11111 3.16667 2.11111H11.6111C12.1917 2.11111 12.6667 2.58611 12.6667 3.16667V15.8333Z",
+        fill: "#FEF9FF"
+    }, void 0, false, {
+        fileName: "[project]/src/const-value/config-icons/page.js",
+        lineNumber: 752,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0))
+}, void 0, false, {
+    fileName: "[project]/src/const-value/config-icons/page.js",
+    lineNumber: 745,
+    columnNumber: 3
+}, ("TURBOPACK compile-time value", void 0));
+}),
+"[externals]/util [external] (util, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("util", () => require("util"));
+
+module.exports = mod;
+}),
+"[externals]/stream [external] (stream, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("stream", () => require("stream"));
+
+module.exports = mod;
+}),
+"[externals]/path [external] (path, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("path", () => require("path"));
+
+module.exports = mod;
+}),
+"[externals]/http [external] (http, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("http", () => require("http"));
+
+module.exports = mod;
+}),
+"[externals]/https [external] (https, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("https", () => require("https"));
+
+module.exports = mod;
+}),
+"[externals]/url [external] (url, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("url", () => require("url"));
+
+module.exports = mod;
+}),
+"[externals]/fs [external] (fs, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("fs", () => require("fs"));
+
+module.exports = mod;
+}),
+"[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("crypto", () => require("crypto"));
+
+module.exports = mod;
+}),
+"[externals]/http2 [external] (http2, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("http2", () => require("http2"));
+
+module.exports = mod;
+}),
+"[externals]/assert [external] (assert, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("assert", () => require("assert"));
+
+module.exports = mod;
+}),
+"[externals]/zlib [external] (zlib, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("zlib", () => require("zlib"));
+
+module.exports = mod;
+}),
+"[externals]/events [external] (events, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("events", () => require("events"));
+
+module.exports = mod;
+}),
+"[project]/src/lib/axios.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$auth$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/auth.js [app-ssr] (ecmascript)");
+;
+;
+const api = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].create({
+    baseURL: process.env.NEXT_PUBLIC_API_URL
+});
+api.interceptors.request.use((config)=>{
+    const token = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$auth$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getToken"])();
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
+api.interceptors.response.use((res)=>res, (err)=>{
+    if (err.response?.status === 401) {
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$auth$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["clearToken"])();
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+    }
+    return Promise.reject(err);
+});
+const __TURBOPACK__default__export__ = api;
+}),
+"[project]/src/lib/api/endpoints.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "API_ENDPOINTS",
+    ()=>API_ENDPOINTS
+]);
+const API_ENDPOINTS = {
+    AUTH: {
+        SIGNUP: "/v1/auth/signup",
+        LOGIN: "/v1/auth/login",
+        GOOGLE_LOGIN: "/v1/auth/google-login",
+        FORGOT_PASSWORD: "/v1/auth/forgot-password",
+        VERIFY_OTP: "/v1/auth/verify-otp",
+        RESEND_OTP: "/v1/auth/resend-otp",
+        RESET_PASSWORD: "/v1/auth/reset-password",
+        ORG_VERIFY: "/v1/auth/org/verify"
+    },
+    EVENTS: {
+        ALL: "/v1/events",
+        BY_ID: (id)=>`/v1/events/${id}`
+    },
+    ORGANIZER: {
+        PROFILE: (orgId)=>`/v1/organizations/${orgId}`,
+        EVENTS: (orgId)=>`/v1/organizations/${orgId}/events`,
+        EVENT_BY_ID: (orgId, eventId)=>`/v1/organizations/${orgId}/events/${eventId}`
+    }
+};
+}),
+"[project]/src/lib/api/apiHelper.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "handleApi",
+    ()=>handleApi
+]);
+async function handleApi(promise) {
+    try {
+        const res = await promise;
+        return res.data;
+    } catch (err) {
+        console.error("API Error:", err?.response || err);
+        return {
+            success: false,
+            message: err?.response?.data?.message || err?.message || "Something went wrong",
+            status: err?.response?.status || 500
+        };
+    }
+}
+}),
+"[project]/src/lib/api/event.api.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "getAllEventsApi",
+    ()=>getAllEventsApi,
+    "getEventByIdApi",
+    ()=>getEventByIdApi
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/axios.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api/endpoints.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api/apiHelper.js [app-ssr] (ecmascript)");
+;
+;
+;
+const getAllEventsApi = ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].EVENTS.ALL));
+const getEventByIdApi = (eventId)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$apiHelper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["handleApi"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$endpoints$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["API_ENDPOINTS"].EVENTS.BY_ID(eventId)));
+}),
+"[project]/src/components/global/ChooseEventCategory/ChooseEventCategory.js [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
+
+const e = new Error("Could not parse module '[project]/src/components/global/ChooseEventCategory/ChooseEventCategory.js'\n\nExpected ident");
+e.code = 'MODULE_UNPARSABLE';
+throw e;
+}),
+"[project]/src/components/global/EventSearchBar/EventSearchBar.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "card": "EventSearchBar-module__32HgIG__card",
+  "col": "EventSearchBar-module__32HgIG__col",
+  "icon": "EventSearchBar-module__32HgIG__icon",
+  "row": "EventSearchBar-module__32HgIG__row",
+  "sub": "EventSearchBar-module__32HgIG__sub",
+  "title": "EventSearchBar-module__32HgIG__title",
+  "wrapper": "EventSearchBar-module__32HgIG__wrapper",
+});
+}),
+"[project]/src/components/global/EventSearchBar/EventSearchBar.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>EventSearchBar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/EventSearchBar/EventSearchBar.module.css [app-ssr] (css module)");
+"use client";
+;
+;
+function EventSearchBar({ whatIcon, whereIcon, whenIcon, onWhatClick, onWhereClick, onWhenClick }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].wrapper,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].card,
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].row,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].col,
+                        onClick: onWhatClick,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].icon,
+                                children: whatIcon
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                lineNumber: 18,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title,
+                                        children: "What"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                        lineNumber: 20,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sub,
+                                        children: "Event Type"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                        lineNumber: 21,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].col,
+                        onClick: onWhereClick,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].icon,
+                                children: whereIcon
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                lineNumber: 26,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title,
+                                        children: "Where"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                        lineNumber: 28,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sub,
+                                        children: "Location"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                        lineNumber: 29,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                lineNumber: 27,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                        lineNumber: 25,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].col,
+                        onClick: onWhenClick,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].icon,
+                                children: whenIcon
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                lineNumber: 34,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title,
+                                        children: "When"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sub,
+                                        children: "Date"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                        lineNumber: 37,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                                lineNumber: 35,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                        lineNumber: 33,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+                lineNumber: 16,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+            lineNumber: 15,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/global/EventSearchBar/EventSearchBar.js",
+        lineNumber: 14,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/EventSlider/EventSlider.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "active": "EventSlider-module__GZKOFG__active",
+  "chip": "EventSlider-module__GZKOFG__chip",
+  "eventCard": "EventSlider-module__GZKOFG__eventCard",
+  "eventCardBottom": "EventSlider-module__GZKOFG__eventCardBottom",
+  "eventCards": "EventSlider-module__GZKOFG__eventCards",
+  "eventDetails": "EventSlider-module__GZKOFG__eventDetails",
+  "eventHeader": "EventSlider-module__GZKOFG__eventHeader",
+  "eventImg": "EventSlider-module__GZKOFG__eventImg",
+  "eventLine": "EventSlider-module__GZKOFG__eventLine",
+  "eventSection": "EventSlider-module__GZKOFG__eventSection",
+  "eventTitle": "EventSlider-module__GZKOFG__eventTitle",
+  "filterRow": "EventSlider-module__GZKOFG__filterRow",
+  "filterSection": "EventSlider-module__GZKOFG__filterSection",
+  "navBtn": "EventSlider-module__GZKOFG__navBtn",
+  "priceBtn": "EventSlider-module__GZKOFG__priceBtn",
+  "seeAllBtn": "EventSlider-module__GZKOFG__seeAllBtn",
+  "sliderBtns": "EventSlider-module__GZKOFG__sliderBtns",
+  "tag": "EventSlider-module__GZKOFG__tag",
+  "viewIcons": "EventSlider-module__GZKOFG__viewIcons",
+});
+}),
+"[project]/src/components/global/EventSlider/EventSlider.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>EventSlider
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/EventSlider/EventSlider.module.css [app-ssr] (css module)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/const-value/config-icons/page.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+;
+function EventSlider({ title, data = [] }) {
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const sliderRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const slideLeft = ()=>{
+        sliderRef.current?.scrollBy({
+            left: -350,
+            behavior: "smooth"
+        });
+    };
+    const slideRight = ()=>{
+        sliderRef.current?.scrollBy({
+            left: 350,
+            behavior: "smooth"
+        });
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventSection,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventHeader,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        children: title
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].seeAllBtn,
+                        children: "See all"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventLine
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                lineNumber: 36,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].filterSection,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].filterRow,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chip} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].active}`,
+                                children: "All"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chip,
+                                children: "Education"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 42,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chip,
+                                children: "Sports"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 43,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chip,
+                                children: "Entertainment"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].chip,
+                                children: "Networking"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sliderBtns,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].navBtn,
+                                onClick: slideLeft,
+                                children: "❮"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 49,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].navBtn,
+                                onClick: slideRight,
+                                children: "❯"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 50,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                        lineNumber: 48,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                lineNumber: 39,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventCards,
+                ref: sliderRef,
+                children: data.map((event, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventCard,
+                        onClick: ()=>router.push(`/events/${event.identity}`),
+                        children: [
+                            event.tag && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].tag,
+                                children: event.tag
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 62,
+                                columnNumber: 27
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: event.bannerImage,
+                                alt: event.title,
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventImg
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 64,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventTitle,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: event.title
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                        lineNumber: 71,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SAVEICON"]
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                        lineNumber: 72,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 70,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventDetails,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: [
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LOCATION_ICON"],
+                                                    " ",
+                                                    event.venue || "N/A"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                                lineNumber: 77,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: [
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TICKET_ICON"],
+                                                    " $200"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                                lineNumber: 78,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                        lineNumber: 76,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: [
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DATEICON"],
+                                                    " ",
+                                                    event.eventDate,
+                                                    " ",
+                                                    event.eventTime
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                                lineNumber: 81,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: [
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODE_ICON"],
+                                                    " ",
+                                                    event.mode
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                                lineNumber: 82,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                        lineNumber: 80,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 75,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].eventCardBottom,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].viewIcons,
+                                        children: [
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VIEW_ICON"],
+                                            " 456"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                        lineNumber: 87,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].priceBtn,
+                                        children: event.type || "Paid"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                        lineNumber: 88,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                                lineNumber: 86,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, i, true, {
+                        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                        lineNumber: 57,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+                lineNumber: 55,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/EventSlider/EventSlider.js",
+        lineNumber: 29,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/Footer/Footer.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "bottom": "Footer-module__pru1la__bottom",
+  "brand": "Footer-module__pru1la__brand",
+  "col": "Footer-module__pru1la__col",
+  "inputWrap": "Footer-module__pru1la__inputWrap",
+  "links": "Footer-module__pru1la__links",
+  "logo": "Footer-module__pru1la__logo",
+  "main": "Footer-module__pru1la__main",
+  "query": "Footer-module__pru1la__query",
+  "skyline": "Footer-module__pru1la__skyline",
+  "socialBlock": "Footer-module__pru1la__socialBlock",
+  "socials": "Footer-module__pru1la__socials",
+  "subscribe": "Footer-module__pru1la__subscribe",
+  "subscribeBtn": "Footer-module__pru1la__subscribeBtn",
+  "subscribeRow": "Footer-module__pru1la__subscribeRow",
+  "text": "Footer-module__pru1la__text",
+  "top": "Footer-module__pru1la__top",
+  "whatsapp": "Footer-module__pru1la__whatsapp",
+});
+}),
+"[project]/src/components/global/Footer/Footer.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>Footer
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/const-value/config-icons/page.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/Footer/Footer.module.css [app-ssr] (css module)");
+;
+;
+;
+function Footer() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].root,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].skyline,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                    src: "/images/footer.png",
+                    alt: "Skyline"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/global/Footer/Footer.js",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/Footer/Footer.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].main,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].top,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].brand,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: "/images/logo.png",
+                                        alt: "ACE",
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].logo
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 25,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].text,
+                                        children: [
+                                            "Life is Full of Events, don't Let them Pass Unnoticed,",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                lineNumber: 29,
+                                                columnNumber: 15
+                                            }, this),
+                                            "Explore and Join What Excites You!"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 27,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                lineNumber: 24,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].subscribe,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        children: "Get In Touch!"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 36,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        children: "Don't Miss the Next Big Event, Stay in the Loop."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 37,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].subscribeRow,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].inputWrap,
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        children: "@"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                        lineNumber: 41,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "email",
+                                                        placeholder: "Enter your email"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                        lineNumber: 42,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                lineNumber: 40,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].subscribeBtn,
+                                                children: "Subscribe"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                lineNumber: 45,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].whatsapp,
+                                                children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FOOTER_WHATSAPP"]
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                lineNumber: 47,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 39,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                lineNumber: 35,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].links,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].socialBlock,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].socials,
+                                        children: [
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FOOTER_FACEBOOK"],
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FOOTER_INSTA"],
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FOOTER_X"],
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FOOTER_LINKEDIN"]
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 57,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].query,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                children: "Send Your Query"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                lineNumber: 65,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        children: "@"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                        lineNumber: 66,
+                                                        columnNumber: 18
+                                                    }, this),
+                                                    " info@ace.com"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                                lineNumber: 66,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 64,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                lineNumber: 56,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].col,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        children: "Company"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 71,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "About us"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 72,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "FAQ’s"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 73,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Feedback"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 74,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Contact us"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 75,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                lineNumber: 70,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].col,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        children: "Events"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 79,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Trending Events"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 80,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Upcoming Events"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 81,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Featured Events"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 82,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Virtual Events"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 83,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                lineNumber: 78,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].col,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        children: "Our Policies"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 87,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Privacy Policy"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 88,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Top Organizers"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 89,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Cookies"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 90,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        children: "Disclaimer"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                                        lineNumber: 91,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/Footer/Footer.js",
+                                lineNumber: 86,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/Footer/Footer.js",
+                        lineNumber: 55,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/Footer/Footer.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].bottom,
+                children: "© 2025 All College Event. All rights reserved."
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/Footer/Footer.js",
+                lineNumber: 97,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/Footer/Footer.js",
+        lineNumber: 13,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/HeroBanner/HeroBanner.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "center": "HeroBanner-module__DFaC7q__center",
+  "loopGradient": "HeroBanner-module__DFaC7q__loopGradient",
+  "subtitle": "HeroBanner-module__DFaC7q__subtitle",
+  "title": "HeroBanner-module__DFaC7q__title",
+});
+}),
+"[project]/src/components/global/HeroBanner/HeroBanner.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>HeroBanner
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBanner$2f$HeroBanner$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/HeroBanner/HeroBanner.module.css [app-ssr] (css module)");
+"use client";
+;
+;
+function HeroBanner({ text }) {
+    const words = text.split(" ");
+    console.log("00000000", words);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBanner$2f$HeroBanner$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBanner$2f$HeroBanner$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].center}`,
+                children: words.map((word, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        style: {
+                            animationDelay: `${0.3 * i}s`
+                        },
+                        children: word
+                    }, i, false, {
+                        fileName: "[project]/src/components/global/HeroBanner/HeroBanner.js",
+                        lineNumber: 13,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/HeroBanner/HeroBanner.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBanner$2f$HeroBanner$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].subtitle,
+                children: "Discover events that match your vibe — anytime, anywhere."
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/HeroBanner/HeroBanner.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
+}
+}),
+"[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "cardItem": "HeroBannerCarousel-module__zC5IAa__cardItem",
+  "cardsStage": "HeroBannerCarousel-module__zC5IAa__cardsStage",
+  "carouselRoot": "HeroBannerCarousel-module__zC5IAa__carouselRoot",
+  "posCenter": "HeroBannerCarousel-module__zC5IAa__posCenter",
+  "posHidden": "HeroBannerCarousel-module__zC5IAa__posHidden",
+  "posLeft": "HeroBannerCarousel-module__zC5IAa__posLeft",
+  "posLeftFar": "HeroBannerCarousel-module__zC5IAa__posLeftFar",
+  "posLeftXFar": "HeroBannerCarousel-module__zC5IAa__posLeftXFar",
+  "posRight": "HeroBannerCarousel-module__zC5IAa__posRight",
+  "posRightFar": "HeroBannerCarousel-module__zC5IAa__posRightFar",
+  "posRightXFar": "HeroBannerCarousel-module__zC5IAa__posRightXFar",
+});
+}),
+"[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>HeroBannerCarousel
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.module.css [app-ssr] (css module)");
+"use client";
+;
+;
+;
+function HeroBannerCarousel({ images = [], interval = 4500 }) {
+    const n = images.length;
+    const [centerIdx, setCenterIdx] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const timerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!n) return;
+        timerRef.current = setInterval(()=>{
+            setCenterIdx((prev)=>(prev + 1) % n);
+        }, interval);
+        return ()=>clearInterval(timerRef.current);
+    }, [
+        n,
+        interval
+    ]);
+    const handleClick = (idx)=>setCenterIdx(idx);
+    const getPosClass = (imgIdx)=>{
+        if (n === 1) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posCenter;
+        const diff = (imgIdx - centerIdx + n) % n;
+        if (diff === 0) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posCenter;
+        if (diff === 1) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posRight;
+        if (diff === 2) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posRightFar;
+        if (diff === 3) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posRightXFar;
+        if (diff === n - 1) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posLeft;
+        if (diff === n - 2) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posLeftFar;
+        if (diff === n - 3) return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posLeftXFar;
+        return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].posHidden;
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].carouselRoot,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].cardsStage,
+            children: images.map((src, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].cardItem} ${getPosClass(idx)}`,
+                    onClick: ()=>handleClick(idx),
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: src,
+                        alt: `poster-${idx}`,
+                        draggable: false
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.js",
+                        lineNumber: 48,
+                        columnNumber: 13
+                    }, this)
+                }, idx, false, {
+                    fileName: "[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.js",
+                    lineNumber: 43,
+                    columnNumber: 11
+                }, this))
+        }, void 0, false, {
+            fileName: "[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.js",
+            lineNumber: 41,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.js",
+        lineNumber: 40,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "activeDot": "SpotlightCarousel-module__JlpA1G__activeDot",
+  "controls": "SpotlightCarousel-module__JlpA1G__controls",
+  "countdown": "SpotlightCarousel-module__JlpA1G__countdown",
+  "cta": "SpotlightCarousel-module__JlpA1G__cta",
+  "dot": "SpotlightCarousel-module__JlpA1G__dot",
+  "dots": "SpotlightCarousel-module__JlpA1G__dots",
+  "header": "SpotlightCarousel-module__JlpA1G__header",
+  "image": "SpotlightCarousel-module__JlpA1G__image",
+  "left": "SpotlightCarousel-module__JlpA1G__left",
+  "meta": "SpotlightCarousel-module__JlpA1G__meta",
+  "num": "SpotlightCarousel-module__JlpA1G__num",
+  "pill": "SpotlightCarousel-module__JlpA1G__pill",
+  "right": "SpotlightCarousel-module__JlpA1G__right",
+  "share": "SpotlightCarousel-module__JlpA1G__share",
+  "slide": "SpotlightCarousel-module__JlpA1G__slide",
+  "startsIn": "SpotlightCarousel-module__JlpA1G__startsIn",
+  "title": "SpotlightCarousel-module__JlpA1G__title",
+  "track": "SpotlightCarousel-module__JlpA1G__track",
+  "wrapper": "SpotlightCarousel-module__JlpA1G__wrapper",
+});
+}),
+"[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>SpotlightCarousel
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.module.css [app-ssr] (css module)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/const-value/config-icons/page.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+/* ---------------- SAFE DATE FORMATTER ---------------- */ function formatDate(dateString) {
+    const d = new Date(dateString);
+    return d.toISOString().replace("T", " ").slice(0, 16);
+}
+/* ---------------- DEFAULT DATA ---------------- */ const defaultSlides = [
+    {
+        id: 1,
+        img: "/images/event.png",
+        title: "Quick Solvathon Innovation Challenge",
+        location: "KCT Tech Park, Coimbatore",
+        datetime: "2025-10-19T17:00:00"
+    },
+    {
+        id: 2,
+        img: "/images/event.png",
+        title: "International Conference on Design",
+        location: "Coimbatore Convention Center",
+        datetime: "2025-11-18T10:00:00"
+    }
+];
+/* ---------------- COUNTDOWN HOOK ---------------- */ function useCountdown(targetIso) {
+    const [diff, setDiff] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(()=>Math.max(new Date(targetIso) - new Date(), 0));
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const timer = setInterval(()=>{
+            setDiff(Math.max(new Date(targetIso) - new Date(), 0));
+        }, 1000);
+        return ()=>clearInterval(timer);
+    }, [
+        targetIso
+    ]);
+    const secs = Math.floor(diff / 1000) % 60;
+    const mins = Math.floor(diff / (1000 * 60)) % 60;
+    const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    return {
+        days,
+        hours,
+        mins,
+        secs
+    };
+}
+function SpotlightCarousel({ slides = defaultSlides }) {
+    const [current, setCurrent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const total = slides.length;
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const timer = setInterval(()=>{
+            setCurrent((prev)=>(prev + 1) % total);
+        }, 8000);
+        return ()=>clearInterval(timer);
+    }, [
+        total
+    ]);
+    const goto = (i)=>setCurrent((i + total) % total);
+    const prev = ()=>goto(current - 1);
+    const next = ()=>goto(current + 1);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].root,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title,
+                children: "Top Spotlights"
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                lineNumber: 75,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].wrapper,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].track,
+                    style: {
+                        transform: `translateX(-${current * 100}%)`
+                    },
+                    children: slides.map((s)=>{
+                        const { days, hours, mins, secs } = useCountdown(s.datetime);
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].slide,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].left,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: s.img,
+                                        alt: s.title,
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].image
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                        lineNumber: 88,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                    lineNumber: 87,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].right,
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].header,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: s.title
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                    lineNumber: 93,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].share,
+                                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SHAREICON"]
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                    lineNumber: 94,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                            lineNumber: 92,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].meta,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: [
+                                                        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LOCATION_ICON"],
+                                                        " ",
+                                                        s.location
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                    lineNumber: 98,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: [
+                                                        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DATEICON"],
+                                                        " ",
+                                                        formatDate(s.datetime)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                    lineNumber: 99,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                            lineNumber: 97,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].startsIn,
+                                            children: "Event Starts In"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                            lineNumber: 102,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].countdown,
+                                            children: [
+                                                [
+                                                    days,
+                                                    hours,
+                                                    mins,
+                                                    secs
+                                                ].map((v, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].pill,
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].num,
+                                                            children: String(v).padStart(2, "0")
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                            lineNumber: 107,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    }, i, false, {
+                                                        fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                        lineNumber: 106,
+                                                        columnNumber: 23
+                                                    }, this)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].cta,
+                                                    children: "Get Ticket"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                                    lineNumber: 110,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                            lineNumber: 104,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                    lineNumber: 91,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, s.id, true, {
+                            fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                            lineNumber: 86,
+                            columnNumber: 15
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                    lineNumber: 78,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                lineNumber: 77,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].controls,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: prev,
+                        children: "❮"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                        lineNumber: 120,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].dots,
+                        children: slides.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: i === current ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].activeDot : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].dot,
+                                onClick: ()=>goto(i)
+                            }, i, false, {
+                                fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                                lineNumber: 123,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                        lineNumber: 121,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: next,
+                        children: "❯"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                        lineNumber: 130,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+                lineNumber: 119,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js",
+        lineNumber: 74,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/LeaderboardModal/LeaderboardModal.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "cell-name": "LeaderboardModal-module__VZChaq__cell-name",
+  "fadeIn": "LeaderboardModal-module__VZChaq__fadeIn",
+  "first": "LeaderboardModal-module__VZChaq__first",
+  "highlight": "LeaderboardModal-module__VZChaq__highlight",
+  "lb-avatar": "LeaderboardModal-module__VZChaq__lb-avatar",
+  "lb-backdrop": "LeaderboardModal-module__VZChaq__lb-backdrop",
+  "lb-close": "LeaderboardModal-module__VZChaq__lb-close",
+  "lb-list-sub": "LeaderboardModal-module__VZChaq__lb-list-sub",
+  "lb-list-title": "LeaderboardModal-module__VZChaq__lb-list-title",
+  "lb-medal": "LeaderboardModal-module__VZChaq__lb-medal",
+  "lb-modal": "LeaderboardModal-module__VZChaq__lb-modal",
+  "lb-name-cell": "LeaderboardModal-module__VZChaq__lb-name-cell",
+  "lb-overlay": "LeaderboardModal-module__VZChaq__lb-overlay",
+  "lb-pod-avatar": "LeaderboardModal-module__VZChaq__lb-pod-avatar",
+  "lb-pod-card": "LeaderboardModal-module__VZChaq__lb-pod-card",
+  "lb-pod-name": "LeaderboardModal-module__VZChaq__lb-pod-name",
+  "lb-podium": "LeaderboardModal-module__VZChaq__lb-podium",
+  "lb-rank": "LeaderboardModal-module__VZChaq__lb-rank",
+  "lb-row-ui": "LeaderboardModal-module__VZChaq__lb-row-ui",
+  "lb-subtitle": "LeaderboardModal-module__VZChaq__lb-subtitle",
+  "lb-title": "LeaderboardModal-module__VZChaq__lb-title",
+  "leaders-table": "LeaderboardModal-module__VZChaq__leaders-table",
+  "leaders-table-wrap": "LeaderboardModal-module__VZChaq__leaders-table-wrap",
+  "medalBounce": "LeaderboardModal-module__VZChaq__medalBounce",
+  "modalPop": "LeaderboardModal-module__VZChaq__modalPop",
+  "podiumFloat": "LeaderboardModal-module__VZChaq__podiumFloat",
+  "second": "LeaderboardModal-module__VZChaq__second",
+  "slideUp": "LeaderboardModal-module__VZChaq__slideUp",
+  "stat-box": "LeaderboardModal-module__VZChaq__stat-box",
+  "stat-label": "LeaderboardModal-module__VZChaq__stat-label",
+  "stat-value": "LeaderboardModal-module__VZChaq__stat-value",
+  "third": "LeaderboardModal-module__VZChaq__third",
+});
+}),
+"[project]/src/components/global/LeaderboardModal/LeaderboardModal.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>LeaderboardModal
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/LeaderboardModal/LeaderboardModal.module.css [app-ssr] (css module)");
+"use client";
+;
+;
+;
+// Public images
+const goldMedal = "/images/FirstOr.png";
+const silverMedal = "/images/SecondOr.png";
+const bronzeMedal = "/images/ThreedOr.png";
+function LeaderboardModal({ open, onClose, data = [] }) {
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        document.body.style.overflow = open ? "hidden" : "";
+        return ()=>document.body.style.overflow = "";
+    }, [
+        open
+    ]);
+    if (!open) return null;
+    const top3 = data.slice(0, 3);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].overlay,
+        role: "dialog",
+        "aria-modal": "true",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backdrop,
+                onClick: onClose
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].modal,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].close,
+                        onClick: onClose,
+                        "aria-label": "Close",
+                        children: "✕"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title,
+                        children: "Legends Board"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].subtitle,
+                        children: "Where brilliant organizers rise — your dedication builds the stage for every success!"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].podium,
+                        children: top3.map((org, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].podiumCard} ${i === 0 ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].first : i === 1 ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].second : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].third}`,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: i === 0 ? goldMedal : i === 1 ? silverMedal : bronzeMedal,
+                                        alt: "medal",
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].medal
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                        lineNumber: 48,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].avatarWrap,
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            src: org.avatar,
+                                            alt: org.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                            lineNumber: 55,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                        lineNumber: 54,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].name,
+                                        children: org.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                        lineNumber: 58,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].stats,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statLabel,
+                                                        children: "Events created"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                        lineNumber: 62,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statValue,
+                                                        children: org.events
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                        lineNumber: 63,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                lineNumber: 61,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statLabel,
+                                                        children: "User views"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                        lineNumber: 66,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statValue,
+                                                        children: org.views
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                        lineNumber: 67,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                lineNumber: 65,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                        lineNumber: 60,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, org.id, true, {
+                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].listTitle,
+                        children: "List of Top Organizers"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 75,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].listSub,
+                        children: "You don't just host events; you shape experiences. Keep shining!"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 76,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].tableWrap,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].table,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                children: "Organizer"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                lineNumber: 84,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                children: "Events"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                lineNumber: 85,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                children: "Views"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                lineNumber: 86,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                children: "Rank"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                lineNumber: 87,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                        lineNumber: 83,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                    lineNumber: 82,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                    children: data.map((org)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].nameCell,
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                            src: org.avatar,
+                                                            alt: org.name
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                            lineNumber: 94,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        org.name
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                    lineNumber: 93,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                    children: org.events
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                    lineNumber: 97,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                    children: org.views
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                    lineNumber: 98,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].rank,
+                                                    children: org.rank
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                                    lineNumber: 99,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, org.id, true, {
+                                            fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                            lineNumber: 92,
+                                            columnNumber: 17
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                                    lineNumber: 90,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                            lineNumber: 81,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                        lineNumber: 80,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/LeaderboardModal/LeaderboardModal.js",
+        lineNumber: 22,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/LocationHighlights/LocationHighlights.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "active": "LocationHighlights-module__W4R5xq__active",
+  "card": "LocationHighlights-module__W4R5xq__card",
+  "events": "LocationHighlights-module__W4R5xq__events",
+  "grid": "LocationHighlights-module__W4R5xq__grid",
+  "img": "LocationHighlights-module__W4R5xq__img",
+  "name": "LocationHighlights-module__W4R5xq__name",
+  "sub": "LocationHighlights-module__W4R5xq__sub",
+  "tab": "LocationHighlights-module__W4R5xq__tab",
+  "tabs": "LocationHighlights-module__W4R5xq__tabs",
+  "text": "LocationHighlights-module__W4R5xq__text",
+});
+}),
+"[project]/src/components/global/LocationHighlights/LocationHighlights.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>PopularLocations
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/LocationHighlights/LocationHighlights.module.css [app-ssr] (css module)");
+"use client";
+;
+;
+;
+function PopularLocations() {
+    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("cities");
+    const cities = [
+        {
+            img: "/images/coimbatore.png",
+            name: "Coimbatore",
+            events: "1725 Events"
+        },
+        {
+            img: "/images/chennai.png",
+            name: "Chennai",
+            events: "1710 Events"
+        },
+        {
+            img: "/images/bangalore.png",
+            name: "Bangalore",
+            events: "500 Events"
+        },
+        {
+            img: "/images/cochin.png",
+            name: "Cochin",
+            events: "475 Events"
+        },
+        {
+            img: "/images/delhi.png",
+            name: "Delhi",
+            events: "450 Events"
+        },
+        {
+            img: "/images/salem.png",
+            name: "Salem",
+            events: "400 Events"
+        }
+    ];
+    const countries = [
+        {
+            img: "/images/india.png",
+            name: "India",
+            events: "1725 Events"
+        },
+        {
+            img: "/images/australia.png",
+            name: "Australia",
+            events: "1710 Events"
+        },
+        {
+            img: "/images/usa.png",
+            name: "USA",
+            events: "500 Events"
+        },
+        {
+            img: "/images/uk.png",
+            name: "UK",
+            events: "200 Events"
+        },
+        {
+            img: "/images/uae.png",
+            name: "UAE",
+            events: "300 Events"
+        },
+        {
+            img: "/images/singapore.png",
+            name: "Singapore",
+            events: "400 Events"
+        }
+    ];
+    const list = activeTab === "cities" ? cities : countries;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].root,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].tabs,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].tab} ${activeTab === "cities" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].active : ""}`,
+                        onClick: ()=>setActiveTab("cities"),
+                        children: "Popular Cities"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].tab} ${activeTab === "countries" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].active : ""}`,
+                        onClick: ()=>setActiveTab("countries"),
+                        children: "Popular Countries"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                lineNumber: 32,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sub,
+                children: activeTab === "cities" ? "Cities That Never Stop Celebrating" : "Where Every Continent Comes Alive with Events"
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].grid,
+                children: list.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].card,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: item.img,
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].img,
+                                alt: item.name
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                                lineNumber: 59,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].text,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].name,
+                                        children: item.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                                        lineNumber: 61,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].events,
+                                        children: item.events
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                                        lineNumber: 62,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                                lineNumber: 60,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, i, true, {
+                        fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                        lineNumber: 58,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+                lineNumber: 56,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/LocationHighlights/LocationHighlights.js",
+        lineNumber: 30,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
+
+__turbopack_context__.v({
+  "avatar": "OrganizerCarousel-module__lSNBea__avatar",
+  "avatarWrap": "OrganizerCarousel-module__lSNBea__avatarWrap",
+  "card": "OrganizerCarousel-module__lSNBea__card",
+  "events": "OrganizerCarousel-module__lSNBea__events",
+  "header": "OrganizerCarousel-module__lSNBea__header",
+  "leaderboardBtn": "OrganizerCarousel-module__lSNBea__leaderboardBtn",
+  "list": "OrganizerCarousel-module__lSNBea__list",
+  "more": "OrganizerCarousel-module__lSNBea__more",
+  "name": "OrganizerCarousel-module__lSNBea__name",
+  "row": "OrganizerCarousel-module__lSNBea__row",
+  "sub": "OrganizerCarousel-module__lSNBea__sub",
+  "title": "OrganizerCarousel-module__lSNBea__title",
+});
+}),
+"[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>OrganizersCarousel
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.module.css [app-ssr] (css module)");
+"use client";
+;
+;
+function OrganizersCarousel({ onOpenLeaderboard }) {
+    const ORGANIZERS = [
+        {
+            id: 1,
+            name: "Swaram Academy",
+            avatar: "https://png.pngtree.com/element_pic/00/16/07/06577d261edb9ec.jpg",
+            events: 17
+        },
+        {
+            id: 2,
+            name: "Noise & Grains",
+            avatar: "https://static.vecteezy.com/system/resources/thumbnails/008/214/517/small_2x/abstract-geometric-logo-or-infinity-line-logo-for-your-company-free-vector.jpg",
+            events: 1725
+        },
+        {
+            id: 3,
+            name: "Amrita Vidyalayam",
+            avatar: "https://img.freepik.com/free-vector/abstract-logo-flame-shape_1043-44.jpg",
+            events: 3025
+        },
+        {
+            id: 4,
+            name: "Chetri Club",
+            avatar: "https://marketplace.canva.com/EAF7cca_2pA/1/0/1600w/canva-black-and-blue-initials-creative-logo-U-z4x7ZUjjs.jpg",
+            events: 25
+        },
+        {
+            id: 5,
+            name: "Microsoft",
+            avatar: "https://img.freepik.com/free-vector/abstract-company-logo_53876-120501.jpg",
+            events: 2300
+        }
+    ];
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].root,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].header,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].title,
+                                children: "Our Top Organizers"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sub,
+                                children: [
+                                    "Find the Organizations you're looking for quickly.",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].more,
+                                        children: " You can see more."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                        lineNumber: 47,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].leaderboardBtn,
+                        onClick: onOpenLeaderboard,
+                        children: "View Leaderboard >>>"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].row,
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].list,
+                    children: ORGANIZERS.map((org)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].card,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].avatarWrap,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: org.avatar,
+                                        alt: org.name,
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].avatar
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                        lineNumber: 62,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                    lineNumber: 61,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].name,
+                                    children: org.name
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                    lineNumber: 65,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].events,
+                                    children: [
+                                        org.events,
+                                        " events"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                                    lineNumber: 66,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, org.id, true, {
+                            fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                            lineNumber: 60,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                    lineNumber: 58,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js",
+        lineNumber: 40,
+        columnNumber: 5
+    }, this);
+}
+}),
+"[project]/src/app/home/LandingPage.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>LandingPage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+// GLOBAL COMPONENTS (new paths)
+// ICONS
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/const-value/config-icons/page.js [app-ssr] (ecmascript)");
+// API
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$event$2e$api$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/api/event.api.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-hot-toast/dist/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$ChooseEventCategory$2f$ChooseEventCategory$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/ChooseEventCategory/ChooseEventCategory.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/EventSearchBar/EventSearchBar.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/EventSlider/EventSlider.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/Footer/Footer.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBanner$2f$HeroBanner$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/HeroBanner/HeroBanner.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/HeroBannerCarousel/HeroBannerCarousel.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/SpotlightCarousel/SpotlightCarousel.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/LeaderboardModal/LeaderboardModal.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/LocationHighlights/LocationHighlights.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/global/OrganizerCarousel/OrganizerCarousel.js [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+function LandingPage() {
+    const [openLB, setOpenLB] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [events, setEvents] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const apiText = "What Event would you like to go to?";
+    const posters = [
+        "/images/australia.png",
+        "/images/auth-forgot.png",
+        "/images/or_passwordsuccess.png",
+        "/images/or_forgotpasswordnextimage.png",
+        "/images/or_forgotpassword.png",
+        "/images/or_login.png",
+        "/images/auth-signup.png"
+    ];
+    const CATEGORIES = [
+        {
+            name: "Conferences",
+            img: "/images/Conferences.png",
+            class: "conference"
+        },
+        {
+            name: "Hackathon",
+            img: "/images/Hackathon.png",
+            class: "hackathon"
+        },
+        {
+            name: "Webinars",
+            img: "/images/Webinars.png",
+            class: "webinar"
+        },
+        {
+            name: "Athletics",
+            img: "/images/Athletics.png",
+            class: "athletics"
+        },
+        {
+            name: "Concerts",
+            img: "/images/concert.png",
+            class: "concerts"
+        },
+        {
+            name: "Tournaments",
+            img: "/images/Tournaments.png",
+            class: "tournaments"
+        },
+        {
+            name: "Job Fairs",
+            img: "/images/JobFairs.png",
+            class: "jobfairs"
+        },
+        {
+            name: "Explore more",
+            img: "/images/Explore.png",
+            class: "explore"
+        }
+    ];
+    const ORGANIZERSS = [
+        {
+            id: 1,
+            name: "Swaram Academy",
+            avatar: "https://png.pngtree.com/element_pic/00/16/07/06577d261edb9ec.jpg",
+            events: 17,
+            views: 2517,
+            rank: 1
+        }
+    ];
+    const loadEvents = async ()=>{
+        try {
+            const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$api$2f$event$2e$api$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAllEventsApi"])();
+            if (res?.status) {
+                setEvents(res.data);
+            } else {
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].error(res?.message || "Failed to load events");
+            }
+        } catch  {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].error("Something went wrong");
+        } finally{
+            setLoading(false);
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        loadEvents();
+    }, []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "dashboard-root",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+                className: "dash-hero",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBanner$2f$HeroBanner$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        text: apiText
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/home/LandingPage.js",
+                        lineNumber: 103,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "btn-explore",
+                        children: "Explore Events"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/home/LandingPage.js",
+                        lineNumber: 105,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "hero-carousel-area",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$HeroBannerCarousel$2f$HeroBannerCarousel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            images: posters
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/home/LandingPage.js",
+                            lineNumber: 108,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/home/LandingPage.js",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSearchBar$2f$EventSearchBar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        whatIcon: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["WHATICON"],
+                        whereIcon: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LOCATION_ICON"],
+                        whenIcon: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$const$2d$value$2f$config$2d$icons$2f$page$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DATEICON"]
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/home/LandingPage.js",
+                        lineNumber: 117,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 102,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$ChooseEventCategory$2f$ChooseEventCategory$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                categories: CATEGORIES
+            }, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 126,
+                columnNumber: 7
+            }, this),
+            !loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        title: "Trending Events",
+                        data: events
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/home/LandingPage.js",
+                        lineNumber: 129,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        title: "Browse Events",
+                        data: events
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/home/LandingPage.js",
+                        lineNumber: 130,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$SpotlightCarousel$2f$SpotlightCarousel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 134,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$EventSlider$2f$EventSlider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                title: "Upcoming Events",
+                data: events
+            }, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 136,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$OrganizerCarousel$2f$OrganizerCarousel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                onOpenLeaderboard: ()=>setOpenLB(true)
+            }, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 137,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LeaderboardModal$2f$LeaderboardModal$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                open: openLB,
+                onClose: ()=>setOpenLB(false),
+                data: ORGANIZERSS
+            }, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 139,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$LocationHighlights$2f$LocationHighlights$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 144,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$global$2f$Footer$2f$Footer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/src/app/home/LandingPage.js",
+                lineNumber: 145,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/home/LandingPage.js",
+        lineNumber: 101,
+        columnNumber: 5
+    }, this);
+}
+}),
+];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__d44ca588._.js.map

@@ -1,0 +1,45 @@
+/* [project]/src/app/home/landing.css [app-client] (css) */
+.dashboard-root {
+  background: radial-gradient(circle at 2% 2%, #e9d7ff8c 0%, #e9d7ff40 20%, #0000 65%), radial-gradient(circle at 85% 38%, #fff5dc99 0%, #e1c8ff59 20%, #e1c8ff2e 30%, #0000 75%), radial-gradient(circle at 12% 95%, #ebdcff59 0%, #0000 40%), #fff;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.dash-hero {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.btn-explore {
+  color: #fff;
+  cursor: pointer;
+  background: #7f2bff;
+  border: none;
+  border-radius: 28px;
+  margin-top: 24px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: transform .2s;
+}
+
+.btn-explore:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .dash-hero {
+    padding: 0 16px;
+  }
+
+  .section {
+    margin-top: 60px;
+  }
+}
+
+/*# sourceMappingURL=src_app_home_landing_css_bad6b30c._.single.css.map*/

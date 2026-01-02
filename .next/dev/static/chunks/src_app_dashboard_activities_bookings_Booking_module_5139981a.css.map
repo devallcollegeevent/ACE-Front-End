@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/app/dashboard/activities/bookings/Booking.module.css"],"sourcesContent":[".wrapper {\r\n  padding: 20px;\r\n}\r\n\r\n.heading {\r\n  font-size: 22px;\r\n  font-weight: 700;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));\r\n  gap: 20px;\r\n}\r\n\r\n.card {\r\n  background: #fff;\r\n  border-radius: 14px;\r\n  padding: 12px;\r\n  position: relative;\r\n}\r\n\r\n.card img {\r\n  width: 100%;\r\n  height: 160px;\r\n  border-radius: 12px;\r\n}\r\n\r\n.badge {\r\n  position: absolute;\r\n  right: 12px;\r\n  bottom: 12px;\r\n  background: #7a12ff;\r\n  color: #fff;\r\n  border-radius: 20px;\r\n  padding: 6px 14px;\r\n  border: none;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;;AAMA;;;;;;;AAOA;;;;;;AAMA"}}]
+}

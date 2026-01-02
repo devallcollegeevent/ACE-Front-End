@@ -1,0 +1,91 @@
+/* =========================
+   CENTER
+========================= */
+.center {
+  text-align: center;
+  width: 100%;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  color: #1c1c1c;
+}
+
+/* Gradient animated words */
+.title span {
+  background: linear-gradient(
+    90deg,
+    #7f2bff,
+    #ff7a00
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: loopGradient 12s ease-in-out infinite;
+}
+
+/* =========================
+   SUB TITLE
+========================= */
+.subtitle {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #666666;
+  text-align: center;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes loopGradient {
+  0% {
+    -webkit-text-fill-color: #1c1c1c;
+  }
+  30% {
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    -webkit-text-fill-color: #1c1c1c;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .title {
+    font-size: 42px;
+    padding-top: 70px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+    padding-top: 60px;
+    gap: 6px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+}

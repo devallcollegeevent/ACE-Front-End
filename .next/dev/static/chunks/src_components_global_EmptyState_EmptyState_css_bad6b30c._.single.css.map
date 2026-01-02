@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/global/EmptyState/EmptyState.css"],"sourcesContent":["/* EMPTY STATE WRAPPER */\r\n.empty-state {\r\n  text-align: center;\r\n  padding: 60px 20px;\r\n}\r\n\r\n/* IMAGE */\r\n.empty-state img {\r\n  max-width: 260px;\r\n  width: 100%;\r\n  margin-bottom: 16px;\r\n}\r\n\r\n/* TITLE */\r\n.empty-state h6 {\r\n  font-weight: 600;\r\n  margin-bottom: 4px;\r\n}\r\n\r\n/* SUBTITLE */\r\n.empty-state p {\r\n  color: #6c757d;\r\n  font-size: 14px;\r\n  margin-bottom: 0;\r\n}\r\n"],"names":[],"mappings":"AACA;;;;;AAMA;;;;;;AAOA;;;;;AAMA"}}]
+}

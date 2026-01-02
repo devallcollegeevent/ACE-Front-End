@@ -1,0 +1,241 @@
+/* [project]/src/app/dashboard/space/create/CreateEvent.module.css [app-client] (css) */
+.CreateEvent-module__szMDfW__wrapper {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* [project]/src/app/dashboard/space/create/components/Stepper.module.css [app-client] (css) */
+.Stepper-module__Lw2a6a__stepper {
+  justify-content: space-between;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.Stepper-module__Lw2a6a__step {
+  text-align: center;
+  opacity: .4;
+  flex: 1;
+}
+
+.Stepper-module__Lw2a6a__step p {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.Stepper-module__Lw2a6a__circle {
+  background: #f2f2f2;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+}
+
+.Stepper-module__Lw2a6a__active {
+  opacity: 1;
+}
+
+.Stepper-module__Lw2a6a__active .Stepper-module__Lw2a6a__circle {
+  background: #fff;
+  box-shadow: 0 0 0 6px #f1e7ff;
+}
+
+/* [project]/src/app/dashboard/space/create/steps/OrganizerDetails.module.css [app-client] (css) */
+.OrganizerDetails-module__DXs4XW__card {
+  background: #f2f2f2;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 24px;
+}
+
+.OrganizerDetails-module__DXs4XW__cardTitle {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.OrganizerDetails-module__DXs4XW__orgBlock {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+.OrganizerDetails-module__DXs4XW__orgHeader {
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-weight: 600;
+  display: flex;
+}
+
+.OrganizerDetails-module__DXs4XW__deleteBtn {
+  color: #7f00ff;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #7f00ff;
+  border-radius: 18px;
+  padding: 6px 14px;
+}
+
+.OrganizerDetails-module__DXs4XW__field {
+  flex-direction: column;
+  margin-bottom: 14px;
+  display: flex;
+}
+
+.OrganizerDetails-module__DXs4XW__field label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.OrganizerDetails-module__DXs4XW__field span {
+  color: red;
+}
+
+.OrganizerDetails-module__DXs4XW__input {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 44px;
+  margin-top: 6px;
+  padding: 0 14px;
+}
+
+.OrganizerDetails-module__DXs4XW__grid2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  display: grid;
+}
+
+.OrganizerDetails-module__DXs4XW__addWrap {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.OrganizerDetails-module__DXs4XW__addBtn {
+  color: #fff;
+  background: #7f00ff;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 26px;
+}
+
+.OrganizerDetails-module__DXs4XW__actionEnd {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.OrganizerDetails-module__DXs4XW__nextBtn {
+  color: #fff;
+  background: #7f00ff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 44px;
+}
+
+/* [project]/src/app/dashboard/space/create/steps/EventDetails.module.css [app-client] (css) */
+.EventDetails-module__D0qSHW__card {
+  background: #f2f2f2;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+.EventDetails-module__D0qSHW__cardTitle {
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.EventDetails-module__D0qSHW__cardHeader {
+  justify-content: space-between;
+  display: flex;
+}
+
+.EventDetails-module__D0qSHW__grid3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  display: grid;
+}
+
+.EventDetails-module__D0qSHW__input {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 44px;
+  padding: 0 14px;
+}
+
+.EventDetails-module__D0qSHW__textarea {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 120px;
+  margin-top: 16px;
+  padding: 12px;
+}
+
+.EventDetails-module__D0qSHW__actions {
+  justify-content: space-between;
+  display: flex;
+}
+
+.EventDetails-module__D0qSHW__btnPrimary {
+  color: #fff;
+  background: #7f00ff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 40px;
+}
+
+.EventDetails-module__D0qSHW__btnOutline {
+  background: #fff;
+  border: 2px solid #7f00ff;
+  border-radius: 25px;
+  padding: 12px 40px;
+}
+
+/* [project]/src/app/dashboard/space/create/steps/MediaTickets.module.css [app-client] (css) */
+.MediaTickets-module__y1lmVq__card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+.MediaTickets-module__y1lmVq__input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  height: 44px;
+  margin-top: 12px;
+  padding: 0 12px;
+}
+
+.MediaTickets-module__y1lmVq__empty {
+  color: #7f00ff;
+}
+
+.MediaTickets-module__y1lmVq__actions {
+  justify-content: space-between;
+  display: flex;
+}
+
+.MediaTickets-module__y1lmVq__primaryBtn {
+  color: #fff;
+  background: #7f00ff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 40px;
+}
+
+.MediaTickets-module__y1lmVq__outlineBtn {
+  background: #fff;
+  border: 2px solid #7f00ff;
+  border-radius: 24px;
+  padding: 12px 40px;
+}
+
+/*# sourceMappingURL=src_app_dashboard_space_create_579b6446._.css.map*/
