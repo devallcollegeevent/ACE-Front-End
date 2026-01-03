@@ -13,10 +13,12 @@ import {
 } from "../../../const-value/config-icons/page";
 import Footer from "../Footer/Footer";
 import "./CommonEventDetails.css";
+import ConfirmModal from "../../ui/Modal/ConfirmModal";
 
 export default function CommonEventDetails({ event = {}, onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
+  const [openConfirm, setOpenConfirm] = useState(false);
   const [countdown, setCountdown] = useState({
     days: "00",
     hours: "00",
@@ -92,6 +94,19 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
+
+  const handleRegisterClick = () => {
+    setOpenConfirm(true);
+  };
+
+  const handleConfirm = () => {
+    setOpenConfirm(false);
+    window.open(event.paymentLink , "_blank", "noopener,noreferrer");
+  };
+
+  const handleCancel = () => {
+    setOpenConfirm(false);
+  };
   console.log("singel event value", event);
   return (
     <div className="container event-wrapper my-4">
@@ -155,10 +170,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           </div>
         </div>
 
-        <button
-          className="btn-register"
-          onClick={() => window.open(event.paymentLink, "_blank")}
-        >
+        <button className="btn-register" onClick={handleRegisterClick}>
           Register Now
         </button>
       </div>
@@ -434,6 +446,16 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       <div>
         <Footer />
       </div>
+      <ConfirmModal
+        open={openConfirm}
+        title="External Redirection"
+        description={
+          "You’re being redirected to an external website that is not managed by Allcollegeevent. For security reasons, we’re unable to verify this link."
+        }
+        image="/images/logo.png"
+        onCancel={handleCancel}
+        onConfirm={handleConfirm}
+      />
     </div>
   );
 }
