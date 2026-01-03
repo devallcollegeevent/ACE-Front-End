@@ -173,7 +173,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       </p>
 
       {/* ================= 5. VENUE + TICKETS ================= */}
-      <div className="row g-4 py-5">
+      <div className="row g-4 py-3">
         {/* ================= VENUE & DATE (LEFT 6) ================= */}
         <div className="col-lg-6">
           <div className="card-box h-100">
@@ -304,7 +304,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
                     key={item.identity || `${item.member?.identity}-${index}`}
                     className="mb-3 host-section"
                   >
-                    <div className="host-grid mt-1">
+                    <div className="host-grid ">
                       <div>
                         <label>organization Name</label>
                         <p>{item.member?.organizationName || "-"}</p>
