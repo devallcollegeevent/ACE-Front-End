@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/auth/user/login/login.css"],"sourcesContent":[".auth-shell {\r\n  min-height: 100vh;\r\n  background-image: url(\"/images/background.png\");\r\n  background-size: cover;\r\n  background-position: center;\r\n  font-family: Inter, sans-serif;\r\n}\r\n.login-forgot {\r\n  text-align: right;\r\n  font-size: 13px;\r\n  margin-bottom: 12px;\r\n}\r\n\r\n.login-forgot a {\r\n  color: var(--tx-link);\r\n  font-weight: 600;\r\n}\r\n\r\n.login-divider {\r\n  text-align: center;\r\n  color: #999;\r\n  margin: 18px 0;\r\n}\r\n.login-google {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n.auth-divider {\r\n  text-align: center;\r\n  padding-top: 15px;\r\n  margin-bottom: 20px;\r\n}\r\n.Switch-to-Organizer {\r\n  color: var(--hover, #5606a6);\r\n  text-align: right;\r\n  cursor: pointer;\r\n  /* BL melody */\r\n  font-family: \"BL Melody\";\r\n  font-size: 16px;\r\n  font-style: normal;\r\n  font-weight: 600;\r\n  line-height: normal;\r\n}\r\n.organization-sections {\r\n  display: flex;\r\n  justify-content: end;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;;AAOA;;;;;;AAMA;;;;;AAKA;;;;;;AAKA;;;;;AAIA;;;;;;AAKA;;;;;;;;;;;AAWA"}}]
-}

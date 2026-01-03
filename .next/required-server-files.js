@@ -50,7 +50,7 @@ self.__SERVER_FILES_MANIFEST={
       "qualities": [
         75
       ],
-      "unoptimized": false
+      "unoptimized": true
     },
     "reactMaxHeadersLength": 6000,
     "cacheLife": {
@@ -140,7 +140,7 @@ self.__SERVER_FILES_MANIFEST={
       "isExperimentalCompile": false
     }
   },
-  "appDir": "C:\\Users\\Admin\\Downloads\\ace-nextjs-full-project",
+  "appDir": "D:\\Siva\\ACE-Front-End",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

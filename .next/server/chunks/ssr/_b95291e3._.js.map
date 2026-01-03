@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/app/events/%5Bid%5D/page.js"],"sourcesContent":["export default function Page(){ return <h1>events/[id]/page.js</h1> }"],"names":[],"mappings":"8LAAe,SAAS,IAAQ,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,KAAA,UAAG,uBAAyB"}

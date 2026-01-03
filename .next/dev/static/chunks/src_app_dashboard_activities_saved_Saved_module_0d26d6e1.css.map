@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/app/dashboard/activities/saved/Saved.module.css"],"sourcesContent":[".wrapper {\r\n  padding: 20px;\r\n}\r\n\r\n.heading {\r\n  font-size: 22px;\r\n  font-weight: 700;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));\r\n  gap: 20px;\r\n}\r\n\r\n.card {\r\n  background: #fff;\r\n  border-radius: 14px;\r\n  padding: 12px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.08);\r\n}\r\n\r\n.image {\r\n  width: 100%;\r\n  height: 150px;\r\n  object-fit: cover;\r\n  border-radius: 10px;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;;AAMA;;;;;;;AAOA"}}]
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/app/dashboard/space/create-event/CreateEvent.module.css"],"sourcesContent":[".wrapper {\r\n  padding: 20px;\r\n}\r\n\r\n.stepper {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  margin-bottom: 30px;\r\n}\r\n\r\n.stepper span {\r\n  font-weight: 700;\r\n  opacity: 0.4;\r\n}\r\n\r\n.active {\r\n  opacity: 1;\r\n  color: #7a12ff;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;AAKA"}}]
-}

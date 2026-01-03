@@ -25,6 +25,8 @@
   "/dashboard/space/my-events/page": "/dashboard/space/my-events",
   "/dashboard/space/page": "/dashboard/space",
   "/events/[id]/page": "/events/[id]",
-  "/events/listing/page": "/events/listing",
+  "/events/page": "/events",
+  "/explore-categories/page": "/explore-categories",
+  "/organization-details/[id]/page": "/organization-details/[id]",
   "/page": "/"
 }

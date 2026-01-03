@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/components/ClientLayout.js"],"sourcesContent":["\"use client\";\r\n\r\n\r\nexport default function ClientLayout({ children }) {\r\n  return (\r\n    <>\r\n      <Navb />\r\n      {children}\r\n    </>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;AAGe,SAAS,aAAa,EAAE,QAAQ,EAAE;IAC/C,qBACE;;0BACE,8OAAC;;;;;YACA;;;AAGP"}}]
-}

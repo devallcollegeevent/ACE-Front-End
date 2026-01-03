@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/app/events/listing/page.js"],"sourcesContent":["export default function Page(){ return <h1>events/listing/page.js</h1> }"],"names":[],"mappings":"8LAAe,SAAS,IAAQ,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,KAAA,UAAG,0BAA4B"}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Downloads/ace-nextjs-full-project/src/components/global/Navbar/Navbar.js"],"sourcesContent":["\"use client\";\nexport default function Navbar(){return <nav>Navbar</nav>}"],"names":[],"mappings":";;;;;AAAA;;AACe,SAAS;IAAS,qBAAO,8OAAC;kBAAI;;;;;;AAAY"}}]
-}

@@ -28,6 +28,14 @@
         "nxtPid": "nxtPid"
       },
       "namedRegex": "^/events/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/organization-details/[id]",
+      "regex": "^/organization\\-details/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/organization\\-details/(?<nxtPid>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -188,10 +196,16 @@
       "namedRegex": "^/dashboard/space/my\\-events(?:/)?$"
     },
     {
-      "page": "/events/listing",
-      "regex": "^/events/listing(?:/)?$",
+      "page": "/events",
+      "regex": "^/events(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/events/listing(?:/)?$"
+      "namedRegex": "^/events(?:/)?$"
+    },
+    {
+      "page": "/explore-categories",
+      "regex": "^/explore\\-categories(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/explore\\-categories(?:/)?$"
     }
   ],
   "dataRoutes": [],

@@ -25,6 +25,8 @@
   "/dashboard/space/my-events/page": "app/dashboard/space/my-events/page.js",
   "/dashboard/space/page": "app/dashboard/space/page.js",
   "/events/[id]/page": "app/events/[id]/page.js",
-  "/events/listing/page": "app/events/listing/page.js",
+  "/events/page": "app/events/page.js",
+  "/explore-categories/page": "app/explore-categories/page.js",
+  "/organization-details/[id]/page": "app/organization-details/[id]/page.js",
   "/page": "app/page.js"
 }
