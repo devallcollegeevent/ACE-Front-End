@@ -3,14 +3,18 @@
   width: 315px;
   flex-shrink: 0;
   cursor: pointer;
+  border-radius: 13.91px;
+  border: 1.5px solid #e9e9e9;
 }
 
 /* IMAGE */
 .event-img {
-  width: 100%;
-  height: 120px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 150px;
+  padding: 7px;
+  border-radius: 17px;
 }
 
 /* TEXT */
@@ -91,4 +95,3 @@
   column-gap: 50px;
   white-space: nowrap;
 }
-

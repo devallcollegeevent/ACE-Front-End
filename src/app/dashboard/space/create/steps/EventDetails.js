@@ -224,7 +224,7 @@ export default function EventDetails({
             >
               <option value="">Select Event Type</option>
               {eventTypes.map((t) => (
-                <option key={t.id} value={t.id}>
+                <option key={t.identity} value={t.identity}>
                   {t.name}
                 </option>
               ))}

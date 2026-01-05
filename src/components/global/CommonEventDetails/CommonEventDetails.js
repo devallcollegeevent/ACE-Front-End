@@ -152,7 +152,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           <div className="meta-row">
             <div>
               <span className="tag yellow">
-                {event?.eventTypeIdentity || "==========="}
+                {event?.categoryName || "==========="}
               </span>
 
               <span className="tag purple">Paid</span>

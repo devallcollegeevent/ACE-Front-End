@@ -162,4 +162,6 @@
 }
 .event-card {
   cursor: pointer;
+  border-radius: 13.91px;
+  border: 1.5px solid #e9e9e9;
 }

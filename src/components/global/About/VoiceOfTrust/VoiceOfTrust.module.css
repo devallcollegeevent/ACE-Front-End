@@ -1,0 +1,53 @@
+.wrapper {
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.wrapper h2 {
+  font-size: 1.8rem;
+}
+
+.wrapper span {
+  color: #7c3aed;
+}
+
+.grid {
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #7c3aed, #ff9800);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.card h4 {
+  margin-bottom: 0.25rem;
+}
+
+.card span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}

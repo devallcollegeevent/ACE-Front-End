@@ -176,7 +176,7 @@ export default function CreateEvent() {
       if (media.accommodation) {
         fd.append(
           "accommodationIdentities",
-          JSON.stringify([media.accommodation])
+          JSON.stringify(media.accommodation || [])
         );
       }
 

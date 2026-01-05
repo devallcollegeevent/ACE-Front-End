@@ -1,0 +1,56 @@
+.hero {
+  padding: 4rem 1rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #ff9800;
+}
+
+.hero h1 strong {
+  color: #7c3aed;
+}
+
+.images {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.images img {
+  width: 180px;
+  height: 260px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: translateY(-10px);
+}
+
+/* arc background */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 240px;
+  background: #faf7ff;
+  border-radius: 50%;
+  z-index: -1;
+}

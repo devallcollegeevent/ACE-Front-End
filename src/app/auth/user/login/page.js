@@ -96,7 +96,6 @@ export default function UserLoginPage() {
       const googleToken = response.credential;
 
       const res = await googleAuthLoginApi({
-        google: true,
         googleToken,
       });
 
