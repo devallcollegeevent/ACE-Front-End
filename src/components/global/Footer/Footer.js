@@ -104,7 +104,7 @@ export default function Footer() {
           <div className={styles.col}>
             <h4>Our Policies</h4>
             <a onClick={() => router.push("/privacy-policy")}>Privacy Policy</a>
-            <a onClick={() => router.push("/organizers")}>Top Organizers</a>
+            <a onClick={() => router.push("/terms-and-conditions")}>Terms & Conditions</a>
             <a onClick={() => router.push("/cookies")}>Cookies</a>
             <a onClick={() => router.push("/disclaimer")}>Disclaimer</a>
           </div>
