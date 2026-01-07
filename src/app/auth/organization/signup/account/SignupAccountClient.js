@@ -62,7 +62,7 @@ export default function SignupAccountClient() {
 
     setLoading(true);
     try {
-      await signupApi({
+      const res = await signupApi({
         org_cat: category,
         country,
         state,
@@ -74,6 +74,13 @@ export default function SignupAccountClient() {
         platform: "web",
       });
 
+      //DO NOT THROW
+      if (!res?.status) {
+        return toast.error(res?.message || MSG_ERR_SIGNUP_FAILED);
+      }
+
+      //SUCCESS ONLY ONCE
+      toast.success(res.message || MSG_SIGNUP_SUCCESS);
       router.push("/auth/organization/login");
     } catch (err) {
       toast.error("Something went wrong");

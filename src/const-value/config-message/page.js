@@ -22,7 +22,7 @@ export const LABEL_ORG_SELECT_COLLEGE = "Select College";
 // ---------------------------------------------------------
 export const TITLE_WELCOME_DASHBOARD = "Welcome to your dashboard";
 export const TITLE_ORG_LOGIN_MAIN = "Host. Manage. Inspire.";
-export const TITLE_ORG_ACCOUNT_CREATION = "Account Creation";
+export const TITLE_ORG_ACCOUNT_CREATION = "Organization Category";
 export const TITLE_VERIFY_ACCOUNT = "Verify your Account";
 export const TITLE_ORG_CATEGORY = "Organization Category";
 export const TITLE_USER_LOGIN = "Welcome Back";

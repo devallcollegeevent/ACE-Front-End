@@ -49,7 +49,7 @@ const INITIAL_FORM_DATA = {
   media: {
     bannerImages: [],
     perks: [],
-    certification: [],
+    certification: "",
     accommodation: [],
     tickets: [],
     paymentLink: "",
@@ -106,7 +106,18 @@ export default function CreateEvent() {
         return;
       }
 
-      const organizer = formData.organizer.organizations[0];
+      const collaboratorsPayload = (formData.organizer.organizations || []).map(
+        (org) => ({
+          hostIdentity: org.hostBy,
+          organizationName: org.orgName,
+          organizerNumber: org.organizerNumber,
+          orgDept: org.department || "",
+          organizerName: org.organizerName,
+          location: org.location,
+        })
+      );
+
+      console.log("FINAL COLLABORATORS PAYLOAD →", collaboratorsPayload);
       const event = formData.event;
       const media = formData.media;
 
@@ -122,26 +133,15 @@ export default function CreateEvent() {
         fd.append("certIdentity", media.certification);
       }
 
-      fd.append(
-        "eligibleDeptIdentities",
-        JSON.stringify(organizer.department ? [organizer.department] : [])
-      );
+      const deptList = formData.organizer.organizations
+        .map((o) => o.department)
+        .filter(Boolean);
+
+      fd.append("eligibleDeptIdentities", JSON.stringify(deptList));
 
       fd.append("tags", JSON.stringify(event.tags || []));
 
-      fd.append(
-        "collaborators",
-        JSON.stringify([
-          {
-            hostIdentity: organizer.hostBy,
-            organizationName: organizer.orgName,
-            organizerNumber: organizer.organizerNumber,
-            orgDept: organizer.department,
-            organizerName: organizer.organizerName,
-            location: organizer.location,
-          },
-        ])
-      );
+      fd.append("collaborators", JSON.stringify(collaboratorsPayload));
 
       fd.append(
         "calendars",

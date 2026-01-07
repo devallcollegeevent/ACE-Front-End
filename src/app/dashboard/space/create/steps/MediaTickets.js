@@ -20,6 +20,8 @@ import {
 import TicketModal from "../../../../../components/ui/Modal/TicketModal";
 import ConfirmModal from "../../../../../components/ui/Modal/ConfirmModal";
 import { processImage } from "../../../../../lib/utils/imageProcessor";
+import { ticketSchema } from "../../../../../components/validation";
+import toast from "react-hot-toast";
 
 export default function MediaTickets({
   data,
@@ -31,9 +33,7 @@ export default function MediaTickets({
   /* ================= LOCAL STATE (WITH PREFILL) ================= */
   const [tickets, setTickets] = useState(data?.tickets || []);
   const [perks, setPerks] = useState(data?.perks?.[0] || "");
-  const [certification, setCertification] = useState(
-    data?.certification?.[0] || ""
-  );
+  const [certification, setCertification] = useState(data?.certification || "");
   const [accommodation, setAccommodation] = useState(
     data?.accommodation?.[0] || ""
   );
@@ -115,7 +115,7 @@ export default function MediaTickets({
     setData({
       bannerImages: [],
       perks: [],
-      certification: [],
+      certification: "",
       accommodation: [],
       tickets: [],
       paymentLink: "",
@@ -131,11 +131,11 @@ export default function MediaTickets({
     setData({
       ...data,
       perks: perks ? [perks] : [],
-      certification: certification ? [certification] : [],
+      certification: certification || "",
       accommodation: accommodation ? [accommodation] : [],
       paymentLink,
       tickets,
-      bannerImages: images, 
+      bannerImages: images,
     });
   }, [perks, certification, accommodation, paymentLink, tickets, images]);
 
@@ -172,17 +172,34 @@ export default function MediaTickets({
     setOpenTicketModal(true);
   };
 
-  const handleSaveTicket = () => {
-    if (editingIndex !== null) {
-      const updated = [...tickets];
-      updated[editingIndex] = { ...ticketForm, type: ticketType };
-      setTickets(updated);
-    } else {
-      setTickets([...tickets, { ...ticketForm, type: ticketType }]);
-    }
+  const handleSaveTicket = async () => {
+    try {
+      await ticketSchema.validate(
+        {
+          ...ticketForm,
+          ticketType,
+        },
+        { abortEarly: false }
+      );
 
-    setOpenTicketModal(false);
-    setEditingIndex(null);
+      const payload = {
+        ...ticketForm,
+        type: ticketType,
+      };
+
+      if (editingIndex !== null) {
+        const updated = [...tickets];
+        updated[editingIndex] = payload;
+        setTickets(updated);
+      } else {
+        setTickets([...tickets, payload]);
+      }
+
+      setOpenTicketModal(false);
+      setEditingIndex(null);
+    } catch (err) {
+      toast.error(err?.errors?.[0] || "Invalid ticket data");
+    }
   };
 
   useEffect(() => {
@@ -331,9 +348,7 @@ export default function MediaTickets({
             <select
               className={styles.input}
               value={certification}
-              onChange={(e) => {
-                setCertification(e.target.value);
-              }}
+              onChange={(e) => setCertification(e.target.value)}
             >
               <option value="">Select Certification</option>
               {certList.map((c) => (

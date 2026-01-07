@@ -4,12 +4,15 @@ import {
   DATEICON,
   INSTAGRAMICON,
   LEFTSIDEARROW_ICON,
+  LIKE_ICON,
   LINKEDINICON,
   LOCATION_ICON,
   MAPLOCATIONVIEWICON,
   RIGHTSIDEARROW_ICON,
   SAVEDICON,
+  SAVEICON,
   SHAREICON,
+  SINGELEVENTSHARE_ICON,
   WHATSAPPICON,
   XICON,
   YOUTUBEICON,
@@ -180,11 +183,11 @@ export default function CommonEventDetails({ event = {}, onBack }) {
                 <span className="views">👁 5678</span>
                 {/* BACKEND: event.views */}
               </div>
-              <div>
+              <div className="soc-mediya">
                 {/* like , share , save */}
-                <span>Like</span>
-                <span>SAHRE</span>
-                <span>SAVE</span>
+                <span>{LIKE_ICON} 123</span>
+                <span>{SINGELEVENTSHARE_ICON}</span>
+                <span>{SAVEICON}</span>
               </div>
             </div>
           </div>
@@ -347,7 +350,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           <div className="col-lg-8">
             <div className="card-box mt-4">
               <h3>Event Host Details</h3>
-              <h4>{event.org?.domainEmail || "-"}</h4>
+              <h4>{event.org?.organizationName || "-"}</h4>
 
               {/* ================= CO - ORGANIZATION ================= */}
               {event.collaborators && event.collaborators.length > 0 && (

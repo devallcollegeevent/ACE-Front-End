@@ -64,56 +64,144 @@ export const SAVEICON = (
   </svg>
 );
 export const RIGHTSIDEARROW_ICON = (
-<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-  <circle cx="21" cy="21" r="19" fill="#1C1C1C"/>
-  <g filter="url(#filter0_d_15521_43427)">
-    <path d="M2 21C2 24.7578 3.11433 28.4313 5.20208 31.5558C7.28982 34.6804 10.2572 37.1156 13.729 38.5537C17.2008 39.9918 21.0211 40.368 24.7067 39.6349C28.3924 38.9018 31.7778 37.0922 34.435 34.435C37.0922 31.7778 38.9018 28.3924 39.6349 24.7067C40.368 21.0211 39.9918 17.2008 38.5537 13.729C37.1156 10.2572 34.6804 7.28982 31.5558 5.20208C28.4313 3.11433 24.7578 2 21 2C15.9626 2.00545 11.133 4.00898 7.57099 7.57099C4.00898 11.133 2.00545 15.9626 2 21ZM26.4055 18.7612C26.9992 19.355 27.3327 20.1603 27.3327 21C27.3327 21.8397 26.9992 22.645 26.4055 23.2388L19.0066 30.6377L16.7677 28.3989L24.1667 21L16.7076 13.5393L18.9417 11.3005L26.4055 18.7612Z" fill="#F3F3F3"/>
-  </g>
-  <defs>
-    <filter id="filter0_d_15521_43427" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset/>
-      <feGaussianBlur stdDeviation="1"/>
-      <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_15521_43427"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_15521_43427" result="shape"/>
-    </filter>
-  </defs>
-</svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="42"
+    height="42"
+    viewBox="0 0 42 42"
+    fill="none"
+  >
+    <circle cx="21" cy="21" r="19" fill="#1C1C1C" />
+    <g filter="url(#filter0_d_15521_43427)">
+      <path
+        d="M2 21C2 24.7578 3.11433 28.4313 5.20208 31.5558C7.28982 34.6804 10.2572 37.1156 13.729 38.5537C17.2008 39.9918 21.0211 40.368 24.7067 39.6349C28.3924 38.9018 31.7778 37.0922 34.435 34.435C37.0922 31.7778 38.9018 28.3924 39.6349 24.7067C40.368 21.0211 39.9918 17.2008 38.5537 13.729C37.1156 10.2572 34.6804 7.28982 31.5558 5.20208C28.4313 3.11433 24.7578 2 21 2C15.9626 2.00545 11.133 4.00898 7.57099 7.57099C4.00898 11.133 2.00545 15.9626 2 21ZM26.4055 18.7612C26.9992 19.355 27.3327 20.1603 27.3327 21C27.3327 21.8397 26.9992 22.645 26.4055 23.2388L19.0066 30.6377L16.7677 28.3989L24.1667 21L16.7076 13.5393L18.9417 11.3005L26.4055 18.7612Z"
+        fill="#F3F3F3"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_15521_43427"
+        x="0"
+        y="0"
+        width="42"
+        height="42"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation="1" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_15521_43427"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_15521_43427"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
 );
 export const LEFTSIDEARROW_ICON = (
-<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-  <circle cx="19" cy="19" r="19" transform="matrix(-1 0 0 1 40 2)" fill="#1C1C1C"/>
-  <g filter="url(#filter0_d_15521_43417)">
-    <path d="M40 21C40 24.7578 38.8857 28.4313 36.7979 31.5558C34.7102 34.6804 31.7428 37.1156 28.271 38.5537C24.7992 39.9918 20.9789 40.368 17.2933 39.6349C13.6076 38.9018 10.2222 37.0922 7.56498 34.435C4.90778 31.7778 3.09821 28.3924 2.36509 24.7067C1.63197 21.0211 2.00823 17.2008 3.44629 13.729C4.88436 10.2572 7.31963 7.28982 10.4442 5.20208C13.5687 3.11433 17.2422 2 21 2C26.0374 2.00545 30.867 4.00898 34.429 7.57099C37.991 11.133 39.9946 15.9626 40 21ZM15.5945 18.7612C15.0008 19.355 14.6673 20.1603 14.6673 21C14.6673 21.8397 15.0008 22.645 15.5945 23.2388L22.9934 30.6377L25.2323 28.3989L17.8333 21L25.2924 13.5393L23.0583 11.3005L15.5945 18.7612Z" fill="#F3F3F3"/>
-  </g>
-  <defs>
-    <filter id="filter0_d_15521_43417" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset/>
-      <feGaussianBlur stdDeviation="1"/>
-      <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_15521_43417"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_15521_43417" result="shape"/>
-    </filter>
-  </defs>
-</svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="42"
+    height="42"
+    viewBox="0 0 42 42"
+    fill="none"
+  >
+    <circle
+      cx="19"
+      cy="19"
+      r="19"
+      transform="matrix(-1 0 0 1 40 2)"
+      fill="#1C1C1C"
+    />
+    <g filter="url(#filter0_d_15521_43417)">
+      <path
+        d="M40 21C40 24.7578 38.8857 28.4313 36.7979 31.5558C34.7102 34.6804 31.7428 37.1156 28.271 38.5537C24.7992 39.9918 20.9789 40.368 17.2933 39.6349C13.6076 38.9018 10.2222 37.0922 7.56498 34.435C4.90778 31.7778 3.09821 28.3924 2.36509 24.7067C1.63197 21.0211 2.00823 17.2008 3.44629 13.729C4.88436 10.2572 7.31963 7.28982 10.4442 5.20208C13.5687 3.11433 17.2422 2 21 2C26.0374 2.00545 30.867 4.00898 34.429 7.57099C37.991 11.133 39.9946 15.9626 40 21ZM15.5945 18.7612C15.0008 19.355 14.6673 20.1603 14.6673 21C14.6673 21.8397 15.0008 22.645 15.5945 23.2388L22.9934 30.6377L25.2323 28.3989L17.8333 21L25.2924 13.5393L23.0583 11.3005L15.5945 18.7612Z"
+        fill="#F3F3F3"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_15521_43417"
+        x="0"
+        y="0"
+        width="42"
+        height="42"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation="1" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_15521_43417"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_15521_43417"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
 );
 export const LIKE_ICON = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="18"
-    height="10"
+    width="24"
+    height="20"
     viewBox="0 0 26 23"
     fill="none"
   >
     <path
       d="M7.17317 2.51536C6.91804 2.51536 6.65212 2.53692 6.37903 2.58363C2.68145 3.20169 2.51975 5.83563 2.51975 7.51014C2.51975 9.18465 3.54028 13.8848 12.6135 19.2892C21.6868 13.8848 22.7073 9.18465 22.7073 7.51014C22.7073 5.83563 22.5456 3.1981 18.848 2.58363C18.5749 2.53692 18.309 2.51536 18.0539 2.51536C15.2798 2.51536 13.537 5.01994 12.8938 6.14826C12.768 6.36745 12.4554 6.36745 12.3332 6.14826C11.69 5.01994 9.94725 2.51536 7.17317 2.51536ZM7.17317 0C9.43699 0 11.2696 1.07801 12.6135 2.39678C13.961 1.07801 15.7901 0 18.0539 0C18.4528 0 18.8588 0.0323399 19.2613 0.100614C22.2833 0.603686 23.7171 2.20992 24.3854 3.4676C25.1221 4.85464 25.2227 6.2884 25.2227 7.51014C25.2227 9.67335 24.1195 15.3617 13.8999 21.4524L12.7788 22.1208C12.6746 22.1819 12.5488 22.1819 12.4446 22.1208L11.3235 21.4524C1.10396 15.3652 0.000795364 9.67335 0.000795364 7.51014C0.000795364 6.29199 0.101416 4.85823 0.838057 3.4676C1.50642 2.20992 2.94018 0.603686 5.9622 0.100614C6.36466 0.0323399 6.77071 0 7.16957 0H7.17317Z"
       fill="#3D3D3D"
+    />
+  </svg>
+);
+export const SINGELEVENTSHARE_ICON = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+  >
+    <path
+      d="M2.81773e-05 8.98944C-0.00762663 10.9127 1.54535 12.4781 3.46871 12.4857C4.35449 12.4892 5.20835 12.1551 5.85644 11.5513L11.0462 13.8944C11.0101 14.0885 10.9903 14.2851 10.987 14.4825C10.9809 16.419 12.5458 17.9938 14.4824 18C16.419 18.0061 17.9938 16.4412 18 14.5046C18.0061 12.5681 16.4412 10.9933 14.5046 10.9871C13.3475 10.9835 12.2632 11.5508 11.6065 12.5034L6.73064 10.3018C7.07696 9.46557 7.0783 8.52626 6.73439 7.68902L11.6035 5.47623C12.6999 7.06197 14.8743 7.45861 16.4601 6.36221C18.0458 5.2658 18.4424 3.09153 17.346 1.50578C16.2496 -0.0799575 14.0752 -0.476595 12.4895 0.619811C11.5451 1.27277 10.9822 2.34832 10.984 3.49645C10.9871 3.69407 11.0072 3.89102 11.0439 4.08523L5.86768 6.43731C4.46527 5.12047 2.26086 5.18981 0.943992 6.5922C0.334522 7.2413 -0.00327252 8.09907 2.81773e-05 8.98944Z"
+      fill="#1C1C1C"
     />
   </svg>
 );

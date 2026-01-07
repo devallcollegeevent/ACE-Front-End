@@ -28,6 +28,9 @@ export const resendOtpApi = (data) =>
 export const resetPasswordApi = (data) =>
   handleApi(apiPublic.post(API_ENDPOINTS.AUTH.RESET_PASSWORD, data));
 
+export const updateAuthProfile = (data) =>
+  handleApi(apiPublic.post(API_ENDPOINTS.AUTH.UPDATEPROFILE, data));
+
 export const verifyEmailApi = (token) =>
   handleApi(
     apiPublic.get(

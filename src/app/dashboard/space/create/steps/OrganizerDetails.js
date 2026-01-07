@@ -38,6 +38,30 @@ export default function OrganizerDetails({
     loadCategories();
   }, []);
 
+  const addOrganization = () => {
+    if (organizations.length >= 3) {
+      console.warn("Maximum 3 collaborators allowed");
+      console.log("CURRENT COLLABORATORS →", organizations);
+      return;
+    }
+
+    const updated = [
+      ...organizations,
+      {
+        hostBy: "",
+        orgName: "",
+        location: "",
+        organizerName: "",
+        organizerNumber: "",
+        department: "",
+      },
+    ];
+
+    console.log("AFTER ADD COLLABORATOR →", updated);
+
+    setData({ ...data, organizations: updated });
+  };
+
   const updateOrg = (index, key, value) => {
     const updated = [...organizations];
     updated[index][key] = value;
@@ -46,31 +70,17 @@ export default function OrganizerDetails({
       updated[index].department = "";
     }
 
+    console.log("UPDATED ORGANIZATIONS →", updated);
+
     setData({ ...data, organizations: updated });
   };
 
-  const addOrganization = () => {
-    setData({
-      ...data,
-      organizations: [
-        ...organizations,
-        {
-          hostBy: "",
-          orgName: "",
-          location: "",
-          organizerName: "",
-          organizerNumber: "",
-          department: "",
-        },
-      ],
-    });
-  };
-
   const deleteOrganization = (index) => {
-    setData({
-      ...data,
-      organizations: organizations.filter((_, i) => i !== index),
-    });
+    const updated = organizations.filter((_, i) => i !== index);
+
+    console.log("AFTER DELETE →", updated);
+
+    setData({ ...data, organizations: updated });
   };
 
   const showDepartment = (hostBy) => {
@@ -102,7 +112,6 @@ export default function OrganizerDetails({
       ],
     });
   }, [resetSignal]);
-
 
   return (
     <>
@@ -224,7 +233,9 @@ export default function OrganizerDetails({
                   <option value="ECE">ECE</option>
                   <option value="IT">IT</option>
                   <option value="Computer Science">Computer Science</option>
-                  <option value="School of Management">School of Management</option>
+                  <option value="School of Management">
+                    School of Management
+                  </option>
                   <option value="Science">Science</option>
                   <option value="Economics">Economics</option>
                 </select>
@@ -241,7 +252,16 @@ export default function OrganizerDetails({
       </div>
 
       <div className={styles.actionEnd}>
-        <button className={styles.nextBtn} onClick={onNext}>
+        <button
+          className={styles.nextBtn}
+          onClick={() => {
+            console.log(
+              "FINAL COLLABORATORS BEFORE NEXT →",
+              data.organizations
+            );
+            onNext();
+          }}
+        >
           Next
         </button>
       </div>

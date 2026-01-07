@@ -14,6 +14,7 @@ import {
   getCities,
 } from "../../../../../lib/location.api";
 import { useLoading } from "../../../../../context/LoadingContext";
+import toast from "react-hot-toast";
 
 export default function EventDetails({
   data,
@@ -165,6 +166,7 @@ export default function EventDetails({
       mapLink: "",
       meetLink: "",
       offers: "",
+      venue:"",
     });
   }, [resetSignal]);
 
@@ -418,17 +420,29 @@ export default function EventDetails({
                 </select>
               </div>
             </div>
-
-            <div className={styles.field}>
-              <label>
-                Google Map Link <span>*</span>
-              </label>
-              <input
-                className={styles.input}
-                placeholder="Enter map link"
-                value={data.mapLink || ""}
-                onChange={(e) => setData({ ...data, mapLink: e.target.value })}
-              />
+            <div className={styles.grid2}>
+              <div className={styles.field}>
+                <label>
+                  Google Map Link <span>*</span>
+                </label>
+                <input
+                  className={styles.input}
+                  placeholder="Enter map link"
+                  value={data.mapLink || ""}
+                  onChange={(e) =>
+                    setData({ ...data, mapLink: e.target.value })
+                  }
+                />
+              </div>
+              <div className={styles.field}>
+                <label>Venue <span>*</span></label>
+                <input
+                  className={styles.input}
+                  placeholder="Enter venue"
+                  value={data.venue || ""}
+                  onChange={(e) => setData({ ...data, venue: e.target.value })}
+                />
+              </div>
             </div>
           </>
         )}

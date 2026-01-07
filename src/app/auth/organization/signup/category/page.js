@@ -63,44 +63,45 @@ export default function Page() {
         </div>
         <div>{PAGEMOVEICON}</div>
       </div>
-      {/* Stepper */}
-      <div className="text-center mb-4 mt-5">
-        <div className="d-flex justify-content-center gap-4">
-          <div className="text-center">
-            <div className="fw-bold">1</div>
-            <small>{LABEL_ORG_STEP_CATEGORY}</small>
-          </div>
+      {/* STEPPER */}
+      <div className="org-stepper">
+        <div className="org-step active">
+          <div className="dot">1</div>
+          <small>{LABEL_ORG_STEP_CATEGORY}</small>
+        </div>
 
-          <div className="text-center opacity-50">
-            <div className="fw-bold">2</div>
-            <small>{LABEL_ORG_STEP_DETAILS}</small>
-          </div>
+        <div className="line active"></div>
 
-          <div className="text-center opacity-50">
-            <div className="fw-bold">3</div>
-            <small>{LABEL_ORG_STEP_ACCOUNT}</small>
-          </div>
+        <div className="org-step">
+          <div className="dot">2</div>
+          <small>{LABEL_ORG_STEP_DETAILS}</small>
+        </div>
+
+        <div className="line"></div>
+
+        <div className="org-step">
+          <div className="dot">3</div>
+          <small>{LABEL_ORG_STEP_ACCOUNT}</small>
         </div>
       </div>
 
       {/* Page Title */}
       <h2 className="text-center fw-bold">{TITLE_ORG_ACCOUNT_CREATION}</h2>
-      <p className="text-center text-muted mb-4">
-        {SUBTITLE_ORG_ACCOUNT_CREATION}
-      </p>
 
       {/* Category Grid */}
       <div className="row g-3">
         {CATEGORIES.map((c) => (
           <div key={c.id} className="col-md-4 col-sm-6 col-12">
             <div
-              className={`card p-3 shadow-sm text-center border-2 ${
+              className={`card p-3  text-center ${
                 selected === c.id ? "border-primary" : "border-light"
               }`}
               role="button"
               onClick={() => setSelected(c.id)}
             >
-              <div className="mb-2">{c.icon}</div>
+              <div className="mb-2">
+                <div className="cat-icons">{c.icon}</div>
+              </div>
               <h6 className="fw-semibold">{c.title}</h6>
             </div>
           </div>
@@ -108,8 +109,8 @@ export default function Page() {
       </div>
 
       {/* Continue Button */}
-      <div className="mt-4 text-center">
-        <button className="btn btn-primary px-4" onClick={onContinue}>
+      <div className="mt-4 text-center btn-container">
+        <button className="btn continue-btn" onClick={onContinue}>
           {BTN_CONTINUE}
         </button>
       </div>

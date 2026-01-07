@@ -26,6 +26,7 @@
 .ellipsis {
   overflow: hidden;
   white-space: nowrap;
+  width: 231px;
   text-overflow: ellipsis;
 }
 
@@ -34,7 +35,7 @@
   color: #1c1c1c;
   background-color: #e9d4ff;
   border: 1px solid #7f00ff;
-  border-radius: 7px;
+  border-radius: 20px;
   padding: 4px 29px;
   font-size: 12px;
   font-weight: 600;

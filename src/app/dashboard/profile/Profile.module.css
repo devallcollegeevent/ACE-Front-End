@@ -88,7 +88,64 @@
   font-size: 14px;
   max-width: 420px;
 }
+/* ===== IMAGE PREVIEW SECTION ===== */
 
+.previewImageWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+}
+
+/* ✕ remove icon */
+.removeImageIcon {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.preview-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.imgpreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+.cancelicon {
+  position: relative;
+  top: 5;
+  right: 5;
+  background-color: #000;
+  color: #fff;
+  width: 22;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12;
+  cursor: pointer;
+}
 /* ================= BUTTONS ================= */
 .btnRow {
   display: flex;

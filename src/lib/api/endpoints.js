@@ -15,6 +15,7 @@ export const API_ENDPOINTS = {
     RESEND_OTP: "/v1/auth/resend-otp",
     RESET_PASSWORD: "/v1/auth/reset-password",
     ORG_VERIFY: "/v1/auth/org/verify",
+    UPDATEPROFILE: "/v1/auth/update-profile",
   },
 
   /* ================= USERS ================= */

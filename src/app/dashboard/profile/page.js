@@ -13,13 +13,13 @@ import {
   getUserProfileApi,
   updateUserProfileApi,
 } from "../../../lib/api/user.api";
-import { forgotApi } from "../../../lib/api/auth.api";
+import { forgotApi, updateAuthProfile } from "../../../lib/api/auth.api";
 
 /* Utils */
 import { getUserData } from "../../../lib/auth";
 import { useLoading } from "../../../context/LoadingContext";
 import ConfirmModal from "../../../components/ui/Modal/ConfirmModal";
-
+import { useRouter } from "next/navigation";
 
 /* ================= ROLE BASED API ================= */
 const getProfileApis = (user) => {
@@ -47,12 +47,16 @@ export default function ProfilePage() {
   const [profile, setProfile] = useState(null);
   const [mode, setMode] = useState("view");
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const router = useRouter();
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     image: null,
   });
+
+  // IMAGE PREVIEW STATE
+  const [imagePreview, setImagePreview] = useState(null);
 
   /* ================= LOAD PROFILE ================= */
   useEffect(() => {
@@ -88,22 +92,44 @@ export default function ProfilePage() {
     setGlobalLoading(true);
     try {
       const user = getUserData();
-      const api = getProfileApis(user);
 
       const payload = new FormData();
-      payload.append(api.nameKey, form.name);
-      payload.append(api.emailKey, form.email);
-      if (form.image) payload.append("image", form.image);
 
-      const res = await api.updateProfile(user.identity, payload);
-      if (res?.status) {
-        toast.success("Profile updated");
-        setMode("view");
+      //IDENTITY (IMPORTANT)
+      payload.append("identity", user?.identity);
+
+      //TYPE
+      payload.append("type", user?.type);
+      // ROLE BASED NAME
+      if (user?.type === "org") {
+        payload.append("organizationName", form.name);
       } else {
-        toast.error("Update failed");
+        payload.append("name", form.name);
+      }
+
+      //IMAGE (optional)
+      if (form.image) {
+        payload.append("profileImage", form.image);
+      }
+
+      // DEBUG
+      console.log("UPDATE PROFILE PAYLOAD ↓↓↓");
+      for (const pair of payload.entries()) {
+        console.log(pair[0], "=>", pair[1]);
+      }
+
+      const res = await updateAuthProfile(payload);
+
+      if (res?.success) {
+        toast.success("Profile updated successfully");
+        setMode("view");
+        setImagePreview(null);
+        setForm((prev) => ({ ...prev, image: null }));
+      } else {
+        toast.error(res?.message || "Update failed");
       }
     } catch {
-      toast.error("Update failed");
+      toast.error("Profile update failed");
     } finally {
       setGlobalLoading(false);
     }
@@ -113,8 +139,7 @@ export default function ProfilePage() {
   const handleSendResetMail = async () => {
     setGlobalLoading(true);
     try {
-      await forgotApi({ email: form.email });
-      toast.success("Password reset email sent");
+      router.push("/auth/forgot-password");
       setShowConfirmModal(false);
     } catch {
       toast.error("Failed to send reset email");
@@ -156,9 +181,7 @@ export default function ProfilePage() {
             <label>Full Name</label>
             <input
               value={form.name}
-              onChange={(e) =>
-                setForm({ ...form, name: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
 
             <label>Domain Email Id</label>
@@ -173,34 +196,87 @@ export default function ProfilePage() {
           </div>
 
           <div>
-            <div
-              className={styles.uploadBox}
-              onClick={() => fileRef.current.click()}
-            >
-              Upload Profile picture (1:1) in PNG or JPEG Format
-            </div>
+            {/* ===== IMAGE UPLOAD (UI UNCHANGED) ===== */}
+            {!imagePreview ? (
+              <div
+                className={styles.uploadBox}
+                onClick={() => fileRef.current.click()}
+              >
+                Upload Profile picture (1:1) in PNG or JPEG Format
+              </div>
+            ) : (
+              <div
+                style={{ position: "relative", width: "100%", height: "250px" }}
+              >
+                <img
+                  src={imagePreview}
+                  alt="preview"
+                  className={styles.imgpreview}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "5%",
+                  }}
+                />
+                <span
+                  onClick={() => {
+                    setForm({ ...form, image: null });
+                    setImagePreview(null);
+                    fileRef.current.value = "";
+                  }}
+                  style={{
+                    position: "absolute",
+                    top: 5,
+                    right: 5,
+                    background: "#000",
+                    color: "#fff",
+                    width: 22,
+                    height: 22,
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 12,
+                    cursor: "pointer",
+                  }}
+                >
+                  ✕
+                </span>
+              </div>
+            )}
 
             <input
               ref={fileRef}
               type="file"
               hidden
               accept="image/*"
-              onChange={(e) =>
-                setForm({ ...form, image: e.target.files[0] })
-              }
+              onChange={(e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                if (!file.type.startsWith("image/")) {
+                  toast.error("Only image files allowed");
+                  return;
+                }
+
+                setForm({ ...form, image: file });
+                setImagePreview(URL.createObjectURL(file));
+              }}
             />
 
             <div className={styles.btnRow}>
               <button
                 className={styles.cancelBtn}
-                onClick={() => setMode("view")}
+                onClick={() => {
+                  setMode("view");
+                  setImagePreview(null);
+                  setForm((prev) => ({ ...prev, image: null }));
+                }}
               >
                 Cancel
               </button>
-              <button
-                className={styles.saveBtn}
-                onClick={saveProfile}
-              >
+              <button className={styles.saveBtn} onClick={saveProfile}>
                 Save Changes
               </button>
             </div>
