@@ -20,11 +20,20 @@ import {
 import Footer from "../Footer/Footer";
 import "./CommonEventDetails.css";
 import ConfirmModal from "../../ui/Modal/ConfirmModal";
+import BannerImageModal from "./modals/BannerImageModal";
+import EditOverlay from "./overlays/EditOverlay";
+import TicketListModal from "./modals/TicketListModal";
+import TicketModal from "../../ui/Modal/TicketModal";
+import EventDetailsModal from "./modals/EventDetailsModal";
+import OrganizationModal from "./modals/OrganizationModal";
+import OfferModal from "./modals/OfferModal";
+import SocialMediaModal from "./modals/SocialMediaModal";
 
 export default function CommonEventDetails({ event = {}, onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
+
   const [countdown, setCountdown] = useState({
     days: "00",
     hours: "00",
@@ -46,45 +55,47 @@ export default function CommonEventDetails({ event = {}, onBack }) {
 
   const calendar = event?.calendars?.[0];
   const location = event?.location;
+  const [openBannerModal, setOpenBannerModal] = useState(false);
+  const [bannerImages, setBannerImages] = useState(images);
+  const [openTicketListModal, setOpenTicketListModal] = useState(false);
+  const [openTicketModal, setOpenTicketModal] = useState(false);
+  const [selectedTicket, setSelectedTicket] = useState(null);
+
+  const [ticketForm, setTicketForm] = useState({
+    name: "",
+    description: "",
+    from: "",
+    to: "",
+    amount: "",
+    total: "1000",
+  });
+
+  const [ticketType, setTicketType] = useState("FREE");
+  const [openHostModal, setOpenHostModal] = useState(false);
+  const [openOrgModal, setOpenOrgModal] = useState(false);
+  const [openOfferModal, setOpenOfferModal] = useState(false);
+  const [openSocialModal, setOpenSocialModal] = useState(false);
+
+  // data states (pre-populate)
+  const [orgData, setOrgData] = useState(event.org || {});
+  const [offerData, setOfferData] = useState(event.offers || "");
+  const [socialData, setSocialData] = useState(event.socialLinks || {});
 
   /* ================= COUNTDOWN ================= */
   useEffect(() => {
-    if (!calendar?.startDate || !calendar?.startTime) return;
+    if (!selectedTicket) return;
 
-    const targetDate = new Date(
-      `${calendar.startDate}T${calendar.startTime}:00`
-    );
+    setTicketForm({
+      name: selectedTicket.name || "",
+      description: selectedTicket.description || "",
+      from: selectedTicket.sellingFrom || "",
+      to: selectedTicket.sellingTo || "",
+      amount: selectedTicket.price || "",
+      total: selectedTicket.total || "1000",
+    });
 
-    const timer = setInterval(() => {
-      const now = new Date();
-      const diff = targetDate - now;
-
-      if (diff <= 0) {
-        clearInterval(timer);
-        setCountdown({
-          days: "00",
-          hours: "00",
-          mins: "00",
-          secs: "00",
-        });
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const mins = Math.floor((diff / (1000 * 60)) % 60);
-      const secs = Math.floor((diff / 1000) % 60);
-
-      setCountdown({
-        days: String(days).padStart(2, "0"),
-        hours: String(hours).padStart(2, "0"),
-        mins: String(mins).padStart(2, "0"),
-        secs: String(secs).padStart(2, "0"),
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [calendar]);
+    setTicketType(selectedTicket.isPaid ? "PAID" : "FREE");
+  }, [selectedTicket]);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -119,6 +130,26 @@ export default function CommonEventDetails({ event = {}, onBack }) {
     youtube: YOUTUBEICON,
     x: XICON,
   };
+  useEffect(() => {
+    if (selectedTicket) {
+      setTicketForm({
+        name: selectedTicket.name || "",
+        description: selectedTicket.description || "",
+        from: selectedTicket.sellingFrom || "",
+        to: selectedTicket.sellingTo || "",
+        amount: selectedTicket.price || "",
+        total: selectedTicket.total || "1000",
+      });
+
+      setTicketType(selectedTicket.isPaid ? "PAID" : "FREE");
+    }
+  }, [selectedTicket]);
+
+  useEffect(() => {
+    if (openOrgModal || openOfferModal || openSocialModal) {
+      setOpenHostModal(false);
+    }
+  }, [openOrgModal, openOfferModal, openSocialModal]);
 
   return (
     <>
@@ -131,13 +162,24 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           {/* rest of your event details UI */}
         </div>
         {/* ================= 1. HERO ================= */}
-        <div className="hero-card">
-          <img src={images[currentIndex]} alt="event" className="event-img" />
+        <div className="hero-card edit-wrapper">
+          {/* ALWAYS BLURRED BACKGROUND */}
+          <div
+            className="blur-bg"
+            style={{ backgroundImage: `url(${images[currentIndex]})` }}
+          />
 
+          {/* CLEAR CENTER IMAGE */}
+          <img
+            className="event-img"
+            alt="event"
+            src={bannerImages[currentIndex]}
+          />
+
+          <EditOverlay onEdit={() => setOpenBannerModal(true)} />
           <span className="badge-upcoming">
             {event?.status || "Upcoming Event"}
           </span>
-
           {/* SLIDER CONTROLS – BELOW IMAGE */}
           {images.length > 1 && (
             <div className="slider-controls">
@@ -269,9 +311,9 @@ export default function CommonEventDetails({ event = {}, onBack }) {
 
           {/* ================= TICKET AVAILABILITY (RIGHT 6) ================= */}
           <div className="col-lg-6">
-            <div className="card-box">
+            <div className="card-box edit-wrapper">
               <h4 className="section-title mb-4">Ticket Availability</h4>
-
+              <EditOverlay onEdit={() => setOpenTicketListModal(true)} />
               <div className="row g-4">
                 {event?.tickets && event.tickets.length > 0 ? (
                   event.tickets.map((ticket) => {
@@ -348,8 +390,10 @@ export default function CommonEventDetails({ event = {}, onBack }) {
         {/* ================= 6. HOST DETAILS ================= */}
         <div className="row g-4 py-5">
           <div className="col-lg-8">
-            <div className="card-box mt-4">
+            <div className="card-box mt-4 edit-wrapper">
               <h3>Event Host Details</h3>
+              <EditOverlay onEdit={() => setOpenHostModal(true)} />
+
               <h4>{event.org?.organizationName || "-"}</h4>
 
               {/* ================= CO - ORGANIZATION ================= */}
@@ -410,7 +454,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
                 <div className="tag-wrap">
                   {event?.tags && event.tags.length > 0 ? (
                     event.tags.map((tag, index) => (
-                      <span key={`${tag}-${index}`}>#{tag}</span>
+                      <span key={`${tag}-${index}`}>{tag}</span>
                     ))
                   ) : (
                     <span>No tags</span>
@@ -523,6 +567,94 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           onConfirm={handleConfirm}
         />
       </div>
+      {openBannerModal && (
+        <BannerImageModal
+          images={bannerImages}
+          onClose={() => setOpenBannerModal(false)}
+          onSave={(newImages) => {
+            setBannerImages(newImages);
+            setOpenBannerModal(false);
+          }}
+        />
+      )}
+      {openTicketListModal && (
+        <TicketListModal
+          tickets={event.tickets}
+          onClose={() => setOpenTicketListModal(false)}
+          onEditTicket={(ticket) => {
+            setSelectedTicket(ticket);
+            setOpenTicketListModal(false);
+            setOpenTicketModal(true);
+          }}
+        />
+      )}
+
+      {openTicketModal && (
+        <TicketModal
+          open={openTicketModal}
+          onClose={() => {
+            setOpenTicketModal(false);
+            setSelectedTicket(null);
+          }}
+          ticketForm={ticketForm}
+          setTicketForm={setTicketForm}
+          ticketType={ticketType}
+          setTicketType={setTicketType}
+          onSave={() => {
+            console.log("UPDATED TICKET :", ticketForm);
+            setOpenTicketModal(false);
+          }}
+        />
+      )}
+
+      {openHostModal && (
+        <EventDetailsModal
+          onClose={() => setOpenHostModal(false)}
+          onOrgClick={() => {
+            setOpenOrgModal(true);
+          }}
+          onOfferClick={() => {
+            setOpenOfferModal(true);
+          }}
+          onSocialClick={() => {
+            setOpenSocialModal(true);
+          }}
+        />
+      )}
+
+      {openOrgModal && (
+        <OrganizationModal
+          data={orgData}
+          onClose={() => setOpenOrgModal(false)}
+          onSave={(val) => {
+            setOrgData(val);
+            setOpenOrgModal(false);
+          }}
+        />
+      )}
+
+      {openOfferModal && (
+        <OfferModal
+          value={offerData}
+          onClose={() => setOpenOfferModal(false)}
+          onSave={(val) => {
+            setOfferData(val);
+            setOpenOfferModal(false);
+          }}
+        />
+      )}
+
+      {openSocialModal && (
+        <SocialMediaModal
+          value={socialData}
+          onClose={() => setOpenSocialModal(false)}
+          onSave={(val) => {
+            setSocialData(val);
+            setOpenSocialModal(false);
+          }}
+        />
+      )}
+
       {/* ================= 10. FOOTER SECTION ================= */}
       <div>
         <Footer />
