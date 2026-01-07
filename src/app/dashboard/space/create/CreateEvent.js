@@ -45,6 +45,7 @@ const INITIAL_FORM_DATA = {
     state: "",
     city: "",
     mapLink: "",
+    venue:"",
   },
   media: {
     bannerImages: [],
@@ -188,6 +189,7 @@ export default function CreateEvent() {
             state: event.state,
             city: event.city,
             mapLink: event.mapLink,
+            venue: event.venue,
           })
         );
       }
