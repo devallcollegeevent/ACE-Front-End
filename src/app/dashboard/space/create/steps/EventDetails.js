@@ -14,7 +14,6 @@ import {
   getCities,
 } from "../../../../../lib/location.api";
 import { useLoading } from "../../../../../context/LoadingContext";
-import toast from "react-hot-toast";
 
 export default function EventDetails({
   data,

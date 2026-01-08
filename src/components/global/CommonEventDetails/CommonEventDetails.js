@@ -28,6 +28,8 @@ import EventDetailsModal from "./modals/EventDetailsModal";
 import OrganizationModal from "./modals/OrganizationModal";
 import OfferModal from "./modals/OfferModal";
 import SocialMediaModal from "./modals/SocialMediaModal";
+import { updateEventApi } from "../../../lib/api/event.api";
+import { toast } from "react-hot-toast";
 
 export default function CommonEventDetails({ event = {}, onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,7 +79,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   const [openSocialModal, setOpenSocialModal] = useState(false);
 
   // data states (pre-populate)
-  const [orgData, setOrgData] = useState(event.organizations || []);
+  const [orgData, setOrgData] = useState(event.collaborators || []);
   const [offerData, setOfferData] = useState(event.offers || "");
   const [socialData, setSocialData] = useState(event.socialLinks || {});
 
@@ -123,13 +125,6 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   };
   console.log("singel event value", event);
 
-  const SOCIAL_ICON_MAP = {
-    whatsapp: WHATSAPPICON,
-    instagram: INSTAGRAMICON,
-    linkedin: LINKEDINICON,
-    youtube: YOUTUBEICON,
-    x: XICON,
-  };
   useEffect(() => {
     if (selectedTicket) {
       setTicketForm({
@@ -145,11 +140,179 @@ export default function CommonEventDetails({ event = {}, onBack }) {
     }
   }, [selectedTicket]);
 
+  const openEventDetailsAgain = () => {
+    setOpenOfferModal(false);
+    setOpenSocialModal(false);
+    setOpenOrgModal(false);
+
+    setTimeout(() => {
+      setOpenHostModal(true);
+    }, 0);
+  };
+
   useEffect(() => {
     if (openOrgModal || openOfferModal || openSocialModal) {
       setOpenHostModal(false);
     }
   }, [openOrgModal, openOfferModal, openSocialModal]);
+
+  // update api call
+
+  const handleOrganizationSave = async (payload) => {
+    try {
+      const formData = new FormData();
+      formData.append("collaborators", JSON.stringify(payload.collaborators));
+
+      const toastId = toast.loading("Updating organization details...");
+
+      const res = await updateEventApi(event.identity, formData);
+
+      toast.dismiss(toastId);
+
+      if (res?.status) {
+        toast.success("Organization details updated successfully");
+        setOpenOrgModal(false);
+      } else {
+        toast.error(res?.data?.message || "Update failed ");
+      }
+    } catch (err) {
+      console.error("Organization update error:", err);
+
+      toast.error(
+        err?.response?.data?.message || "Failed to update organization details"
+      );
+    }
+  };
+
+  const handleOfferSave = async (offerValue) => {
+    try {
+      if (!offerValue || !offerValue.trim()) {
+        toast.error("Offer cannot be empty");
+        return;
+      }
+
+      const formData = new FormData();
+
+      formData.append("offers", offerValue);
+
+      const toastId = toast.loading("Updating offer...");
+
+      const res = await updateEventApi(event.identity, formData);
+
+      toast.dismiss(toastId);
+
+      if (res?.status) {
+        toast.success("Offer updated successfully");
+        setOfferData(offerValue);
+        setOpenOfferModal(false);
+      } else {
+        toast.error(res?.data?.message || "Failed to update offer");
+      }
+    } catch (err) {
+      console.error("Offer update error:", err);
+      toast.error("Something went wrong while updating offer");
+    }
+  };
+
+  const handleSocialSave = async (payload) => {
+    try {
+      const formData = new FormData();
+
+      // MUST stringify
+      formData.append("socialLinks", JSON.stringify(payload.socialLinks));
+
+      const res = await updateEventApi(event.identity, formData);
+
+      if (res?.status) {
+        toast.success("Social media details updated");
+      }
+
+      setOpenSocialModal(false);
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to update social media details");
+    }
+  };
+
+  const handleBannerSave = async (previewImages) => {
+    try {
+      const formData = new FormData();
+
+      //  existing images (URL)
+      const existingImages = previewImages
+        .filter((img) => !img.file)
+        .map((img) => (typeof img === "string" ? img : img.url));
+
+      //new uploaded files
+      const newImages = previewImages.filter((img) => img.file);
+
+      // IMPORTANT: stringify
+      formData.append("existingBannerImages", JSON.stringify(existingImages));
+
+      newImages.forEach((img) => {
+        formData.append("bannerImages", img.file);
+      });
+
+      console.log("image upload", formData);
+      const res = await updateEventApi(event.identity, formData);
+
+      if (res.data.success) {
+        toast.success("Banner image updated successfully");
+        setBannerImages(previewImages);
+        setOpenBannerModal(false);
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Banner image update failed");
+    }
+  };
+
+  /* ================= TICKET UPDATE ================= */
+  const handleTicketSave = async () => {
+    try {
+      if (!selectedTicket?.identity) {
+        toast.error("Invalid ticket selected");
+        return;
+      }
+
+      const payload = [
+        {
+          identity: selectedTicket.identity,
+          name: ticketForm.name,
+          description: ticketForm.description,
+          sellingFrom: ticketForm.from,
+          sellingTo: ticketForm.to,
+          price: ticketType === "PAID" ? Number(ticketForm.amount) : 0,
+          isPaid: ticketType === "PAID",
+          totalQuantity: Number(ticketForm.total),
+        },
+      ];
+
+      const formData = new FormData();
+
+      // VERY IMPORTANT – stringify
+      formData.append("tickets", JSON.stringify(payload));
+
+      const toastId = toast.loading("Updating ticket...");
+
+      const res = await updateEventApi(event.identity, formData);
+
+      toast.dismiss(toastId);
+
+      if (res?.status) {
+        toast.success("Ticket updated successfully");
+
+        // close modal
+        setOpenTicketModal(false);
+        setSelectedTicket(null);
+      } else {
+        toast.error(res?.data?.message || "Ticket update failed");
+      }
+    } catch (err) {
+      console.error("Ticket update error:", err);
+      toast.error(err?.response?.data?.message || "Failed to update ticket");
+    }
+  };
 
   return (
     <>
@@ -181,28 +344,28 @@ export default function CommonEventDetails({ event = {}, onBack }) {
             {event?.status || "Upcoming Event"}
           </span>
           {/* SLIDER CONTROLS – BELOW IMAGE */}
-          {images.length > 1 && (
-            <div className="slider-controls">
-              <span onClick={prevSlide} className="arrow-side">
-                {LEFTSIDEARROW_ICON}
-              </span>
-
-              <div className="slider-dots">
-                {images.map((_, index) => (
-                  <span
-                    key={index}
-                    className={index === currentIndex ? "active" : ""}
-                    onClick={() => goToSlide(index)}
-                  />
-                ))}
-              </div>
-
-              <span onClick={nextSlide} className="arrow-side">
-                {RIGHTSIDEARROW_ICON}
-              </span>
-            </div>
-          )}
         </div>
+        {images.length > 1 && (
+          <div className="slider-controls">
+            <span onClick={prevSlide} className="arrow-side">
+              {LEFTSIDEARROW_ICON}
+            </span>
+
+            <div className="slider-dots">
+              {images.map((_, index) => (
+                <span
+                  key={index}
+                  className={index === currentIndex ? "active" : ""}
+                  onClick={() => goToSlide(index)}
+                />
+              ))}
+            </div>
+
+            <span onClick={nextSlide} className="arrow-side">
+              {RIGHTSIDEARROW_ICON}
+            </span>
+          </div>
+        )}
 
         {/* ================= 2. TITLE + REGISTER ================= */}
         <div className="title-row">
@@ -441,7 +604,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
                     <h3>Discounts & Offers</h3>
                     <div className="discount-section">
                       <img src="/images/discount.png" alt="Discount" />
-                      <span>Get 50% off on Elite tickets</span>
+                      <span>{event.offers}</span>
                     </div>
                     <hr />
                   </>
@@ -461,36 +624,14 @@ export default function CommonEventDetails({ event = {}, onBack }) {
                   )}
                 </div>
 
-                {event?.socialLinks && (
-                  <>
-                    <hr />
-                    <h3 className="mt-3">Follow us on</h3>
-
-                    <div className="tag-wrap">
-                      {Object.entries(event.socialLinks).map(([key, link]) => {
-                        if (!link || !SOCIAL_ICON_MAP[key]) return null;
-
-                        // whatsapp special handling
-                        const finalLink =
-                          key === "whatsapp" && !link.startsWith("http")
-                            ? `https://wa.me/${link}`
-                            : link;
-
-                        return (
-                          <a
-                            key={key}
-                            href={finalLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-icon"
-                          >
-                            {SOCIAL_ICON_MAP[key]}
-                          </a>
-                        );
-                      })}
-                    </div>
-                  </>
-                )}
+                <h3 className="mt-3">Follow us on</h3>
+                <div className="tag-wrap">
+                  <span>{WHATSAPPICON}</span>
+                  <span>{INSTAGRAMICON}</span>
+                  <span>{YOUTUBEICON}</span>
+                  <span>{XICON}</span>
+                  {/* BACKEND: tags */}
+                </div>
               </div>
             </div>
           </div>
@@ -571,12 +712,10 @@ export default function CommonEventDetails({ event = {}, onBack }) {
         <BannerImageModal
           images={bannerImages}
           onClose={() => setOpenBannerModal(false)}
-          onSave={(newImages) => {
-            setBannerImages(newImages);
-            setOpenBannerModal(false);
-          }}
+          onSave={handleBannerSave}
         />
       )}
+
       {openTicketListModal && (
         <TicketListModal
           tickets={event.tickets}
@@ -600,16 +739,16 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           setTicketForm={setTicketForm}
           ticketType={ticketType}
           setTicketType={setTicketType}
-          onSave={() => {
-            console.log("UPDATED TICKET :", ticketForm);
-            setOpenTicketModal(false);
-          }}
+          onSave={handleTicketSave}
         />
       )}
 
       {openHostModal && (
         <EventDetailsModal
-          onClose={() => setOpenHostModal(false)}
+          onClose={() => {
+            // FULL CLOSE – no reopen
+            setOpenHostModal(false);
+          }}
           onOrgClick={() => {
             setOpenHostModal(false);
             setTimeout(() => setOpenOrgModal(true), 0);
@@ -628,33 +767,33 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       {openOrgModal && (
         <OrganizationModal
           orgs={orgData}
-          onClose={() => setOpenOrgModal(false)}
-          onSave={(updatedOrgs) => {
-            setOrgData(updatedOrgs);
+          onClose={() => {
             setOpenOrgModal(false);
+            setTimeout(() => setOpenHostModal(true), 0);
           }}
+          onSave={handleOrganizationSave}
         />
       )}
 
       {openOfferModal && (
         <OfferModal
           value={offerData}
-          onClose={() => setOpenOfferModal(false)}
-          onSave={(val) => {
-            setOfferData(val);
-            setOpenOfferModal(false);
-          }}
+          onClose={openEventDetailsAgain}
+          onSave={handleOfferSave}
         />
       )}
 
       {openSocialModal && (
         <SocialMediaModal
           value={socialData}
-          onClose={() => setOpenSocialModal(false)}
-          onSave={(val) => {
-            setSocialData(val);
+          onClose={() => {
+            //Social Media close
             setOpenSocialModal(false);
+
+            //Back to Event Host Details popup
+            setTimeout(() => setOpenHostModal(true), 0);
           }}
+          onSave={handleSocialSave}
         />
       )}
 

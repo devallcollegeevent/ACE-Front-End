@@ -67,3 +67,50 @@
   background: #eee6ff;
   color: #7f00ff;
 }
+
+.bottomProfile {
+  margin-top: auto;
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+}
+
+.profileImg {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileCircle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #7a12ff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileText {
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #333;
+}
+.profileTextEmail {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #7f00ff;
+}
+.exitImage {
+  width: 30px;
+  padding-left: 10px;
+}

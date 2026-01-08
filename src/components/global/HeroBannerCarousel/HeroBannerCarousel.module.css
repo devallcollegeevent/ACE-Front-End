@@ -149,7 +149,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .cardItem img {
-    object-fit: cover; /* ✅ image cut pannum */
+    object-fit: cover; /* image cut pannum */
     padding: 0; /* UI neat ah irukkum */
   }
 

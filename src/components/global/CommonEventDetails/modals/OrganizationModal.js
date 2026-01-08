@@ -3,88 +3,112 @@ import { useState } from "react";
 import "./OrganizationModal.css";
 
 export default function OrganizationModal({ orgs = [], onClose, onSave }) {
-  // existing orgs (read only)
-  const [existingOrgs] = useState(orgs);
 
-  // new orgs (editable)
-  const [newOrgs, setNewOrgs] = useState([]);
+  // 🔑 editable local state
+  const [editableOrgs, setEditableOrgs] = useState(
+    orgs.map((org) => ({
+      ...org,
+      member: { ...org.member },
+    }))
+  );
 
-  const addOrg = () => {
-    setNewOrgs([
-      ...newOrgs,
-      {
-        organizerName: "",
-        organizerNumber: "",
-        location: "",
-        eventHostBy: "",
-        organizationName: "",
-        department: "",
-      },
-    ]);
+  // 🔄 update handler
+  const updateField = (index, key, value) => {
+    const updated = [...editableOrgs];
+    updated[index].member[key] = value;
+    setEditableOrgs(updated);
   };
 
-  const updateNewOrg = (index, key, value) => {
-    const updated = [...newOrgs];
-    updated[index][key] = value;
-    setNewOrgs(updated);
+  const handleSave = () => {
+    const payload = {
+      collaborators: editableOrgs.map((org) => ({
+        collaboratorMemberId: org.member.identity,
+        organizerName: org.member.organizerName,
+        organizerNumber: org.member.organizerNumber,
+      })),
+    };
+
+    console.log("FINAL PAYLOAD", payload);
+    onSave(payload);
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <h3>Organization Details</h3>
+    <div className="child-overlay" onClick={onClose}>
+      <div className="child-modal" onClick={(e) => e.stopPropagation()}>
 
-        {/* ================= EXISTING ORGS ================= */}
-        {existingOrgs.map((org, index) => (
-          <div key={index}>
+        {/* HEADER */}
+        <div className="modal-header">
+          <button className="back-btn" onClick={onClose}>←</button>
+          <h3>Organization Details</h3>
+        </div>
+
+        {/* BODY */}
+        {editableOrgs.map((org, index) => (
+          <div key={index} className="org-section">
             <h4>Organization {index + 1}</h4>
 
-            <input value={org.organizerName || ""} readOnly />
-            <input value={org.organizerNumber || ""} readOnly />
-            <input value={org.location || ""} readOnly />
-            <input value={org.organizationName || ""} readOnly />
+            <div className="org-grid">
+
+              {/* Organizer Name – EDITABLE */}
+              <div>
+                <label>Organizer Name </label>
+                <input
+                  value={org.member.organizerName || ""}
+                  onChange={(e) =>
+                    updateField(index, "organizerName", e.target.value)
+                  }
+                />
+              </div>
+
+              {/* Organizer Number – EDITABLE */}
+              <div>
+                <label>Organizer Number </label>
+                <input
+                  value={org.member.organizerNumber || ""}
+                  onChange={(e) =>
+                    updateField(index, "organizerNumber", e.target.value)
+                  }
+                />
+              </div>
+
+              {/* READ ONLY FIELDS */}
+              <div>
+                <label>Location</label>
+                <input
+                  value={org.member.location || ""}
+                  readOnly
+                  className="readonly-highlight"
+                />
+              </div>
+
+              <div>
+                <label>Event Host By</label>
+                <input
+                  value={org.member.hostCategoryName || ""}
+                  readOnly
+                  className="readonly-highlight"
+                />
+              </div>
+
+              <div>
+                <label>Organization Name</label>
+                <input
+                  value={org.member.organizationName || ""}
+                  readOnly
+                  className="readonly-highlight"
+                />
+              </div>
+
+            </div>
           </div>
         ))}
 
-        {/* ================= NEW ORGS ================= */}
-        {newOrgs.map((org, index) => (
-          <div key={index}>
-            <h4>New Organization</h4>
-
-            <input
-              placeholder="Organizer Name"
-              value={org.organizerName}
-              onChange={(e) =>
-                updateNewOrg(index, "organizerName", e.target.value)
-              }
-            />
-
-            <input
-              placeholder="Organizer Number"
-              value={org.organizerNumber}
-              onChange={(e) =>
-                updateNewOrg(index, "organizerNumber", e.target.value)
-              }
-            />
-
-            <input
-              placeholder="Location"
-              value={org.location}
-              onChange={(e) =>
-                updateNewOrg(index, "location", e.target.value)
-              }
-            />
-          </div>
-        ))}
-
-        <button onClick={addOrg}>+ Add Organization</button>
-
-        <div style={{ marginTop: 20 }}>
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={() => onSave([...existingOrgs, ...newOrgs])}>
-            Save
-          </button>
+        {/* FOOTER */}
+        <div className="modal-footer">
+          <button className="outline-btn" onClick={onClose}>Cancel</button>
+          <button className="primary-btn" onClick={handleSave}>Save</button>
         </div>
+
       </div>
     </div>
   );

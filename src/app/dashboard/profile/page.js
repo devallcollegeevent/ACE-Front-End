@@ -161,7 +161,7 @@ export default function ProfilePage() {
           </div>
 
           <div>
-            <label>Domain Email Id</label>
+            <label>Email</label>
             <p>{form.email}</p>
           </div>
 

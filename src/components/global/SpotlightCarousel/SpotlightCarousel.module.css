@@ -2,7 +2,6 @@
    ROOT
 ========================= */
 
-
 /* =========================
    TITLE
 ========================= */
@@ -40,7 +39,7 @@
   min-width: 100%;
   display: flex;
   gap: 70px;
-  padding: 40px 10%;
+  padding: 40px 3%;
   background: #edf7ff;
   box-sizing: border-box;
 }
@@ -49,7 +48,7 @@
    LEFT
 ========================= */
 .left {
-  width: 40%;
+  width: 80%;
 }
 
 .image {
@@ -116,9 +115,61 @@
 .countdown {
   display: flex;
   gap: 14px;
+  margin-top: 16px;
+  align-items: end;
+}
+.location {
+  display: flex;
   align-items: center;
-  margin-top: 14px;
-  flex-wrap: wrap;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.countdown span {
+  text-align: center;
+  border-radius: 26%;
+  width: 81px;
+  height: 81px;
+  padding: 20px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* DAYS – BLUE */
+.cd-days {
+  border-radius: 62.185px;
+  border: 2.291px solid #911cd5;
+  background: rgba(238, 210, 255, 0.84);
+}
+
+/* HOURS – GREEN */
+.cd-hours {
+  border-radius: 62.185px;
+  border: 2.291px solid #0b822a;
+  background: #d1f8db;
+}
+
+/* MINS – ORANGE */
+.cd-mins {
+  border-radius: 62.185px;
+  border: 2.291px solid #f5dba2;
+  background: #fff7d8;
+}
+
+/* SECS – RED */
+.cd-secs {
+  border-radius: 62.185px;
+  border: 2.291px solid #0052a2;
+  background: #6cb4f9;
+}
+
+/* Label text */
+.countdown span br + * {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 /* Countdown pill */
@@ -141,14 +192,15 @@
 /* CTA */
 .cta {
   margin-left: 20px;
-  padding: 10px 22px;
+  padding: 17px 26px;
   background: #7f2bff;
   color: #ffffff;
   border-radius: 25px;
   border: none;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.25s ease;
+  height: 60px;
+  text-decoration: none;
 }
 
 .cta:hover {

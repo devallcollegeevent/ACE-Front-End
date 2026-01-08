@@ -19,11 +19,6 @@ export default function TicketListModal({
           </button>
         </div>
 
-        {/* ADD BUTTON */}
-        <div className="modal-actions">
-          <button className="btn-add">+ Add</button>
-        </div>
-
         {/* TABLE */}
         <div className="ticket-table">
           <div className="ticket-row header">
@@ -40,7 +35,7 @@ export default function TicketListModal({
               <span>{t.price}</span>
               <div className="d-flex gap-5">
                 <span onClick={() => onEditTicket(t)}>{EDITICON}</span>
-                <span onClick={() => onDeleteTicket(t.identity)}>
+                <span onClick={() => onDeleteTicket(t.identity)} style={{display:"none"}}>
                   {DELETICON}
                 </span>
               </div>

@@ -44,6 +44,7 @@ const INITIAL_FORM_DATA = {
     country: "",
     state: "",
     city: "",
+    offers:"",
     mapLink: "",
     venue:"",
   },
@@ -189,6 +190,7 @@ export default function CreateEvent() {
             state: event.state,
             city: event.city,
             mapLink: event.mapLink,
+            offers: event.offers,
             venue: event.venue,
           })
         );

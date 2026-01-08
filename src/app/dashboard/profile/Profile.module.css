@@ -180,6 +180,29 @@
   background: #6510d8;
 }
 
+.row {
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  flex-wrap: wrap;
+}
+
+.row span {
+  white-space: nowrap;
+}
+
+.rowMuted {
+  margin-top: 6px;
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  color: #777;
+  flex-wrap: wrap;
+}
+
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .editBox {
