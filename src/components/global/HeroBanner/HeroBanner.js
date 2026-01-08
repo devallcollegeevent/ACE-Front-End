@@ -4,7 +4,6 @@ import styles from "./HeroBanner.module.css";
 
 export default function HeroBanner({ text }) {
   const words = text.split(" ");
-  console.log("00000000",words)
 
   return (
     <>

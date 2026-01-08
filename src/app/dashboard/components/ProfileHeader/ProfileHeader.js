@@ -62,8 +62,6 @@ export default function ProfileHeader() {
 
   const firstLetter = displayName.charAt(0).toUpperCase();
 
-  console.log("profile",profile)
-
   return (
     <div className={styles.wrapper}>
       {/* COVER */}

@@ -31,8 +31,6 @@ export default function MyEventsGrid({ events = [] }) {
       router.push(`/events/${encodeId(eventId)}`);
     };
 
-    console.log("////////",events)
-
   return (
     <>
       <div className="row g-4">

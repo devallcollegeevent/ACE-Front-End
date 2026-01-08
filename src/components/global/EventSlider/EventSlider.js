@@ -44,7 +44,6 @@ export default function EventSlider({ title, data = [], des }) {
     });
   };
 
-  console.log(",,,,,,,,,,,,,,,",data)
   return (
     <section className="container-fluid mt-4 px-5">
       {/* HEADER */}

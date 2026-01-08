@@ -18,7 +18,6 @@ export default function TicketListModal({
     });
   };
 
-  console.log("qqqqqqqqq11111111", tickets);
   return (
     <div className="banner-modal-overlay">
       <div className="ticket-modal">

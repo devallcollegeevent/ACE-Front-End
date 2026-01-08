@@ -82,8 +82,6 @@ export default function UserSignupPage() {
 
     const res = await signupApi(payload);
 
-    console.log("SIGNUP RESPONSE:", res);
-
     //DO NOT THROW
     if (!res?.status) {
       setLoading(false); //STOP LOADING

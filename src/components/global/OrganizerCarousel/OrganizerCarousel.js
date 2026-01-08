@@ -14,7 +14,6 @@ export default function OrganizersCarousel({ onOpenLeaderboard, data = [] }) {
     router.push(`/organization-details/${encryptedId}`);
   };
 
-  console.log("xxxxxxxxxxx",data)
   return (
     <section className={styles.topOrganizersroot}>
       {/* Header */}

@@ -151,7 +151,6 @@ export default function MediaTickets({
   /* ================= TICKET ================= */
 
   const handleAddTicket = () => {
-    console.log("OPEN MODAL CLICKED");
     setEditingIndex(null);
     setTicketForm({
       name: "",

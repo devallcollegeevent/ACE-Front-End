@@ -19,7 +19,6 @@ export default function EventsList({ events = [] }) {
       </div>
     );
   }
-console.log("999999999999",events)
   return (
     <div className="events-list">
 

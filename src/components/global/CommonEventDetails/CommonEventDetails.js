@@ -277,7 +277,6 @@ export default function CommonEventDetails({ event = {}, onBack }) {
         formData.append("bannerImages", img.file);
       });
 
-      console.log("image upload", formData);
       const res = await updateEventApi(event.identity, formData);
 
       if (res.data.success) {
@@ -406,7 +405,6 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       toast.error("Failed to update other details");
     }
   };
-console.log("====ddddddddddd=",event)
   return (
     <>
       <div className="container event-wrapper my-4">

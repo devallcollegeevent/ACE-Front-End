@@ -96,8 +96,6 @@ export default function EventsFilterPage() {
     page * PAGE_SIZE
   );
 
-  console.log("====eeeee",events)
-
   useEffect(() => {
   setPage(1);
 }, [filters, sort]);
