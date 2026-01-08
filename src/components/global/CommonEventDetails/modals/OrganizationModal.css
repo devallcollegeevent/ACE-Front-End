@@ -1,0 +1,128 @@
+/* ===== Overlay ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Modal Box ===== */
+.modal {
+  background: #fff;
+  width: 720px;
+  max-width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+/* ===== Headings ===== */
+.modal h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.modal h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+/* ===== Grid Layout ===== */
+.org-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ===== Inputs ===== */
+.modal input,
+.modal select,
+.modal textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ===== Readonly look ===== */
+.modal input[readonly],
+.modal textarea[readonly] {
+  background: #f1f1f1;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* ===== Section divider ===== */
+.org-divider {
+  height: 1px;
+  background: #eee;
+  margin: 20px 0;
+}
+
+/* ===== Buttons row ===== */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 12px;
+}
+
+/* ===== Left buttons ===== */
+.btn-outline {
+  padding: 10px 22px;
+  border-radius: 24px;
+  border: 1px solid #bbb;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== Primary ===== */
+.btn-primary {
+  padding: 10px 26px;
+  border-radius: 24px;
+  border: none;
+  background: #7a12ff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== Add button ===== */
+.btn-add {
+  background: #7a12ff;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== Delete ===== */
+.btn-delete {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .org-grid {
+    grid-template-columns: 1fr;
+  }
+}

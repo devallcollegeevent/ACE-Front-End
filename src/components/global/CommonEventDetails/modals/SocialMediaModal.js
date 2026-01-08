@@ -1,9 +1,12 @@
+"use client";
+import { useState } from "react";
+
 export default function SocialMediaModal({ value, onClose, onSave }) {
-  const [form, setForm] = useState(value);
+  const [form, setForm] = useState(value || {});
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="child-overlay" onClick={onClose}>
+      <div className="child-modal" onClick={(e) => e.stopPropagation()}>
         <h3>Social Media Details</h3>
 
         <input
@@ -22,15 +25,7 @@ export default function SocialMediaModal({ value, onClose, onSave }) {
           }
         />
 
-        <input
-          placeholder="LinkedIn"
-          value={form.linkedin || ""}
-          onChange={(e) =>
-            setForm({ ...form, linkedin: e.target.value })
-          }
-        />
-
-        <button onClick={onClose}>Reset</button>
+        <button onClick={onClose}>Cancel</button>
         <button onClick={() => onSave(form)}>Save</button>
       </div>
     </div>

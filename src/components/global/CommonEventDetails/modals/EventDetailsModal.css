@@ -1,17 +1,89 @@
-.modal-overlay {
+/* OVERLAY */
+.host-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 999999; /* VERY IMPORTANT */
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modal-box {
+/* MODAL BOX */
+.host-modal {
   background: #fff;
+  width: 520px;
+  max-width: 90%;
   border-radius: 16px;
   padding: 24px;
-  width: 600px;
-  max-width: 90%;
+}
+
+/* HEADER */
+.host-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.host-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* LIST */
+.host-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.host-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.host-item:hover {
+  background: #f7f7f7;
+}
+
+.host-item span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #444;
+}
+
+/* FOOTER */
+.host-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.save-btn {
+  background: #7a12ff;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }

@@ -1,9 +1,12 @@
-export default function OfferDetailsModal({ value, onClose, onSave }) {
-  const [offer, setOffer] = useState(value);
+"use client";
+import { useState } from "react";
+
+export default function OfferModal({ value, onClose, onSave }) {
+  const [offer, setOffer] = useState(value || "");
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="child-overlay" onClick={onClose}>
+      <div className="child-modal" onClick={(e) => e.stopPropagation()}>
         <h3>Offer Details</h3>
 
         <textarea
@@ -11,7 +14,7 @@ export default function OfferDetailsModal({ value, onClose, onSave }) {
           onChange={(e) => setOffer(e.target.value)}
         />
 
-        <button onClick={onClose}>Reset</button>
+        <button onClick={onClose}>Cancel</button>
         <button onClick={() => onSave(offer)}>Save</button>
       </div>
     </div>

@@ -65,7 +65,7 @@
 
 /* RIGHT BIG CARD */
 .vertical {
-  grid-row: span 2;   /* 🔥 THIS IS THE KEY */
+  grid-row: span 2;   /* THIS IS THE KEY */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

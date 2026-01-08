@@ -77,7 +77,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   const [openSocialModal, setOpenSocialModal] = useState(false);
 
   // data states (pre-populate)
-  const [orgData, setOrgData] = useState(event.org || {});
+  const [orgData, setOrgData] = useState(event.organizations || []);
   const [offerData, setOfferData] = useState(event.offers || "");
   const [socialData, setSocialData] = useState(event.socialLinks || {});
 
@@ -611,23 +611,26 @@ export default function CommonEventDetails({ event = {}, onBack }) {
         <EventDetailsModal
           onClose={() => setOpenHostModal(false)}
           onOrgClick={() => {
-            setOpenOrgModal(true);
+            setOpenHostModal(false);
+            setTimeout(() => setOpenOrgModal(true), 0);
           }}
           onOfferClick={() => {
-            setOpenOfferModal(true);
+            setOpenHostModal(false);
+            setTimeout(() => setOpenOfferModal(true), 0);
           }}
           onSocialClick={() => {
-            setOpenSocialModal(true);
+            setOpenHostModal(false);
+            setTimeout(() => setOpenSocialModal(true), 0);
           }}
         />
       )}
 
       {openOrgModal && (
         <OrganizationModal
-          data={orgData}
+          orgs={orgData}
           onClose={() => setOpenOrgModal(false)}
-          onSave={(val) => {
-            setOrgData(val);
+          onSave={(updatedOrgs) => {
+            setOrgData(updatedOrgs);
             setOpenOrgModal(false);
           }}
         />

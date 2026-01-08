@@ -29,7 +29,7 @@ export const resetPasswordApi = (data) =>
   handleApi(apiPublic.post(API_ENDPOINTS.AUTH.RESET_PASSWORD, data));
 
 export const updateAuthProfile = (data) =>
-  handleApi(apiPublic.post(API_ENDPOINTS.AUTH.UPDATEPROFILE, data));
+  handleApi(apiPrivate.post(API_ENDPOINTS.AUTH.UPDATEPROFILE, data));
 
 export const verifyEmailApi = (token) =>
   handleApi(

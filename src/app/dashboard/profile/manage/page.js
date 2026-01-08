@@ -142,7 +142,7 @@ export default function ManagePage() {
               Cancel
             </button>
 
-            {/* 🔥 ONLY CHANGE HERE */}
+            {/*ONLY CHANGE HERE */}
             <button
               className={styles.saveBtn}
               onClick={() => setShowConfirm(true)}
