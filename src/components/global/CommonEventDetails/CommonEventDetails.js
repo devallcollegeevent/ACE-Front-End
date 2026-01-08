@@ -30,6 +30,7 @@ import OfferModal from "./modals/OfferModal";
 import SocialMediaModal from "./modals/SocialMediaModal";
 import { updateEventApi } from "../../../lib/api/event.api";
 import { toast } from "react-hot-toast";
+import OtherDetailsModal from "./modals/OtherDetailsModal";
 
 export default function CommonEventDetails({ event = {}, onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,6 +63,13 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   const [openTicketListModal, setOpenTicketListModal] = useState(false);
   const [openTicketModal, setOpenTicketModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState(null);
+  const [otherDetails, setOtherDetails] = useState({
+    certIdentity: null,
+    perkIdentities: [],
+    accommodationIdentities: [],
+    website: "",
+    videoLink: "",
+  });
 
   const [ticketForm, setTicketForm] = useState({
     name: "",
@@ -77,27 +85,15 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   const [openOrgModal, setOpenOrgModal] = useState(false);
   const [openOfferModal, setOpenOfferModal] = useState(false);
   const [openSocialModal, setOpenSocialModal] = useState(false);
+  const [openOtherModal, setOpenOtherModal] = useState(false);
 
   // data states (pre-populate)
   const [orgData, setOrgData] = useState(event.collaborators || []);
   const [offerData, setOfferData] = useState(event.offers || "");
   const [socialData, setSocialData] = useState(event.socialLinks || {});
+  
 
-  /* ================= COUNTDOWN ================= */
-  useEffect(() => {
-    if (!selectedTicket) return;
-
-    setTicketForm({
-      name: selectedTicket.name || "",
-      description: selectedTicket.description || "",
-      from: selectedTicket.sellingFrom || "",
-      to: selectedTicket.sellingTo || "",
-      amount: selectedTicket.price || "",
-      total: selectedTicket.total || "1000",
-    });
-
-    setTicketType(selectedTicket.isPaid ? "PAID" : "FREE");
-  }, [selectedTicket]);
+  // imge move left and right
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -123,7 +119,35 @@ export default function CommonEventDetails({ event = {}, onBack }) {
   const handleCancel = () => {
     setOpenConfirm(false);
   };
-  console.log("singel event value", event);
+
+  /* ================= COUNTDOWN ================= */
+  useEffect(() => {
+    if (!selectedTicket) return;
+
+    setTicketForm({
+      name: selectedTicket.name || "",
+      description: selectedTicket.description || "",
+      from: selectedTicket.sellingFrom || "",
+      to: selectedTicket.sellingTo || "",
+      amount: selectedTicket.price || "",
+      total: selectedTicket.total || "1000",
+    });
+
+    setTicketType(selectedTicket.isPaid ? "PAID" : "FREE");
+  }, [selectedTicket]);
+
+  useEffect(() => {
+    if (!event) return;
+
+    setOtherDetails({
+      certIdentity: event.cert?.identity || null,
+      perkIdentities: event.eventPerks?.map((p) => p.perk?.identity) || [],
+      accommodationIdentities:
+        event.eventAccommodations?.map((a) => a.accommodation?.identity) || [],
+      website: event.eventLink || "",
+      videoLink: event.videoLink || "",
+    });
+  }, [event]);
 
   useEffect(() => {
     if (selectedTicket) {
@@ -156,7 +180,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
     }
   }, [openOrgModal, openOfferModal, openSocialModal]);
 
-  // update api call
+  // update organizers
 
   const handleOrganizationSave = async (payload) => {
     try {
@@ -183,7 +207,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       );
     }
   };
-
+  // updated offer
   const handleOfferSave = async (offerValue) => {
     try {
       if (!offerValue || !offerValue.trim()) {
@@ -213,7 +237,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       toast.error("Something went wrong while updating offer");
     }
   };
-
+  // updated social media
   const handleSocialSave = async (payload) => {
     try {
       const formData = new FormData();
@@ -233,7 +257,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       toast.error("Failed to update social media details");
     }
   };
-
+  // updated banner images
   const handleBannerSave = async (previewImages) => {
     try {
       const formData = new FormData();
@@ -267,7 +291,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
     }
   };
 
-  /* ================= TICKET UPDATE ================= */
+  // updated tickets
   const handleTicketSave = async () => {
     try {
       if (!selectedTicket?.identity) {
@@ -275,23 +299,40 @@ export default function CommonEventDetails({ event = {}, onBack }) {
         return;
       }
 
-      const payload = [
-        {
-          identity: selectedTicket.identity,
-          name: ticketForm.name,
-          description: ticketForm.description,
-          sellingFrom: ticketForm.from,
-          sellingTo: ticketForm.to,
-          price: ticketType === "PAID" ? Number(ticketForm.amount) : 0,
-          isPaid: ticketType === "PAID",
-          totalQuantity: Number(ticketForm.total),
-        },
-      ];
+      //EXISTING tickets copy pannrom
+      const updatedTickets = event.tickets.map((t) => {
+        // edited ticket
+        if (t.identity === selectedTicket.identity) {
+          return {
+            identity: t.identity,
+            name: ticketForm.name,
+            description: ticketForm.description,
+            sellingFrom: ticketForm.from,
+            sellingTo: ticketForm.to,
+            price: ticketType === "PAID" ? Number(ticketForm.amount) : 0,
+            isPaid: ticketType === "PAID",
+            totalQuantity: Number(ticketForm.total),
+          };
+        }
 
+        // untouched tickets
+        return {
+          identity: t.identity,
+          name: t.name,
+          description: t.description,
+          sellingFrom: t.sellingFrom,
+          sellingTo: t.sellingTo,
+          price: t.price,
+          isPaid: t.isPaid,
+          totalQuantity: t.totalQuantity,
+        };
+      });
+
+      //  FormData build
       const formData = new FormData();
 
-      // VERY IMPORTANT – stringify
-      formData.append("tickets", JSON.stringify(payload));
+      // VERY IMPORTANT
+      formData.append("tickets", JSON.stringify(updatedTickets));
 
       const toastId = toast.loading("Updating ticket...");
 
@@ -302,7 +343,6 @@ export default function CommonEventDetails({ event = {}, onBack }) {
       if (res?.status) {
         toast.success("Ticket updated successfully");
 
-        // close modal
         setOpenTicketModal(false);
         setSelectedTicket(null);
       } else {
@@ -314,6 +354,59 @@ export default function CommonEventDetails({ event = {}, onBack }) {
     }
   };
 
+  // update other details
+
+  const handleOtherDetailsSave = async (updatedValues) => {
+    try {
+      const formData = new FormData();
+
+      // STATE update (important)
+      setOtherDetails(updatedValues);
+
+      if (updatedValues.certIdentity) {
+        formData.append("certIdentity", updatedValues.certIdentity);
+      }
+
+      if (updatedValues.perkIdentities?.length) {
+        formData.append(
+          "perkIdentities",
+          JSON.stringify(updatedValues.perkIdentities)
+        );
+      }
+
+      if (updatedValues.accommodationIdentities?.length) {
+        formData.append(
+          "accommodationIdentities",
+          JSON.stringify(updatedValues.accommodationIdentities)
+        );
+      }
+
+      if (updatedValues.website) {
+        formData.append("eventLink", updatedValues.website);
+      }
+
+      if (updatedValues.videoLink) {
+        formData.append("videoLink", updatedValues.videoLink);
+      }
+
+      const toastId = toast.loading("Updating other details...");
+
+      const res = await updateEventApi(event.identity, formData);
+
+      toast.dismiss(toastId);
+
+      if (res?.status) {
+        toast.success("Other details updated successfully");
+        setOpenOtherModal(false);
+      } else {
+        toast.error("Update failed");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to update other details");
+    }
+  };
+console.log("====ddddddddddd=",event)
   return (
     <>
       <div className="container event-wrapper my-4">
@@ -339,7 +432,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
             src={bannerImages[currentIndex]}
           />
 
-          <EditOverlay onEdit={() => setOpenBannerModal(true)} />
+          <EditOverlay onEdit={() => setOpenBannerModal(true)} eventOrgIdentity={event?.org?.identity}/>
           <span className="badge-upcoming">
             {event?.status || "Upcoming Event"}
           </span>
@@ -476,7 +569,7 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           <div className="col-lg-6">
             <div className="card-box edit-wrapper">
               <h4 className="section-title mb-4">Ticket Availability</h4>
-              <EditOverlay onEdit={() => setOpenTicketListModal(true)} />
+              <EditOverlay onEdit={() => setOpenTicketListModal(true)} eventOrgIdentity={event?.org?.identity}/>
               <div className="row g-4">
                 {event?.tickets && event.tickets.length > 0 ? (
                   event.tickets.map((ticket) => {
@@ -555,9 +648,9 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           <div className="col-lg-8">
             <div className="card-box mt-4 edit-wrapper">
               <h3>Event Host Details</h3>
-              <EditOverlay onEdit={() => setOpenHostModal(true)} />
+              <EditOverlay onEdit={() => setOpenHostModal(true)} eventOrgIdentity={event?.org?.identity}/>
 
-              <h4>{event.org?.organizationName || "-"}</h4>
+              <h4>{event.org?.organizationName || "-"}({event.org?.domainEmail})</h4>
 
               {/* ================= CO - ORGANIZATION ================= */}
               {event.collaborators && event.collaborators.length > 0 && (
@@ -637,8 +730,10 @@ export default function CommonEventDetails({ event = {}, onBack }) {
           </div>
         </div>
         {/* ================= 8. OTHER DETAILS ================= */}
-        <div className="card-box mt-4">
+        <div className="card-box mt-4 edit-wrapper">
           <h3>Other Details</h3>
+          {/* EDIT ICON HERE */}
+          <EditOverlay onEdit={() => setOpenOtherModal(true)} eventOrgIdentity={event?.org?.identity}/>
 
           <div className="row">
             {/* ================= PERKS ================= */}
@@ -794,6 +889,14 @@ export default function CommonEventDetails({ event = {}, onBack }) {
             setTimeout(() => setOpenHostModal(true), 0);
           }}
           onSave={handleSocialSave}
+        />
+      )}
+
+      {openOtherModal && (
+        <OtherDetailsModal
+          value={otherDetails}
+          onClose={() => setOpenOtherModal(false)}
+          onSave={handleOtherDetailsSave}
         />
       )}
 

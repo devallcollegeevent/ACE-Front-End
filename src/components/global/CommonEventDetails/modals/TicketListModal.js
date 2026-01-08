@@ -8,6 +8,17 @@ export default function TicketListModal({
   onEditTicket,
   onDeleteTicket,
 }) {
+  const formatDateOnly = (iso) => {
+    if (!iso) return "-";
+
+    return new Date(iso).toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
+  console.log("qqqqqqqqq11111111", tickets);
   return (
     <div className="banner-modal-overlay">
       <div className="ticket-modal">
@@ -23,19 +34,24 @@ export default function TicketListModal({
         <div className="ticket-table">
           <div className="ticket-row header">
             <span>Ticket Name</span>
-            <span>Price</span>
+            <span>sellingFrom</span>
+            <span>sellingTo</span>
             <span>Total</span>
-            <span></span>
+            <span>Action</span>
           </div>
 
           {tickets.map((t) => (
             <div className="ticket-row" key={t.identity}>
               <span>{t.name}</span>
-              <span>{t.price}</span>
-              <span>{t.price}</span>
-              <div className="d-flex gap-5">
+              <span>{formatDateOnly(t.sellingFrom)}</span>
+              <span>{formatDateOnly(t.sellingTo)}</span>
+              <span>{t.totalQuantity}</span>
+              <div className="d-flex gap-5 pe-auto">
                 <span onClick={() => onEditTicket(t)}>{EDITICON}</span>
-                <span onClick={() => onDeleteTicket(t.identity)} style={{display:"none"}}>
+                <span
+                  onClick={() => onDeleteTicket(t.identity)}
+                  style={{ display: "none" }}
+                >
                   {DELETICON}
                 </span>
               </div>
@@ -44,8 +60,8 @@ export default function TicketListModal({
         </div>
 
         {/* FOOTER */}
-        <div className="modal-footer">
-          <button className="btn-save">Save</button>
+        <div className="modal-footer text-end">
+          <button className="btn-save">Update</button>
         </div>
       </div>
     </div>

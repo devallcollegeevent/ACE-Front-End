@@ -52,7 +52,7 @@
 
 .modal-footer {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   gap: 16px;
   margin-top: 24px;
 }
