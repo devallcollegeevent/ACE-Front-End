@@ -29,6 +29,15 @@ export const getOrganizerEventsApi = (orgId) =>
 export const deleteEventApi = (eventId) =>
   handleApi(apiPrivate.delete(`/event/delete/${eventId}`));
 
+export const updateEventApi = (eventId, formData) => {
+  return apiPrivate.put(`/v1/events/${eventId}`, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+};
+
+
 /* =======================
    MASTER DATA
 ======================= */

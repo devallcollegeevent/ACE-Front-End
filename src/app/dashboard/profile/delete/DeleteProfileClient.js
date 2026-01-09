@@ -29,7 +29,7 @@ export default function DeleteProfilePage() {
 
   const userData = getUserData();
 
-  // ✅ SAFETY GUARD
+  // SAFETY GUARD
   if (!userData) return null;
 
   const handleDelete = async () => {

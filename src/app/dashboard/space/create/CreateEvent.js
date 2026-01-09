@@ -44,6 +44,7 @@ const INITIAL_FORM_DATA = {
     country: "",
     state: "",
     city: "",
+    offers:"",
     mapLink: "",
     venue:"",
   },
@@ -118,7 +119,6 @@ export default function CreateEvent() {
         })
       );
 
-      console.log("FINAL COLLABORATORS PAYLOAD →", collaboratorsPayload);
       const event = formData.event;
       const media = formData.media;
 
@@ -189,6 +189,7 @@ export default function CreateEvent() {
             state: event.state,
             city: event.city,
             mapLink: event.mapLink,
+            offers: event.offers,
             venue: event.venue,
           })
         );
@@ -212,7 +213,6 @@ export default function CreateEvent() {
         });
       }
 
-      console.log("FINAL FORMDATA PAYLOAD ↓↓↓");
       for (let pair of fd.entries()) {
         console.log(pair[0], "=>", pair[1]);
       }

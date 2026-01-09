@@ -16,7 +16,6 @@ export default function SavedEventsPage() {
 
     try {
       const res = await getAllEventsApi();
-      console.log("check res", res);
       if (res?.status) {
         setEvents(res.data);
         setGlobalLoading(false);

@@ -22,8 +22,6 @@ export default function MyEventsList({ events = [] }) {
     setDeleteId(null);
   };
 
-  console.log("999999",events)
-
   return (
     <>
       <div className="list-group list-group-flush p-5">

@@ -151,7 +151,6 @@ export default function MediaTickets({
   /* ================= TICKET ================= */
 
   const handleAddTicket = () => {
-    console.log("OPEN MODAL CLICKED");
     setEditingIndex(null);
     setTicketForm({
       name: "",
@@ -466,15 +465,10 @@ export default function MediaTickets({
         open={openSuccessModal}
         image="/images/logo.png"
         title="Event Submitted Successfully"
-        description={`Your event details under ${
-          data?.organizer?.organizations?.[0]?.orgName || "your organization"
-        } have been successfully filled.
-
-Please review all the information carefully. If everything looks correct, click Confirm to submit your event.
-
-Once confirmed, your event will be sent for admin review and approval. After approval, the event will be published and visible to users.
-
-Do you want to proceed with event submission?`}
+        description="Your event details are complete.
+Review them and click Confirm to submit for approval.
+Once approved, your event will be published.
+Submit now?"
         onCancel={() => setOpenSuccessModal(false)}
         onConfirm={() => {
           setOpenSuccessModal(false);

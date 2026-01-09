@@ -14,7 +14,6 @@ import {
   getCities,
 } from "../../../../../lib/location.api";
 import { useLoading } from "../../../../../context/LoadingContext";
-import toast from "react-hot-toast";
 
 export default function EventDetails({
   data,
@@ -40,7 +39,6 @@ export default function EventDetails({
     async function loadCategories() {
       try {
         const res = await getEventCategoriesApi();
-        console.log("CATEGORIES ===>", res);
         if (res?.success) {
           setCategories(res.data);
         }
@@ -58,9 +56,7 @@ export default function EventDetails({
 
     async function loadEventTypes() {
       try {
-        console.log("bbbbbbbbbbbbbbb", data);
         const res = await getEventTypesApi(data.category);
-        console.log("EVENT TYPES ===>", res);
         if (res?.success) {
           setEventTypes(res.data);
         }

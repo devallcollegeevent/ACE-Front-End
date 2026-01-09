@@ -113,7 +113,6 @@ export default function ProfilePage() {
       }
 
       // DEBUG
-      console.log("UPDATE PROFILE PAYLOAD ↓↓↓");
       for (const pair of payload.entries()) {
         console.log(pair[0], "=>", pair[1]);
       }
@@ -161,7 +160,7 @@ export default function ProfilePage() {
           </div>
 
           <div>
-            <label>Domain Email Id</label>
+            <label>Email</label>
             <p>{form.email}</p>
           </div>
 

@@ -15,13 +15,14 @@
 }
 
 .viewBox label {
-  font-size: 13px;
-  color: #888888;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 700;
 }
 
 .viewBox p {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   color: #222222;
   margin-top: 4px;
 }
@@ -51,8 +52,9 @@
 }
 
 .left label {
-  font-size: 13px;
-  color: #666666;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 700;
 }
 
 .left input {
@@ -177,6 +179,29 @@
 .saveBtn:hover {
   background: #6510d8;
 }
+
+.row {
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  flex-wrap: wrap;
+}
+
+.row span {
+  white-space: nowrap;
+}
+
+.rowMuted {
+  margin-top: 6px;
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  color: #777;
+  flex-wrap: wrap;
+}
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {

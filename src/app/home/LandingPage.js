@@ -83,7 +83,6 @@ export default function LandingPage() {
 
     try {
       const res = await getAllEventsApi();
-      console.log("check res", res);
       if (res?.status) {
         setEvents(res.data);
       } else {

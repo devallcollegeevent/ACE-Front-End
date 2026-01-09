@@ -42,9 +42,9 @@ export default function OrganizersCarousel({ onOpenLeaderboard, data = [] }) {
               style={{ cursor: "pointer" }}
             >
               <div className={styles.avatarWrap}>
-                {org.logoUrl ? (
+                {org.profileImage ? (
                   <img
-                    src={org.logoUrl}
+                    src={org.profileImage}
                     alt={org.organizationName}
                     className={styles.avatar}
                   />
@@ -57,7 +57,7 @@ export default function OrganizersCarousel({ onOpenLeaderboard, data = [] }) {
 
               <div className={styles.name}>{org.organizationName}</div>
               <div className={styles.events}>
-                {org.totalEvents || 0} events
+                {org._count.events || 0} events
               </div>
             </div>
           ))}
