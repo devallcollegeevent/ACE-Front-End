@@ -4,9 +4,10 @@ import { getEventBySlugApi } from "../../../lib/api/event.api";
 
 /* ================= SEO ================= */
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
+  const { slug } =  params;
 
   const res = await getEventBySlugApi(slug);
+  console.log("siiiiiiiiiiii",res)
   const event = res?.data;
 
   if (!event) {
