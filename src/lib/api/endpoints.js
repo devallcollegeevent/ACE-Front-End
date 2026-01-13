@@ -2,7 +2,7 @@ export const API_ENDPOINTS = {
   /* ================= EVENTS ================= */
   EVENTS: {
     ALL: "/v1/events",
-    SINGLE: (eventId) => `/v1/events/${eventId}`,
+    SINGLE: (slug) => `/v1/events/${slug}`,
   },
 
   /* ================= AUTH ================= */

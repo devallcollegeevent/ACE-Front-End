@@ -39,7 +39,7 @@ export default function EventDetails({
     async function loadCategories() {
       try {
         const res = await getEventCategoriesApi();
-        if (res?.success) {
+        if (res?.status) {
           setCategories(res.data);
         }
       } catch (err) {
@@ -57,7 +57,7 @@ export default function EventDetails({
     async function loadEventTypes() {
       try {
         const res = await getEventTypesApi(data.category);
-        if (res?.success) {
+        if (res?.status) {
           setEventTypes(res.data);
         }
       } catch (err) {

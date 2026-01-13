@@ -26,8 +26,13 @@ export default function EventSlider({ title, data = [], des }) {
     sliderRef.current?.scrollBy({ left: 350, behavior: "smooth" });
   };
 
-  const handleClick = (eventId) => {
-    router.push(`/events/${encodeId(eventId)}`);
+  const handleClick = (slug) => {
+    if (!slug) {
+      console.error("Slug missing");
+      return;
+    }
+
+    router.push(`/events/${slug}`);
   };
 
   const handleCardClick = () => {
@@ -44,6 +49,7 @@ export default function EventSlider({ title, data = [], des }) {
     });
   };
 
+  console.log("====dfghjkl", data);
   return (
     <section className="container-fluid mt-4 px-5">
       {/* HEADER */}
@@ -84,7 +90,7 @@ export default function EventSlider({ title, data = [], des }) {
               <div
                 key={event.identity ?? index}
                 className="card event-card"
-                onClick={() => handleClick(event.identity)}
+                onClick={() => handleClick(event.slug)}
               >
                 {/* IMAGE */}
                 <img

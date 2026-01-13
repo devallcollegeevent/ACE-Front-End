@@ -27,7 +27,8 @@ export default function OrganizerDetails({
     async function loadCategories() {
       try {
         const res = await getOrgCategoriesApi();
-        if (res?.success) {
+        console.log("99999999999",res)
+        if (res?.status) {
           setOrgCategories(res.data);
         }
       } catch (err) {
@@ -112,6 +113,8 @@ export default function OrganizerDetails({
       ],
     });
   }, [resetSignal]);
+
+  console.log("11111111111",orgCategories)
 
   return (
     <>
