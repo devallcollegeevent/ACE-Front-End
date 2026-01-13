@@ -46,29 +46,29 @@ export function middleware(req) {
   const userAgent = req.headers.get("user-agent")?.toLowerCase() || "";
   const secFetchMode = req.headers.get("sec-fetch-mode");
 
-  console.log("🔥 Middleware:", pathname);
+  console.log("Middleware:", pathname);
 
-  /* 1️⃣ BLOCK SENSITIVE PATHS */
+  /* BLOCK SENSITIVE PATHS */
   if (SENSITIVE_PATHS.some((p) => pathname.startsWith(p))) {
     return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  /* 2️⃣ SANITIZE PATH */
+  /*  SANITIZE PATH */
   if (!isPathSafe(pathname)) {
     return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  /* 3️⃣ BLOCK BOTS */
+  /*  BLOCK BOTS */
   if (BLOCKED_USER_AGENTS.some((ua) => userAgent.includes(ua))) {
     return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  /* 4️⃣ AUTH PROTECTED ROUTES */
+  /*  AUTH PROTECTED ROUTES */
   if (PROTECTED_ROUTES.some((route) => pathname.startsWith(route)) && !token) {
     return NextResponse.redirect(new URL("/auth/user/login", req.url));
   }
 
-  /* 5️⃣ BLOCK MANUAL URL TYPING ONLY */
+  /*  BLOCK MANUAL URL TYPING ONLY */
   if (BLOCK_DIRECT_ACCESS_ROUTES.some((route) => pathname.startsWith(route))) {
     // browser address bar typing = navigate
     if (secFetchMode === "navigate") {
