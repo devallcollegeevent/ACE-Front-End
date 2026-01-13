@@ -115,10 +115,6 @@ export default function EventDetails({
     let value = tagInput.trim();
     if (!value) return;
 
-    if (!value.startsWith("#")) {
-      value = `#${value}`;
-    }
-
     if (data.tags?.includes(value)) {
       setTagInput("");
       return;
@@ -162,7 +158,7 @@ export default function EventDetails({
       mapLink: "",
       meetLink: "",
       offers: "",
-      venue:"",
+      venue: "",
     });
   }, [resetSignal]);
 
@@ -431,7 +427,9 @@ export default function EventDetails({
                 />
               </div>
               <div className={styles.field}>
-                <label>Venue <span>*</span></label>
+                <label>
+                  Venue <span>*</span>
+                </label>
                 <input
                   className={styles.input}
                   placeholder="Enter venue"

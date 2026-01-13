@@ -1,79 +1,86 @@
 import { NextResponse } from "next/server";
 
+/* ================= CONFIG ================= */
+
+const BLOCKED_USER_AGENTS = [
+  "curl",
+  "wget",
+  "python",
+  "scrapy",
+  "postman",
+  "httpclient",
+];
+
+const SENSITIVE_PATHS = [
+  "/.env",
+  "/.git",
+  "/.next",
+  "/config",
+  "/server",
+  "/api/admin",
+];
+
+const PROTECTED_ROUTES = ["/dashboard", "/profile", "/settings", "/space"];
+
+const BLOCK_DIRECT_ACCESS_ROUTES = ["/events", "/organization-details"];
+
+/* ================= HELPERS ================= */
+
+function getToken(req) {
+  return req.cookies.get("token")?.value || null;
+}
+
+function isPathSafe(pathname) {
+  return (
+    !pathname.includes("..") &&
+    !pathname.includes("//") &&
+    !pathname.includes("%2e")
+  );
+}
+
+/* ================= MIDDLEWARE ================= */
+
 export function middleware(req) {
   const { pathname } = req.nextUrl;
+  const token = getToken(req);
+  const userAgent = req.headers.get("user-agent")?.toLowerCase() || "";
+  const secFetchMode = req.headers.get("sec-fetch-mode");
 
-  const token = req.cookies.get("token")?.value;
-  const role = req.cookies.get("role")?.value;
+  console.log("Middleware:", pathname);
 
-  // ----------------------------------
-  // PUBLIC ROUTES (NO AUTH REQUIRED)
-  // ----------------------------------
-  const publicRoutes = [
-    "/",
-    "/home",
-    "/auth",
-    "/auth/login",
-    "/auth/signup",
-    "/auth/forgot-password",
-    "/auth/enter-code",
-    "/auth/reset-password",
-    "/auth/success",
-    "/auth/email-verify",
-  ];
-
-  if (publicRoutes.some((route) => pathname.startsWith(route))) {
-    return NextResponse.next();
+  /* BLOCK SENSITIVE PATHS */
+  if (SENSITIVE_PATHS.some((p) => pathname.startsWith(p))) {
+    return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  // ----------------------------------
-  // BLOCK UNAUTHENTICATED USERS
-  // ----------------------------------
-  if (!token) {
-    // Organizer area
-    if (pathname.startsWith("/organization")) {
-      return NextResponse.redirect(
-        new URL("/auth/organization/login", req.url)
-      );
+  /*  SANITIZE PATH */
+  if (!isPathSafe(pathname)) {
+    return NextResponse.rewrite(new URL("/not-found", req.url));
+  }
+
+  /*  BLOCK BOTS */
+  if (BLOCKED_USER_AGENTS.some((ua) => userAgent.includes(ua))) {
+    return NextResponse.rewrite(new URL("/not-found", req.url));
+  }
+
+  /*  AUTH PROTECTED ROUTES */
+  if (PROTECTED_ROUTES.some((route) => pathname.startsWith(route)) && !token) {
+    return NextResponse.redirect(new URL("/auth/user/login", req.url));
+  }
+
+  /*  BLOCK MANUAL URL TYPING ONLY */
+  if (BLOCK_DIRECT_ACCESS_ROUTES.some((route) => pathname.startsWith(route))) {
+    // browser address bar typing = navigate
+    if (secFetchMode === "navigate") {
+      return NextResponse.rewrite(new URL("/not-found", req.url));
     }
-
-    // User area
-    if (pathname.startsWith("/dashboard") || pathname.startsWith("/events")) {
-      return NextResponse.redirect(
-        new URL("/auth/user/login", req.url)
-      );
-    }
-  }
-
-  // ----------------------------------
-  // ROLE-BASED PROTECTION
-  // ----------------------------------
-
-  // Organizer trying to access user pages
-  if (role === "organizer" && pathname.startsWith("/dashboard")) {
-    return NextResponse.redirect(
-      new URL("/organization/event-management/my-events", req.url)
-    );
-  }
-
-  // User trying to access organizer pages
-  if (role === "user" && pathname.startsWith("/organization")) {
-    return NextResponse.redirect(
-      new URL("/events/listing", req.url)
-    );
   }
 
   return NextResponse.next();
 }
 
-// ----------------------------------
-// MATCH ROUTES
-// ----------------------------------
+/* ================= MATCHER ================= */
+
 export const config = {
-  matcher: [
-    "/dashboard/:path*",
-    "/organization/:path*",
-    "/events/:path*",
-    "/auth/:path*",
-  ],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|images|fonts).*)"],
 };
