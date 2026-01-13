@@ -79,7 +79,7 @@ export function middleware(req) {
   return NextResponse.next();
 }
 
-/* ================= MATCHER ================= */
+/* ================= MATCHER ================= check testing*/
 
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico|images|fonts).*)"],
