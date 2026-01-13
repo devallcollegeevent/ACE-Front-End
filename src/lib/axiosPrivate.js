@@ -3,6 +3,7 @@ import { getToken, clearToken } from "./auth";
 
 const apiPrivate = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
+  withCredentials: true,
 });
 
 apiPrivate.interceptors.request.use((config) => {

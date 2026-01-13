@@ -719,7 +719,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
                 <div className="tag-wrap">
                   {event?.tags && event.tags.length > 0 ? (
                     event.tags.map((tag, index) => (
-                      <span key={`${tag}-${index}`}>{tag}</span>
+                      <span key={`${tag}-${index}`}>#{tag}</span>
                     ))
                   ) : (
                     <span>No tags</span>
