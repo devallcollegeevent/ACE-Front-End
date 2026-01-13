@@ -1,0 +1,94 @@
+.other-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-modal {
+  background: #fff;
+  width: 860px;
+  max-width: 95%;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.other-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.other-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "BL Melody", sans-serif;
+}
+
+.close-btn {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.other-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.other-grid .full {
+  grid-column: span 2;
+}
+
+.other-grid label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.other-grid label span {
+  color: red;
+}
+
+.other-grid input,
+.other-grid select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.chips span {
+  background: #f2eaff;
+  color: #7a12ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.other-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 26px;
+}
+
+.other-footer button {
+  background: #7a12ff;
+  color: #fff;
+  padding: 12px 36px;
+  border-radius: 26px;
+  border: none;
+  font-weight: 600;
+}
