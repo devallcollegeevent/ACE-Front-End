@@ -16,20 +16,18 @@ const SENSITIVE_PATHS = [
   "/.git",
   "/.next",
   "/config",
+  "/server",
+  "/api/admin",
 ];
 
-const PROTECTED_ROUTES = [
-  "/dashboard",
-  "/profile",
-  "/settings",
-  "/space",
-];
+const PROTECTED_ROUTES = ["/dashboard", "/profile", "/settings", "/space"];
+
+const BLOCK_DIRECT_ACCESS_ROUTES = ["/events", "/organization-details"];
 
 /* ================= HELPERS ================= */
 
 function getToken(req) {
-  // 🔥 MUST MATCH BACKEND COOKIE NAME
-  return req.cookies.get("authToken")?.value || null;
+  return req.cookies.get("token")?.value || null;
 }
 
 function isPathSafe(pathname) {
@@ -42,56 +40,47 @@ function isPathSafe(pathname) {
 
 /* ================= MIDDLEWARE ================= */
 
-export default function middleware(req) {
+export function middleware(req) {
   const { pathname } = req.nextUrl;
-
-  /* ✅ API ROUTES – ALWAYS ALLOW */
-  if (pathname.startsWith("/api")) {
-    return NextResponse.next();
-  }
-
   const token = getToken(req);
   const userAgent = req.headers.get("user-agent")?.toLowerCase() || "";
-  const fetchMode = req.headers.get("sec-fetch-mode");
+  const secFetchMode = req.headers.get("sec-fetch-mode");
 
-  console.log("Middleware:", pathname, "| mode:", fetchMode);
+  console.log("Middleware:", pathname);
 
-  /* ❌ BLOCK SENSITIVE PATHS */
+  /* BLOCK SENSITIVE PATHS */
   if (SENSITIVE_PATHS.some((p) => pathname.startsWith(p))) {
     return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  /* ❌ SANITIZE PATH */
+  /*  SANITIZE PATH */
   if (!isPathSafe(pathname)) {
     return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  /* ❌ BLOCK BOTS */
+  /*  BLOCK BOTS */
   if (BLOCKED_USER_AGENTS.some((ua) => userAgent.includes(ua))) {
     return NextResponse.rewrite(new URL("/not-found", req.url));
   }
 
-  /* 🔐 PROTECTED ROUTES
-     - ONLY block manual URL typing
-     - Allow router.push / Link navigation
-  */
-  if (
-    PROTECTED_ROUTES.some((route) => pathname.startsWith(route)) &&
-    fetchMode === "navigate" &&
-    !token
-  ) {
-    return NextResponse.redirect(
-      new URL("/auth/user/login", req.url)
-    );
+  /*  AUTH PROTECTED ROUTES */
+  if (PROTECTED_ROUTES.some((route) => pathname.startsWith(route)) && !token) {
+    return NextResponse.redirect(new URL("/auth/user/login", req.url));
+  }
+
+  /*  BLOCK MANUAL URL TYPING ONLY */
+  if (BLOCK_DIRECT_ACCESS_ROUTES.some((route) => pathname.startsWith(route))) {
+    // browser address bar typing = navigate
+    if (secFetchMode === "navigate") {
+      return NextResponse.rewrite(new URL("/not-found", req.url));
+    }
   }
 
   return NextResponse.next();
 }
 
-/* ================= MATCHER ================= */
+/* ================= MATCHER ================= check testing*/
 
 export const config = {
-  matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|images|fonts).*)",
-  ],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|images|fonts).*)"],
 };

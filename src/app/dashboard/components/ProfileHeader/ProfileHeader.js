@@ -10,67 +10,64 @@ import { getUserProfileApi } from "../../../../lib/api/user.api";
 import { getUserData } from "../../../../lib/auth";
 import { useLoading } from "../../../../context/LoadingContext";
 
+// ORGANIZER API
+
 export default function ProfileHeader() {
   const router = useRouter();
+  const [profile, setProfile] = useState(null);
+  const [loading, setLoading] = useState(true); 
 
-  // profile default-aa empty object
-  const [profile, setProfile] = useState({});
-  const [loading, setLoading] = useState(true);
-
-  const { setLoading: setGlobalLoading } = useLoading();
+  const { setLoading: setGlobalLoading } = useLoading(); 
 
   /* ================= LOAD PROFILE ================= */
   useEffect(() => {
     async function loadProfile() {
-      setGlobalLoading(true);
+      setGlobalLoading(true); 
 
       try {
         const user = getUserData();
         if (!user?.identity) return;
 
+        // ROLE DETECTION
         const role =
           user.role || (user.type === "org" ? "organizer" : "user");
 
         let res;
+
         if (role === "organizer") {
           res = await getOrganizationProfileApi(user.identity);
         } else {
           res = await getUserProfileApi(user.identity);
         }
 
-        if (res?.status && res.data) {
-          setProfile(res.data); // real data replace
+        if (res?.status) {
+          setProfile(res.data);
         }
       } catch (err) {
         console.error("ProfileHeader error:", err);
       } finally {
-        setLoading(false);
-        setGlobalLoading(false);
+        setLoading(false);          
+        setGlobalLoading(false);    
       }
     }
 
     loadProfile();
   }, [setGlobalLoading]);
 
-  /* ================= SAFE FALLBACK VALUES ================= */
+  if (loading || !profile) return null;
 
+  /* ================= FALLBACK LETTER ================= */
   const displayName =
-    profile.organizationName ||
-    profile.name ||
-    "User";
+    profile.organizationName || profile.name || "User";
 
   const firstLetter = displayName.charAt(0).toUpperCase();
-
-  const followersCount = profile.followersCount || 0;
-  const followingCount = profile.followingCount || 0;
-  const rank = profile.rank || 0;
-
-  /* ================= UI (UNCHANGED) ================= */
 
   return (
     <div className={styles.wrapper}>
       {/* COVER */}
-      <div className={styles.cover} />
+      <div
+        className={styles.cover}
+      />
 
       {/* CONTENT */}
       <div className={styles.content}>
@@ -102,7 +99,7 @@ export default function ProfileHeader() {
                 router.push("/dashboard/profile/followers")
               }
             >
-              {followersCount} Followers
+              {profile.followersCount || 0} Followers
             </span>
 
             <span
@@ -110,12 +107,12 @@ export default function ProfileHeader() {
                 router.push("/dashboard/profile/following")
               }
             >
-              {followingCount} Following
+              {profile.followingCount || 0} Following
             </span>
           </div>
 
           <div className={styles.rank}>
-            #{rank} Rank
+            #{profile.rank || 0} Rank
           </div>
         </div>
       </div>

@@ -1,31 +1,26 @@
 import axios from "axios";
-import { getToken } from "./auth";
+import { getToken, clearToken } from "./auth";
 
 const apiPrivate = axios.create({
-  baseURL: "/api/proxy", // proxy
-  withCredentials: true, // 🔥 cookie send aagum
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  withCredentials: true,
 });
 
-/* ================= REQUEST INTERCEPTOR ================= */
 apiPrivate.interceptors.request.use((config) => {
-  const token = getToken(); // localStorage helper
+  const token = getToken();
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
 });
 
-/* ================= RESPONSE INTERCEPTOR ================= */
 apiPrivate.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      // 🔥 token invalid / expired / deleted
-      localStorage.removeItem("token");
-      localStorage.removeItem("userData");
-
+      clearToken();
       if (typeof window !== "undefined") {
-        window.location.href = "/unauthorized";
+        // window.location.href = "/auth/user/login";
       }
     }
     return Promise.reject(err);

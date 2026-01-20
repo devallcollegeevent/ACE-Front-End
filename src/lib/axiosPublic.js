@@ -1,8 +1,9 @@
 import axios from "axios";
 
 const apiPublic = axios.create({
-  baseURL: "/api/proxy",
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   withCredentials: true,
 });
 
-export default apiPublic;
+
+export default apiPublic;   
