@@ -27,7 +27,8 @@ export default function OrganizerDetails({
     async function loadCategories() {
       try {
         const res = await getOrgCategoriesApi();
-        if (res?.success) {
+        console.log("check cat",res)
+        if (res?.status) {
           setOrgCategories(res.data);
         }
       } catch (err) {
@@ -112,6 +113,7 @@ export default function OrganizerDetails({
       ],
     });
   }, [resetSignal]);
+
 
   return (
     <>
