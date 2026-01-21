@@ -1,18 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   DATEICON,
   INSTAGRAMICON,
   LEFTSIDEARROW_ICON,
   LIKE_ICON,
-  LINKEDINICON,
   LOCATION_ICON,
   MAPLOCATIONVIEWICON,
   RIGHTSIDEARROW_ICON,
-  SAVEDICON,
   SAVEICON,
-  SHAREICON,
   SINGELEVENTSHARE_ICON,
+  VIEW_ICON,
   WHATSAPPICON,
   XICON,
   YOUTUBEICON,
@@ -20,22 +18,14 @@ import {
 import Footer from "../Footer/Footer";
 import "./EventDetailsView.css";
 import ConfirmModal from "../../ui/Modal/ConfirmModal";
-import BannerImageModal from "./modals/BannerImageModal";
-// import EditOverlay from "./overlays/EditOverlay";
-// import TicketListModal from "./modals/TicketListModal";
-// import TicketModal from "../../ui/Modal/TicketModal";
-// import EventDetailsModal from "./modals/EventDetailsModal";
-// import OrganizationModal from "./modals/OrganizationModal";
-// import OfferModal from "./modals/OfferModal";
-// import SocialMediaModal from "./modals/SocialMediaModal";
-// import { updateEventApi } from "../../../lib/api/event.api";
-// import { toast } from "react-hot-toast";
-// import OtherDetailsModal from "./modals/OtherDetailsModal";
+import { addEventViewApi } from "../../../lib/api/event.api";
+
 
 export default function EventDetailsView({ event = {}, onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
+  const viewCalledRef = useRef(false);
 
   const [countdown, setCountdown] = useState({
     days: "00",
@@ -58,18 +48,9 @@ export default function EventDetailsView({ event = {}, onBack }) {
 
   const calendar = event?.calendars?.[0];
   const location = event?.location;
-  // const [openBannerModal, setOpenBannerModal] = useState(false);
   const [bannerImages, setBannerImages] = useState(images);
-  // const [openTicketListModal, setOpenTicketListModal] = useState(false);
-  // const [openTicketModal, setOpenTicketModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState(null);
-  // const [otherDetails, setOtherDetails] = useState({
-  //   certIdentity: null,
-  //   perkIdentities: [],
-  //   accommodationIdentities: [],
-  //   website: "",
-  //   videoLink: "",
-  // });
+
 
   const [ticketForm, setTicketForm] = useState({
     name: "",
@@ -79,20 +60,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
     amount: "",
     total: "1000",
   });
-
-  // const [ticketType, setTicketType] = useState("FREE");
-  // const [openHostModal, setOpenHostModal] = useState(false);
-  // const [openOrgModal, setOpenOrgModal] = useState(false);
-  // const [openOfferModal, setOpenOfferModal] = useState(false);
-  // const [openSocialModal, setOpenSocialModal] = useState(false);
-  // const [openOtherModal, setOpenOtherModal] = useState(false);
-
-  // data states (pre-populate)
-  // const [orgData, setOrgData] = useState(event.collaborators || []);
-  // const [offerData, setOfferData] = useState(event.offers || "");
-  // const [socialData, setSocialData] = useState(event.socialLinks || {});
-
-  // imge move left and right
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -119,35 +86,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
     setOpenConfirm(false);
   };
 
-  /* ================= COUNTDOWN ================= */
-  // useEffect(() => {
-  //   if (!selectedTicket) return;
-
-  //   setTicketForm({
-  //     name: selectedTicket.name || "",
-  //     description: selectedTicket.description || "",
-  //     from: selectedTicket.sellingFrom || "",
-  //     to: selectedTicket.sellingTo || "",
-  //     amount: selectedTicket.price || "",
-  //     total: selectedTicket.total || "1000",
-  //   });
-
-  //   setTicketType(selectedTicket.isPaid ? "PAID" : "FREE");
-  // }, [selectedTicket]);
-
-  // useEffect(() => {
-  //   if (!event) return;
-
-  //   setOtherDetails({
-  //     certIdentity: event.cert?.identity || null,
-  //     perkIdentities: event.eventPerks?.map((p) => p.perk?.identity) || [],
-  //     accommodationIdentities:
-  //       event.eventAccommodations?.map((a) => a.accommodation?.identity) || [],
-  //     website: event.eventLink || "",
-  //     videoLink: event.videoLink || "",
-  //   });
-  // }, [event]);
-
   useEffect(() => {
     if (selectedTicket) {
       setTicketForm({
@@ -163,247 +101,17 @@ export default function EventDetailsView({ event = {}, onBack }) {
     }
   }, [selectedTicket]);
 
-  // const openEventDetailsAgain = () => {
-  //   setOpenOfferModal(false);
-  //   setOpenSocialModal(false);
-  //   setOpenOrgModal(false);
+  useEffect(() => {
+    // safety checks
+    if (!event?.slug) return;
 
-  //   setTimeout(() => {
-  //     setOpenHostModal(true);
-  //   }, 0);
-  // };
+    // prevent duplicate calls in same render lifecycle
+    if (viewCalledRef.current) return;
 
-  // useEffect(() => {
-  //   if (openOrgModal || openOfferModal || openSocialModal) {
-  //     setOpenHostModal(false);
-  //   }
-  // }, [openOrgModal, openOfferModal, openSocialModal]);
+    viewCalledRef.current = true;
 
-  // update organizers
-
-  // const handleOrganizationSave = async (payload) => {
-  //   try {
-  //     const formData = new FormData();
-  //     formData.append("collaborators", JSON.stringify(payload.collaborators));
-
-  //     const toastId = toast.loading("Updating organization details...");
-
-  //     const res = await updateEventApi(event.identity, formData);
-
-  //     toast.dismiss(toastId);
-
-  //     if (res?.status) {
-  //       toast.success("Organization details updated successfully");
-  //       setOpenOrgModal(false);
-  //     } else {
-  //       toast.error(res?.data?.message || "Update failed ");
-  //     }
-  //   } catch (err) {
-  //     console.error("Organization update error:", err);
-
-  //     toast.error(
-  //       err?.response?.data?.message || "Failed to update organization details"
-  //     );
-  //   }
-  // };
-  // updated offer
-  // const handleOfferSave = async (offerValue) => {
-  //   try {
-  //     if (!offerValue || !offerValue.trim()) {
-  //       toast.error("Offer cannot be empty");
-  //       return;
-  //     }
-
-  //     const formData = new FormData();
-
-  //     formData.append("offers", offerValue);
-
-  //     const toastId = toast.loading("Updating offer...");
-
-  //     const res = await updateEventApi(event.identity, formData);
-
-  //     toast.dismiss(toastId);
-
-  //     if (res?.status) {
-  //       toast.success("Offer updated successfully");
-  //       setOfferData(offerValue);
-  //       setOpenOfferModal(false);
-  //     } else {
-  //       toast.error(res?.data?.message || "Failed to update offer");
-  //     }
-  //   } catch (err) {
-  //     console.error("Offer update error:", err);
-  //     toast.error("Something went wrong while updating offer");
-  //   }
-  // };
-  // updated social media
-  // const handleSocialSave = async (payload) => {
-  //   try {
-  //     const formData = new FormData();
-
-  //     // MUST stringify
-  //     formData.append("socialLinks", JSON.stringify(payload.socialLinks));
-
-  //     const res = await updateEventApi(event.identity, formData);
-
-  //     if (res?.status) {
-  //       toast.success("Social media details updated");
-  //     }
-
-  //     setOpenSocialModal(false);
-  //   } catch (err) {
-  //     console.error(err);
-  //     toast.error("Failed to update social media details");
-  //   }
-  // };
-  // updated banner images
-  // const handleBannerSave = async (previewImages) => {
-  //   try {
-  //     const formData = new FormData();
-
-  //     //  existing images (URL)
-  //     const existingImages = previewImages
-  //       .filter((img) => !img.file)
-  //       .map((img) => (typeof img === "string" ? img : img.url));
-
-  //     //new uploaded files
-  //     const newImages = previewImages.filter((img) => img.file);
-
-  //     // IMPORTANT: stringify
-  //     formData.append("existingBannerImages", JSON.stringify(existingImages));
-
-  //     newImages.forEach((img) => {
-  //       formData.append("bannerImages", img.file);
-  //     });
-
-  //     const res = await updateEventApi(event.identity, formData);
-
-  //     if (res.data.success) {
-  //       toast.success("Banner image updated successfully");
-  //       setBannerImages(previewImages);
-  //       setOpenBannerModal(false);
-  //     }
-  //   } catch (err) {
-  //     console.error(err);
-  //     toast.error("Banner image update failed");
-  //   }
-  // };
-
-  // updated tickets
-  // const handleTicketSave = async () => {
-  //   try {
-  //     if (!selectedTicket?.identity) {
-  //       toast.error("Invalid ticket selected");
-  //       return;
-  //     }
-
-  //     //EXISTING tickets copy pannrom
-  //     const updatedTickets = event.tickets.map((t) => {
-  //       // edited ticket
-  //       if (t.identity === selectedTicket.identity) {
-  //         return {
-  //           identity: t.identity,
-  //           name: ticketForm.name,
-  //           description: ticketForm.description,
-  //           sellingFrom: ticketForm.from,
-  //           sellingTo: ticketForm.to,
-  //           price: ticketType === "PAID" ? Number(ticketForm.amount) : 0,
-  //           isPaid: ticketType === "PAID",
-  //           totalQuantity: Number(ticketForm.total),
-  //         };
-  //       }
-
-  //       // untouched tickets
-  //       return {
-  //         identity: t.identity,
-  //         name: t.name,
-  //         description: t.description,
-  //         sellingFrom: t.sellingFrom,
-  //         sellingTo: t.sellingTo,
-  //         price: t.price,
-  //         isPaid: t.isPaid,
-  //         totalQuantity: t.totalQuantity,
-  //       };
-  //     });
-
-  //     //  FormData build
-  //     const formData = new FormData();
-
-  //     // VERY IMPORTANT
-  //     formData.append("tickets", JSON.stringify(updatedTickets));
-
-  //     const toastId = toast.loading("Updating ticket...");
-
-  //     const res = await updateEventApi(event.identity, formData);
-
-  //     toast.dismiss(toastId);
-
-  //     if (res?.status) {
-  //       toast.success("Ticket updated successfully");
-
-  //       setOpenTicketModal(false);
-  //       setSelectedTicket(null);
-  //     } else {
-  //       toast.error(res?.data?.message || "Ticket update failed");
-  //     }
-  //   } catch (err) {
-  //     console.error("Ticket update error:", err);
-  //     toast.error(err?.response?.data?.message || "Failed to update ticket");
-  //   }
-  // };
-
-  // update other details
-
-  // const handleOtherDetailsSave = async (updatedValues) => {
-  //   try {
-  //     const formData = new FormData();
-
-  //     // STATE update (important)
-  //     setOtherDetails(updatedValues);
-
-  //     if (updatedValues.certIdentity) {
-  //       formData.append("certIdentity", updatedValues.certIdentity);
-  //     }
-
-  //     if (updatedValues.perkIdentities?.length) {
-  //       formData.append(
-  //         "perkIdentities",
-  //         JSON.stringify(updatedValues.perkIdentities)
-  //       );
-  //     }
-
-  //     if (updatedValues.accommodationIdentities?.length) {
-  //       formData.append(
-  //         "accommodationIdentities",
-  //         JSON.stringify(updatedValues.accommodationIdentities)
-  //       );
-  //     }
-
-  //     if (updatedValues.website) {
-  //       formData.append("eventLink", updatedValues.website);
-  //     }
-
-  //     if (updatedValues.videoLink) {
-  //       formData.append("videoLink", updatedValues.videoLink);
-  //     }
-
-  //     const toastId = toast.loading("Updating other details...");
-
-  //     const res = await updateEventApi(event.identity, formData);
-
-  //     toast.dismiss(toastId);
-
-  //     if (res?.status) {
-  //       toast.success("Other details updated successfully");
-  //       setOpenOtherModal(false);
-  //     } else {
-  //       toast.error("Update failed");
-  //     }
-  //   } catch (err) {
-  //     console.error(err);
-  //     toast.error("Failed to update other details");
-  //   }
-  // };
+    addEventViewApi(event.slug);
+  }, [event?.slug]);
 
   return (
     <>
@@ -479,7 +187,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
                 <span className="tag green">{event?.mode || "===="}</span>
                 {/* BACKEND: event.tags */}
 
-                <span className="views">👁 5678</span>
+                <span className="views">{VIEW_ICON} {event?.viewCount}</span>
                 {/* BACKEND: event.views */}
               </div>
             </div>
@@ -571,12 +279,9 @@ export default function EventDetailsView({ event = {}, onBack }) {
           <div className="col-lg-6">
             <div className="card-box edit-wrapper">
               <h4 className="section-title mb-4">Ticket Availability</h4>
-              {/* <EditOverlay
-                onEdit={() => setOpenTicketListModal(true)}
-                eventOrgIdentity={event?.org?.identity}
-              /> */}
+      
               <div className="row g-4">
-                {event?.tickets && event?.tickets?.length || 0 > 0 ? (
+                {(event?.tickets && event?.tickets?.length) || 0 > 0 ? (
                   event.tickets.map((ticket) => {
                     const now = new Date();
                     const startDate = new Date(ticket.sellingFrom);
@@ -615,7 +320,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
                                       day: "2-digit",
                                       month: "short",
                                       year: "numeric",
-                                    }
+                                    },
                                   )}`
                                 : `Ticket ends on ${endDate.toLocaleDateString(
                                     "en-IN",
@@ -623,7 +328,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
                                       day: "2-digit",
                                       month: "short",
                                       year: "numeric",
-                                    }
+                                    },
                                   )}`}
                             </span>
 
@@ -653,10 +358,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
           <div className="col-lg-8">
             <div className="card-box mt-4 edit-wrapper">
               <h3>Event Host Details</h3>
-              {/* <EditOverlay
-                onEdit={() => setOpenHostModal(true)}
-                eventOrgIdentity={event?.org?.identity}
-              /> */}
 
               <h4>
                 {event.org?.organizationName || "-"}({event.org?.domainEmail})
@@ -742,11 +443,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
         {/* ================= 8. OTHER DETAILS ================= */}
         <div className="card-box mt-4 edit-wrapper">
           <h3>Other Details</h3>
-          {/* EDIT ICON HERE */}
-          {/* <EditOverlay
-            onEdit={() => setOpenOtherModal(true)}
-            eventOrgIdentity={event?.org?.identity}
-          /> */}
 
           <div className="row">
             {/* ================= PERKS ================= */}
@@ -816,102 +512,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
           onConfirm={handleConfirm}
         />
       </div>
-      {/* {openBannerModal && (
-        <BannerImageModal
-          images={bannerImages}
-          onClose={() => setOpenBannerModal(false)}
-          onSave={handleBannerSave}
-        />
-      )}
-
-      {openTicketListModal && (
-        <TicketListModal
-          tickets={event.tickets}
-          onClose={() => setOpenTicketListModal(false)}
-          onEditTicket={(ticket) => {
-            setSelectedTicket(ticket);
-            setOpenTicketListModal(false);
-            setOpenTicketModal(true);
-          }}
-        />
-      )}
-
-      {openTicketModal && (
-        <TicketModal
-          open={openTicketModal}
-          onClose={() => {
-            setOpenTicketModal(false);
-            setSelectedTicket(null);
-          }}
-          ticketForm={ticketForm}
-          setTicketForm={setTicketForm}
-          ticketType={ticketType}
-          setTicketType={setTicketType}
-          onSave={handleTicketSave}
-        />
-      )}
-
-      {openHostModal && (
-        <EventDetailsModal
-          onClose={() => {
-            // FULL CLOSE – no reopen
-            setOpenHostModal(false);
-          }}
-          onOrgClick={() => {
-            setOpenHostModal(false);
-            setTimeout(() => setOpenOrgModal(true), 0);
-          }}
-          onOfferClick={() => {
-            setOpenHostModal(false);
-            setTimeout(() => setOpenOfferModal(true), 0);
-          }}
-          onSocialClick={() => {
-            setOpenHostModal(false);
-            setTimeout(() => setOpenSocialModal(true), 0);
-          }}
-        />
-      )}
-
-      {openOrgModal && (
-        <OrganizationModal
-          orgs={orgData}
-          onClose={() => {
-            setOpenOrgModal(false);
-            setTimeout(() => setOpenHostModal(true), 0);
-          }}
-          onSave={handleOrganizationSave}
-        />
-      )}
-
-      {openOfferModal && (
-        <OfferModal
-          value={offerData}
-          onClose={openEventDetailsAgain}
-          onSave={handleOfferSave}
-        />
-      )}
-
-      {openSocialModal && (
-        <SocialMediaModal
-          value={socialData}
-          onClose={() => {
-            //Social Media close
-            setOpenSocialModal(false);
-
-            //Back to Event Host Details popup
-            setTimeout(() => setOpenHostModal(true), 0);
-          }}
-          onSave={handleSocialSave}
-        />
-      )}
-
-      {openOtherModal && (
-        <OtherDetailsModal
-          value={otherDetails}
-          onClose={() => setOpenOtherModal(false)}
-          onSave={handleOtherDetailsSave}
-        />
-      )} */}
+     
 
       {/* ================= 10. FOOTER SECTION ================= */}
       <div>

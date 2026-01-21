@@ -28,7 +28,7 @@
 .ellipsis {
   overflow: hidden;
   white-space: nowrap;
-  width: 231px;
+  width: 198px;
   text-overflow: ellipsis;
   font-family: var(--font-poppins), sans-serif;
 }

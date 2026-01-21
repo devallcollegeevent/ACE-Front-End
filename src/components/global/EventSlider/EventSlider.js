@@ -14,6 +14,19 @@ import {
 
 import "./EventSlider.css";
 
+/* ================= HELPER ================= */
+const getLowestTicketPrice = (tickets = []) => {
+  if (!Array.isArray(tickets) || tickets.length === 0) return null;
+
+  const prices = tickets
+    .filter((t) => typeof t.price === "number")
+    .map((t) => t.price);
+
+  if (prices.length === 0) return null;
+
+  return Math.min(...prices);
+};
+
 export default function EventSlider({
   title,
   data = [],
@@ -23,7 +36,6 @@ export default function EventSlider({
   const router = useRouter();
   const sliderRef = useRef(null);
 
-  // like state per card (id based)
   const [likedCards, setLikedCards] = useState({});
 
   const toggleLike = (id) => {
@@ -115,6 +127,7 @@ export default function EventSlider({
         {data.map((event, index) => {
           const calendar = event.calendars?.[0];
           const isLiked = likedCards[event.identity];
+          const lowestPrice = getLowestTicketPrice(event.tickets);
 
           return (
             <div
@@ -144,21 +157,31 @@ export default function EventSlider({
                     <span className="ellipsis">
                       {LOCATION_ICON} {event.location?.city || "N/A"}
                     </span>
-                    <span>{TICKET_ICON} 500</span>
+
+                    <span>
+                      {TICKET_ICON}{" "}
+                      {lowestPrice === null
+                        ? "N/A"
+                        : lowestPrice === 0
+                        ? "Free"
+                        : `₹${lowestPrice}`}
+                    </span>
                   </div>
 
                   <div className="mt-2">
                     <div>
                       {DATEICON} {formatDate(calendar?.startDate)}
                     </div>
-
-                    {/* LIKE */}
                   </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center mt-3">
-                  <span className="view-badge">{VIEW_ICON} 456</span>
-                  <span className="badge-paid">{event.categoryName}</span>
+                  <span className="view-badge">
+                    {VIEW_ICON} {event.viewCount || 0}
+                  </span>
+                  <span className="badge-paid">
+                    {event.categoryName || "No category"}
+                  </span>
                 </div>
               </div>
             </div>

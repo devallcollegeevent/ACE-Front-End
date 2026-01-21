@@ -3,6 +3,8 @@ export const API_ENDPOINTS = {
   EVENTS: {
     ALL: "/v1/events",
     SINGLE: (slug) => `/v1/events/${slug}`,
+    VIEW: (slug) => `/v1/events/${slug}/view`,
+    FILTER: "/v1/filter",
   },
 
   /* ================= AUTH ================= */
@@ -43,8 +45,11 @@ export const API_ENDPOINTS = {
     EXPLORE_EVENT_TYPE: "/v1/master/event-types",
     ACCOMMODATIONS: "/v1/master/accommodations",
     EVENT_TYPES: (categoryId) => `/v1/master/event-types/${categoryId}`,
+    ALL_EVENT_TYPES:  `/v1/master/event-types`,
     CATEGORIES: "/v1/master/categories",
     CERTIFICATIONS: "/v1/master/certifications",
     PERKS: "/v1/master/perks",
+    ELIGIBLE_DEPARTMENTS: "/v1/master/eligible-departments",
+
   },
 };

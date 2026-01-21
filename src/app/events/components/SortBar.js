@@ -35,12 +35,6 @@ export default function SortBar({ value, onChange, onSearch }) {
         <option value="old">Oldest</option>
         <option value="popular">Popular</option>
       </select>
-
-      {/* GRID ICON */}
-      <button className="grid-btn">
-        <FaListUl />
-        <FaThLarge />
-      </button>
     </div>
   );
 }

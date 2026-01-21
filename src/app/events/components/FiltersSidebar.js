@@ -1,29 +1,20 @@
 "use client";
+import Dropdown from "./Dropdown";
 
 export default function FiltersSidebar({
   categories = [],
   eventTypes = [],
   perks = [],
   certifications = [],
+  eligibleDepartments = [],
+  accommodations = [],
   filters,
-  onChange,
+  setFilters,
   onReset,
+  toggleUnion,
 }) {
-  const toggleArray = (key, value) => {
-    onChange((prev) => {
-      const exists = prev[key]?.includes(value);
-      return {
-        ...prev,
-        [key]: exists
-          ? prev[key].filter((v) => v !== value)
-          : [...(prev[key] || []), value],
-      };
-    });
-  };
-
   return (
     <aside className="filters-sidebar">
-
       {/* HEADER */}
       <div className="filters-header">
         <h6>Filters</h6>
@@ -35,87 +26,99 @@ export default function FiltersSidebar({
       {/* EVENT STATUS */}
       <div className="filter-block">
         <label className="filter-check">
-          <input type="checkbox" /> All Events
-          <span>150</span>
+          <input
+            type="checkbox"
+            checked={filters.eventTypes.includes("featured")}
+            onChange={() =>
+              setFilters((prev) => ({
+                ...prev,
+                eventTypes: ["featured"], // SINGLE
+              }))
+            }
+          />
+          Featured Events
         </label>
+
         <label className="filter-check">
-          <input type="checkbox" /> Trending Events
-          <span>50</span>
-        </label>
-        <label className="filter-check">
-          <input type="checkbox" /> Upcoming Events
-          <span>25</span>
-        </label>
-        <label className="filter-check">
-          <input type="checkbox" /> Ongoing Events
-          <span>45</span>
+          <input
+            type="checkbox"
+            checked={filters.eventTypes.includes("trending")}
+            onChange={() =>
+              setFilters((prev) => ({
+                ...prev,
+                eventTypes: ["trending"], // SINGLE
+              }))
+            }
+          />
+          Trending Events
         </label>
       </div>
 
-      {/* DATE */}
+      {/* EVENT DATE */}
       <div className="filter-block">
-        <h6>Select Date</h6>
-        <input
-          type="date"
-          className="filter-input"
-          onChange={(e) =>
-            onChange((p) => ({ ...p, date: e.target.value }))
-          }
-        />
+        <h6>Event Date</h6>
+        <input type="date" className="filter-input" />
       </div>
 
-      {/* MODE */}
+      {/* MODE OF EVENT */}
       <div className="filter-block">
         <h6>Mode of Event</h6>
-        {["online", "offline", "hybrid"].map((m) => (
-          <label key={m} className="filter-check">
+        {["ONLINE", "OFFLINE", "HYBRID"].map((mode) => (
+          <label key={mode} className="filter-check">
             <input
               type="checkbox"
-              checked={filters.mode?.includes(m)}
-              onChange={() => toggleArray("mode", m)}
+              checked={filters.modes.includes(mode)}
+              onChange={() =>
+                setFilters((prev) => ({
+                  ...prev,
+                  modes: [mode], // SINGLE
+                }))
+              }
             />
-            {m.charAt(0).toUpperCase() + m.slice(1)}
-            <span>50</span>
+            {mode}
           </label>
         ))}
       </div>
 
-      {/* DEPARTMENT */}
-      <div className="filter-block">
-        <h6>Select Eligible Department</h6>
-        <select className="filter-select">
-          <option>Select Eligible Department</option>
-        </select>
-      </div>
-
-      {/* CATEGORY */}
-      <div className="filter-block">
-        <h6>Select your Category</h6>
-        <select
-          className="filter-select"
-          value={filters.category}
-          onChange={(e) =>
-            onChange((p) => ({ ...p, category: e.target.value }))
-          }
-        >
-          <option value="">Select your category</option>
-          {categories.map((c) => (
-            <option key={c.identity} value={c.identity}>
-              {c.categoryName}
-            </option>
-          ))}
-        </select>
-      </div>
-
       {/* EVENT TYPE */}
       <div className="filter-block">
-        <h6>Type of Event</h6>
-        <select className="filter-select">
-          <option>Select your event</option>
-          {eventTypes.map((t) => (
-            <option key={t.identity}>{t.name}</option>
-          ))}
-        </select>
+        <h6>Event Type</h6>
+        <Dropdown
+          options={eventTypes}
+          value={filters.eventTypeIdentity}
+          onChange={(v) => setFilters((p) => ({ ...p, eventTypeIdentity: v }))}
+          placeholder="Select Event Type"
+          multiple={false}
+        />
+      </div>
+
+      {/* ELIGIBLE DEPARTMENT (UNION) */}
+      <div className="filter-block">
+        <h6>Eligible Department</h6>
+        <Dropdown
+          options={eligibleDepartments}
+          value={filters.eligibleDeptIdentities}
+          onChange={(v) =>
+            setFilters((p) => ({
+              ...p,
+              eligibleDeptIdentities: v,
+            }))
+          }
+          placeholder="Select Departments"
+          multiple={true}
+          labelKey="name"
+          valueKey="identity"
+        />
+      </div>
+
+      {/* PRICING */}
+      <div className="filter-block">
+        <h6>Pricing</h6>
+        <input type="range" min="0" max="10000" className="pricing-input" />
+        <div className="d-flex justify-content-between">
+          <span>0</span>
+          <span>10,000</span>
+        </div>
       </div>
 
       {/* PERKS */}
@@ -123,29 +126,50 @@ export default function FiltersSidebar({
         <h6>Perks</h6>
         {perks.map((p) => (
           <label key={p.identity} className="filter-check">
-            <input
-              type="checkbox"
-              onChange={() => toggleArray("perks", p.identity)}
-            />
-            {p.perkName}
+            <input type="checkbox" /> {p.perkName}
             <span>50</span>
           </label>
         ))}
       </div>
 
-      {/* CERTIFICATIONS */}
+      {/* CERTIFICATE TYPE */}
       <div className="filter-block">
-        <h6>Certifications</h6>
-        {certifications.map((c) => (
-          <label key={c.identity} className="filter-check">
+        <h6>Certificate Type</h6>
+        <select className="filter-select">
+          <option>Select certificate type</option>
+          {certifications.map((c) => (
+            <option key={c.identity}>{c.certName}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* ✅ ACCOMMODATION (FROM API) */}
+      <div className="filter-block">
+        <h6>Accommodation</h6>
+
+        {accommodations.length === 0 && (
+          <p style={{ fontSize: "12px", color: "#999" }}>
+            No accommodations available
+          </p>
+        )}
+
+        {accommodations.map((a) => (
+          <label key={a.identity} className="filter-check">
             <input
               type="checkbox"
+              checked={filters.accommodationIdentities.includes(a.identity)}
               onChange={() =>
-                toggleArray("certifications", c.identity)
+                setFilters((p) => ({
+                  ...p,
+                  accommodationIdentities: p.accommodationIdentities.includes(
+                    a.identity,
+                  )
+                    ? p.accommodationIdentities.filter((x) => x !== a.identity)
+                    : [...p.accommodationIdentities, a.identity],
+                }))
               }
             />
-            {c.certName}
-            <span>50</span>
+            {a.accommodationName}
           </label>
         ))}
       </div>
