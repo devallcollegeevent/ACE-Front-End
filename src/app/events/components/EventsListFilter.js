@@ -63,7 +63,6 @@ export default function EventsListFilter({ events = [] }) {
       </div>
     );
   }
-  console.log("jjjjjjjjj", events);
   /* ===== LIST ===== */
   return (
     <div className="events-list">

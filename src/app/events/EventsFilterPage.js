@@ -138,7 +138,7 @@ export default function EventsFilterPage() {
       try {
         const res = await getAllEventTypesApi();
         if (res?.status) {
-          setEventTypes(res.data); 
+          setEventTypes(res.data);
         }
       } catch (err) {
         console.error("All event types error:", err);
@@ -155,7 +155,7 @@ export default function EventsFilterPage() {
         const payload = buildFilterPayload(filters, page);
         const res = await filterEventsApi(payload);
 
-        if (res?.success) {
+        if (res?.status) {
           setEvents(res.data || []);
           setTotalPages(Math.ceil((res.meta?.total || 0) / PAGE_SIZE));
         } else {
@@ -230,7 +230,14 @@ export default function EventsFilterPage() {
             onSearch={(v) => setFilters((f) => ({ ...f, searchText: v }))}
           />
 
-          <ActiveFilterChips filters={filters} onRemove={handleRemoveFilter} />
+          <ActiveFilterChips
+            filters={filters}
+            onRemove={handleRemoveFilter}
+            eventTypes={eventTypes}
+            departments={eligibleDepartments}
+            perks={perks}
+            certifications={certifications}
+          />
 
           <EventsListFilter events={events} />
 

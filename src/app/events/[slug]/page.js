@@ -7,7 +7,6 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
 
   const res = await getEventBySlugApi(slug);
-  console.log("siiiiiiiiiiii", res);
   const event = res?.data;
 
   if (!event) {

@@ -1,5 +1,15 @@
 "use client";
-import Dropdown from "./Dropdown";
+
+import dynamic from "next/dynamic";
+
+/**
+ * IMPORTANT:
+ * react-select must be loaded only on client
+ * to avoid hydration mismatch
+ */
+const Select = dynamic(() => import("react-select"), {
+  ssr: false,
+});
 
 export default function FiltersSidebar({
   categories = [],
@@ -11,11 +21,24 @@ export default function FiltersSidebar({
   filters,
   setFilters,
   onReset,
-  toggleUnion,
 }) {
+  /* ================= OPTIONS ================= */
+
+  // Event Type (single select)
+  const eventTypeOptions = eventTypes.map((e) => ({
+    value: e.identity,
+    label: e.eventTypeName || e.name, // SAFE
+  }));
+
+  // Eligible Department (multi select)
+  const departmentOptions = eligibleDepartments.map((d) => ({
+    value: d.identity,
+    label: d.name,
+  }));
+
   return (
     <aside className="filters-sidebar">
-      {/* HEADER */}
+      {/* ================= HEADER ================= */}
       <div className="filters-header">
         <h6>Filters</h6>
         <button className="reset-btn" onClick={onReset}>
@@ -23,7 +46,7 @@ export default function FiltersSidebar({
         </button>
       </div>
 
-      {/* EVENT STATUS */}
+      {/* ================= EVENT STATUS ================= */}
       <div className="filter-block">
         <label className="filter-check">
           <input
@@ -32,7 +55,7 @@ export default function FiltersSidebar({
             onChange={() =>
               setFilters((prev) => ({
                 ...prev,
-                eventTypes: ["featured"], // SINGLE
+                eventTypes: ["featured"],
               }))
             }
           />
@@ -46,7 +69,7 @@ export default function FiltersSidebar({
             onChange={() =>
               setFilters((prev) => ({
                 ...prev,
-                eventTypes: ["trending"], // SINGLE
+                eventTypes: ["trending"],
               }))
             }
           />
@@ -54,13 +77,28 @@ export default function FiltersSidebar({
         </label>
       </div>
 
-      {/* EVENT DATE */}
+      {/* ================= EVENT DATE ================= */}
       <div className="filter-block">
         <h6>Event Date</h6>
-        <input type="date" className="filter-input" />
+        <input
+          type="date"
+          className="filter-input"
+          value={filters.dateRange?.startDate || ""}
+          onChange={(e) =>
+            setFilters((p) => ({
+              ...p,
+              dateRange: e.target.value
+                ? {
+                    startDate: e.target.value,
+                    endDate: e.target.value,
+                  }
+                : null,
+            }))
+          }
+        />
       </div>
 
-      {/* MODE OF EVENT */}
+      {/* ================= MODE OF EVENT ================= */}
       <div className="filter-block">
         <h6>Mode of Event</h6>
         {["ONLINE", "OFFLINE", "HYBRID"].map((mode) => (
@@ -71,7 +109,7 @@ export default function FiltersSidebar({
               onChange={() =>
                 setFilters((prev) => ({
                   ...prev,
-                  modes: [mode], // SINGLE
+                  modes: [mode],
                 }))
               }
             />
@@ -80,70 +118,123 @@ export default function FiltersSidebar({
         ))}
       </div>
 
-      {/* EVENT TYPE */}
+      {/* ================= EVENT TYPE (react-select) ================= */}
       <div className="filter-block">
         <h6>Event Type</h6>
-        <Dropdown
-          options={eventTypes}
-          value={filters.eventTypeIdentity}
-          onChange={(v) => setFilters((p) => ({ ...p, eventTypeIdentity: v }))}
+        <Select
+          options={eventTypeOptions}
           placeholder="Select Event Type"
-          multiple={false}
-        />
-      </div>
-
-      {/* ELIGIBLE DEPARTMENT (UNION) */}
-      <div className="filter-block">
-        <h6>Eligible Department</h6>
-        <Dropdown
-          options={eligibleDepartments}
-          value={filters.eligibleDeptIdentities}
-          onChange={(v) =>
+          value={eventTypeOptions.find(
+            (o) => o.value === filters.eventTypeIdentity,
+          )}
+          onChange={(selected) =>
             setFilters((p) => ({
               ...p,
-              eligibleDeptIdentities: v,
+              eventTypeIdentity: selected?.value || "",
             }))
           }
-          placeholder="Select Departments"
-          multiple={true}
-          labelKey="name"
-          valueKey="identity"
+          isClearable
+          menuPortalTarget={
+            typeof window !== "undefined" ? document.body : null
+          }
+          styles={{
+            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+          }}
         />
       </div>
 
-      {/* PRICING */}
+      {/* ================= ELIGIBLE DEPARTMENT (MAX 2) ================= */}
+      <div className="filter-block">
+        <h6>Eligible Department</h6>
+        <Select
+          options={departmentOptions}
+          placeholder="Select Departments"
+          isMulti
+          value={departmentOptions.filter((o) =>
+            filters.eligibleDeptIdentities.includes(o.value),
+          )}
+          onChange={(selected) =>
+            setFilters((p) => ({
+              ...p,
+              eligibleDeptIdentities: selected
+                ? selected.map((s) => s.value)
+                : [],
+            }))
+          }
+        />
+      </div>
+
+      {/* ================= PRICING ================= */}
       <div className="filter-block">
         <h6>Pricing</h6>
-        <input type="range" min="0" max="10000" className="pricing-input" />
+        <input
+          type="range"
+          min="0"
+          max="10000"
+          className="pricing-input"
+          value={filters.priceRange.max}
+          onChange={(e) =>
+            setFilters((p) => ({
+              ...p,
+              priceRange: {
+                min: 0,
+                max: Number(e.target.value),
+              },
+            }))
+          }
+        />
+
         <div className="d-flex justify-content-between">
           <span>0</span>
-          <span>10,000</span>
+          <span>{filters.priceRange.max}</span>
         </div>
       </div>
 
-      {/* PERKS */}
+      {/* ================= PERKS ================= */}
       <div className="filter-block">
         <h6>Perks</h6>
         {perks.map((p) => (
           <label key={p.identity} className="filter-check">
-            <input type="checkbox" /> {p.perkName}
-            <span>50</span>
+            <input
+              type="checkbox"
+              checked={filters.perkIdentities.includes(p.identity)}
+              onChange={() =>
+                setFilters((f) => ({
+                  ...f,
+                  perkIdentities: f.perkIdentities.includes(p.identity)
+                    ? f.perkIdentities.filter((x) => x !== p.identity)
+                    : [...f.perkIdentities, p.identity],
+                }))
+              }
+            />
+            {p.perkName}
           </label>
         ))}
       </div>
 
-      {/* CERTIFICATE TYPE */}
+      {/* ================= CERTIFICATE TYPE ================= */}
       <div className="filter-block">
         <h6>Certificate Type</h6>
-        <select className="filter-select">
-          <option>Select certificate type</option>
+        <select
+          className="filter-select"
+          value={filters.certIdentity}
+          onChange={(e) =>
+            setFilters((p) => ({
+              ...p,
+              certIdentity: e.target.value,
+            }))
+          }
+        >
+          <option value="">Select certificate type</option>
           {certifications.map((c) => (
-            <option key={c.identity}>{c.certName}</option>
+            <option key={c.identity} value={c.identity}>
+              {c.certName}
+            </option>
           ))}
         </select>
       </div>
 
-      {/* ✅ ACCOMMODATION (FROM API) */}
+      {/* ================= ACCOMMODATION ================= */}
       <div className="filter-block">
         <h6>Accommodation</h6>
 
