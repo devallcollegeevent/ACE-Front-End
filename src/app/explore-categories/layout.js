@@ -1,17 +1,17 @@
 export const metadata = {
-  // 1️⃣ Browser tab + Google blue link
+  // Browser tab + Google blue link
   title: "TEST – Event Categories | ACE",
 
-  // 2️⃣ Google search description
+  // Google search description
   description:
     "TEST description: This page lets users explore different types of college events.",
 
-  // 3️⃣ Canonical (original URL)
+  // Canonical (original URL)
   alternates: {
     canonical: "/explore-categories",
   },
 
-  // 4️⃣ WhatsApp / Facebook / LinkedIn preview
+  // WhatsApp / Facebook / LinkedIn preview
   openGraph: {
     title: "TEST OG Title – Explore Categories",
     description:
@@ -29,7 +29,7 @@ export const metadata = {
     type: "website",
   },
 
-  // 5️⃣ Twitter / X preview
+  // Twitter / X preview
   twitter: {
     card: "summary_large_image",
     title: "TEST Twitter Title – Categories",

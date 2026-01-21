@@ -25,11 +25,11 @@ async function handler(req) {
       method: req.method,
       headers,
       body,
-      credentials: "include", // 🔥 REQUIRED
+      credentials: "include", // REQUIRED
       cache: "no-store",
     });
 
-    /* 🔥 COPY ALL HEADERS */
+    /* COPY ALL HEADERS */
     const responseHeaders = new Headers();
 
     // VERY IMPORTANT: forward Set-Cookie

@@ -49,7 +49,7 @@ export default function ExploreCategoriesPage() {
   return (
     <div className="explore-page">
       <div className="text-start m-4" style={{ cursor: "pointer" }}>
-        <p onClick={handleBack}> 🔙 Back</p>
+        <p onClick={handleBack}>Back</p>
       </div>
 
       {/* HEADER */}

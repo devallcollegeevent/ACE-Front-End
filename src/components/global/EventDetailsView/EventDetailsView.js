@@ -410,7 +410,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
       <div className="container event-wrapper my-4">
         <div className="event-details-wrapper">
           <button className="event-back-btn" onClick={onBack}>
-            🔙 Back
+            Back
           </button>
 
           {/* rest of your event details UI */}

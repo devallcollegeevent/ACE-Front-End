@@ -78,7 +78,7 @@
 .posCenter {
   transform: scale(1.15);
   opacity: 1;
-  filter: none; /* 🔥 IMPORTANT */
+  filter: none; /* IMPORTANT */
   z-index: 10;
   box-shadow: 0 22px 60px rgba(15, 15, 15, 0.35);
 }

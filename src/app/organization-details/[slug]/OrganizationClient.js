@@ -93,7 +93,7 @@ export default function OrganizationClient({ slug }) {
         className="btn btn-light rounded-pill mb-3"
         onClick={() => router.back()}
       >
-        🔙 Back
+        Back
       </button>
 
       {/* ===== HERO ===== */}
