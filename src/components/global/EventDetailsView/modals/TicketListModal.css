@@ -1,3 +1,4 @@
+/* Modal backdrop overlay */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -7,6 +8,7 @@
   z-index: 9999;
 }
 
+/* Main modal container */
 .ticket-modal {
   background: #fff;
   width: 820px;
@@ -14,18 +16,21 @@
   padding: 24px;
 }
 
+/* Modal header layout */
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Container for modal action buttons */
 .modal-actions {
   display: flex;
   justify-content: flex-end;
   margin: 16px 0;
 }
 
+/* "Add new ticket" button style */
 .btn-add {
   background: #7f00ff;
   color: #fff;
@@ -34,11 +39,13 @@
   border: none;
 }
 
+/* Table container for tickets */
 .ticket-table {
   border: 1px solid #eee;
   border-radius: 12px;
 }
 
+/* Individual row in the ticket table */
 .ticket-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -46,21 +53,25 @@
   align-items: center;
 }
 
+/* Header row style for the table */
 .ticket-row.header {
   background: #f7f7f7;
   font-weight: 600;
 }
 
+/* Styling for buttons within an actions cell */
 .actions button {
   margin-right: 8px;
 }
 
+/* Modal footer layout */
 .modal-footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
 }
 
+/* "Save changes" button style */
 .btn-save {
   background: #7f00ff;
   color: #fff;

@@ -1,3 +1,4 @@
+/* Modal backdrop overlay */
 .other-overlay {
   position: fixed;
   inset: 0;
@@ -8,6 +9,7 @@
   justify-content: center;
 }
 
+/* Main modal container */
 .other-modal {
   background: #fff;
   width: 860px;
@@ -16,23 +18,27 @@
   padding: 28px;
 }
 
+/* Modal header layout */
 .other-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Modal title typography */
 .other-header h3 {
   font-size: 20px;
   font-weight: 700;
   font-family: "BL Melody", sans-serif;
 }
 
+/* Close button styling */
 .close-btn {
   font-size: 22px;
   cursor: pointer;
 }
 
+/* Two-column grid layout for form fields */
 .other-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -40,19 +46,23 @@
   margin-top: 20px;
 }
 
+/* Full-width column span for grid items */
 .other-grid .full {
   grid-column: span 2;
 }
 
+/* Form field label styling */
 .other-grid label {
   font-size: 14px;
   font-weight: 600;
 }
 
+/* Required field indicator */
 .other-grid label span {
   color: red;
 }
 
+/* Common styles for input and select fields */
 .other-grid input,
 .other-grid select {
   width: 100%;
@@ -63,6 +73,7 @@
   background: #fafafa;
 }
 
+/* Container for displaying chips/tags */
 .chips {
   display: flex;
   gap: 8px;
@@ -70,6 +81,7 @@
   margin-top: 8px;
 }
 
+/* Individual chip styling */
 .chips span {
   background: #f2eaff;
   color: #7a12ff;
@@ -78,12 +90,14 @@
   font-size: 12px;
 }
 
+/* Modal footer layout */
 .other-footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 26px;
 }
 
+/* Footer button styling */
 .other-footer button {
   background: #7a12ff;
   color: #fff;

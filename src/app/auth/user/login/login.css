@@ -1,3 +1,4 @@
+/* Main authentication page container */
 .auth-shell {
   min-height: 100vh;
   background-image: url("/images/background.png");
@@ -5,48 +6,61 @@
   background-position: center;
   font-family: Inter, sans-serif;
 }
+
+/* "Forgot Password" link section */
 .login-forgot {
   text-align: right;
   font-size: 13px;
   margin-bottom: 12px;
 }
 
+/* Link styling within "Forgot Password" */
 .login-forgot a {
   color: var(--tx-link);
   font-weight: 600;
 }
 
+/* Divider with text (e.g., "OR") */
 .login-divider {
   text-align: center;
   color: #999;
   margin: 18px 0;
 }
+
+/* Google login button container */
 .login-google {
   display: flex;
   justify-content: center;
 }
+
+/* General authentication divider */
 .auth-divider {
   text-align: center;
   padding-top: 15px;
   margin-bottom: 20px;
 }
+
+/* Role switcher link to Organizer login */
 .Switch-to-Organizer {
   color: var(--hover, #5606a6);
   text-align: right;
   cursor: pointer;
-  /* BL melody */
   font-family: "BL Melody";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
+
+/* Layout for organization-related sections */
 .organization-sections {
   display: flex;
   justify-content: end;
   gap: 10px;
   align-items: center;
 }
+
+/* Wrapper for Google login button */
 .google-wrap{
   display: flex;
   justify-content: center;

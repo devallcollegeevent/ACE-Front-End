@@ -1,7 +1,9 @@
+/* Main container wrapper */
 .wrapper {
   padding: 20px;
 }
 
+/* Page heading style */
 .heading {
   font-size: 22px;
   font-weight: 700;
@@ -9,12 +11,14 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Grid layout for booking items */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
+/* Individual booking card */
 .card {
   background: #fff;
   border-radius: 14px;
@@ -22,12 +26,14 @@
   position: relative;
 }
 
+/* Image inside the booking card */
 .card img {
   width: 100%;
   height: 160px;
   border-radius: 12px;
 }
 
+/* Status badge positioned on the card */
 .badge {
   position: absolute;
   right: 12px;

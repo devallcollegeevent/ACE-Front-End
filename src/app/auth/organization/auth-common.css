@@ -1,6 +1,7 @@
 /* --------------------------------------------------
    SHELL
 -------------------------------------------------- */
+/* Main page container */
 .org-shell {
   min-height: 100vh;
   display: flex;
@@ -12,6 +13,7 @@
   color: #1c1c1c;
 }
 
+/* Left column for branding/image */
 .org-left {
   flex: 1 1 50%;
   display: flex;
@@ -24,6 +26,7 @@
   background-size: cover;
 }
 
+/* Image within the left column */
 .org-left-img {
   width: 100%;
   max-width: 666px;
@@ -31,6 +34,7 @@
   object-fit: contain;
 }
 
+/* Right column for form content */
 .org-right {
   flex: 1 1 50%;
   display: flex;
@@ -40,6 +44,7 @@
   box-sizing: border-box;
 }
 
+/* Footer for user authentication sections */
 .u-auth-foot {
   margin-top: 12px;
   text-align: center;
@@ -47,6 +52,7 @@
   color: #3d3d3d;
 }
 
+/* Card container for authentication forms */
 .org-card {
   width: 100%;
   max-width: 560px;
@@ -56,6 +62,7 @@
 /* --------------------------------------------------
    STEPPER
 -------------------------------------------------- */
+/* Stepper component container */
 .org-stepper {
   display: flex;
   align-items: center;
@@ -65,6 +72,7 @@
   padding: 10px 205px;
 }
 
+/* Individual step element */
 .org-step {
   text-align: center;
   font-size: 13px;
@@ -76,6 +84,7 @@
   min-width: 120px;
 }
 
+/* Circular step indicator */
 .org-step .dot {
   width: 44px;
   height: 44px;
@@ -88,12 +97,14 @@
   color: #1c1c1c;
 }
 
+/* Active step indicator style */
 .org-step.active .dot {
   background: #7f00ff;
   color: #ffffff;
   box-shadow: 0 6px 18px rgba(127, 0, 255, 0.18);
 }
 
+/* Connector line between steps */
 .line {
   flex: 1;
   height: 4px;
@@ -102,6 +113,7 @@
   margin: 0 8px;
 }
 
+/* Active state for connector line */
 .line.active {
   background: #7f00ff;
 }
@@ -109,6 +121,7 @@
 /* --------------------------------------------------
    TITLES
 -------------------------------------------------- */
+/* Main title styling */
 .org-title {
   font-size: 32px;
   font-weight: 700;
@@ -117,6 +130,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Subtitle styling */
 .org-sub {
   font-size: 14px;
   color: #3d3d3d;
@@ -127,6 +141,7 @@
 /* --------------------------------------------------
    CATEGORY GRID
 -------------------------------------------------- */
+/* Grid layout for category selection */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -134,6 +149,7 @@
   margin: 12px 0 22px;
 }
 
+/* Individual category item */
 .category-card {
   cursor: pointer;
   background: none;
@@ -151,6 +167,7 @@
   border-radius: 10px;
 }
 
+/* Category icon wrapper */
 .category-card .icon {
   width: 56px;
   height: 56px;
@@ -161,6 +178,7 @@
   justify-content: center;
 }
 
+/* Category title text */
 .category-card .cat-title {
   font-size: 13px;
   font-weight: 600;
@@ -177,6 +195,7 @@
 /* --------------------------------------------------
    FORM
 -------------------------------------------------- */
+/* Form action buttons container */
 .org-actions {
   margin-top: 8px;
   display: flex;
@@ -184,18 +203,22 @@
   padding: 10px 65px;
 }
 
+/* General form styling */
 .org-form {
   width: 100%;
 }
 
+/* A row within the form */
 .form-row {
   width: 100%;
 }
 
+/* Form input and label container */
 .form-group {
   margin-bottom: 20px;
 }
 
+/* Form input label */
 .form-label {
   display: block;
   font-size: 14px;
@@ -205,6 +228,7 @@
   text-align: start;
 }
 
+/* General form input control */
 .form-control {
   width: 100%;
   padding: 12px 16px;
@@ -220,19 +244,21 @@
   box-shadow: 0 6px 18px rgba(127, 0, 255, 0.06);
 }
 
+/* Two-column grid layout for forms */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
-/* Password Toggle */
+/* Password input wrapper for toggle icon */
 .pass-wrap {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+/* Password visibility toggle icon */
 .pass-toggle {
   position: absolute;
   right: 12px;
@@ -245,6 +271,7 @@
 /* --------------------------------------------------
    OTP
 -------------------------------------------------- */
+/* OTP input container */
 .otp-row {
   display: flex;
   gap: 12px;
@@ -252,6 +279,7 @@
   margin: 14px 0;
 }
 
+/* Single OTP input field */
 .otp-input {
   width: 72px;
   height: 72px;
@@ -272,6 +300,7 @@
 /* --------------------------------------------------
    BUTTONS
 -------------------------------------------------- */
+/* Primary ghost button style */
 .btn-primary-ghost {
   width: 100%;
   padding: 14px;
@@ -284,6 +313,7 @@
   cursor: pointer;
 }
 
+/* Secondary button style */
 .btn-secondary {
   width: 100%;
   padding: 12px;
@@ -293,7 +323,7 @@
   cursor: pointer;
 }
 
-/* Footer */
+/* Common footer style */
 .org-foot {
   margin-top: 22px;
   text-align: center;
@@ -310,6 +340,7 @@
 /* --------------------------------------------------
    VERIFY MODAL
 -------------------------------------------------- */
+/* Modal overlay */
 .verify-overlay {
   position: fixed;
   inset: 0;
@@ -320,6 +351,7 @@
   z-index: 9999;
 }
 
+/* Modal dialog box */
 .verify-modal {
   width: 40%;
   padding: 80px 60px;
@@ -329,11 +361,13 @@
   text-align: center;
 }
 
+/* Logo inside the verification modal */
 .verify-logo {
   width: 150px;
   height: 100px;
 }
 
+/* Title inside the verification modal */
 .verify-title {
   font-size: 30px;
   font-weight: 700;
@@ -341,16 +375,19 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Action buttons container in modal */
 .form-actions {
   padding: 7% 17%;
 }
 
+/* Informational text in modal */
 .verify-text {
   font-size: 16px;
   color: #3d3d3d;
   line-height: 1.6;
 }
 
+/* "Resend Code" button style */
 .resendCondeText {
   border: none;
   background: none;
@@ -358,6 +395,8 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+/* Role switcher link style */
 .Switch-to-Organizer {
   color: var(--hover, #5606a6);
   text-align: right;
@@ -369,20 +408,24 @@
   font-weight: 600;
   line-height: normal;
 }
+
+/* Layout for organization-specific sections */
 .organization-sections {
   display: flex;
   justify-content: end;
   gap: 10px;
   align-items: center;
 }
+
+/* Category icon style */
 .cat-icons {
   display: inline-block;
   background: #efefef;
   padding: 15px;
   border-radius: 10px;
 }
-.btn-container {
-}
+
+/* Continue button style */
 .continue-btn {
   display: inline-block;
   padding: 10px 100px;

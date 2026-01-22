@@ -1,9 +1,11 @@
+/* Main container wrapper */
 .wrapper {
   padding: 20px;
   background: #ffffff;
   border-radius: 0 0 20px 20px;
 }
 
+/* Section heading styles */
 .heading {
   font-size: 22px;
   font-weight: 700;
@@ -11,6 +13,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Card container layout */
 .card {
   width: 100%;
   background: #ffffff;
@@ -23,29 +26,33 @@
   align-items: center;
 }
 
+/* Card title typography */
 .card h4 {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
 }
 
+/* Card description text */
 .card p {
   margin-top: 5px;
   font-size: 14px;
   color: #777777;
 }
 
-/* Switch */
+/* Switch container */
 .switch {
   position: relative;
   width: 45px;
   height: 24px;
 }
 
+/* Hide default checkbox */
 .switch input {
   display: none;
 }
 
+/* Slider track styles */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -55,6 +62,7 @@
   transition: 0.3s;
 }
 
+/* Slider knob styles */
 .slider::before {
   content: "";
   position: absolute;
@@ -67,14 +75,17 @@
   transition: 0.3s;
 }
 
+/* Active state background */
 input:checked + .slider {
   background: #8a00ff;
 }
 
+/* Move knob when checked */
 input:checked + .slider::before {
   transform: translateX(20px);
 }
 
+/* Mobile responsive styles */
 @media (max-width: 600px) {
   .card {
     padding: 16px;

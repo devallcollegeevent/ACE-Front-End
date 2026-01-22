@@ -1,3 +1,4 @@
+/* Full-screen centered container */
 .nf-wrapper {
   min-height: 100vh;
   width: 100%;
@@ -6,21 +7,25 @@
   justify-content: center;
 }
 
+/* Content wrapper */
 .nf-content {
   text-align: center;
   padding: 20px;
 }
+/* Responsive image styling */
 .nf-image {
   max-width: 90%;
   max-height: 37vh;
   object-fit: contain;
 }
 
+/* Large icon styling */
 .nf-icon {
   font-size: 70px;
   vertical-align: middle;
 }
 
+/* Main title typography */
 .nf-title {
   margin-top: 10px;
   font-size: 28px;
@@ -28,6 +33,7 @@
   color: #000;
 }
 
+/* Error code text */
 .nf-error {
   letter-spacing: 6px;
   font-size: 26px;
@@ -35,6 +41,7 @@
   margin: 10px 0;
 }
 
+/* Description text */
 .nf-desc {
   font-size: 14px;
   color: #9e9e9e;
@@ -42,6 +49,7 @@
   margin: 0 auto 30px;
 }
 
+/* Gradient action button */
 .nf-btn {
   background: linear-gradient(90deg, #7b2cff, #6a00ff);
   color: #fff;
@@ -53,6 +61,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Button hover effects */
 .nf-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(106, 0, 255, 0.3);

@@ -1,3 +1,4 @@
+/* Modal backdrop overlay */
 .child-overlay {
   position: fixed;
   inset: 0;
@@ -8,6 +9,7 @@
   justify-content: center;
 }
 
+/* Main modal container */
 .child-modal {
   background: #fff;
   border-radius: 16px;
@@ -15,6 +17,7 @@
   padding: 24px;
 }
 
+/* Modal header layout */
 .modal-header {
   display: flex;
   align-items: center;
@@ -22,6 +25,7 @@
   margin-bottom: 24px;
 }
 
+/* Back button styling */
 .back-btn {
   border: none;
   background: none;
@@ -29,12 +33,14 @@
   cursor: pointer;
 }
 
+/* Form container for social inputs */
 .social-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* Wrapper for an input field with an icon */
 .input-wrap {
   display: flex;
   align-items: center;
@@ -43,6 +49,7 @@
   padding: 10px 12px;
 }
 
+/* Input field styles within the wrapper */
 .input-wrap input {
   border: none;
   outline: none;
@@ -50,6 +57,7 @@
   font-size: 14px;
 }
 
+/* Modal footer layout */
 .modal-footer {
   display: flex;
   justify-content: end;
@@ -57,6 +65,7 @@
   margin-top: 24px;
 }
 
+/* Outline button style */
 .outline-btn {
   border: 1px solid #7a12ff;
   background: #fff;
@@ -65,6 +74,7 @@
   border-radius: 24px;
 }
 
+/* Primary button style */
 .primary-btn {
   background: #7a12ff;
   color: #fff;

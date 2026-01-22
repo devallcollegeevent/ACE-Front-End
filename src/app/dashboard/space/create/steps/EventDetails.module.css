@@ -1,3 +1,4 @@
+/* Card container styling */
 .card {
   background: #f5f5f5;
   padding: 24px;
@@ -6,29 +7,34 @@
   border: 1px solid #e6e6e6;
 }
 
+/* Card title typography */
 .cardTitle {
   font-weight: 700;
   margin-bottom: 18px;
   font-family: "BL Melody", sans-serif;
 }
 
+/* Card header layout */
 .cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Three-column grid layout */
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
+/* Two-column grid layout */
 .grid2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
+/* Form field container */
 .field {
   display: flex;
   flex-direction: column;
@@ -36,6 +42,7 @@
   
 }
 
+/* Form field label styles */
 .field label {
   font-size: 14px;
   font-weight: 500;
@@ -44,10 +51,12 @@
   color: #000;
 }
 
+/* Required field indicator */
 .field label span {
   color: red;
 }
 
+/* Common styles for input and textarea */
 .input,
 .textarea {
   border-radius: 10px;
@@ -106,6 +115,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Active state for mode buttons */
 .active {
   border-color: #7b2cff;
   background: #f3ecff;
@@ -113,6 +123,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Primary button style */
 .btnPrimary {
   background: #7b2cff;
   color: #fff;
@@ -123,6 +134,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Outline button style */
 .btnOutline {
   border: 2px solid #7b2cff;
   background: #fff;
@@ -132,6 +144,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Small button style */
 .btnSmall {
   background: #7b2cff;
   color: #fff;
@@ -142,11 +155,13 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Action buttons container */
 .actions {
   display: flex;
   justify-content: space-between;
 }
 
+/* Muted text style */
 .muted {
   text-align: center;
   color: #000;

@@ -39,12 +39,14 @@
   width: 100%;
 }
 
+/* Dashed box for file uploads */
 .uploadBox {
   border: 1px dashed #ccc;
   border-radius: 12px;
   padding: 20px;
 }
 
+/* File upload inner container */
 .fileUpload {
   display: flex;
   gap: 16px;
@@ -53,6 +55,7 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+/* Row for image previews */
 .previewRow {
   display: flex;
   gap: 10px;
@@ -94,6 +97,7 @@
   border-radius: 10px;
 }
 
+/* Ticket section header layout */
 .ticketHeader {
   display: flex;
   justify-content: space-between;
@@ -101,6 +105,7 @@
   margin-top: 10px;
 }
 
+/* Add button styling */
 .addBtn {
   background: #7f00ff;
   color: #fff;
@@ -149,6 +154,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Modal backdrop overlay */
 .modalBackdrop {
   position: fixed;
   inset: 0;
@@ -159,6 +165,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Modal content container */
 .modal {
   background: #fff;
   padding: 24px;
@@ -166,21 +173,25 @@
   width: 600px;
 }
 
+/* Container for switch controls */
 .switchRow {
   text-align: right;
   margin-bottom: 20px;
 }
 
+/* Clickable span within the switch row */
 .switchRow span {
   margin-left: 20px;
   cursor: pointer;
 }
 
+/* Active state for switch or tabs */
 .active {
   color: #7f00ff;
   font-weight: 700;
 }
 
+/* Success modal container */
 .successModal {
   background: #fff;
   padding: 40px;

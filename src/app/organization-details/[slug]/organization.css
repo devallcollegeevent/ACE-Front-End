@@ -1,13 +1,16 @@
+/* Organization hero image styling */
 .org-hero-img {
   height: 360px;
   object-fit: cover;
   border-radius: 20px;
 }
 
+/* Utility class for purple background */
 .bg-purple {
   background: #7f00ff;
 }
 
+/* Container for hero image slider dots */
 .org-hero-dots {
   position: absolute;
   bottom: 16px;
@@ -17,6 +20,7 @@
   gap: 6px;
 }
 
+/* Individual dot style */
 .org-hero-dots .dot {
   width: 6px;
   height: 6px;
@@ -24,10 +28,12 @@
   background: #ddd;
 }
 
+/* Active dot style */
 .org-hero-dots .dot.active {
   background: #7f00ff;
 }
 
+/* Organization logo image styling */
 .org-logo {
   width: 64px;
   height: 64px;
@@ -35,6 +41,7 @@
   object-fit: cover;
 }
 
+/* Organization metadata text styling */
 .org-meta span {
   margin-right: 12px;
   font-size: 13px;
@@ -42,11 +49,13 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+/* Purple button style */
 .btn-purple {
   background: #7f00ff;
   color: #fff;
 }
 
+/* Style for a "paid" event badge */
 .badge-paid {
   background: #e9d4ff;
   border: 1px solid #7f00ff;
@@ -54,18 +63,21 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+/* Container for past event cards */
 .past-card {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
 }
 
+/* Image within a past event card */
 .past-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
+/* Overlay for past event card content */
 .past-overlay {
   position: absolute;
   inset: 0;

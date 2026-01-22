@@ -1,9 +1,11 @@
+/* Main container wrapper */
 .wrapper {
   padding: 20px;
   background: #ffffff;
   border-radius: 0 0 20px 20px;
 }
 
+/* Section heading styles */
 .heading {
   font-size: 22px;
   font-weight: 700;
@@ -11,6 +13,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Card container layout */
 .card {
   width: 100%;
   background: #ffffff;
@@ -23,12 +26,14 @@
   align-items: center;
 }
 
+/* Left section of the card */
 .left {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
+/* Card title typography */
 .left h4 {
   margin: 0;
   font-size: 16px;
@@ -36,6 +41,7 @@
   font-family: "BL Melody", sans-serif;
 }
 
+/* Card description text */
 .left p {
   margin-top: 5px;
   font-size: 14px;
@@ -43,22 +49,25 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+/* Icon styles */
 .icon {
   font-size: 28px;
   color: #000000;
 }
 
-/* Switch */
+/* Switch container */
 .switch {
   position: relative;
   width: 45px;
   height: 24px;
 }
 
+/* Hide default checkbox */
 .switch input {
   display: none;
 }
 
+/* Slider track styles */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -68,6 +77,7 @@
   transition: 0.3s;
 }
 
+/* Slider knob styles */
 .slider::before {
   content: "";
   position: absolute;
@@ -80,14 +90,17 @@
   transition: 0.3s;
 }
 
+/* Active state background */
 input:checked + .slider {
   background: #8a00ff;
 }
 
+/* Move knob when checked */
 input:checked + .slider::before {
   transform: translateX(20px);
 }
 
+/* Mobile responsive styles */
 @media (max-width: 600px) {
   .left {
     gap: 12px;

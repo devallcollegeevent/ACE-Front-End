@@ -1,9 +1,11 @@
+/* Main wrapper for the delete profile component */
 .wrapper {
   padding: 20px;
   background-color: var(--white);
   border-radius: 0px 0px 20px 20px;
 }
 
+/* Confirmation box for the delete action */
 .confirmBox {
   background: #f5f5f5;
   padding-bottom: 20px;
@@ -29,22 +31,26 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+/* Button row for confirm/cancel actions */
 .btnRow {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
+/* Cancel button style */
 .cancelBtn {
   background: #fff;
   border: 1px solid #000;
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: 600;
+    /* Font family for the cancel button */
   cursor: pointer;
   font-family: "BL Melody", sans-serif;
 }
 
+/* Delete button style */
 .deleteBtn {
   background: #7a12ff;
   border: none;
@@ -57,6 +63,7 @@
 
 }
 
+/* Success message box style */
 .successBox {
   background: #f5f5f5;
   padding: 60px;
@@ -67,6 +74,7 @@
   font-weight: 700;
 }
 
+/* Media query for screens with a maximum width of 600px */
 @media (max-width: 600px) {
   .confirmBox {
     padding: 25px;

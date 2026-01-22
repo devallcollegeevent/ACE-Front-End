@@ -1,3 +1,4 @@
+/* Modal backdrop overlay */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -9,6 +10,7 @@
   z-index: 9999;
 }
 
+/* Main modal container */
 .ticket-edit-modal {
   width: 520px;
   background: #fff;
@@ -16,18 +18,21 @@
   padding: 24px;
 }
 
+/* Modal header layout */
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Modal body layout */
 .modal-body {
   margin-top: 20px;
   display: grid;
   gap: 16px;
 }
 
+/* Form field label styles */
 .field label {
   font-weight: 600;
   font-size: 14px;
@@ -35,6 +40,7 @@
   color: #000;
 }
 
+/* Form field input styles */
 .field input {
   width: 100%;
   padding: 10px;
@@ -42,6 +48,7 @@
   border: 1px solid #ddd;
 }
 
+/* Modal footer layout */
 .modal-footer {
   display: flex;
   justify-content: flex-end;
@@ -49,6 +56,7 @@
   margin-top: 24px;
 }
 
+/* Cancel button style */
 .btn-cancel {
   border: 1px solid #7a12ff;
   background: transparent;
@@ -56,6 +64,7 @@
   border-radius: 22px;
 }
 
+/* Save button style */
 .btn-save {
   background: #7a12ff;
   color: white;
