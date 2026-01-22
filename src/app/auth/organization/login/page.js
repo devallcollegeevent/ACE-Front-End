@@ -1,5 +1,13 @@
 "use client";
 
+/**
+ * Organizer login page (client)
+ *
+ * - Renders organizer sign-in UI and handles authentication flow.
+ * - Validates input, calls loginApi, saves token & role on success.
+ * - Uses global loading context and toast notifications for UX feedback.
+ */
+
 import "./organizer-login.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -45,20 +53,23 @@ import { useLoading } from "../../../../context/LoadingContext";
 export default function OrganizerLoginPage() {
   const router = useRouter();
 
+  // controlled inputs
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // toggle password visibility
   const [showPass, setShowPass] = useState(false);
-  // GLOBAL LOADING
+
+  // global loading context used to block UI during async ops
   const { setLoading } = useLoading();
 
   // -----------------------------
-  // SUBMIT
+  // SUBMIT: validate -> API -> persist -> navigate
   // -----------------------------
   async function onSubmit(e) {
     e.preventDefault();
     setLoading(true);
 
-    // validation
+    // client-side validation using schema
     try {
       await organizerLoginSchema.validate(
         { email, password },
@@ -71,20 +82,22 @@ export default function OrganizerLoginPage() {
     }
 
     try {
+      // call backend login endpoint
       const res = await loginApi({
         email,
         password,
         type: ROLE_ORGANIZER,
       });
 
+      // handle invalid response
       if (!res?.status || !res?.token) {
         toast.error(res?.message || MSG_INVALID_CREDENTIALS);
         setLoading(false);
         return;
       }
 
+      // persist token (in app storage) and set cookies for session
       saveToken(res.token);
-
       document.cookie = `token=${res.token}; path=/; max-age=${
         60 * 60 * 24 * 7
       }`;
@@ -93,24 +106,26 @@ export default function OrganizerLoginPage() {
       toast.success(MSG_LOGIN_SUCCESS_ORGANIZER);
       router.push("/dashboard");
     } catch (err) {
+      // generic error handling
       toast.error(MSG_LOGIN_FAILED);
     } finally {
       setLoading(false);
     }
   }
 
+  // UI helper to navigate to user login
   const handleUserLogin = () => {
     router.push("/auth/user/login");
   };
 
   return (
     <div className="org-login-shell">
-      {/* LEFT IMAGE */}
+      {/* LEFT IMAGE: illustration */}
       <div className="org-login-left">
         <img src="/images/or_login.png" alt="Organizer Login" />
       </div>
 
-      {/* RIGHT FORM */}
+      {/* RIGHT FORM: inputs, actions */}
       <div className="org-login-right">
         <div className="org-login-card">
           <div className="organization-sections mt-5">
@@ -132,7 +147,7 @@ export default function OrganizerLoginPage() {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            {/* PASSWORD */}
+            {/* PASSWORD with visibility toggle */}
             <label>{LABEL_PASSWORD}</label>
             <div className="pass-wrap">
               <input
@@ -146,7 +161,7 @@ export default function OrganizerLoginPage() {
               </span>
             </div>
 
-            {/* FORGOT */}
+            {/* FORGOT PASSWORD */}
             <div className="forgot">
               <a href="/auth/forgot-password">{TEXT_FORGOT_PASSWORD}</a>
             </div>

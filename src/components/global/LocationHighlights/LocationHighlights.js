@@ -3,6 +3,10 @@
 import { useState } from "react";
 import styles from "./LocationHighlights.module.css";
 
+/**
+ * LocationHighlights Component
+ * Displays popular cities and countries with event counts in a tabbed view.
+ */
 export default function PopularLocations() {
   const [activeTab, setActiveTab] = useState("cities");
 

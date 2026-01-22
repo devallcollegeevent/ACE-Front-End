@@ -8,6 +8,10 @@ const goldMedal = "/images/FirstOr.png";
 const silverMedal = "/images/SecondOr.png";
 const bronzeMedal = "/images/ThreedOr.png";
 
+/**
+ * LeaderboardModal Component
+ * Displays a modal with the top 3 organizers on a podium and a list of others.
+ */
 export default function LeaderboardModal({ open, onClose, data = [] }) {
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";

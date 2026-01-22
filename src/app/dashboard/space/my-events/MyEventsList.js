@@ -4,9 +4,14 @@ import { useState } from "react";
 import DeleteConfirmModal from "../../../../components/ui/DeleteConfirmModal/DeleteConfirmModal";
 import EmptyState from "../../../../components/global/EmptyState/EmptyState";
 
+/**
+ * MyEventsList Component
+ * Displays a list view of events with details and actions.
+ */
 export default function MyEventsList({ events = [] }) {
   const [deleteId, setDeleteId] = useState(null);
-
+ 
+  // Show empty state if no events are provided
   if (!events.length) {
     return (
       <EmptyState
@@ -17,6 +22,7 @@ export default function MyEventsList({ events = [] }) {
     );
   }
 
+  // Handle event deletion confirmation
   const handleDelete = () => {
     console.log("DELETE EVENT:", deleteId);
     setDeleteId(null);

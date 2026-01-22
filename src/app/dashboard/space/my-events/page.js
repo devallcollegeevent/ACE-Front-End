@@ -10,6 +10,10 @@ import { getOrganizerEventsApi } from "../../../../lib/api/organizer.api";
 import { getUserData } from "../../../../lib/auth";
 import { useLoading } from "../../../../context/LoadingContext";
 
+/**
+ * MyEventPage Component
+ * Manages the list of events created by the organizer, with filtering and view toggling (Grid/List).
+ */
 export default function MyEventPage() {
   const [events, setEvents] = useState([]);
   const [view, setView] = useState("grid");

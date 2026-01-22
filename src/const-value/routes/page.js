@@ -1,5 +1,9 @@
 // src/const-value/routes/page.js
 
+/**
+ * App Routes
+ * Centralized definition of application route paths for navigation.
+ */
 // COMMON
 export const HOME_PAGE = "/";
 export const LANDING_PAGE = "/landing";

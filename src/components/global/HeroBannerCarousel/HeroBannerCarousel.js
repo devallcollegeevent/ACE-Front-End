@@ -3,6 +3,10 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "./HeroBannerCarousel.module.css";
 
+/**
+ * HeroBannerCarousel Component
+ * A 3D-style rotating image carousel that auto-plays.
+ */
 export default function HeroBannerCarousel({ images = [], interval = 4500 }) {
   const n = images.length;
   const [centerIdx, setCenterIdx] = useState(0);
@@ -22,6 +26,7 @@ export default function HeroBannerCarousel({ images = [], interval = 4500 }) {
     setCenterIdx(idx);
   };
 
+  // Determine the CSS class for an image based on its position relative to the center index
   const getPosClass = (imgIdx) => {
     if (n === 1) return styles.posCenter;
 

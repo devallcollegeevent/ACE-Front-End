@@ -15,6 +15,10 @@ import {
 
 import { useLoading } from "../../../context/LoadingContext";
 
+/**
+ * Navbar Component
+ * The main navigation bar handling user authentication state, profile access, and navigation links.
+ */
 export default function Navbar() {
   const router = useRouter();
   const { setLoading: setGlobalLoading } = useLoading();
@@ -88,11 +92,13 @@ export default function Navbar() {
   if (!mounted) return null;
 
   /* ================= HANDLERS ================= */
+  // Redirect to login page
   const handleSignup = () => {
     setMenuOpen(false);
     router.push("/auth/user/login");
   };
 
+  // Redirect to user dashboard
   const handleProfileClick = () => {
     setMenuOpen(false);
     router.push("/dashboard");

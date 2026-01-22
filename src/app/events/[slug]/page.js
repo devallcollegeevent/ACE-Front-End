@@ -3,6 +3,7 @@ import EventClient from "./EventClient";
 import { getEventBySlugApi } from "../../../lib/api/event.api";
 
 /* ================= SEO ================= */
+// Generate dynamic metadata for the event page (title, description)
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
@@ -17,13 +18,18 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return {
+  return { 
     title: `${event.title} | AllCollegeEvent`,
     description: event.description?.slice(0, 160),
   };
 }
 
 /* ================= PAGE ================= */
+/**
+ * Event Details Page
+ * Server-side component that fetches event data based on the slug.
+ * Renders SEO metadata, JSON-LD schema for structured data, and the client view.
+ */
 export default async function Page({ params }) {
   const { slug } = await params;
 

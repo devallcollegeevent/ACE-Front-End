@@ -1,6 +1,10 @@
 "use client";
 import "./DeleteConfirmModal.css";
 
+/**
+ * DeleteConfirmModal Component
+ * A modal dialog to confirm deletion actions.
+ */
 export default function DeleteConfirmModal({ open, onClose, onConfirm }) {
   if (!open) return null;
 

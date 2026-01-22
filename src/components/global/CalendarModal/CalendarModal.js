@@ -4,6 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./CalendarModal.module.css";
 import { ADDICON, DELETICON } from "../../../const-value/config-icons/page";
 import { useLoading } from "../../../context/LoadingContext";
+
+/**
+ * CalendarModal Component
+ * A modal for adding and managing multiple date/time slots for an event.
+ */
 export default function CalendarModal({ onClose, onSave }) {
   const { setLoading } = useLoading(); // ONLY ADD
 
@@ -33,6 +38,7 @@ export default function CalendarModal({ onClose, onSave }) {
     }
   }, [rows.length]);
 
+  // Add a new date/time row
   const addRow = () => {
     setRows([
       ...rows,
@@ -40,10 +46,12 @@ export default function CalendarModal({ onClose, onSave }) {
     ]);
   };
 
+  // Remove a specific row
   const removeRow = (index) => {
     setRows(rows.filter((_, i) => i !== index));
   };
 
+  // Update a specific field in a row with validation logic
   const updateRow = (index, field, value) => {
     const updated = [...rows];
     updated[index][field] = value;

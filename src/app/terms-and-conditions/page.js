@@ -218,6 +218,10 @@ const SECTIONS = [
   },
 ];
 
+/**
+ * Terms and Conditions Page
+ * Displays legal terms with a sidebar for easy navigation between sections.
+ */
 export default function TermsConditionsClient() {
   const [active, setActive] = useState("intro");
 

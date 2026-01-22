@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import { getOrgCategoriesApi } from "../../../../../lib/api/event.api";
 import styles from "./OrganizerDetails.module.css";
 
+/**
+ * OrganizerDetails Component
+ * Manages the list of organizations/collaborators hosting the event.
+ * Allows adding up to 3 organizers with details like name, location, and contact info.
+ */
 export default function OrganizerDetails({
   data,
   resetSignal,
@@ -23,6 +28,7 @@ export default function OrganizerDetails({
   ];
 
   /* ================= FETCH ORG CATEGORIES ================= */
+  // Fetch organization categories (e.g., College, Company) on mount
   useEffect(() => {
     async function loadCategories() {
       try {
@@ -39,6 +45,7 @@ export default function OrganizerDetails({
     loadCategories();
   }, []);
 
+  // Add a new organization block (max 3 allowed)
   const addOrganization = () => {
     if (organizations.length >= 3) {
       console.warn("Maximum 3 collaborators allowed");
@@ -63,6 +70,7 @@ export default function OrganizerDetails({
     setData({ ...data, organizations: updated });
   };
 
+  // Update a specific field for an organization at the given index
   const updateOrg = (index, key, value) => {
     const updated = [...organizations];
     updated[index][key] = value;
@@ -76,6 +84,7 @@ export default function OrganizerDetails({
     setData({ ...data, organizations: updated });
   };
 
+  // Remove an organization block
   const deleteOrganization = (index) => {
     const updated = organizations.filter((_, i) => i !== index);
 
@@ -84,6 +93,7 @@ export default function OrganizerDetails({
     setData({ ...data, organizations: updated });
   };
 
+  // Determine if the Department field should be shown based on host type
   const showDepartment = (hostBy) => {
     const selectedCategory = orgCategories.find((c) => c.identity === hostBy);
 
@@ -97,6 +107,7 @@ export default function OrganizerDetails({
     );
   };
 
+  // Reset the organization list to default state
   useEffect(() => {
     if (!resetSignal) return;
 

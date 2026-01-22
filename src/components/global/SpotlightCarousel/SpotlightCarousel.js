@@ -35,6 +35,10 @@ function getCountdown(targetIso) {
 }
 
 /* -------- COMPONENT -------- */
+/**
+ * SpotlightCarousel Component
+ * A carousel highlighting top events with countdowns and details.
+ */
 export default function SpotlightCarousel({ data = [] }) {
   const [current, setCurrent] = useState(0);
   const [, forceUpdate] = useState(0);

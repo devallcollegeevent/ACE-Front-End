@@ -3,9 +3,14 @@
 import { useEffect, useState } from "react";
 import "./FloatingExploreButton.css";
 
+/**
+ * FloatingExploreButton Component
+ * A floating button that appears after scrolling down, allowing users to scroll back to a specific target section.
+ */
 export default function FloatingExploreButton({ targetRef }) {
   const [visible, setVisible] = useState(false);
 
+  // Show button only after scrolling down 250px
   useEffect(() => {
     const onScroll = () => {
       setVisible(window.scrollY > 250);
@@ -15,6 +20,7 @@ export default function FloatingExploreButton({ targetRef }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Scroll smoothly to the target element
   const handleScroll = () => {
     if (!targetRef?.current) return;
 

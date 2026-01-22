@@ -11,22 +11,47 @@ import { getUserProfileApi } from "../../../../lib/api/user.api";
 import ConfirmModal from "../../../../components/ui/Modal/ConfirmModal";
 import { logoutOrganizer } from "../../../../lib/logout";
 
+/**
+ * Sidebar
+ *
+ * Collapsible dashboard sidebar with:
+ *  - profile summary
+ *  - activity links (saved/bookings)
+ *  - organizer-only "My Space" section
+ *  - settings
+ *
+ * Behaviour notes:
+ *  - Expands on hover (expanded state) and opens submenus via openMenu.
+ *  - Loads current user profile once on mount (uses getUserData + API).
+ *  - Shows a logout confirmation modal before performing logout.
+ *
+ */
+
 export default function Sidebar() {
   const pathname = usePathname();
-  const [expanded, setExpanded] = useState(false);
-  const [openMenu, setOpenMenu] = useState(null);
+  const [expanded, setExpanded] = useState(false); // controls collapsed/expanded UI
+  const [openMenu, setOpenMenu] = useState(null); // which submenu is open
   const [role, setRole] = useState("user");
 
-  // profile display-only data
+  // profile display-only data (fetched once)
   const [profile, setProfile] = useState(null);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
-  /* ================= FALLBACK LETTER ================= */
+  /* ================= FALLBACK LETTER =================
+     Compute display-friendly values to avoid rendering issues
+     when profile is not yet loaded.
+  */
   const displayName = profile?.organizationName || profile?.name || "User";
   const displayEmail = profile?.domainEmail || profile?.email || "User";
   const firstLetter = displayName.charAt(0).toUpperCase();
-  /* ================= LOAD USER + PROFILE ================= */
-
+  
+  /* ================= LOAD USER + PROFILE =================
+     Runs once on mount:
+     - Reads local user data (getUserData) to determine identity/type.
+     - Calls the appropriate API to fetch profile details.
+     - Sets role to 'org' when user.type === 'org' for conditional rendering.
+     Errors are logged but not thrown to keep the sidebar resilient.
+  */
   useEffect(() => {
     async function loadProfile() {
       const user = getUserData();
@@ -53,15 +78,20 @@ export default function Sidebar() {
     loadProfile();
   }, []);
 
+  // Toggle a submenu open/closed; clicking the same menu closes it.
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
+  // Small presentational arrow component used beside expanded labels
   const Arrow = ({ open }) => (
     <span className={styles.arrow}>{open ? "▲" : "▼"}</span>
   );
 
-  /* ================= LOGOUT ================= */
+  /* ================= LOGOUT =================
+     Show confirmation modal before actually logging out.
+     On confirm: call logout function and redirect to home.
+  */
   const handleLogoutClick = () => {
     setShowLogoutConfirm(true);
   };
@@ -69,6 +99,7 @@ export default function Sidebar() {
   const confirmLogout = () => {
     setShowLogoutConfirm(false);
     logoutOrganizer();
+    // using location.href to ensure a full reload and cleared client state
     window.location.href = "/";
   };
 
@@ -85,7 +116,7 @@ export default function Sidebar() {
         setOpenMenu(null);
       }}
     >
-      {/* PROFILE */}
+      {/* PROFILE MENU */}
       <div className={styles.menu} onClick={() => toggleMenu("profile")}>
         <img src="/images/User.png" alt="profile" />
         {expanded && (
@@ -173,12 +204,14 @@ export default function Sidebar() {
 
       <div className={styles.bottomProfile}>
         {profile?.profileImage ? (
+          // use provided profile image when available
           <img
             src={profile.profileImage}
             alt="profile"
             className={styles.profileImg}
           />
         ) : (
+          // fallback: circular letter avatar
           <div className={styles.profileCircle}>{firstLetter}</div>
         )}
 

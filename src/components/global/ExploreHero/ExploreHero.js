@@ -2,8 +2,14 @@
 import { VIDEOICON } from "../../../const-value/config-icons/page";
 import "./ExploreHero.css";
 
+/**
+ * ExploreHero Component
+ * Renders the hero section for the Explore page, featuring a title, description,
+ * call-to-action button, and a grid of event images.
+ */
 export default function ExploreHero() {
 
+  // Render the hero section with a split layout (Text Left, Images Right)
   return (
     <section className="ace-hero container-xl">
       <div className="row align-items-center gx-5 gy-5">

@@ -4,11 +4,16 @@ import styles from "./OrganizerCarousel.module.css";
 import { useRouter } from "next/navigation";
 import { encodeId } from "../../../lib/utils/secureId";
 
+/**
+ * OrganizersCarousel Component
+ * Displays a horizontal list of top organizers with navigation to their details.
+ */
 export default function OrganizersCarousel({ onOpenLeaderboard, data = [] }) {
   const router = useRouter();
 
   if (!Array.isArray(data) || data.length === 0) return null;
 
+  // Navigate to the organization details page
   const handleOrgClick = (slug) => {
     // const encryptedId = encodeId(slug);
     router.push(`/organization-details/${slug}`);

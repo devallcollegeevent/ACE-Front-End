@@ -1,5 +1,9 @@
 const BASE = process.env.NEXT_PUBLIC_LOCATION_API_BASE;
 
+/**
+ * Location API
+ * Functions to fetch countries, states, and cities from the location service.
+ */
 export const getCountries = async () => {
   const res = await fetch(`${BASE}/countries/iso`);
   const json = await res.json();

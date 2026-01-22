@@ -1,7 +1,11 @@
-"use client";
+"use client"; 
 
 import styles from "./DashboardChart.module.css";
 
+/**
+ * DashboardChart Component
+ * Visualizes event analytics (clicks, views, likes) over time using a chart.
+ */
 export default function DashboardChart() {
   return (
     <div className={styles.wrapper}>

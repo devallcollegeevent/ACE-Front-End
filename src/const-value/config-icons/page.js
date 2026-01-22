@@ -1,3 +1,7 @@
+/**
+ * Config Icons
+ * Exports SVG icons as React components/constants for consistent usage across the UI.
+ */
 export const LOCATION_ICON = (
   <svg
     xmlns="http://www.w3.org/2000/svg"

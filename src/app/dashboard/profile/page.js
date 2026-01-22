@@ -22,6 +22,12 @@ import ConfirmModal from "../../../components/ui/Modal/ConfirmModal";
 import { useRouter } from "next/navigation";
 
 /* ================= ROLE BASED API ================= */
+
+/**
+ * getProfileApis
+ * Return appropriate API functions and field keys based on user type.
+ * This centralises role-specific differences between user and organizer profiles.
+ */
 const getProfileApis = (user) => {
   if (user?.type === "org") {
     return {
@@ -42,24 +48,36 @@ const getProfileApis = (user) => {
 
 export default function ProfilePage() {
   const { setLoading: setGlobalLoading } = useLoading();
-  const fileRef = useRef(null);
+  const fileRef = useRef(null); // file input ref for image upload
 
+  // fetched profile object
   const [profile, setProfile] = useState(null);
+
+  // UI mode: "view" or "edit"
   const [mode, setMode] = useState("view");
+
+  // confirm modal visibility for password reset
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const router = useRouter();
 
+  // form state for editable fields (name, email, image file)
   const [form, setForm] = useState({
     name: "",
     email: "",
     image: null,
   });
 
-  // IMAGE PREVIEW STATE
+  // local object URL for in-place image preview (not uploaded yet)
   const [imagePreview, setImagePreview] = useState(null);
 
   /* ================= LOAD PROFILE ================= */
-  
+  /**
+   * Load profile on mount:
+   *  - Read local user identity
+   *  - Choose role-specific API via getProfileApis
+   *  - Populate profile and form state for viewing/editing
+   *  - Uses global loading indicator while fetching
+   */
   useEffect(() => {
     const loadProfile = async () => {
       setGlobalLoading(true);
@@ -89,6 +107,14 @@ export default function ProfilePage() {
   }, [setGlobalLoading]);
 
   /* ================= SAVE PROFILE ================= */
+
+  /**
+   * saveProfile
+   * Prepare FormData payload and call auth API to update profile.
+   * - Appends identity/type and role-specific name field
+   * - Optionally includes profileImage when present
+   * - Shows success/error feedback via toast and toggles UI mode
+   */
   const saveProfile = async () => {
     setGlobalLoading(true);
     try {
@@ -96,19 +122,21 @@ export default function ProfilePage() {
 
       const payload = new FormData();
 
-      //IDENTITY (IMPORTANT)
+      // Identity and user type are required by backend to resolve record
       payload.append("identity", user?.identity);
 
-      //TYPE
+
       payload.append("type", user?.type);
-      // ROLE BASED NAME
+      
+      
+      // Role-specific name field
       if (user?.type === "org") {
         payload.append("organizationName", form.name);
       } else {
         payload.append("name", form.name);
       }
 
-      //IMAGE (optional)
+      // Optional profile image upload
       if (form.image) {
         payload.append("profileImage", form.image);
       }
@@ -136,6 +164,12 @@ export default function ProfilePage() {
   };
 
   /* ================= SEND RESET MAIL ================= */
+
+  /**
+   * handleSendResetMail
+   * Navigate to the forgot-password route to initiate password reset flow.
+   * Uses global loader while performing navigation.
+   */
   const handleSendResetMail = async () => {
     setGlobalLoading(true);
     try {
@@ -148,6 +182,7 @@ export default function ProfilePage() {
     }
   };
 
+  // Do not render until profile is loaded
   if (!profile) return null;
 
   return (
@@ -165,6 +200,7 @@ export default function ProfilePage() {
             <p>{form.email}</p>
           </div>
 
+          {/* Enter edit mode */}
           <img
             src="/images/Pen.png"
             className={styles.editIcon}
@@ -187,6 +223,7 @@ export default function ProfilePage() {
             <label>Domain Email Id</label>
             <input value={form.email} disabled />
 
+            {/* Trigger password reset confirmation */}
             <span
               className={styles.changePassword}
               onClick={() => setShowConfirmModal(true)}
@@ -197,6 +234,7 @@ export default function ProfilePage() {
 
           <div>
             {/* ===== IMAGE UPLOAD (UI UNCHANGED) ===== */}
+            {/* When no preview exists, show clickable upload box that opens file selector */}
             {!imagePreview ? (
               <div
                 className={styles.uploadBox}
@@ -219,6 +257,7 @@ export default function ProfilePage() {
                     borderRadius: "5%",
                   }}
                 />
+                {/* remove selected preview and file */}
                 <span
                   onClick={() => {
                     setForm({ ...form, image: null });
@@ -246,6 +285,7 @@ export default function ProfilePage() {
               </div>
             )}
 
+            {/* Hidden file input to handle image selection */}
             <input
               ref={fileRef}
               type="file"
@@ -266,6 +306,7 @@ export default function ProfilePage() {
             />
 
             <div className={styles.btnRow}>
+              {/* Cancel editing and revert unsaved changes */}
               <button
                 className={styles.cancelBtn}
                 onClick={() => {
@@ -276,6 +317,7 @@ export default function ProfilePage() {
               >
                 Cancel
               </button>
+              {/* Persist changes via saveProfile */}
               <button className={styles.saveBtn} onClick={saveProfile}>
                 Save Changes
               </button>

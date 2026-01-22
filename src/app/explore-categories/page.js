@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getExploreEventTypes } from "../../lib/api/event.api";
 
+/**
+ * ExploreCategoriesPage Component
+ * Displays a grid of event categories for users to browse.
+ */
 export default function ExploreCategoriesPage() {
   const router = useRouter();
 

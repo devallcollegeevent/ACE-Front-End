@@ -3,6 +3,10 @@
 import { useState } from "react";
 import "./DeleteConfirmModal.css";
 
+/**
+ * DeleteConfirmModal Component
+ * A modal that requires the user to type their email to confirm a deletion action.
+ */
 export default function DeleteConfirmModal({
   open,
   onClose,
@@ -13,6 +17,7 @@ export default function DeleteConfirmModal({
 
   if (!open) return null;
 
+  // Check if the entered email matches the user's email
   const isMatch =
     email.trim().toLowerCase() === userEmail?.toLowerCase();
 

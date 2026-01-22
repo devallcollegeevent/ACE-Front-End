@@ -1,6 +1,10 @@
 "use client";
 import styles from "./StandFor.module.css";
 
+/**
+ * StandFor Component
+ * Displays the Mission, Vision, and Values of the platform using cards.
+ */
 export default function StandFor() {
   return (
     <section className={styles.wrapper}>

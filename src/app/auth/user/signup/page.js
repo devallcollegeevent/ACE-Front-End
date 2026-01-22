@@ -35,14 +35,26 @@ import {
 } from "../../../../const-value/config-message/page";
 import { useLoading } from "../../../../context/LoadingContext";
 
+/**
+ * UserSignupPage
+ *
+ * Client-side user registration form.
+ * - Validates input with Yup (userSignupSchema).
+ * - Calls signupApi to register the user on the backend.
+ * - Uses global loading context to block UI during the async request.
+ * - Shows toast notifications for success/error and navigates to login on success.
+ */
 export default function UserSignupPage() {
   const router = useRouter();
 
-  const { setLoading } = useLoading(); //ONLY ADD
+  // Global loading context (start/stop around async calls)
+  const { setLoading } = useLoading();
 
+  // toggles to show/hide password fields
   const [showPass, setShowPass] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
+  // controlled form state
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -51,10 +63,11 @@ export default function UserSignupPage() {
     type: ROLE_USER,
   });
 
+  // Submit handler: validate -> API -> feedback -> navigate
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    //YUP validation
+    // Client-side validation using Yup schema
     try {
       await userSignupSchema.validate(
         {
@@ -69,7 +82,7 @@ export default function UserSignupPage() {
       return toast.error(err.errors[0]);
     }
 
-    //API call
+    // Prepare payload for API
     const payload = {
       name: form.name,
       email: form.email,
@@ -78,34 +91,38 @@ export default function UserSignupPage() {
       platform: "web",
     };
 
-    setLoading(true); // START LOADING
+    // Start global loading indicator
+    setLoading(true); 
 
+    // Call signup API (do not throw on backend error; inspect response)
     const res = await signupApi(payload);
 
     //DO NOT THROW
     if (!res?.status) {
-      setLoading(false); //STOP LOADING
+      // Stop loading and show backend-provided or generic error
+      setLoading(false);
       return toast.error(res?.message || MSG_ERR_SIGNUP_FAILED);
     }
 
-    //SUCCESS ONLY ONCE
+    // Success: notify user and navigate to login
     toast.success(res.message || MSG_SIGNUP_SUCCESS);
     setLoading(false); //STOP LOADING
     router.push("/auth/user/login");
   };
 
+  // Navigate to organizer signup flow
   const handleCreateEvent = () => {
     router.push("/auth/organization/signup/category");
   };
 
   return (
     <div className="auth-shell">
-      {/* LEFT IMAGE */}
+      {/* LEFT ILLUSTRATION (hidden on small screens) */}
       <div className="auth-left d-none d-lg-flex">
         <img src="/images/auth-signup.png" alt="signup" />
       </div>
 
-      {/* FORM */}
+      {/* RIGHT: signup form */}
       <div className="auth-right">
         <div className="auth-card signup-card">
           <div className="organization-sections mt-4">  

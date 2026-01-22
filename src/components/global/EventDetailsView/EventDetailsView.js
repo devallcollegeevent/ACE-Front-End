@@ -32,6 +32,10 @@ import BannerImageModal from "./modals/BannerImageModal";
 // import { toast } from "react-hot-toast";
 // import OtherDetailsModal from "./modals/OtherDetailsModal";
 
+/**
+ * EventDetailsView Component
+ * Displays detailed information about a specific event, including banners, tickets, host details, and countdowns.
+ */
 export default function EventDetailsView({ event = {}, onBack }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
@@ -94,27 +98,33 @@ export default function EventDetailsView({ event = {}, onBack }) {
 
   // imge move left and right
 
+  // Navigate to the previous banner image
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
+  // Navigate to the next banner image
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  // Jump to a specific banner image by index
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 
+  // Handle registration click to show confirmation modal
   const handleRegisterClick = () => {
     setOpenConfirm(true);
   };
 
+  // Confirm redirection to external payment link
   const handleConfirm = () => {
     setOpenConfirm(false);
     window.open(event.paymentLink, "_blank", "noopener,noreferrer");
   };
 
+  // Cancel redirection and close modal
   const handleCancel = () => {
     setOpenConfirm(false);
   };
@@ -148,6 +158,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
   //   });
   // }, [event]);
 
+  // Update ticket form state when a specific ticket is selected
   useEffect(() => {
     if (selectedTicket) {
       setTicketForm({

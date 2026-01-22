@@ -1,5 +1,15 @@
 "use client";
 
+/**
+ * ProfileHeader
+ *
+ * - Loads the current user's profile (user or organizer) on mount and displays
+ *   a header with avatar, name, follower/following counts and rank.
+ * - Uses getUserData() to determine identity and role, then calls the
+ *   appropriate API (user or organization) to fetch profile details.
+ *
+ */
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./ProfileHeader.module.css";
@@ -13,11 +23,15 @@ import { useLoading } from "../../../../context/LoadingContext";
 export default function ProfileHeader() {
   const router = useRouter();
 
-  // profile default-aa empty object
+  // profile default — empty object until API returns data
   const [profile, setProfile] = useState({});
   const { setLoading } = useLoading();
 
-  /* ================= LOAD PROFILE ================= */
+  /* ================= LOAD PROFILE =================
+     - Runs once on mount.
+     - Determines role from stored user data and fetches the correct profile.
+     - Uses safe checks to avoid crashing if user info is missing.
+  */
   useEffect(() => {
     async function loadProfile() {
       setLoading(true);
@@ -26,6 +40,7 @@ export default function ProfileHeader() {
         const user = getUserData();
         if (!user?.identity) return;
 
+        // Determine role: prefer explicit role, fallback to type mapping
         const role = user.role || (user.type === "org" ? "organizer" : "user");
 
         let res;
@@ -39,6 +54,7 @@ export default function ProfileHeader() {
           setProfile(res.data); 
         }
       } catch (err) {
+        // Log for diagnostics; UI shows safe fallbacks
         console.error("ProfileHeader error:", err);
       } finally {
         setLoading(false);
@@ -48,8 +64,9 @@ export default function ProfileHeader() {
     loadProfile();
   }, [setLoading]);
 
-  /* ================= SAFE FALLBACK VALUES ================= */
-
+  /* ================= SAFE FALLBACK VALUES =================
+     - Compute display-safe values so UI remains stable even when API data is missing.
+  */
   const displayName = profile.organizationName || profile.name || "User";
 
   const firstLetter = displayName.charAt(0).toUpperCase();
@@ -58,7 +75,10 @@ export default function ProfileHeader() {
   const followingCount = profile.followingCount || 0;
   const rank = profile.rank || 0;
 
-  /* ================= UI (UNCHANGED) ================= */
+  /* ================= UI (PRESENTATIONAL) =================
+     - Renders a cover, avatar (image or fallback initial), and brief stats.
+     - Navigation handlers route to followers/following pages.
+  */
 
   return (
     <div className={styles.wrapper}>

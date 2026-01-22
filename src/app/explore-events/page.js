@@ -11,9 +11,14 @@ import { getAllEventsApi } from "../../lib/api/event.api";
 import WhyChoose from "../../components/global/WhyChoose/WhyChoose";
 import Footer from "../../components/global/Footer/Footer";
 
+/**
+ * ExploreEventsPage Component
+ * Landing page for exploring events, featuring sliders for different event groups.
+ */
 export default function ExploreEventsPage() {
   const [events, setEvents] = useState([]);
 
+  // Fetch all events to populate the sliders
   const loadEvents = async () => {
     try {
       const res = await getAllEventsApi();

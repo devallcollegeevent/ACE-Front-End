@@ -52,6 +52,11 @@ export async function generateMetadata({ params }) {
 }
 
 /* ================= PAGE ================= */
+/**
+ * Organization Details Page
+ * Server-side entry point for the organization profile.
+ * Generates SEO metadata and renders the client view.
+ */
 export default async function Page({ params }) {
   // MUST await params here also
   const { slug } = await params;

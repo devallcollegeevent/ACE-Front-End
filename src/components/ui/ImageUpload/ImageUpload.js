@@ -3,12 +3,17 @@
 import toast from "react-hot-toast";
 import { processImage } from "../../../lib/utils/imageProcessor";
 
+/**
+ * ImageUpload Component
+ * Handles image file selection, validation, and processing (compression).
+ */
 export default function ImageUpload({
   images = [],
   setImages,
   multiple = false,
   label = "Upload Image",
 }) {
+  // Handle file selection and processing
   const handleChange = async (e) => {
     const files = Array.from(e.target.files);
     let updated = [...images];

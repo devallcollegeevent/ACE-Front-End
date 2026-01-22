@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 
+/* Page text / icons / api / loading context imports */
 import {
   TITLE_ORG_ACCOUNT_CREATION,
   SUBTITLE_ORG_ACCOUNT_CREATION,
@@ -32,32 +33,52 @@ import {
 import { signupApi } from "../../../../../lib/api/auth.api";
 import { useLoading } from "../../../../../context/LoadingContext";
 
+/**
+ * SignupAccountClient
+ *
+ * Organizer account creation form.
+ * - Reads previously chosen signup steps from query params (category, location, orgName).
+ * - Collects email + password, validates presence and matching passwords.
+ * - Calls signupApi with collected data and redirects to organizer login on success.
+ */
 export default function SignupAccountClient() {
   const router = useRouter();
   const params = useSearchParams();
 
+  // read values passed from previous signup steps (category, location, org name)
   const category = params.get("cat");
   const country = params.get("country");
   const state = params.get("state");
   const city = params.get("city");
   const orgName = params.get("orgName");
 
+  // controlled inputs for account credentials
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
 
+  // toggles for showing/hiding passwords
   const [showPass1, setShowPass1] = useState(false);
   const [showPass2, setShowPass2] = useState(false);
+
+  // global loading indicator (blocks UI while async operations run)
   const { setLoading } = useLoading();
 
+  // Submit handler:
+  // - basic client-side checks
+  // - call signup API
+  // - show toast messages and navigate on success
   async function onSubmit(e) {
     e.preventDefault();
 
+    // required fields check
     if (!email || !password || !confirm)
       return toast.error(MSG_ERR_FILL_ALL_FIELDS);
 
+    // password confirmation
     if (password !== confirm) return toast.error(MSG_ERR_PASSWORD_MISMATCH);
 
+    // ensure category selected in previous step
     if (!category) return toast.error(MSG_ERR_CATEGORY_MISSING);
 
     setLoading(true);
@@ -74,15 +95,16 @@ export default function SignupAccountClient() {
         platform: "web",
       });
 
-      //DO NOT THROW
+      // If backend signals failure, show error
       if (!res?.status) {
         return toast.error(res?.message || MSG_ERR_SIGNUP_FAILED);
       }
 
-      //SUCCESS ONLY ONCE
+      // success -> notify and redirect to login
       toast.success(res.message || MSG_SIGNUP_SUCCESS);
       router.push("/auth/organization/login");
     } catch (err) {
+      // generic fallback message
       toast.error("Something went wrong");
     } finally {
       setLoading(false);
@@ -91,7 +113,7 @@ export default function SignupAccountClient() {
 
   return (
     <div className="org-shell">
-      {/* LEFT */}
+      {/* LEFT: decorative illustration */}
       <aside
         className="org-left"
         style={{ backgroundImage: "url('/images/organizer-bg-circles.png')" }}
@@ -103,7 +125,7 @@ export default function SignupAccountClient() {
         />
       </aside>
 
-      {/* RIGHT */}
+      {/* RIGHT: form card */}
       <main className="org-right">
         <div className="org-card">
           <h2 className="org-title">{TITLE_ORG_ACCOUNT_CREATION}</h2>
@@ -165,7 +187,7 @@ export default function SignupAccountClient() {
               </div>
             </div>
 
-            {/* ACTION */}
+            {/* ACTION: submit */}
             <div className="org-actions">
               <button type="submit" className="btn-primary-ghost">
                 {BTN_VERIFY_DOMAIN}

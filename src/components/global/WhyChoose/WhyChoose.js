@@ -1,6 +1,10 @@
 "use client";
 import "./WhyChoose.css";
 
+/**
+ * WhyChoose Component
+ * A static section highlighting the benefits of using the platform.
+ */
 export default function WhyChoose() {
   return (
     <section className="why-ace container-xl">

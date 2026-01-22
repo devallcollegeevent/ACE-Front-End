@@ -3,6 +3,10 @@
 import { useLoading } from "../../../context/LoadingContext";
 import "./GlobalLoader.css";
 
+/**
+ * GlobalLoader Component
+ * Displays a full-screen loading overlay when the global loading state is active.
+ */
 export default function GlobalLoader() {
   const { loading } = useLoading();
 

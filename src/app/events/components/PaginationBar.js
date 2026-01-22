@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * PaginationBar Component
+ * Renders pagination controls (Prev, Next, Page Numbers).
+ */
 export default function PaginationBar({ page, total, onChange }) {
   if (total <= 1) return null;
 

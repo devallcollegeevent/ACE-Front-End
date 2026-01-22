@@ -6,12 +6,17 @@ import DeleteConfirmModal from "../../../../components/ui/DeleteConfirmModal/Del
 import EmptyState from "../../../../components/global/EmptyState/EmptyState";
 import "./MyEvents.css";
 import { encodeId } from "../../../../lib/utils/secureId";
-
+ 
+/**
+ * MyEventsGrid Component
+ * Displays a grid of event cards with actions to edit or delete.
+ */
 export default function MyEventsGrid({ events = [] }) {
   const [deleteId, setDeleteId] = useState(null);
   const [openMenuId, setOpenMenuId] = useState(null);
   const router = useRouter();
 
+  // Show empty state if no events are provided
   if (!events.length) {
     return (
       <EmptyState
@@ -22,11 +27,13 @@ export default function MyEventsGrid({ events = [] }) {
     );
   }
 
+  // Handle event deletion confirmation
   const handleDelete = () => {
     console.log("DELETE EVENT:", deleteId);
     setDeleteId(null);
   };
 
+  // Navigate to event details page
   const handleClick = (slug) => {
       router.push(`/events/${slug}`);
     };

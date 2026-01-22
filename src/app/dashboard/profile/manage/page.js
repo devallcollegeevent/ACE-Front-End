@@ -15,18 +15,37 @@ import {
   TITLE_MANAGE_PAGE,
 } from "../../../../const-value/config-message/page";
 
-/*existing confirm modal */
-
-/* example API (unga real API replace pannunga) */
+// Placeholder for server API integration (replace with real API import when available)
 // import { updateSocialLinksApi } from "../../../../lib/api/organizer.api";
 import toast from "react-hot-toast";
 import ConfirmModal from "../../../../components/ui/Modal/ConfirmModal";
 
+/**
+ * ManagePage
+ *
+ * Administrative UI for organizers to view and edit public-facing assets:
+ *  - social media links
+ *  - cover image preview
+ *
+ * Modes:
+ *  - "view": display current values (read-only)
+ *  - "edit": allow modifying links and uploading a cover image (local preview)
+ *  - MSG_EMAIL_VERIFY_SUCCESS: transient success state after saving
+ *
+ * Note: This component contains local state and UI only. Persisting changes
+ * requires wiring the commented API call (handleSaveConfirm) to a backend.
+ */
 export default function ManagePage() {
+  // UI mode: 'view' | 'edit' | MSG_EMAIL_VERIFY_SUCCESS
   const [mode, setMode] = useState("view");
+
+  // Local object URL for cover image preview (not uploaded)
   const [coverImage, setCoverImage] = useState(null);
+
+  // Confirmation modal visibility for save action
   const [showConfirm, setShowConfirm] = useState(false);
 
+  // Local editable copy of social links (initial values as placeholders)
   const [socialLinks, setSocialLinks] = useState({
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
@@ -38,11 +57,23 @@ export default function ManagePage() {
 
   /* ================= HANDLERS ================= */
 
+  /**
+   * handleImageUpload
+   * Create a local preview URL for a user-selected image file.
+   * This preview is for UX only — upload logic should be implemented separately.
+   */
   const handleImageUpload = (e) => {
     const file = e.target.files?.[0];
     if (file) setCoverImage(URL.createObjectURL(file));
   };
 
+  /**
+   * handleChange
+   * Update a single field in the socialLinks state.
+   *
+   * @param {string} key - The social link key to update (e.g., 'linkedin').
+   * @param {string} value - The new URL value entered by the user.
+   */
   const handleChange = (key, value) => {
     setSocialLinks((prev) => ({
       ...prev,
@@ -72,6 +103,7 @@ export default function ManagePage() {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <h2 className={styles.title}>{TITLE_MANAGE_PAGE}</h2>
+        {/* Enter edit mode to modify social links and cover image */}
         <img
           src="/images/Pen.png"
           alt="edit"
@@ -135,6 +167,7 @@ export default function ManagePage() {
           </div>
 
           <div className={styles.btnRow}>
+            {/* Revert to view mode without persisting changes */}
             <button
               className={styles.cancelBtn}
               onClick={() => setMode("view")}
@@ -142,7 +175,7 @@ export default function ManagePage() {
               Cancel
             </button>
 
-            {/*ONLY CHANGE HERE */}
+            {/* Prompt for confirmation before saving changes */}
             <button
               className={styles.saveBtn}
               onClick={() => setShowConfirm(true)}

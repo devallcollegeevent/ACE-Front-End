@@ -41,22 +41,39 @@ import { saveToken } from "../../../../lib/auth";
 import { loginSuccess } from "../../../../store/authSlice";
 import { useLoading } from "../../../../context/LoadingContext";
 
+/**
+ * UserLoginPage
+ *
+ * Client-side login screen for regular users.
+ * - Handles email/password login with client validation (Yup).
+ * - Supports Google OAuth login via @react-oauth/google.
+ * - Uses global loading context and Redux to store authenticated user data.
+ * - Minimal UI responsibilities: form control and navigation on success.
+ */
 export default function UserLoginPage() {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  // GLOBAL LOADING
+  // GLOBAL LOADING (blocks UI while async operations run)
   const { loading, setLoading } = useLoading();
 
+  // toggle for password visibility
   const [showPass, setShowPass] = useState(false);
 
+  // controlled form state
   const [form, setForm] = useState({
     email: "",
     password: "",
     type: ROLE_USER,
   });
 
-  /* ================= NORMAL LOGIN ================= */
+  /* ================= NORMAL LOGIN =================
+     Flow:
+     1. Validate form with userLoginSchema.
+     2. Call loginApi.
+     3. On success: save token, dispatch loginSuccess, navigate home.
+     4. Show toast messages for feedback.
+  */
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -76,6 +93,7 @@ export default function UserLoginPage() {
         return;
       }
 
+      // persist token and update global auth state
       saveToken(res.token);
       dispatch(loginSuccess({ data: res.data }));
 
@@ -88,7 +106,11 @@ export default function UserLoginPage() {
     }
   };
 
-  /* ================= GOOGLE LOGIN ================= */
+  /* ================= GOOGLE LOGIN =================
+     Flow:
+     - Exchange Google credential with backend (googleAuthLoginApi).
+     - On success: same persistence & navigation as normal login.
+  */
   const handleGoogleSuccess = async (response) => {
     setLoading(true);
 
@@ -115,13 +137,15 @@ export default function UserLoginPage() {
       setLoading(false);
     }
   };
+
+  // Helper: navigate to organizer login screen
   const handleCreateEvent = () => {
     router.push("/auth/organization/login");
   };
 
   return (
     <div className="auth-shell">
-      {/* LEFT IMAGE */}
+      {/* LEFT IMAGE (decorative on large screens) */}
       <div className="auth-left d-none d-lg-flex">
         <img src="/images/auth-login.png" alt="login" />
       </div>
@@ -149,7 +173,7 @@ export default function UserLoginPage() {
               onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
 
-            {/* PASSWORD */}
+            {/* PASSWORD with visibility toggle */}
             <label className="auth-label">{LABEL_PASSWORD}</label>
             <div className="auth-pass-wrap">
               <input
@@ -168,7 +192,7 @@ export default function UserLoginPage() {
               </span>
             </div>
 
-            {/* FORGOT */}
+            {/* FORGOT PASSWORD */}
             <div className="login-forgot">
               <a href="/auth/forgot-password">{TEXT_FORGOT_PASSWORD}</a>
             </div>

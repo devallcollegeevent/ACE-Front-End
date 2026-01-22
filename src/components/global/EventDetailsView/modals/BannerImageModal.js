@@ -2,6 +2,10 @@
 import { useRef, useState } from "react";
 import "./BannerImageModal.css";
 
+/**
+ * BannerImageModal Component
+ * Modal to upload and manage event banner images.
+ */
 export default function BannerImageModal({
   images = [],
   onClose,

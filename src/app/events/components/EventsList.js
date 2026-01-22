@@ -4,14 +4,21 @@ import { useRouter } from "next/navigation";
 import { encodeId } from "../../../lib/utils/secureId";
 import { DATEICON, LIKE_ICON, LOCATION_ICON, TICKET_COLOR_ICON } from "../../../const-value/config-icons/page";
 
+/**
+ * EventsList Component
+ * Renders a grid of event cards.
+ * Handles navigation to event details and displays an empty state if no events match.
+ */
 export default function EventsList({ events = [] }) {
   const router = useRouter();
 
+  // Navigate to the specific event details page
   const handleClick = (eventId) => {
     const encId = encodeId(eventId);
     router.push(`/event/${encId}`);
   };
 
+  // Render empty state if the event list is empty
   if (!events.length) {
     return (
       <div className="events-empty">

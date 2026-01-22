@@ -22,6 +22,11 @@ import {
 import Footer from "../../../components/global/Footer/Footer";
 import { useLoading } from "../../../context/LoadingContext";
 
+/**
+ * OrganizationClient Component
+ * Client-side wrapper to display organization details and their events.
+ * Fetches data based on the organization slug.
+ */
 export default function OrganizationClient({ slug }) {
   const router = useRouter();
 

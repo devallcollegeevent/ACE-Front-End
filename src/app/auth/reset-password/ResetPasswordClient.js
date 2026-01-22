@@ -26,20 +26,34 @@ import {
 } from "../../../const-value/config-message/page";
 import { useLoading } from "../../../context/LoadingContext";
 
+/**
+ * ResetPasswordPage (client)
+ *
+ * - Reads role from query params to choose assets/redirects.
+ * - Loads the email from local storage (saved during forgot-password flow).
+ * - Validates new password + confirmation using `userResetSchema`.
+ * - Calls resetPasswordApi to persist the new password and clears stored email on success.
+ * - Uses global loading context and toast notifications for UX feedback.
+ */
 export default function ResetPasswordPage() {
+  // query param role (defaults to user)
   const params = useSearchParams();
   const role = params.get("role") || ROLE_USER;
 
+  // global loading context (used to block UI during async operations)
   const { setLoading } = useLoading(); 
 
+  // email persisted from previous step (forgot password -> enter otp -> reset)
   const email = getEmail();
 
+  // local controlled inputs
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  // visibility toggles for password fields
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
 
-  // ROLE BASED CONFIG
+  // ROLE BASED CONFIG: images and redirects differ for user / organizer flows
   const config = {
     user: {
       image: "/images/auth-forgot.png",
@@ -55,10 +69,14 @@ export default function ResetPasswordPage() {
 
   const ui = config[role];
 
+  // Form submit:
+  // 1) validate inputs with YUP schema
+  // 2) call API to reset password
+  // 3) clear stored email and redirect on success
   async function onSubmit(e) {
     e.preventDefault();
 
-    // YUP VALIDATION
+    // CLIENT-SIDE VALIDATION using Yup schema
     try {
       await userResetSchema.validate(
         { password, confirmPassword: confirm },
@@ -68,22 +86,25 @@ export default function ResetPasswordPage() {
       return toast.error(err.errors[0]);
     }
     finally {
+      // ensure loading is off if validation threw; note setLoading(true) is set before API
       setLoading(false); 
     }
 
 
 
-    // API CALL
+    // API CALL: reset password on backend
     try {
       await resetPasswordApi({
         email,
         password,
       });
 
+      // success -> notify, clear persisted email, and redirect
       toast.success(MSG_PASSWORD_UPDATED_SUCCESS);
       clearEmail();
       window.location.href = ui.redirect;
     } catch (err) {
+      // show backend error if available otherwise generic message
       toast.error(err?.response?.data?.message || MSG_PASSWORD_UPDATED_FAILED);
     } finally {
       setLoading(false); 

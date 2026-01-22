@@ -1,5 +1,14 @@
 "use client";
 
+/**
+ * SuccessClient
+ *
+ * Displays a success/confirmation screen after password reset or account signup.
+ * - Reads `role` from query params to pick images, title, subtitle and login link.
+ * - Uses the shared layout used across auth screens (left illustration + right card).
+ * - Keeps UI stateless and purely presentational.
+ */
+
 import { useSearchParams } from "next/navigation";
 import "./success.css";
 import {
@@ -14,11 +23,14 @@ import {
 import { useLoading } from "../../../context/LoadingContext";
 
 export default function SuccessClient() {
+  // read role from query params (defaults to user)
   const params = useSearchParams();
   const role = params.get("role") || ROLE_USER;
 
+  // global loading context is available if parent toggles it (not used here)
   const { setLoading } = useLoading();
 
+  // UI configuration per role to keep JSX concise
   const config = {
     user: {
       image: "/images/auth-forgot.png",
@@ -38,10 +50,12 @@ export default function SuccessClient() {
 
   return (
     <div className="org-shell">
+      {/* LEFT: illustration */}
       <aside className="org-left">
         <img className="org-left-img" src={ui.image} alt={IMAGE_ALT} />
       </aside>
 
+      {/* RIGHT: success card */}
       <main className="org-right">
         <div className="org-card org-success">
           <h2 className="org-title">{ui.title}</h2>

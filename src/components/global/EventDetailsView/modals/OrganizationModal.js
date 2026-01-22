@@ -2,6 +2,10 @@
 import { useState } from "react";
 import "./OrganizationModal.css";
 
+/**
+ * OrganizationModal Component
+ * Modal to edit organization/collaborator details.
+ */
 export default function OrganizationModal({ orgs = [], onClose, onSave }) {
 
   // editable local state

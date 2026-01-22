@@ -23,6 +23,11 @@ import { processImage } from "../../../../../lib/utils/imageProcessor";
 import { ticketSchema } from "../../../../../components/validation";
 import toast from "react-hot-toast";
 
+/**
+ * MediaTickets Component
+ * Handles media uploads (images, links), perks, certifications, accommodations,
+ * and ticket creation/management.
+ */
 export default function MediaTickets({
   data,
   setData,
@@ -60,6 +65,7 @@ export default function MediaTickets({
   const fileInputRef = useRef(null);
   const [images, setImages] = useState([]);
 
+  // Handle image file selection, validation, and compression
   const handleFileSelect = async (e) => {
     const files = Array.from(e.target.files || []);
     let updatedImages = [...images];
@@ -87,10 +93,12 @@ export default function MediaTickets({
     e.target.value = "";
   };
 
+  // Remove a selected image from the preview list
   const removeImage = (index) => {
     setImages((prev) => prev.filter((_, i) => i !== index));
   };
 
+  // Reset all local state and parent data when resetSignal is triggered
   useEffect(() => {
     // reset local UI states
     setTickets([]);
@@ -127,6 +135,7 @@ export default function MediaTickets({
   }, [resetSignal]);
 
   /* ================= SYNC TO PARENT ================= */
+  // Sync local state changes back to the parent data object
   useEffect(() => {
     setData({
       ...data,
@@ -140,6 +149,7 @@ export default function MediaTickets({
   }, [perks, certification, accommodation, paymentLink, tickets, images]);
 
   /* ================= API LOADS ================= */
+  // Fetch dropdown options for perks, certifications, and accommodations
   useEffect(() => {
     getPerksApi().then((res) => res?.status && setPerksList(res.data));
     getCertificationsApi().then((res) => res?.status && setCertList(res.data));
@@ -150,6 +160,7 @@ export default function MediaTickets({
 
   /* ================= TICKET ================= */
 
+  // Open modal to add a new ticket
   const handleAddTicket = () => {
     setEditingIndex(null);
     setTicketForm({
@@ -164,6 +175,7 @@ export default function MediaTickets({
     setOpenTicketModal(true);
   };
 
+  // Open modal to edit an existing ticket
   const handleEditTicket = (ticket, index) => {
     setEditingIndex(index);
     setTicketForm(ticket);
@@ -171,6 +183,7 @@ export default function MediaTickets({
     setOpenTicketModal(true);
   };
 
+  // Validate and save ticket data (add or update)
   const handleSaveTicket = async () => {
     try {
       await ticketSchema.validate(

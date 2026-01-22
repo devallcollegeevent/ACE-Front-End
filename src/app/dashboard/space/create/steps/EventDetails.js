@@ -15,6 +15,15 @@ import {
 } from "../../../../../lib/location.api";
 import { useLoading } from "../../../../../context/LoadingContext";
 
+
+// EventDetails component
+// ----------------------
+// Purpose:
+//   Manages creation/editing of primary event details including title,
+//   category/type, tags, description, calendar entries, mode (online/offline/hybrid),
+//   and offline location information (country/state/city).
+//
+
 export default function EventDetails({
   data,
   setData,
@@ -35,6 +44,7 @@ export default function EventDetails({
   const [cities, setCities] = useState([]);
 
   /* ================= LOAD CATEGORIES ================= */
+  // Fetch available event categories on component mount
   useEffect(() => {
     async function loadCategories() {
       try {
@@ -51,6 +61,7 @@ export default function EventDetails({
   }, []);
 
   /* ================= LOAD EVENT TYPES (ON CATEGORY CHANGE) ================= */
+  // Fetch specific event types when the selected category changes
   useEffect(() => {
     if (!data.category) return;
 
@@ -69,6 +80,7 @@ export default function EventDetails({
   }, [data.category]);
 
   /* ================= LOAD COUNTRIES ================= */
+  // Fetch list of countries for the location dropdown
   useEffect(() => {
     async function loadCountries() {
       setLoading(true);
@@ -80,6 +92,7 @@ export default function EventDetails({
   }, [setLoading]);
 
   /* ================= LOAD STATES ================= */
+  // Fetch states based on the selected country
   useEffect(() => {
     if (!data.country) {
       setStates([]);
@@ -96,6 +109,7 @@ export default function EventDetails({
   }, [data.country, setLoading]);
 
   /* ================= LOAD CITIES ================= */
+  // Fetch cities based on the selected country and state
   useEffect(() => {
     if (!data.state || !data.country) {
       setCities([]);
@@ -111,6 +125,7 @@ export default function EventDetails({
     loadCities();
   }, [data.state, data.country, setLoading]);
 
+  // Add a new tag to the list if it's not empty and doesn't already exist
   const addTag = () => {
     let value = tagInput.trim();
     if (!value) return;
@@ -128,6 +143,7 @@ export default function EventDetails({
     setTagInput("");
   };
 
+  // Remove a specific tag from the list
   const removeTag = (tag) => {
     setData({
       ...data,
@@ -136,6 +152,7 @@ export default function EventDetails({
   };
 
   /* ================= RESET ON SUCCESS ================= */
+  // Reset form state when the parent component signals a reset
   useEffect(() => {
     if (!resetSignal) return;
 
@@ -315,7 +332,7 @@ export default function EventDetails({
         )}
       </div>
 
-      {/* EVENT MODE – SAME UI AS OLD */}
+      {/* EVENT MODE */}
       <div className={styles.card}>
         <h3 className={styles.cardTitle}>Event Mode</h3>
 

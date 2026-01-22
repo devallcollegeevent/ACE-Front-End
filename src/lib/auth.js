@@ -1,5 +1,9 @@
 import { jwtDecode } from "jwt-decode";
 
+/**
+ * Auth Utilities
+ * Helper functions for managing authentication tokens and user data in LocalStorage.
+ */
 /* ================= TOKEN ================= */
 
 export const saveToken = (token) => {

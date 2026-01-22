@@ -2,6 +2,10 @@
 
 import styles from "./Modal.module.css";
 
+/**
+ * TicketModal Component
+ * A modal form for creating or editing event tickets, supporting both free and paid types.
+ */
 export default function TicketModal({
   open,
   onClose,

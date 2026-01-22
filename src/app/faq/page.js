@@ -33,10 +33,15 @@ const FAQ_DATA = [
   },
 ];
 
+/**
+ * FAQ Page Component
+ * Displays frequently asked questions with category filtering and an inquiry form.
+ */
 export default function FAQ() {
   const [activeTab, setActiveTab] = useState("All");
   const [openIndex, setOpenIndex] = useState(null);
 
+  // Filter FAQs based on the selected tab
   const filteredFaqs =
     activeTab === "All"
       ? FAQ_DATA

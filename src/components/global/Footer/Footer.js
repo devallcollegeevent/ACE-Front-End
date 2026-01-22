@@ -14,6 +14,10 @@ import {
 import styles from "./Footer.module.css";
 import { useRouter } from "next/navigation";
 
+/**
+ * Footer Component
+ * Renders the site-wide footer with navigation links, social media icons, and subscription form.
+ */
 export default function Footer() {
   const router = useRouter();
   return (

@@ -1,5 +1,9 @@
 // src/const-value/storage/page.js
 
+/**
+ * Storage Keys
+ * Constants for LocalStorage and Cookie keys to ensure consistency in data persistence.
+ */
 // LOCAL STORAGE KEYS
 export const STORAGE_TOKEN = "token";
 export const STORAGE_USER_DATA = "userData";

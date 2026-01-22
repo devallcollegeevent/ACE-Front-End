@@ -2,6 +2,10 @@
 
 import styles from "./Modal.module.css";
 
+/**
+ * ConfirmModal Component
+ * A generic modal for confirming actions with a title, description, and optional image.
+ */
 export default function ConfirmModal({
   open,
   title,

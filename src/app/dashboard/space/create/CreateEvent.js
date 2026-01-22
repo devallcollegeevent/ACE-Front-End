@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import { useState } from "react";
 import styles from "./CreateEvent.module.css";
@@ -62,6 +62,14 @@ const INITIAL_FORM_DATA = {
   },
 };
 
+/**
+ * CreateEvent Component
+ * Manages the multi-step wizard for creating an event.
+ * Steps:
+ * 1. Organizer Details
+ * 2. Event Details
+ * 3. Media & Tickets
+ */
 export default function CreateEvent() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
@@ -70,6 +78,7 @@ export default function CreateEvent() {
   const [resetSignal, setResetSignal] = useState(0);
 
   /* ================= STEP 1 ================= */
+  // Validate Organizer Details before proceeding to Step 2
   const handleStep1Next = async () => {
     try {
       await createEventStep1Schema.validate(formData.organizer, {
@@ -82,6 +91,7 @@ export default function CreateEvent() {
   };
 
   /* ================= STEP 2 ================= */
+  // Validate Event Details before proceeding to Step 3
   const handleStep2Next = async () => {
     try {
       await createEventStep2Schema.validate(formData.event, {
@@ -94,6 +104,7 @@ export default function CreateEvent() {
   };
 
   /* ================= FINAL SUBMIT ================= */
+  // Validate Media/Tickets, construct FormData, and submit to API
   const handleFinalSubmit = async () => {
     try {
       await createEventStep3Schema.validate(formData.media, {
@@ -236,8 +247,10 @@ export default function CreateEvent() {
 
   return (
     <div className={styles.wrapper}>
+      {/* Stepper Navigation */}
       <Stepper step={step} />
 
+      {/* Step 1: Organizer Details */}
       {step === 1 && (
         <OrganizerDetails
           data={formData.organizer}
@@ -247,6 +260,7 @@ export default function CreateEvent() {
         />
       )}
 
+      {/* Step 2: Event Details */}
       {step === 2 && (
         <EventDetails
           data={formData.event}
@@ -257,6 +271,7 @@ export default function CreateEvent() {
         />
       )}
 
+      {/* Step 3: Media & Tickets */}
       {step === 3 && (
         <MediaTickets
           data={formData.media}

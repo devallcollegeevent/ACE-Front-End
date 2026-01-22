@@ -34,17 +34,28 @@ import {
 /* GLOBAL LOADING */
 import { useLoading } from "../../../context/LoadingContext";
 
+/**
+ * EnterOtpClient
+ *
+ * UI for entering a 4-digit OTP sent to user's email.
+ * - Reads role from query params to adjust assets/redirect.
+ * - Pre-fills email from local storage (getEmail).
+ * - Validates OTP with otpSchema and calls verifyOtpApi.
+ * - Supports resending OTP via resendOtpApi.
+ */
 export default function EnterOtpClient() {
   const router = useRouter();
   const params = useSearchParams();
   const role = params.get("role") || ROLE_USER;
 
+  // local state
   const [email, setEmail] = useState("");
-  const [otp, setOtp] = useState(["", "", "", ""]);
+  const [otp, setOtp] = useState(["", "", "", ""]); // stores 4 single-digit inputs
   const [resendLoading, setResendLoading] = useState(false);
 
   const { loading, setLoading } = useLoading();
 
+  // refs for input focus management
   const inputs = [
     useRef(null),
     useRef(null),
@@ -52,11 +63,13 @@ export default function EnterOtpClient() {
     useRef(null),
   ];
 
+  // load previously stored email once
   useEffect(() => {
     const storedEmail = getEmail();
     if (storedEmail) setEmail(storedEmail);
   }, []);
 
+  // UI/redirect config per role
   const config = {
     user: {
       image: "/images/auth-forgot.png",
@@ -70,6 +83,7 @@ export default function EnterOtpClient() {
 
   const ui = config[role];
 
+  // handle input change: only digits allowed, auto-focus next input
   function onChange(index, value) {
     if (!/^\d*$/.test(value)) return;
 
@@ -82,6 +96,7 @@ export default function EnterOtpClient() {
     }
   }
 
+  // submit OTP: validate then call API
   async function onSubmit(e) {
     e.preventDefault();
     const code = otp.join("");
@@ -109,6 +124,7 @@ export default function EnterOtpClient() {
     }
   }
 
+  // resend OTP handler
   async function resendCode() {
     try {
       setResendLoading(true);

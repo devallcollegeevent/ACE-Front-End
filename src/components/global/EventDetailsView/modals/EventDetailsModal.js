@@ -1,6 +1,10 @@
 "use client";
 import "./EventDetailsModal.css";
 
+/**
+ * EventDetailsModal Component
+ * A menu modal to navigate between different edit sections (Organization, Offers, Social Media).
+ */
 export default function EventDetailsModal({
   onClose,
   onOrgClick,

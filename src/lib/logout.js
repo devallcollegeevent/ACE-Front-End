@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Logout Utilities
+ * Functions to handle user and organizer logout processes, clearing cookies and storage.
+ */
 export function logoutUser() {
   // Clear cookies
   document.cookie = "token=; path=/; max-age=0";

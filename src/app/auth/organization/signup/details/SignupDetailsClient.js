@@ -32,25 +32,40 @@ import {
   getCities,
 } from "../../../../../lib/location.api";
 
+/**
+ * SignupDetailsClient
+ *
+ * Client component for the "Details" step of organizer signup.
+ * - Loads country/state/city lists from location API.
+ * - Collects org location and name, validates required fields.
+ * - Navigates to account creation step with query params on success.
+ */
+
 export default function Page() {
   const router = useRouter();
   const params = useSearchParams();
   const category = params.get("cat");
 
+  // form fields
   const [country, setCountry] = useState("");
   const [stateName, setStateName] = useState("");
   const [city, setCity] = useState("");
   const [orgName, setOrgName] = useState("");
 
+  // lists for selects
   const [countries, setCountries] = useState([]);
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
 
+  // loading flags for each list (used to show appropriate placeholder)
   const [loadingCountry, setLoadingCountry] = useState(false);
   const [loadingState, setLoadingState] = useState(false);
   const [loadingCity, setLoadingCity] = useState(false);
 
-  /* LOAD COUNTRIES */
+  /* LOAD COUNTRIES ON MOUNT
+     - Fetch top-level country list once when component mounts.
+     - Keep UI responsive by toggling loading flag and fallback to empty list on error.
+  */
   useEffect(() => {
     async function load() {
       setLoadingCountry(true);
@@ -67,7 +82,10 @@ export default function Page() {
     load();
   }, []);
 
-  /* LOAD STATES */
+  /* LOAD STATES WHEN COUNTRY CHANGES
+     - Clear dependent fields if country is unset.
+     - Fetch states for selected country and populate state select.
+  */
   useEffect(() => {
     if (!country) {
       setStates([]);
@@ -90,7 +108,10 @@ export default function Page() {
     load();
   }, [country]);
 
-  /* LOAD CITIES */
+  /* LOAD CITIES WHEN STATE CHANGES
+     - Clear cities if state is unset.
+     - Fetch cities for selected country & state.
+  */
   useEffect(() => {
     if (!stateName) {
       setCities([]);
@@ -113,6 +134,7 @@ export default function Page() {
     load();
   }, [stateName, country]);
 
+  // Continue handler: validate required fields and navigate to account page
   function onContinue(e) {
     e.preventDefault();
 
@@ -127,7 +149,7 @@ export default function Page() {
 
   return (
     <div className="org-shell">
-      {/* LEFT IMAGE – SAME AS OLD */}
+      {/* LEFT ILLUSTRATION */}
       <aside
         className="org-left"
         style={{ backgroundImage: "url('/images/organizer-bg-circles.png')" }}
@@ -142,7 +164,7 @@ export default function Page() {
       {/* RIGHT FORM */}
       <main className="org-right">
         <div className="org-card">
-          {/* STEPPER */}
+          {/* STEP INDICATOR (Category -> Details -> Account) */}
           <div className="org-stepper">
             <div className="org-step active">
               <div className="dot">1</div>
@@ -168,7 +190,7 @@ export default function Page() {
           <p className="org-sub">{SUBTITLE_ORG_DETAILS}</p>
 
           <form className="org-form" onSubmit={onContinue}>
-            {/* COUNTRY */}
+            {/* COUNTRY SELECT */}
             <div className="form-group">
               <label className="form-label">{LABEL_ORG_COUNTRY}</label>
               <select
@@ -187,7 +209,7 @@ export default function Page() {
               </select>
             </div>
 
-            {/* STATE */}
+            {/* STATE SELECT */}
             <div className="form-group">
               <label className="form-label">{LABEL_ORG_STATE}</label>
               <select
@@ -210,7 +232,7 @@ export default function Page() {
               </select>
             </div>
 
-            {/* CITY */}
+            {/* CITY SELECT */}
             <div className="form-group">
               <label className="form-label">{LABEL_ORG_CITY}</label>
               <select
@@ -233,7 +255,7 @@ export default function Page() {
               </select>
             </div>
 
-            {/* ORG NAME */}
+            {/* ORGANIZATION NAME */}
             <div className="form-group">
               <label className="form-label">{LABEL_ORG_NAME}</label>
               <input

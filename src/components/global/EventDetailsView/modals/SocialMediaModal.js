@@ -2,6 +2,10 @@
 import { useState } from "react";
 import "./SocialMediaModal.css";
 
+/**
+ * SocialMediaModal Component
+ * Modal to edit social media links for the event.
+ */
 export default function SocialMediaModal({ value = {}, onClose, onSave }) {
   const [form, setForm] = useState({
     whatsapp: value.whatsapp || "",

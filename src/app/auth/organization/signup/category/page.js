@@ -30,6 +30,15 @@ import {
   TEXT_SIGNIN,
 } from "../../../../../const-value/config-message/page";
 
+/*
+  Organization Signup — Category Selection Page
+  - Presents a grid of organization categories for the user to choose.
+  - Requires a selection before continuing to the "details" step.
+  - Simple stepper at top shows progress (Category -> Details -> Account).
+  - Selected category is passed in the query string to the next step.
+*/
+
+/* Available categories with display title and icon */
 const CATEGORIES = [
   { id: "college", title: "College / University", icon: UNIVERSITYICONS },
   { id: "training", title: "Training Institute", icon: TRAININGICON },
@@ -46,24 +55,29 @@ export default function Page() {
   const router = useRouter();
   const [selected, setSelected] = useState("");
 
+  // Continue button: ensure a category is selected then navigate to details step
   function onContinue() {
     if (!selected) return toast.error(MSG_ERR_CATEGORY_MISSING);
 
+    // Pass selected category via query param for the next page to consume
     router.push(`/auth/organization/signup/details?cat=${selected}`);
   }
 
+  // Quick navigation helper to switch to user signup flow
   const handleUserLogin = () => {
     router.push("/auth/user/signup");
   };
   return (
     <div className="container py-5">
+      {/* Top controls: switch to user signup */}
       <div className="organization-sections mt-4">
         <div className="Switch-to-Organizer" onClick={handleUserLogin}>
           Switch to User Sign Up
         </div>
         <div>{PAGEMOVEICON}</div>
       </div>
-      {/* STEPPER */}
+      
+      {/* STEP INDICATOR: shows current step (Category) */}
       <div className="org-stepper">
         <div className="org-step active">
           <div className="dot">1</div>
@@ -88,7 +102,10 @@ export default function Page() {
       {/* Page Title */}
       <h2 className="text-center fw-bold">{TITLE_ORG_ACCOUNT_CREATION}</h2>
 
-      {/* Category Grid */}
+      {/* Category Grid
+          - Renders cards for each category.
+          - Clicking a card sets it as selected (visual border highlight).
+      */}
       <div className="row g-3">
         {CATEGORIES.map((c) => (
           <div key={c.id} className="col-md-4 col-sm-6 col-12">
@@ -108,14 +125,14 @@ export default function Page() {
         ))}
       </div>
 
-      {/* Continue Button */}
+      {/* Continue Button: advances to next signup step */}
       <div className="mt-4 text-center btn-container">
         <button className="btn continue-btn" onClick={onContinue}>
           {BTN_CONTINUE}
         </button>
       </div>
 
-      {/* Footer */}
+      {/* Footer: link to organizer login */}
       <div className="text-center mt-3">
         <small>
           {TEXT_NO_ACCOUNT}{" "}

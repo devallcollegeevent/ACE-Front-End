@@ -1,6 +1,10 @@
 import axios from "axios";
 import { getToken } from "./auth";
 
+/**
+ * Private Axios Instance
+ * Configured for authenticated requests with interceptors to attach tokens and handle 401 errors.
+ */
 const apiPrivate = axios.create({
   baseURL:
     typeof window === "undefined"

@@ -1,6 +1,10 @@
 "use client";
 import "./EmptyState.css";
 
+/**
+ * EmptyState Component
+ * Reusable component to display a placeholder image and text when no data is available.
+ */
 export default function EmptyState({
   image = "/images/no-event-image.png",
   title = "No events created yet",

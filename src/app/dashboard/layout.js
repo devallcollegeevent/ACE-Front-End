@@ -5,7 +5,11 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Topbar from "./components/Topbar/Topbar";
 import styles from "./Dashboard.module.css";
 import ProfileHeader from "./components/ProfileHeader/ProfileHeader";
-
+ 
+/**
+ * DashboardLayout Component
+ * Main layout wrapper for the dashboard. Handles sidebar navigation and conditional header rendering.
+ */
 export default function DashboardLayout({ children }) {
   const pathname = usePathname();
 

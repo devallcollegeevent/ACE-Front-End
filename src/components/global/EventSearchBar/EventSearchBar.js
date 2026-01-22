@@ -2,6 +2,11 @@
 
 import styles from "./EventSearchBar.module.css";
 
+/**
+ * EventSearchBar Component
+ * Renders a search bar with three sections: What (Event Type), Where (Location), and When (Date).
+ *
+ */
 export default function EventSearchBar({
   whatIcon,
   whereIcon,
@@ -14,6 +19,7 @@ export default function EventSearchBar({
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.row}>
+          {/* What Section - Event Type */}
           <div className={styles.col} onClick={onWhatClick}>
             <div className={styles.icon}>{whatIcon}</div>
             <div>
@@ -22,6 +28,7 @@ export default function EventSearchBar({
             </div>
           </div>
 
+          {/* Where Section - Location */}
           <div className={styles.col} onClick={onWhereClick}>
             <div className={styles.icon}>{whereIcon}</div>
             <div>
@@ -30,6 +37,7 @@ export default function EventSearchBar({
             </div>
           </div>
 
+          {/* When Section - Date */}
           <div className={styles.col} onClick={onWhenClick}>
             <div className={styles.icon}>{whenIcon}</div>
             <div>

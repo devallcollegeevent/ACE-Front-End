@@ -8,6 +8,10 @@ import {
 } from "../../../../lib/api/event.api";
 import "./OtherDetailsModal.css";
 
+/**
+ * OtherDetailsModal Component
+ * Modal to edit additional event details like Certifications, Perks, Accommodation, and Links.
+ */
 export default function OtherDetailsModal({
   value,   // single event la irunthu varra identities
   onClose,

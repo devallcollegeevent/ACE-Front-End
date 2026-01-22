@@ -10,6 +10,10 @@ const DATA = [
   { emoji: "😊", name: "Jerome Bell", role: "User" },
 ];
 
+/**
+ * VoiceOfTrust Component
+ * Displays user and organizer testimonials in an infinite scrolling marquee.
+ */
 export default function VoiceOfTrust() {
   return (
     <section className={styles.wrapper}>
@@ -38,6 +42,7 @@ export default function VoiceOfTrust() {
   );
 }
 
+// Individual testimonial card
 function Card({ item }) {
   return (
     <div className={styles.card}>

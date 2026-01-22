@@ -18,6 +18,11 @@ import EventsList from "./components/EventsList";
 import SortBar from "./components/SortBar";
 import PaginationBar from "./components/PaginationBar";
 
+/**
+ * EventsFilterPage Component
+ * Main container for the events listing page.
+ * Manages state for events, filters, sorting, and pagination.
+ */
 export default function EventsFilterPage() {
   const params = useSearchParams();
 
@@ -42,6 +47,7 @@ export default function EventsFilterPage() {
   const PAGE_SIZE = 6;
 
   /* ================= API LOAD ================= */
+  // Fetch initial data: events, categories, perks, certifications
   useEffect(() => {
     getAllEventsApi().then((r) => r?.status && setEvents(r.data));
     getEventCategoriesApi().then((r) => r?.success && setCategories(r.data));
@@ -49,6 +55,7 @@ export default function EventsFilterPage() {
     getCertificationsApi().then((r) => r?.success && setCertifications(r.data));
   }, []);
 
+  // Fetch event types when a specific category is selected
   useEffect(() => {
     if (filters.category) {
       getEventTypesApi(filters.category).then(
@@ -58,6 +65,7 @@ export default function EventsFilterPage() {
   }, [filters.category]);
 
   /* ================= FILTER LOGIC ================= */
+  // Filter and sort events based on current state
   const filteredEvents = useMemo(() => {
     let list = [...events];
 
@@ -89,6 +97,7 @@ export default function EventsFilterPage() {
   }, [events, filters, sort]);
 
   /* ================= PAGINATION ================= */
+  // Calculate pagination derived from filtered results
   const totalPages = Math.ceil(filteredEvents.length / PAGE_SIZE);
 
   const paginatedEvents = filteredEvents.slice(
@@ -96,6 +105,7 @@ export default function EventsFilterPage() {
     page * PAGE_SIZE
   );
 
+  // Reset to page 1 when filters or sort order change
   useEffect(() => {
   setPage(1);
 }, [filters, sort]);

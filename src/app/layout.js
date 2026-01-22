@@ -20,6 +20,13 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+/**
+ * Root Layout
+ * Wraps the entire application with necessary providers:
+ * - LoadingProvider: Global loading state
+ * - GoogleOAuthProvider: Authentication
+ * - Providers: Other app-specific contexts
+ */
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

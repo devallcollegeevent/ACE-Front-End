@@ -1,3 +1,7 @@
+/**
+ * API Endpoints
+ * Centralized configuration for all API route paths.
+ */
 export const API_ENDPOINTS = {
   /* ================= EVENTS ================= */
   EVENTS: {

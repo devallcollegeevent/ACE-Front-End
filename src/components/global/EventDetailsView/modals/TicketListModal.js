@@ -2,12 +2,17 @@
 import { DELETICON, EDITICON } from "../../../../const-value/config-icons/page";
 import "./TicketListModal.css";
 
+/**
+ * TicketListModal Component
+ * Displays a list of tickets associated with an event in a modal.
+ */
 export default function TicketListModal({
   tickets = [],
   onClose,
   onEditTicket,
   onDeleteTicket,
 }) {
+  // Helper to format ISO date strings to readable format (e.g., 01 Jan 2024)
   const formatDateOnly = (iso) => {
     if (!iso) return "-";
 

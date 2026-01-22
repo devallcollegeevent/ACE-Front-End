@@ -4,15 +4,31 @@ import { useEffect, useState } from "react";
 import styles from "./Notification.module.css";
 import { MdEmail } from "react-icons/md";
 import { IoNotificationsOutline } from "react-icons/io5";
+
+/**
+ * NotificationPage
+ *
+ * Simple settings page to toggle notification channels.
+ * - Email notifications
+ * - WhatsApp notifications
+ *
+ * State is local-only; persist changes via API when backend integration is added.
+ */
+
 export default function NotificationPage() {
+  // Toggle state for email notifications (on by default)
   const [emailNotify, setEmailNotify] = useState(true);
+
+  // Toggle state for WhatsApp notifications (off by default)
   const [whatsappNotify, setWhatsappNotify] = useState(false);
+
 
 
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.heading}>Notification</h2>
 
+      {/* Email notification toggle */}
       <div className={styles.card}>
         <div className={styles.left}>
           <MdEmail className={styles.icon} />
@@ -34,6 +50,7 @@ export default function NotificationPage() {
         </label>
       </div>
 
+      {/* WhatsApp notification toggle */}
       <div className={styles.card}>
         <div className={styles.left}>
           <IoNotificationsOutline className={styles.icon} />

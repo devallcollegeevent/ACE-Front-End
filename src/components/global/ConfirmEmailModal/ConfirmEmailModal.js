@@ -3,6 +3,10 @@
 import { useState, useEffect } from "react";
 import "./ConfirmEmailModal.css";
 
+/**
+ * ConfirmEmailModal Component
+ * A modal that requires the user to type their email to confirm a sensitive action.
+ */
 export default function ConfirmEmailModal({
   open,
   email,

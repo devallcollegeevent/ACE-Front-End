@@ -2,6 +2,10 @@
 
 import styles from "./HeroBanner.module.css";
 
+/**
+ * HeroBanner Component
+ * Displays a large title with animated words and a subtitle.
+ */
 export default function HeroBanner({ text }) {
   const words = text.split(" ");
 

@@ -3,6 +3,10 @@ import imageCompression from "browser-image-compression";
 // 5MB limit
 const MAX_SIZE_MB = 5;
 
+/**
+ * Image Processor
+ * Utility to compress images before upload to optimize performance and storage.
+ */
 export const processImage = async (file) => {
   // size check
   if (file.size / (1024 * 1024) <= MAX_SIZE_MB) {

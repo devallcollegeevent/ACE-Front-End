@@ -1,3 +1,7 @@
+/**
+ * Config Messages
+ * Centralized store for static text, labels, messages, and titles used throughout the application.
+ */
 // META TITEL
 
 export const METADATA_TITEL = "AllCollegeEvent"

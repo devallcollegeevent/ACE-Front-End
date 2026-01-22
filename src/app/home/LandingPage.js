@@ -29,6 +29,11 @@ import { useLoading } from "../../context/LoadingContext.js";
 import { getAllOrganizationsApi } from "../../lib/api/organizer.api.js";
 import FloatingExploreButton from "../../components/global/FloatingExploreButton/FloatingExploreButton.js";
 
+/**
+ * LandingPage Component
+ * The main home page of the application.
+ * Displays hero banners, event categories, trending events, and spotlights.
+ */
 export default function LandingPage() {
   const [openLB, setOpenLB] = useState(false);
   const [events, setEvents] = useState([]);

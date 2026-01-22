@@ -1,5 +1,9 @@
 import * as Yup from "yup";
 
+/**
+ * Validation Schemas
+ * Centralized Yup validation schemas for forms across the application.
+ */
 /* ===========================
    COMMON HELPERS
 =========================== */
@@ -146,7 +150,6 @@ export const createEventStep2Schema = Yup.object({
 });
 
 // STEP 3 – Media & Tickets
-// STEP 3
 export const ticketSchema = Yup.object({
   ticketType: Yup.string()
     .oneOf(["FREE", "PAID"])

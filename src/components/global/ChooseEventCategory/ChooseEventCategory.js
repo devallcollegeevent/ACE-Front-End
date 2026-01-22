@@ -3,9 +3,14 @@
 import styles from "./ChooseEventCategory.module.css";
 import { useRouter } from "next/navigation";
 
+/**
+ * ChooseEventCategory Component
+ * Displays a grid of event categories (Conferences, Hackathons, etc.) for quick navigation.
+ */
 export default function ChooseEventCategory({ categories = [] }) {
   const router = useRouter();
 
+  // Navigate to specific category page or general events page
   const handleCardClick = (category) => {
     if (category.class === "explore") {
       router.push("/explore-categories");

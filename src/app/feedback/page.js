@@ -3,6 +3,10 @@ import { useState } from "react";
 import styles from "./feedback.module.css";
 import Footer from "../../components/global/Footer/Footer";
 
+/**
+ * FeedbackPage Component
+ * Allows users to submit feedback and ratings for the platform.
+ */
 export default function FeedbackPage() {
   const [rating, setRating] = useState("");
 

@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 
+/**
+ * Middleware
+ * Intercepts requests to handle authentication, route protection, and consent logic.
+ */
 /* ===============================
    ROUTE CONFIG
 ================================ */

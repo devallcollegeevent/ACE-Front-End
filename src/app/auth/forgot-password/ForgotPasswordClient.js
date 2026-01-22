@@ -32,6 +32,14 @@ import { saveEmail } from "../../../lib/auth";
 /* LOADING */
 import { useLoading } from "../../../context/LoadingContext";
 
+/**
+ * ForgotPasswordClient
+ *
+ * Simple client UI for requesting a password reset OTP.
+ * - Validates input using role-specific schema.
+ * - Calls forgotApi to send OTP to provided email.
+ * - Saves email to local storage and navigates to Enter OTP screen on success.
+ */
 export default function ForgotPasswordClient() {
   const router = useRouter();
   const params = useSearchParams();
@@ -40,6 +48,7 @@ export default function ForgotPasswordClient() {
   const { setLoading } = useLoading();
   const [email, setEmail] = useState("");
 
+  // UI and behavior configuration per role (user / organizer)
   const config = {
     user: {
       image: "/images/auth-forgot.png",
@@ -61,6 +70,10 @@ export default function ForgotPasswordClient() {
 
   const ui = config[role];
 
+  // Form submit handler:
+  // - validate input with role-specific schema
+  // - call API to send OTP
+  // - persist email locally and navigate to OTP entry on success
   async function onSubmit(e) {
     e.preventDefault();
 
@@ -77,6 +90,7 @@ export default function ForgotPasswordClient() {
         email,
       });
 
+      // keep email for next screen (Enter OTP)
       saveEmail(email);
       toast.success(MSG_OTP_SEND_EMAIL);
       router.push(ui.redirect);
@@ -89,10 +103,12 @@ export default function ForgotPasswordClient() {
 
   return (
     <div className="org-shell">
+      {/* Illustration / left column */}
       <aside className="org-left">
         <img src={ui.image} className="org-left-img" alt="Forgot Password" />
       </aside>
 
+      {/* Form / right column */}
       <main className="org-right">
         <div className="org-card">
           <h2 className="org-title">Forgot Password</h2>

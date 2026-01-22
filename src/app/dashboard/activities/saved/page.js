@@ -1,5 +1,13 @@
 "use client";
 
+/**
+ * SavedEventsPage
+ *
+ * - Loads saved events on mount and displays them via EventSlider.
+ * - Shows a lightweight empty state when there are no events.
+ * - Uses the global loading context to indicate network activity.
+ *
+ */
 import { useEffect, useState } from "react";
 import styles from "./Saved.module.css";
 import EventSlider from "../../../../components/global/EventSlider/EventSlider";
@@ -13,6 +21,8 @@ export default function SavedEventsPage() {
   const { setLoading: setGlobalLoading } = useLoading();
   const router = useRouter();
 
+  // Fetch saved events from backend and update state.
+  // Keeps a global loading indicator active while the request is in-flight.
   const loadEvents = async () => {
     setGlobalLoading(true);
     try {
@@ -23,17 +33,22 @@ export default function SavedEventsPage() {
         toast.error(res?.message || "Failed to load events");
       }
     } catch {
+      // Log the error for debugging and show a user-friendly message.
       toast.error("Something went wrong");
     } finally {
       setGlobalLoading(false);
     }
   };
 
+  // Load events once on mount.
   useEffect(() => {
     loadEvents();
   }, []);
 
-  /* ================= EMPTY STATE ================= */
+  /* ================= EMPTY STATE =================
+     Displayed when there are no saved events.
+     - Provides a clear CTA to explore events.
+  */
   if (!events || events.length === 0) {
     return (
       <div className={styles.wrapper}>
@@ -60,7 +75,9 @@ export default function SavedEventsPage() {
     );
   }
 
-  /* ================= NORMAL ================= */
+  /* ================= NORMAL =================
+     Render the EventSlider with the fetched events.
+  */
   return (
     <div className={styles.wrapper}>
       <EventSlider title="Saved Events" data={events} />

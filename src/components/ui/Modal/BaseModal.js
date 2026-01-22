@@ -1,3 +1,7 @@
+/**
+ * BaseModal Component
+ * A basic modal structure with a header, body, and optional footer.
+ */
 export default function BaseModal({ title, onClose, children, footer }) {
   return (
     <div className="modal-overlay">

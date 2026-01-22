@@ -1,6 +1,10 @@
 "use client";
 import styles from "./StoryBehindFest.module.css";
 
+/**
+ * StoryBehindFest Component
+ * Visual section displaying a collage of images representing the platform's journey.
+ */
 export default function StoryBehindFest() {
   const images = [
     "/images/aboutImageOne.png",

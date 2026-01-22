@@ -2,6 +2,10 @@
 import { useState } from "react";
 import "./OfferModal.css";
 
+/**
+ * OfferModal Component
+ * Modal to edit event offers/discounts text.
+ */
 export default function OfferModal({ value = "", onClose, onSave }) {
   const [offer, setOffer] = useState(value);
 

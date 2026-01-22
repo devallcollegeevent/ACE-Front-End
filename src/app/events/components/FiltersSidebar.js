@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * FiltersSidebar Component
+ * Provides a sidebar with various filter options (Date, Mode, Category, Perks, etc.).
+ */
 export default function FiltersSidebar({
   categories = [],
   eventTypes = [],
@@ -9,6 +13,7 @@ export default function FiltersSidebar({
   onChange,
   onReset,
 }) {
+  // Toggle selection for array-based filters (e.g., mode, perks)
   const toggleArray = (key, value) => {
     onChange((prev) => {
       const exists = prev[key]?.includes(value);

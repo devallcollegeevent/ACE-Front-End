@@ -8,6 +8,11 @@ export const metadata = {
     "Explore college events, workshops, hackathons, concerts and more in one platform.",
 };
 
+/**
+ * Home Page (Server Component)
+ * Fetches initial event and organization data on the server
+ * and passes it to the client-side LandingPage component.
+ */
 export default async function Page() {
   const eventsRes = await getAllEventsApi();
   const orgRes = await getAllOrganizationsApi();

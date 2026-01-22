@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { clearToken } from "../lib/auth";
 
+/**
+ * Auth Slice
+ * Redux slice for managing user authentication state (login, logout, user data).
+ */
 const initialState = {
   user: null,
   organizer: null,

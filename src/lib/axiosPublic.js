@@ -1,5 +1,9 @@
 import axios from "axios";
 
+/**
+ * Public Axios Instance
+ * Configured for public API requests without authentication headers.
+ */
 const apiPublic = axios.create({
   baseURL:
     typeof window === "undefined"

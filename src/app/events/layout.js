@@ -30,6 +30,10 @@ export const metadata = {
   },
 };
 
+/**
+ * Events Layout
+ * Defines metadata for the events section and wraps children components.
+ */
 export default function EventsLayout({ children }) {
   return <>{children}</>; // MUST wrap in JSX
 }

@@ -1,6 +1,10 @@
 "use client";
 import "./TicketEditModal.css";
 
+/**
+ * TicketEditModal Component
+ * Modal to edit details of a specific ticket (Name, Price, Quantity).
+ */
 export default function TicketEditModal({ open, ticket, onClose, onSave }) {
   if (!open || !ticket) return null;
 

@@ -14,6 +14,10 @@ import {
 
 import "./EventSlider.css";
 
+/**
+ * EventSlider Component
+ * Renders a horizontal scrollable list of event cards with navigation controls.
+ */
 export default function EventSlider({
   title,
   data = [],
@@ -26,6 +30,7 @@ export default function EventSlider({
   // like state per card (id based)
   const [likedCards, setLikedCards] = useState({});
 
+  // Toggle the like status for a specific event ID
   const toggleLike = (id) => {
     if (!id) return;
     setLikedCards((prev) => ({
@@ -34,23 +39,28 @@ export default function EventSlider({
     }));
   };
 
+  // Scroll the slider view to the left
   const slideLeft = () => {
     sliderRef.current?.scrollBy({ left: -350, behavior: "smooth" });
   };
 
+  // Scroll the slider view to the right
   const slideRight = () => {
     sliderRef.current?.scrollBy({ left: 350, behavior: "smooth" });
   };
 
+  // Navigate to the specific event details page
   const handleClick = (slug) => {
     if (!slug) return;
     router.push(`/events/${slug}`);
   };
 
+  // Navigate to the main events listing page
   const handleCardClick = () => {
     router.push(`/events`);
   };
 
+  // Format a date string into a readable locale format
   const formatDate = (date) => {
     if (!date) return "N/A";
     return new Date(date).toLocaleDateString("en-IN", {

@@ -39,6 +39,10 @@ export const metadata = {
   },
 };
 
+/**
+ * Explore Categories Layout
+ * Wrapper for the explore categories page.
+ */
 export default function ExploreCategoriesLayout({ children }) {
   return <>{children}</>;
 }

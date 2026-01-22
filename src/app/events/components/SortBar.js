@@ -6,6 +6,10 @@ import {
 } from "../../../const-value/config-icons/page";
 import { FaThLarge, FaListUl } from "react-icons/fa";
 
+/**
+ * SortBar Component
+ * Provides controls for searching, sorting (New, Old, Popular), and toggling view modes.
+ */
 export default function SortBar({ value, onChange, onSearch }) {
   return (
     <div className="sort-bar">

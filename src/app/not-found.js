@@ -3,6 +3,10 @@
 import { useRouter } from "next/navigation";
 import "./not-found.css";
 
+/**
+ * Not Found Page (404)
+ * Custom error page displayed when a route does not exist.
+ */
 export default function NotFound() {
   const router = useRouter();
 

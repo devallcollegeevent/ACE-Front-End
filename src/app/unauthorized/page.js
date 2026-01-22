@@ -1,3 +1,7 @@
+/**
+ * Unauthorized Page
+ * Displayed when a user tries to access a restricted route without permission.
+ */
 export default function UnauthorizedPage() {
   return (
     <div

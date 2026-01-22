@@ -2,6 +2,10 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./JourneyNumbers.module.css";
 
+/**
+ * Counter Component
+ * Animates a number from 0 to 'end' when visible in the viewport.
+ */
 function Counter({ end, label, delay = 0 }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -54,6 +58,10 @@ function Counter({ end, label, delay = 0 }) {
   );
 }
 
+/**
+ * JourneyNumbers Component
+ * Displays statistical milestones (Organizers, Events, Cities) with animated counters.
+ */
 export default function JourneyNumbers() {
   return (
     <section className={styles.wrapper}>

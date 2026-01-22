@@ -20,38 +20,47 @@ import {
 
 import { verifyEmailApi } from "../../../lib/api/auth.api";
 
+// Client component that verifies an email token from the URL query params
 export default function EmailVerifyClient() {
+  // read token query param (e.g. ?token=...)
   const searchParams = useSearchParams();
   const token = searchParams.get(STORAGE_TOKEN);
 
+  // status controls which UI block to show:
+  // MSG_EMAIL_VERIFY_LOADING | MSG_EMAIL_VERIFY_SUCCESS | MSG_EMAIL_VERIFY_FAILED
   const [status, setStatus] = useState(MSG_EMAIL_VERIFY_LOADING);
-  // loading | success | failed
 
   useEffect(() => {
+    // no token -> immediately show failed state
     if (!token) {
       setStatus(MSG_EMAIL_VERIFY_FAILED);
       return;
     }
 
+    // perform server verification once when token is present
     async function verify() {
       try {
         const res = await verifyEmailApi(token);
 
+        // backend returns { status: true } on success
         if (res?.status) {
+          // if opened on mobile, attempt a deep link to the native app
           const isMobile = /Android|iPhone|iPad|iPod/i.test(
             navigator.userAgent
           );
 
           if (isMobile) {
-            // Try to open the mobile app (deep link)
+            // deep link with success state (optional; harmless on web)
             window.location.href = "myapp://email-verify?status=success";
           }
 
           setStatus(MSG_EMAIL_VERIFY_SUCCESS);
         } else {
+          // verification failed on backend
           setStatus(MSG_EMAIL_VERIFY_FAILED);
         }
       } catch (err) {
+        // network or unexpected error -> failed
         setStatus(MSG_EMAIL_VERIFY_FAILED);
       } 
     }
@@ -70,7 +79,7 @@ export default function EmailVerifyClient() {
           <img src="/images/logo.png" alt="logo" style={{ height: 60 }} />
         </div>
 
-        {/* LOADING */}
+        {/* Loading state UI */}
         {status === MSG_EMAIL_VERIFY_LOADING && (
           <>
             <div className="spinner-border text-primary mb-3" />
@@ -79,7 +88,7 @@ export default function EmailVerifyClient() {
           </>
         )}
 
-        {/* SUCCESS */}
+        {/* Success state UI */}
         {status === MSG_EMAIL_VERIFY_SUCCESS && (
           <>
             <h4 className="fw-bold text-success">
@@ -96,7 +105,7 @@ export default function EmailVerifyClient() {
           </>
         )}
 
-        {/* FAILED */}
+        {/* Failed state UI */}
         {status === MSG_EMAIL_VERIFY_FAILED && (
           <>
             <h4 className="fw-bold text-danger">{TITLE_EMAIL_VERIFY_FAILED}</h4>
