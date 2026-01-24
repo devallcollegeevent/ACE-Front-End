@@ -15,9 +15,6 @@ import {
 /* API */
 import { loginApi } from "../../../../lib/api/auth.api";
 
-/* AUTH */
-import { saveToken } from "../../../../lib/auth";
-
 /* VALIDATION */
 import { organizerLoginSchema } from "../../../../components/validation";
 
@@ -55,7 +52,6 @@ export default function OrganizerLoginPage() {
   async function onSubmit(e) {
     e.preventDefault();
 
-    // VALIDATION
     try {
       await organizerLoginSchema.validate(
         { email, password },
@@ -66,7 +62,6 @@ export default function OrganizerLoginPage() {
       return;
     }
 
-    // API CALL
     try {
       setLoading(true);
 
@@ -76,21 +71,15 @@ export default function OrganizerLoginPage() {
         type: ROLE_ORGANIZER,
       });
 
-      if (!res?.status || !res?.token) {
+      if (!res?.status) {
         toast.error(res?.message || MSG_INVALID_CREDENTIALS);
         return;
       }
 
-      saveToken(res.token);
-
-      document.cookie = `token=${res.token}; path=/; max-age=${
-        60 * 60 * 24 * 7
-      }`;
-      document.cookie = `role=organizer; path=/;`;
-
+      //NO token handling
       toast.success(MSG_LOGIN_SUCCESS_ORGANIZER);
       router.push("/dashboard");
-    } catch (err) {
+    } catch {
       toast.error(MSG_LOGIN_FAILED);
     } finally {
       setLoading(false);

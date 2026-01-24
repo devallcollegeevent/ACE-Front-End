@@ -1,4 +1,3 @@
-// src/lib/api/user.api.js
 import apiPrivate from "../axiosPrivate";
 import { API_ENDPOINTS } from "./endpoints";
 import { handleApi } from "./apiHelper";

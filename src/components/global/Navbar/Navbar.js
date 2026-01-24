@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
-import { getUserData } from "../../../lib/auth";
 import { getUserProfileApi } from "../../../lib/api/user.api";
 import { getOrganizationProfileApi } from "../../../lib/api/organizer.api";
 
@@ -13,53 +13,53 @@ import {
   LOCATION_ICON,
 } from "../../../const-value/config-icons/page";
 
-
 export default function Navbar() {
   const router = useRouter();
 
-  const [mounted, setMounted] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // 🔐 REDUX AUTH STATE
+  const { user, organizer, role, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
+  const [mounted, setMounted] = useState(false);
   const [initial, setInitial] = useState("U");
   const [profileImage, setProfileImage] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  /* ================= INITIAL LOAD ================= */
+  /* ================= INITIAL MOUNT ================= */
   useEffect(() => {
     setMounted(true);
-
-    const user = getUserData();
-
-    if (user?.email) {
-      setIsLoggedIn(true);
-      setInitial(user.email.charAt(0).toUpperCase());
-
-      // If image already saved from login (Google login)
-      if (user.profileImage) {
-        setProfileImage(user.profileImage);
-      }
-    }
   }, []);
 
-  /* ================= FETCH PROFILE (ONCE) ================= */
+  /* ================= SET INITIAL LETTER ================= */
+  useEffect(() => {
+    if (!isLoggedIn) return;
+
+    const data = role === "organizer" ? organizer : user;
+    if (!data) return;
+
+    if (data.email) {
+      setInitial(data.email.charAt(0).toUpperCase());
+    }
+  }, [isLoggedIn, user, organizer, role]);
+
+  /* ================= LOAD PROFILE IMAGE ================= */
   useEffect(() => {
     async function loadProfile() {
-      const user = getUserData();
-      if (!user?.identity) return;
-
+      if (!isLoggedIn) return;
 
       try {
-        const role = user.role || (user.type === "org" ? "organizer" : "user");
-
         let res;
-        if (role === "organizer") {
-          res = await getOrganizationProfileApi(user.identity);
-        } else {
-          res = await getUserProfileApi(user.identity);
+
+        if (role === "organizer" && organizer?.id) {
+          res = await getOrganizationProfileApi(organizer.id);
+        }
+
+        if (role !== "organizer" && user?.id) {
+          res = await getUserProfileApi(user.id);
         }
 
         if (res?.status && res.data) {
-          // Banner / profile image preference
           const image =
             res.data.profileImage ||
             res.data.logo ||
@@ -70,20 +70,18 @@ export default function Navbar() {
             setProfileImage(image);
           }
         }
-      } catch (err) {
-        console.error("Navbar profile load error:", err);
-      } finally {
+      } catch {
+        // silent fail (navbar shouldn't break app)
       }
     }
 
-    if (isLoggedIn) {
-      loadProfile();
-    }
-  }, [isLoggedIn]);
+    loadProfile();
+  }, [isLoggedIn, role, user, organizer]);
 
   if (!mounted) return null;
 
   /* ================= HANDLERS ================= */
+
   const handleSignup = () => {
     setMenuOpen(false);
     router.push("/auth/user/login");
@@ -105,7 +103,9 @@ export default function Navbar() {
           className="nav-logo"
           onClick={() => router.push("/")}
         />
-        <button className="nav-explore">Explore {EXPLORE_ICON}</button>
+        <button className="nav-explore">
+          Explore {EXPLORE_ICON}
+        </button>
       </div>
 
       {/* CENTER */}
@@ -118,7 +118,10 @@ export default function Navbar() {
           />
         </div>
 
-        <button className="nav-location-btn">{LOCATION_ICON}</button>
+        <button className="nav-location-btn">
+          {LOCATION_ICON}
+        </button>
+
         {!isLoggedIn && (
           <button
             className="nav-create"
@@ -129,7 +132,10 @@ export default function Navbar() {
         )}
 
         {!isLoggedIn && (
-          <button className="nav-sinup" onClick={handleSignup}>
+          <button
+            className="nav-sinup"
+            onClick={handleSignup}
+          >
             Sign In
           </button>
         )}
@@ -138,7 +144,10 @@ export default function Navbar() {
       {/* RIGHT */}
       {isLoggedIn && (
         <div className={`nav-right ${menuOpen ? "open" : ""}`}>
-          <button className="nav-avatar-btn" onClick={handleProfileClick}>
+          <button
+            className="nav-avatar-btn"
+            onClick={handleProfileClick}
+          >
             {profileImage ? (
               <img
                 src={profileImage}
@@ -147,7 +156,9 @@ export default function Navbar() {
                 onError={() => setProfileImage(null)}
               />
             ) : (
-              <div className="nav-letter-avatar">{initial}</div>
+              <div className="nav-letter-avatar">
+                {initial}
+              </div>
             )}
           </button>
         </div>

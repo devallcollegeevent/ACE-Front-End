@@ -43,7 +43,7 @@ export default function EventSlider({
   const [savedCards, setSavedCards] = useState({});
   const [likeCounts, setLikeCounts] = useState({});
 
-  /* ================= INIT FROM API DATA ================= */
+  /* ================= INIT FROM API DATA like , save , count================= */
   useEffect(() => {
     const liked = {};
     const saved = {};

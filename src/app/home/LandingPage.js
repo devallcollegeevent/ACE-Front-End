@@ -17,7 +17,6 @@ import toast from "react-hot-toast";
 // API
 import { getAllEventsApi } from "../../lib/api/event.api.js";
 import { getAllOrganizationsApi } from "../../lib/api/organizer.api.js";
-import { isUserLoggedIn } from "../../lib/auth.js";
 
 // COMPONENTS
 import ChooseEventCategory from "../../components/global/ChooseEventCategory/ChooseEventCategory";
@@ -55,12 +54,20 @@ export default function LandingPage() {
   ];
 
   const CATEGORIES = [
-    { name: "Conferences", img: "/images/Conferences.png", class: "conference" },
+    {
+      name: "Conferences",
+      img: "/images/Conferences.png",
+      class: "conference",
+    },
     { name: "Hackathon", img: "/images/Hackathon.png", class: "hackathon" },
     { name: "Webinars", img: "/images/Webinars.png", class: "webinar" },
     { name: "Athletics", img: "/images/Athletics.png", class: "athletics" },
     { name: "Concerts", img: "/images/concert.png", class: "concerts" },
-    { name: "Tournaments", img: "/images/Tournaments.png", class: "tournaments" },
+    {
+      name: "Tournaments",
+      img: "/images/Tournaments.png",
+      class: "tournaments",
+    },
     { name: "Job Fairs", img: "/images/JobFairs.png", class: "jobfairs" },
     { name: "Explore more", img: "/images/Explore.png", class: "explore" },
   ];
@@ -68,11 +75,10 @@ export default function LandingPage() {
   /* ================= LOAD DATA ================= */
   const loadLandingData = async () => {
     try {
-      const loggedIn = isUserLoggedIn();
       setLoading(true);
 
       const [eventsRes, orgRes] = await Promise.all([
-        getAllEventsApi(loggedIn),
+        getAllEventsApi(),
         getAllOrganizationsApi(),
       ]);
 
@@ -83,7 +89,7 @@ export default function LandingPage() {
       if (orgRes?.status) {
         setOrganization(orgRes.data);
       }
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong");
     } finally {
       setLoading(false);

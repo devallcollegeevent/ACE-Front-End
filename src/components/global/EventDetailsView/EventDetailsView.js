@@ -3,8 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import {
   DATEICON,
   INSTAGRAMICON,
-  LEFTSIDEARROW_ICON,
-  LIKE_ICON,
+  HEART_ICON,
   LOCATION_ICON,
   MAPLOCATIONVIEWICON,
   RIGHTSIDEARROW_ICON,
@@ -18,9 +17,10 @@ import {
 import Footer from "../Footer/Footer";
 import "./EventDetailsView.css";
 import ConfirmModal from "../../ui/Modal/ConfirmModal";
-import { addEventViewApi } from "../../../lib/api/event.api";
+import { addEventViewApi, likeEventApi } from "../../../lib/api/event.api";
 import { useLoading } from "../../../context/LoadingContext";
 import ShareModal from "../../ui/ShareModal/ShareModal";
+import { getUserData, isUserLoggedIn } from "../../../lib/auth";
 
 export default function EventDetailsView({ event = {}, onBack }) {
   const { setLoading } = useLoading();
@@ -53,6 +53,8 @@ export default function EventDetailsView({ event = {}, onBack }) {
   const location = event?.location;
   const [bannerImages, setBannerImages] = useState(images);
   const [selectedTicket, setSelectedTicket] = useState(null);
+  // ================= LIKE STATE =================
+  const [isLiked, setIsLiked] = useState(false);
 
   const [ticketForm, setTicketForm] = useState({
     name: "",
@@ -62,6 +64,37 @@ export default function EventDetailsView({ event = {}, onBack }) {
     amount: "",
     total: "1000",
   });
+
+  /* ================= INIT FROM API DATA ================= */
+  useEffect(() => {
+    if (!event || !event.identity) return;
+
+    setIsLiked(Boolean(event.isLiked));
+  }, [event]);
+
+  /* ================= LIKE HANDLER ================= */
+  const handleLike = async () => {
+    if (!isUserLoggedIn()) {
+      toast("Please login to like this event", { icon: "⚠️" });
+      return;
+    }
+
+    const user = getUserData();
+    const prevLiked = isLiked;
+
+    // optimistic UI
+    setIsLiked(!prevLiked);
+
+    const res = await likeEventApi({
+      eventIdentity: event.identity,
+      userIdentity: user.identity,
+    });
+
+    if (!res?.status) {
+      // rollback
+      setIsLiked(prevLiked);
+    }
+  };
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -117,8 +150,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
     setLoading(false);
   }, []);
 
-  console.log("==================bnbnbn", event);
-
   return (
     <>
       <div className="container event-wrapper my-4">
@@ -149,11 +180,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
             alt="event"
             src={bannerImages[currentIndex]}
           />
-
-          {/* <EditOverlay
-            onEdit={() => setOpenBannerModal(true)}
-            eventOrgIdentity={event?.org?.identity}
-          /> */}
           <span className="badge-upcoming">
             {event?.status || "Upcoming Event"}
           </span>
@@ -161,10 +187,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
         </div>
         {images.length > 1 && (
           <div className="slider-controls">
-            <span onClick={prevSlide} className="arrow-side">
-              {LEFTSIDEARROW_ICON}
-            </span>
-
             <div className="slider-dots">
               {images.map((_, index) => (
                 <span
@@ -212,15 +234,15 @@ export default function EventDetailsView({ event = {}, onBack }) {
             </button>
             <div className="soc-mediya">
               {/* like , share , save */}
-              <span>
-                {" "}
-                <LIKE_ICON /> {event?.likeCount || 0}
+              <span style={{ cursor: "pointer" }} onClick={handleLike}>
+                <HEART_ICON active={isLiked} />
               </span>
+
               <span className="share-icon" onClick={() => setOpenShare(true)}>
                 {SINGELEVENTSHARE_ICON}
               </span>
 
-              <span>{SAVEICON}</span>
+              {/* <span>{SAVEICON}</span> */}
             </div>
           </div>
         </div>
@@ -246,7 +268,12 @@ export default function EventDetailsView({ event = {}, onBack }) {
               {/* LOCATION */}
               <p>
                 {LOCATION_ICON}{" "}
-                {[location?.city, location?.state, location?.country]
+                {[
+                  location?.city,
+                  location?.state,
+                  location?.country,
+                  location?.venue,
+                ]
                   .filter(Boolean)
                   .join(", ") || "Location not set"}
               </p>
@@ -384,10 +411,10 @@ export default function EventDetailsView({ event = {}, onBack }) {
               </h4>
 
               {/* ================= CO - ORGANIZATION ================= */}
-              {event.collaborators && event.collaborators.length > 0 && (
+              {event.Collaborator && event.Collaborator.length > 0 && (
                 <div className="host-section">
                   {/* MAP ONLY THE DETAILS */}
-                  {event.collaborators.map((item, index) => (
+                  {event.Collaborator.map((item, index) => (
                     <div
                       key={item.identity || `${item.member?.identity}-${index}`}
                       className="mb-3 host-section"

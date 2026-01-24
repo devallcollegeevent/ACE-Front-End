@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
    ROUTE CONFIG
 ================================ */
 
-// Public routes (token / consent illa kooda ok)
 const PUBLIC_ROUTES = [
   "/",
   "/about",
@@ -19,7 +18,6 @@ const PUBLIC_ROUTES = [
   "/unauthorized",
 ];
 
-// Protected routes (token MUST)
 const PROTECTED_ROUTES = [
   "/dashboard",
   "/profile",
@@ -27,7 +25,6 @@ const PROTECTED_ROUTES = [
   "/space",
 ];
 
-// Consent required routes (GDPR / cookie consent)
 const CONSENT_REQUIRED_ROUTES = [
   "/",
   "/events",
@@ -43,34 +40,22 @@ const CONSENT_REQUIRED_ROUTES = [
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  /* --------------------------------
-     1. Ignore Next internals & assets
-  --------------------------------- */
+  // Ignore assets & internals
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/images") ||
     pathname.startsWith("/favicon") ||
-    pathname.endsWith(".png") ||
-    pathname.endsWith(".jpg") ||
-    pathname.endsWith(".jpeg") ||
-    pathname.endsWith(".svg") ||
-    pathname.endsWith(".css") ||
-    pathname.endsWith(".js") ||
-    pathname.endsWith(".ico")
+    pathname.match(/\.(png|jpg|jpeg|svg|css|js|ico)$/)
   ) {
     return NextResponse.next();
   }
 
-  /* --------------------------------
-     2. Read cookies
-  --------------------------------- */
-  const token = request.cookies.get("token")?.value;
+  // ✅ CORRECT COOKIE NAME
+  const token = request.cookies.get("authToken")?.value;
   const consent = request.cookies.get("user_consent")?.value;
 
-  /* --------------------------------
-     3. PROTECTED ROUTES (Auth)
-  --------------------------------- */
+  // Protected routes
   if (PROTECTED_ROUTES.some((route) => pathname.startsWith(route))) {
     if (!token) {
       return NextResponse.redirect(
@@ -80,37 +65,24 @@ export function middleware(request) {
     return NextResponse.next();
   }
 
-  /* --------------------------------
-     4. CONSENT CHECK
-     (only if route needs consent)
-  --------------------------------- */
+  // Consent routes
   if (
     CONSENT_REQUIRED_ROUTES.some((route) => pathname.startsWith(route)) &&
     !consent
   ) {
-    // Consent illa → page load aagum
-    // consent modal client side handle pannum
     return NextResponse.next();
   }
 
-  /* --------------------------------
-     5. PUBLIC ROUTES → allow
-  --------------------------------- */
+  // Public routes
   if (PUBLIC_ROUTES.some((route) => pathname.startsWith(route))) {
     return NextResponse.next();
   }
 
-  /* --------------------------------
-     6. EVERYTHING ELSE → 404
-  --------------------------------- */
+  // Fallback
   return NextResponse.rewrite(
     new URL("/not-found", request.url)
   );
 }
-
-/* ===============================
-   APPLY TO ALL ROUTES
-================================ */
 
 export const config = {
   matcher: ["/:path*"],

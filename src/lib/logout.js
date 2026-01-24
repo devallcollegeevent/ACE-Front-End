@@ -1,27 +1,15 @@
 "use client";
 
-export function logoutUser() {
-  // Clear cookies
-  document.cookie = "token=; path=/; max-age=0";
-  document.cookie = "role=; path=/; max-age=0";
-
-  // Clear localStorage
-  localStorage.removeItem("token");
-  localStorage.removeItem("userData");
-
-  // Session clear
-  sessionStorage.clear();
+export async function logoutUser() {
+  try {
+    await fetch("/api/logout", {
+      method: "POST",
+      credentials: "include",
+    });
+  } finally {
+    sessionStorage.clear();
+    window.location.href = "/";
+  }
 }
 
-export function logoutOrganizer() {
-  // Clear cookies
-  document.cookie = "token=; path=/; max-age=0";
-  document.cookie = "role=; path=/; max-age=0";
-
-  // Clear localStorage
-  localStorage.removeItem("token");
-  localStorage.removeItem("userData");
-
-  // Session clear
-  sessionStorage.clear();
-}
+export const logoutOrganizer = logoutUser;

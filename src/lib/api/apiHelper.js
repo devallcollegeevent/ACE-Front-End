@@ -3,6 +3,11 @@ export const handleApi = async (promise) => {
     const res = await promise;
     return res.data;
   } catch (err) {
-    return err.response?.data || err;
+    return {
+      status: false,
+      message:
+        err.response?.data?.message ||
+        "Something went wrong",
+    };
   }
 };

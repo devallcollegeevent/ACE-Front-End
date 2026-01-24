@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { clearToken } from "../lib/auth";
 
 const initialState = {
   user: null,
@@ -15,22 +14,21 @@ const authSlice = createSlice({
     loginSuccess: (state, action) => {
       const { data, role } = action.payload;
 
-      state.role = role;
       state.isLoggedIn = true;
-
-      if (role === "user") {
-        state.user = data;
-        state.organizer = null;
-      }
+      state.role = role || null;
 
       if (role === "organizer") {
         state.organizer = data;
         state.user = null;
+      } else {
+        // default user
+        state.user = data;
+        state.organizer = null;
+        state.role = "user";
       }
     },
 
     logout: (state) => {
-      clearToken();
       state.user = null;
       state.organizer = null;
       state.role = null;

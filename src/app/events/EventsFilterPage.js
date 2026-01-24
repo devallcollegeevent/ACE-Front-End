@@ -94,6 +94,8 @@ export default function EventsFilterPage() {
   const [eligibleDepartments, setEligibleDepartments] = useState([]);
   const [accommodations, setAccommodations] = useState([]);
   const [sort, setSort] = useState("");
+
+  
   // default RECENT
 
   /* ================= EVENTS ================= */

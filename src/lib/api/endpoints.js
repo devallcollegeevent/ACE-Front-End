@@ -3,9 +3,15 @@ export const API_ENDPOINTS = {
   EVENTS: {
     ALL_PUBLIC: "/v1/events",
     ALL_PRIVATE: "/v1/events_protec",
-    SINGLE: (slug) => `/v1/events/${slug}`,
+
+    SINGLE_PUBLIC: (slug) => `/v1/events/${slug}`,
+    SINGLE_PRIVATE: (slug) => `/v1/events_protec/${slug}`,
+
     VIEW: (slug) => `/v1/events/${slug}/view`,
-    FILTER: "/v1/filter",
+
+    FILTER_PUBLIC: "/v1/filter",
+    FILTER_PRIVATE: "/v1/filter_protec",
+
     STATUSES: "/v1/event/statuses",
   },
 

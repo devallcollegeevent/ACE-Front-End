@@ -37,14 +37,13 @@ import {
 
 import { loginApi, googleAuthLoginApi } from "../../../../lib/api/auth.api";
 
-import { saveToken } from "../../../../lib/auth";
 import { loginSuccess } from "../../../../store/authSlice";
-import { useLoading } from "../../../../context/LoadingContext"; 
+import { useLoading } from "../../../../context/LoadingContext";
 
 export default function UserLoginPage() {
   const router = useRouter();
   const dispatch = useDispatch();
-  const { setLoading } = useLoading(); 
+  const { setLoading } = useLoading();
 
   const [showPass, setShowPass] = useState(false);
 
@@ -65,24 +64,24 @@ export default function UserLoginPage() {
     }
 
     try {
-      setLoading(true); 
+      setLoading(true);
 
       const res = await loginApi(form);
 
-      if (!res?.status || !res?.token) {
+      if (!res?.status) {
         toast.error(res?.message || MSG_LOGIN_FAILED);
         return;
       }
 
-      saveToken(res.token);
+      //ONLY user data
       dispatch(loginSuccess({ data: res.data }));
 
       toast.success(MSG_LOGIN_SUCCESS_USER);
       router.push("/");
-    } catch (err) {
+    } catch {
       toast.error(MSG_LOGIN_FAILED);
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
@@ -97,12 +96,11 @@ export default function UserLoginPage() {
         googleToken,
       });
 
-      if (!res?.status || !res?.token) {
+      if (!res?.status) {
         toast.error(MSG_GOOGLE_LOGIN_FAILED);
         return;
       }
 
-      saveToken(res.token);
       dispatch(loginSuccess({ data: res.data }));
 
       toast.success(MSG_GOOGLE_LOGIN_SUCCESS_USER);
@@ -110,13 +108,13 @@ export default function UserLoginPage() {
     } catch (err) {
       toast.error(MSG_GOOGLE_LOGIN_FAILED);
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
   const handleCreateEvent = () => {
     try {
-      setLoading(true); 
+      setLoading(true);
       router.push("/auth/organization/login");
     } catch (err) {
       setLoading(false);
@@ -162,9 +160,7 @@ export default function UserLoginPage() {
                 type={showPass ? "text" : "password"}
                 placeholder={PH_PASSWORD}
                 value={form.password}
-                onChange={(e) =>
-                  setForm({ ...form, password: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, password: e.target.value })}
               />
 
               <span
@@ -196,8 +192,7 @@ export default function UserLoginPage() {
 
             {/* FOOTER */}
             <div className="auth-footer">
-              {TEXT_NO_ACCOUNT}{" "}
-              <a href="/auth/user/signup">{TEXT_SIGNUP}</a>
+              {TEXT_NO_ACCOUNT} <a href="/auth/user/signup">{TEXT_SIGNUP}</a>
             </div>
           </form>
         </div>

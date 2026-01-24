@@ -6,11 +6,9 @@ import "./explore-event.css";
 
 import EventSlider from "../../components/global/EventSlider/EventSlider";
 import ExploreHero from "../../components/global/ExploreHero/ExploreHero";
-
 import { getAllEventsApi } from "../../lib/api/event.api";
 import WhyChoose from "../../components/global/WhyChoose/WhyChoose";
 import Footer from "../../components/global/Footer/Footer";
-import { isUserLoggedIn } from "../../lib/auth";
 import { useLoading } from "../../context/LoadingContext";
 
 export default function ExploreEventsPage() {
@@ -19,10 +17,9 @@ export default function ExploreEventsPage() {
 
   const loadEvents = async () => {
     try {
-      setLoading(true); // 🔥 START LOADER
+      setLoading(true);
 
-      const loggedIn = isUserLoggedIn();
-      const res = await getAllEventsApi(loggedIn);
+      const res = await getAllEventsApi();
 
       if (res?.status) {
         setEvents(res.data);
@@ -42,18 +39,16 @@ export default function ExploreEventsPage() {
 
   return (
     <>
-      <div className="">
-        <ExploreHero />
+      <ExploreHero />
 
-        <EventSlider title="Ongoing Events" data={events} />
-        <EventSlider title="Upcoming Events" data={events} />
-        <EventSlider title="Featured Events" data={events} />
-        <EventSlider title="Trending Events" data={events} />
-        <EventSlider title="Virtual Events" data={events} />
+      <EventSlider title="Ongoing Events" data={events} />
+      <EventSlider title="Upcoming Events" data={events} />
+      <EventSlider title="Featured Events" data={events} />
+      <EventSlider title="Trending Events" data={events} />
+      <EventSlider title="Virtual Events" data={events} />
 
-        <WhyChoose />
-        <Footer />
-      </div>
+      <WhyChoose />
+      <Footer />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import apiPrivate from "../axiosPrivate";
+import apiPublic from "../axiosPublic";
 import { API_ENDPOINTS } from "./endpoints";
 import { handleApi } from "./apiHelper";
-import apiPublic from "../axiosPublic";
 
 /* ================= ORGANIZATION ================= */
 
@@ -19,9 +19,6 @@ export const deleteOrganizationApi = (orgId) =>
 
 /* ================= ORGANIZER EVENTS ================= */
 
-export const getOrganizerEventsApi = (orgId) =>
-  handleApi(apiPrivate.get(API_ENDPOINTS.ORGANIZER.EVENTS(orgId)));
-
 export const getApprovedOrganizerEventsApi = (orgId) =>
   handleApi(apiPublic.get(API_ENDPOINTS.ORGANIZER.APPROVEDEVENTS(orgId)));
 
@@ -30,18 +27,3 @@ export const getOrganizationByEventsApi = (slug) =>
 
 export const createOrganizerEventApi = (orgId, data) =>
   handleApi(apiPrivate.post(API_ENDPOINTS.ORGANIZER.EVENTS(orgId), data));
-
-export const getOrganizerSingleEventApi = (orgId, eventId) =>
-  handleApi(
-    apiPrivate.get(
-      API_ENDPOINTS.ORGANIZER.EVENT_BY_ID(orgId, eventId)
-    )
-  );
-
-export const updateOrganizerSingleEventApi = (orgId, eventId, data) =>
-  handleApi(
-    apiPrivate.put(
-      API_ENDPOINTS.ORGANIZER.EVENT_BY_ID(orgId, eventId),
-      data
-    )
-  );
