@@ -24,7 +24,6 @@ export default function MyEventsList({ events = [] }) {
 
   // Handle event deletion confirmation
   const handleDelete = () => {
-    console.log("DELETE EVENT:", deleteId);
     setDeleteId(null);
   };
 

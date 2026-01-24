@@ -19,7 +19,6 @@ export default function OrganizersCarousel({ onOpenLeaderboard, data = [] }) {
     router.push(`/organization-details/${slug}`);
   };
 
-  console.log("kkkkkkkkkkkkk",data)
 
   return (
     <section className={styles.topOrganizersroot}>

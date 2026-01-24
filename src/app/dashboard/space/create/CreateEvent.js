@@ -224,9 +224,10 @@ export default function CreateEvent() {
         });
       }
 
-      for (let pair of fd.entries()) {
-        console.log(pair[0], "=>", pair[1]);
-      }
+      // DEBUG
+      // for (let pair of fd.entries()) {
+      //   console.log(pair[0], "=>", pair[1]);
+      // }
 
       const res = await createEventApi(orgId, fd);
 

@@ -33,7 +33,6 @@ export default function OrganizerDetails({
     async function loadCategories() {
       try {
         const res = await getOrgCategoriesApi();
-        console.log("check cat",res)
         if (res?.status) {
           setOrgCategories(res.data);
         }
@@ -49,7 +48,6 @@ export default function OrganizerDetails({
   const addOrganization = () => {
     if (organizations.length >= 3) {
       console.warn("Maximum 3 collaborators allowed");
-      console.log("CURRENT COLLABORATORS →", organizations);
       return;
     }
 
@@ -65,8 +63,6 @@ export default function OrganizerDetails({
       },
     ];
 
-    console.log("AFTER ADD COLLABORATOR →", updated);
-
     setData({ ...data, organizations: updated });
   };
 
@@ -78,18 +74,13 @@ export default function OrganizerDetails({
     if (key === "hostBy" && !showDepartment(value)) {
       updated[index].department = "";
     }
-
-    console.log("UPDATED ORGANIZATIONS →", updated);
-
+    
     setData({ ...data, organizations: updated });
   };
 
   // Remove an organization block
   const deleteOrganization = (index) => {
-    const updated = organizations.filter((_, i) => i !== index);
-
-    console.log("AFTER DELETE →", updated);
-
+    const updated = organizations.filter((_, i) => i !== index);    
     setData({ ...data, organizations: updated });
   };
 
@@ -267,11 +258,7 @@ export default function OrganizerDetails({
       <div className={styles.actionEnd}>
         <button
           className={styles.nextBtn}
-          onClick={() => {
-            console.log(
-              "FINAL COLLABORATORS BEFORE NEXT →",
-              data.organizations
-            );
+          onClick={() => {            
             onNext();
           }}
         >

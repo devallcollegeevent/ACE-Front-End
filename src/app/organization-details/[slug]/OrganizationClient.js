@@ -38,14 +38,11 @@ export default function OrganizationClient({ slug }) {
   useEffect(() => {
     if (!slug) return;
 
-    console.log("Slug received:", slug);
-
     const fetchData = async () => {
       setLoading(true); 
 
       try {
         const res = await getOrganizationByEventsApi(slug);
-        console.log("API response:", res);
 
         setData(res?.data || []);
       } catch (err) {

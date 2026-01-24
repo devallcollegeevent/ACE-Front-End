@@ -31,8 +31,7 @@ export default function OrganizationModal({ orgs = [], onClose, onSave }) {
         organizerNumber: org.member.organizerNumber,
       })),
     };
-
-    console.log("FINAL PAYLOAD", payload);
+    
     onSave(payload);
   };
 

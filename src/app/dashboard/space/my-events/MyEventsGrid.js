@@ -28,8 +28,7 @@ export default function MyEventsGrid({ events = [] }) {
   }
 
   // Handle event deletion confirmation
-  const handleDelete = () => {
-    console.log("DELETE EVENT:", deleteId);
+  const handleDelete = () => {    
     setDeleteId(null);
   };
 
@@ -93,8 +92,7 @@ export default function MyEventsGrid({ events = [] }) {
                         <div className="event-menu-dropdown">
                           <button
                             className="dropdown-item"
-                            onClick={() => {
-                              console.log("EDIT EVENT:", e.identity);
+                            onClick={() => {                          
                               setOpenMenuId(null);
                             }}
                           >

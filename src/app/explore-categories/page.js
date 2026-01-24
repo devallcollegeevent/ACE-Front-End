@@ -47,8 +47,6 @@ export default function ExploreCategoriesPage() {
     router.push(`/events?category=${category.identity || category.name}`);
   };
 
-  console.log("categories",categories)
-
   /* ================= UI ================= */
   return (
     <div className="explore-page">

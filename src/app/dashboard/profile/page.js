@@ -142,9 +142,9 @@ export default function ProfilePage() {
       }
 
       // DEBUG
-      for (const pair of payload.entries()) {
-        console.log(pair[0], "=>", pair[1]);
-      }
+      // for (const pair of payload.entries()) {
+      //   console.log(pair[0], "=>", pair[1]);
+      // }
 
       const res = await updateAuthProfile(payload);
 
