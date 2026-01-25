@@ -4,14 +4,13 @@ import { useEffect, useState } from "react";
 import styles from "./Booking.module.css";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
 import { useLoading } from "../../../../context/LoadingContext";
-import { getUserData } from "../../../../lib/auth";
 import {
   COLOR_SAVED_ICON,
   DATEICON,
   LOCATION_ICON,
-  TICKET_COLOR_ICON,
   TICKET_ICON,
   VIEW_ICON,
 } from "../../../../const-value/config-icons/page";
@@ -20,16 +19,20 @@ import { getSavedEventsApi } from "../../../../lib/api/auth.api";
 const PAGE_SIZE = 6;
 
 export default function BookingEventsPage() {
-  const { setLoading } = useLoading(); // 🌍 GLOBAL LOADER
+  const { setLoading } = useLoading(); 
+  const router = useRouter();
+
   const [events, setEvents] = useState([]);
   const [localLoading, setLocalLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  const router = useRouter();
+  const { user, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
   /* ================= STOP GLOBAL LOADER ON PAGE LOAD ================= */
   useEffect(() => {
-    setLoading(false); // 🔥 IMPORTANT
+    setLoading(false);
   }, []);
 
   /* ================= LOAD BOOKED EVENTS ================= */
@@ -37,18 +40,17 @@ export default function BookingEventsPage() {
     try {
       setLocalLoading(true);
 
-      const user = getUserData();
-      if (!user?.identity) {
+      if (!isLoggedIn || !user?.identity) {
         setEvents([]);
         return;
       }
 
       const res = await getSavedEventsApi(user.identity);
 
-      if (res.status) {
+      if (res?.status) {
         setEvents(res.data?.events || []);
       } else {
-        toast.error(res.message || "Failed to load booked events");
+        toast.error(res?.message || "Failed to load booked events");
         setEvents([]);
       }
     } catch {
@@ -61,7 +63,7 @@ export default function BookingEventsPage() {
 
   useEffect(() => {
     loadEvents();
-  }, []);
+  }, [isLoggedIn, user?.identity]);
 
   /* ================= PAGINATION ================= */
   const totalPages = Math.ceil(events.length / PAGE_SIZE);
@@ -85,7 +87,9 @@ export default function BookingEventsPage() {
           <img src="/images/no-event-image.png" alt="No Events" />
           <h3>No Booked Events</h3>
           <p>You haven’t booked any events yet</p>
-          <button onClick={() => router.push("/events")}>Explore Events</button>
+          <button onClick={() => router.push("/events")}>
+            Explore Events
+          </button>
         </div>
       </div>
     );
@@ -108,7 +112,9 @@ export default function BookingEventsPage() {
                 src={e.bannerImages?.[0] || "/images/event.png"}
                 alt={e.title}
               />
-              {e.offers && <span className={styles.offer}>Offers</span>}
+              {e.offers && (
+                <span className={styles.offer}>Offers</span>
+              )}
             </div>
 
             <div className={styles.content}>
@@ -122,7 +128,7 @@ export default function BookingEventsPage() {
                   {LOCATION_ICON} {e.location?.city || "N/A"}
                 </span>
                 <span>
-                  {TICKET_ICON} {e.tickets[0].price || "Free"}
+                  {TICKET_ICON} {e.tickets?.[0]?.price || "Free"}
                 </span>
               </div>
 
@@ -130,7 +136,7 @@ export default function BookingEventsPage() {
                 <span>
                   {DATEICON}{" "}
                   {new Date(
-                    e.calendars?.[0]?.startDate || e.createdAt,
+                    e.calendars?.[0]?.startDate || e.createdAt
                   ).toLocaleDateString("en-IN", {
                     day: "2-digit",
                     month: "short",
@@ -151,7 +157,10 @@ export default function BookingEventsPage() {
       {/* ================= PAGINATION ================= */}
       {totalPages > 1 && (
         <div className={styles.pagination}>
-          <button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>
+          <button
+            disabled={page === 1}
+            onClick={() => setPage((p) => p - 1)}
+          >
             Prev
           </button>
 

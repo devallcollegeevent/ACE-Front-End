@@ -2,6 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
+import toast from "react-hot-toast";
 
 import {
   DATEICON,
@@ -15,16 +17,19 @@ import {
 import "./EventSlider.css";
 import { useLoading } from "../../../context/LoadingContext";
 
-import { getUserData, isUserLoggedIn } from "../../../lib/auth";
-import { likeEventApi, saveEventApi } from "../../../lib/api/event.api";
-import toast from "react-hot-toast";
+import {
+  likeEventApi,
+  saveEventApi,
+} from "../../../lib/api/event.api";
 
 /* ================= HELPER ================= */
 const getLowestTicketPrice = (tickets = []) => {
   if (!Array.isArray(tickets) || tickets.length === 0) return null;
+
   const prices = tickets
     .filter((t) => typeof t.price === "number")
     .map((t) => t.price);
+
   return prices.length ? Math.min(...prices) : null;
 };
 
@@ -38,20 +43,23 @@ export default function EventSlider({
   const sliderRef = useRef(null);
   const { setLoading } = useLoading();
 
+  /* ================= REDUX AUTH ================= */
+  const { isLoggedIn } = useSelector((state) => state.auth);
+
   /* ================= STATE ================= */
   const [likedCards, setLikedCards] = useState({});
   const [savedCards, setSavedCards] = useState({});
   const [likeCounts, setLikeCounts] = useState({});
 
-  /* ================= INIT FROM API DATA like , save , count================= */
+  /* ================= INIT FROM API DATA ================= */
   useEffect(() => {
     const liked = {};
     const saved = {};
     const counts = {};
 
     data.forEach((event) => {
-      liked[event.identity] = event.isLiked;
-      saved[event.identity] = event.isSaved;
+      liked[event.identity] = Boolean(event.isLiked);
+      saved[event.identity] = Boolean(event.isSaved);
       counts[event.identity] = event.likeCount || 0;
     });
 
@@ -60,27 +68,19 @@ export default function EventSlider({
     setLikeCounts(counts);
   }, [data]);
 
-  /* ================= ACTIONS ================= */
-
+  /* ================= LIKE ================= */
   const handleLike = async (event) => {
-    if (!isUserLoggedIn()) {
+    if (!isLoggedIn) {
       toast("Please login to like events", {
         icon: "⚠️",
-        className: "toast-warning",
       });
       return;
     }
 
-    const user = getUserData();
     const eventId = event.identity;
-
-    const payload = {
-      eventIdentity: eventId,
-      userIdentity: user.identity,
-    };
-
     const wasLiked = likedCards[eventId];
 
+    // optimistic UI
     setLikedCards((prev) => ({
       ...prev,
       [eventId]: !wasLiked,
@@ -89,17 +89,16 @@ export default function EventSlider({
     setLikeCounts((prev) => ({
       ...prev,
       [eventId]: wasLiked
-        ? prev[eventId] - 1 
-        : prev[eventId] + 1, 
+        ? prev[eventId] - 1
+        : prev[eventId] + 1,
     }));
 
-    const res = await likeEventApi(payload);
+    const res = await likeEventApi({
+      eventIdentity: eventId,
+    });
 
-    if (res?.status) {
-      toast.success(wasLiked ? "Like removed" : "Event liked successfully", {
-        className: "toast-success",
-      });
-    } else {
+    if (!res?.status) {
+      // rollback
       setLikedCards((prev) => ({
         ...prev,
         [eventId]: wasLiked,
@@ -110,58 +109,56 @@ export default function EventSlider({
         [eventId]: prev[eventId],
       }));
 
-      toast.error("Failed to update like", {
-        className: "toast-error",
-      });
+      toast.error("Failed to update like");
     }
   };
 
+  /* ================= SAVE ================= */
   const handleSave = async (event) => {
-    if (!isUserLoggedIn()) {
+    if (!isLoggedIn) {
       toast("Please login to save events", {
         icon: "⚠️",
-        className: "toast-warning",
       });
       return;
     }
 
-    const user = getUserData();
+    const eventId = event.identity;
+    const wasSaved = savedCards[eventId];
 
-    const payload = {
-      eventIdentity: event.identity,
-      userIdentity: user.identity,
-    };
-
+    // optimistic UI
     setSavedCards((prev) => ({
       ...prev,
-      [event.identity]: !prev[event.identity],
+      [eventId]: !wasSaved,
     }));
 
-    const res = await saveEventApi(payload);
+    const res = await saveEventApi({
+      eventIdentity: eventId,
+    });
 
-    if (res?.status) {
-      toast.success("Event saved successfully", {
-        className: "toast-success",
-      });
-    } else {
+    if (!res?.status) {
+      // rollback
       setSavedCards((prev) => ({
         ...prev,
-        [event.identity]: !prev[event.identity],
+        [eventId]: wasSaved,
       }));
 
-      toast.error("Failed to save event", {
-        className: "toast-error",
-      });
+      toast.error("Failed to save event");
     }
   };
 
   /* ================= SLIDER ================= */
   const slideLeft = () => {
-    sliderRef.current?.scrollBy({ left: -350, behavior: "smooth" });
+    sliderRef.current?.scrollBy({
+      left: -350,
+      behavior: "smooth",
+    });
   };
 
   const slideRight = () => {
-    sliderRef.current?.scrollBy({ left: 350, behavior: "smooth" });
+    sliderRef.current?.scrollBy({
+      left: 350,
+      behavior: "smooth",
+    });
   };
 
   const handleClick = (slug) => {
@@ -193,7 +190,9 @@ export default function EventSlider({
     return (
       <section className="container-fluid mt-4 px-5">
         <h5 className="fw-bold">{title}</h5>
-        <p className="text-center text-muted py-4">No events found</p>
+        <p className="text-center text-muted py-4">
+          No events found
+        </p>
       </section>
     );
   }
@@ -204,7 +203,9 @@ export default function EventSlider({
       {/* HEADER */}
       <div className="d-flex justify-content-between align-items-center mb-2">
         <div>
-          <h5 className="fw-bold mb-0 land-title">{title}</h5>
+          <h5 className="fw-bold mb-0 land-title">
+            {title}
+          </h5>
           {des && <p className="mt-2">{des}</p>}
         </div>
       </div>
@@ -213,10 +214,16 @@ export default function EventSlider({
 
       {/* NAV */}
       <div className="d-flex justify-content-end gap-4 mb-3">
-        <button className="scroll-rounded-circle" onClick={slideLeft}>
+        <button
+          className="scroll-rounded-circle"
+          onClick={slideLeft}
+        >
           ❮
         </button>
-        <button className="scroll-rounded-circle" onClick={slideRight}>
+        <button
+          className="scroll-rounded-circle"
+          onClick={slideRight}
+        >
           ❯
         </button>
       </div>
@@ -231,41 +238,58 @@ export default function EventSlider({
           const calendar = event.calendars?.[0];
           const isLiked = likedCards[event.identity];
           const isSaved = savedCards[event.identity];
-          const lowestPrice = getLowestTicketPrice(event.tickets);
+          const lowestPrice = getLowestTicketPrice(
+            event.tickets,
+          );
 
           return (
-            <div key={event.identity} className="card event-card">
+            <div
+              key={event.identity}
+              className="card event-card"
+            >
               <img
-                src={event.bannerImages?.[0] || "/images/event.png"}
+                src={
+                  event.bannerImages?.[0] ||
+                  "/images/event.png"
+                }
                 className="event-img"
                 alt={event.title}
-                onClick={() => handleClick(event.slug)}
+                onClick={() =>
+                  handleClick(event.slug)
+                }
               />
 
               <div className="card-body p-3">
                 <div className="d-flex justify-content-between align-items-start mt-2">
-                  <span className="fw-semibold card-titel">{event.title}</span>
+                  <span className="fw-semibold card-titel">
+                    {event.title}
+                  </span>
+
                   {/* SAVE */}
                   <span
                     onClick={() => handleSave(event)}
-                    className={isSaved ? "save-active" : "save-inactive"}
                   >
                     <SAVEICON active={isSaved} />
                   </span>
+
                   {/* LIKE */}
                   <div
                     onClick={() => handleLike(event)}
                     className="text-center"
                   >
                     <HEART_ICON active={isLiked} />
-                    <p>{likeCounts[event.identity] ?? 0}</p>
+                    <p>
+                      {likeCounts[event.identity] ??
+                        0}
+                    </p>
                   </div>
                 </div>
 
                 <div className="mt-2 event-details">
                   <div className="d-flex justify-content-between">
                     <span>
-                      {LOCATION_ICON} {event.location?.city || "N/A"}
+                      {LOCATION_ICON}{" "}
+                      {event.location?.city || "N/A"}
                     </span>
 
                     <span>
@@ -279,17 +303,20 @@ export default function EventSlider({
                   </div>
 
                   <div className="mt-2">
-                    {DATEICON} {formatDate(calendar?.startDate)}
+                    {DATEICON}{" "}
+                    {formatDate(calendar?.startDate)}
                   </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center mt-3">
                   <span className="view-badge">
-                    {VIEW_ICON} {event.viewCount || 0}
+                    {VIEW_ICON}{" "}
+                    {event.viewCount || 0}
                   </span>
 
                   <span className="badge-paid">
-                    {event.categoryName || "No category"}
+                    {event.categoryName ||
+                      "No category"}
                   </span>
                 </div>
               </div>

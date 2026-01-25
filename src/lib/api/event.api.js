@@ -2,6 +2,7 @@ import apiPublic from "../axiosPublic";
 import apiPrivate from "../axiosPrivate";
 import { API_ENDPOINTS } from "./endpoints";
 import { handleApi } from "./apiHelper";
+import { isUserLoggedIn } from "../auth";
 
 /* =======================
    EVENTS (PUBLIC / PRIVATE)
@@ -9,24 +10,13 @@ import { handleApi } from "./apiHelper";
 ======================= */
 
 export const getAllEventsApi = async () => {
-  try {
-    // 🔐 Try private first
-    return await handleApi(
-      apiPrivate.get(API_ENDPOINTS.EVENTS.ALL_PRIVATE)
-    );
-  } catch (error) {
-    // 👤 Not logged in → fallback public
-    if (error?.response?.status === 401) {
-      return await handleApi(
-        apiPublic.get(API_ENDPOINTS.EVENTS.ALL_PUBLIC)
-      );
-    }
-
-    return {
-      status: false,
-      message: "Failed to fetch events",
-    };
+  // 👤 NOT LOGGED IN → DIRECT PUBLIC
+  if (!isUserLoggedIn()) {
+    return handleApi(apiPublic.get(API_ENDPOINTS.EVENTS.ALL_PUBLIC));
   }
+
+  // 🔐 LOGGED IN → PRIVATE
+  return handleApi(apiPrivate.get(API_ENDPOINTS.EVENTS.ALL_PRIVATE));
 };
 
 /* =======================
@@ -34,19 +24,11 @@ export const getAllEventsApi = async () => {
 ======================= */
 
 export const getEventBySlugApi = async (slug) => {
-  try {
-    return await handleApi(
-      apiPrivate.get(API_ENDPOINTS.EVENTS.SINGLE_PRIVATE(slug))
-    );
-  } catch (error) {
-    if (error?.response?.status === 401) {
-      return await handleApi(
-        apiPublic.get(API_ENDPOINTS.EVENTS.SINGLE_PUBLIC(slug))
-      );
-    }
-
-    return { status: false };
+  if (!isUserLoggedIn()) {
+    return handleApi(apiPublic.get(API_ENDPOINTS.EVENTS.SINGLE_PUBLIC(slug)));
   }
+
+  return handleApi(apiPrivate.get(API_ENDPOINTS.EVENTS.SINGLE_PRIVATE(slug)));
 };
 
 /* =======================
@@ -54,15 +36,11 @@ export const getEventBySlugApi = async (slug) => {
 ======================= */
 
 export const likeEventApi = async (payload) => {
-  return handleApi(
-    apiPrivate.post("/v1/events/like", payload)
-  );
+  return handleApi(apiPrivate.post("/v1/events/like", payload));
 };
 
 export const saveEventApi = async (payload) => {
-  return handleApi(
-    apiPrivate.post("/v1/events/save", payload)
-  );
+  return handleApi(apiPrivate.post("/v1/events/save", payload));
 };
 
 /* =======================
@@ -70,9 +48,7 @@ export const saveEventApi = async (payload) => {
 ======================= */
 
 export const addEventViewApi = async (slug) => {
-  return handleApi(
-    apiPublic.post(API_ENDPOINTS.EVENTS.VIEW(slug))
-  );
+  return handleApi(apiPublic.post(API_ENDPOINTS.EVENTS.VIEW(slug)));
 };
 
 /* =======================
@@ -80,15 +56,11 @@ export const addEventViewApi = async (slug) => {
 ======================= */
 
 export const getOrganizerEventsApi = async (orgId) => {
-  return handleApi(
-    apiPrivate.get(API_ENDPOINTS.ORGANIZER.EVENTS(orgId))
-  );
+  return handleApi(apiPrivate.get(API_ENDPOINTS.ORGANIZER.EVENTS(orgId)));
 };
 
 export const deleteEventApi = async (eventId) => {
-  return handleApi(
-    apiPrivate.delete(`/event/delete/${eventId}`)
-  );
+  return handleApi(apiPrivate.delete(`/event/delete/${eventId}`));
 };
 
 export const updateEventApi = async (eventId, formData) => {
@@ -97,7 +69,7 @@ export const updateEventApi = async (eventId, formData) => {
       headers: {
         "Content-Type": "multipart/form-data",
       },
-    })
+    }),
   );
 };
 
@@ -106,71 +78,46 @@ export const updateEventApi = async (eventId, formData) => {
 ======================= */
 
 export const getOrgCategoriesApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.ORG_CATEGORIES)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.ORG_CATEGORIES));
 
 export const getExploreEventTypes = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.EXPLORE_EVENT_TYPE)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.EXPLORE_EVENT_TYPE));
 
 export const getEventCategoriesApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.CATEGORIES)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.CATEGORIES));
 
 export const getEventTypesApi = async (categoryId) =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.EVENT_TYPES(categoryId))
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.EVENT_TYPES(categoryId)));
 
 export const getAllEventTypesApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.ALL_EVENT_TYPES)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.ALL_EVENT_TYPES));
 
 export const getAccommodationsApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.ACCOMMODATIONS)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.ACCOMMODATIONS));
 
 export const getCertificationsApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.CERTIFICATIONS)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.CERTIFICATIONS));
 
 export const getPerksApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.PERKS)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.PERKS));
 
 export const getEligibleDepartmentsApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.MASTER.ELIGIBLE_DEPARTMENTS)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.MASTER.ELIGIBLE_DEPARTMENTS));
 
 /* =======================
    FILTER EVENTS
 ======================= */
 
 export const filterEventsApi = async (payload) => {
-  try {
-    return await handleApi(
-      apiPrivate.post(API_ENDPOINTS.EVENTS.FILTER_PRIVATE, payload)
+  if (!isUserLoggedIn()) {
+    return handleApi(
+      apiPublic.post(API_ENDPOINTS.EVENTS.FILTER_PUBLIC, payload),
     );
-  } catch (error) {
-    if (error?.response?.status === 401) {
-      return await handleApi(
-        apiPublic.post(API_ENDPOINTS.EVENTS.FILTER_PUBLIC, payload)
-      );
-    }
-
-    return {
-      status: false,
-      message: "Failed to fetch events",
-    };
   }
+
+  return handleApi(
+    apiPrivate.post(API_ENDPOINTS.EVENTS.FILTER_PRIVATE, payload),
+  );
 };
 
 /* =======================
@@ -178,9 +125,7 @@ export const filterEventsApi = async (payload) => {
 ======================= */
 
 export const getEventStatusesApi = async () =>
-  handleApi(
-    apiPublic.get(API_ENDPOINTS.EVENTS.STATUSES)
-  );
+  handleApi(apiPublic.get(API_ENDPOINTS.EVENTS.STATUSES));
 
 /* =======================
    CREATE EVENT (ORGANIZER)
@@ -188,8 +133,5 @@ export const getEventStatusesApi = async () =>
 
 export const createEventApi = async (orgId, formData) =>
   handleApi(
-    apiPrivate.post(
-      API_ENDPOINTS.ORGANIZER.CREATEVENTS(orgId),
-      formData
-    )
+    apiPrivate.post(API_ENDPOINTS.ORGANIZER.CREATEVENTS(orgId), formData),
   );

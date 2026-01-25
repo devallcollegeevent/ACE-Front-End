@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import styles from "./Saved.module.css";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
-import { getUserData } from "../../../../lib/auth";
 import { getSavedEventsApi } from "../../../../lib/api/auth.api";
 import {
   COLOR_SAVED_ICON,
@@ -21,25 +21,30 @@ const PAGE_SIZE = 6;
 export default function SavedEventsPage() {
   const [events, setEvents] = useState([]);
   const [page, setPage] = useState(1);
+
   const { setLoading } = useLoading();
   const router = useRouter();
 
+  const { user, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
+
+  /* ================= LOAD SAVED EVENTS ================= */
   const loadEvents = async () => {
     try {
       setLoading(true);
 
-      const user = getUserData();
-      if (!user?.identity) {
+      if (!isLoggedIn || !user?.identity) {
         setEvents([]);
         return;
       }
 
       const res = await getSavedEventsApi(user.identity);
 
-      if (res.status) {
+      if (res?.status) {
         setEvents(res.data?.events || []);
       } else {
-        toast.error(res.message || "Failed to load saved events");
+        toast.error(res?.message || "Failed to load saved events");
         setEvents([]);
       }
     } catch {
@@ -52,7 +57,7 @@ export default function SavedEventsPage() {
 
   useEffect(() => {
     loadEvents();
-  }, []);
+  }, [isLoggedIn, user?.identity]);
 
   /* ================= PAGINATION ================= */
   const totalPages = Math.ceil(events.length / PAGE_SIZE);
@@ -67,13 +72,13 @@ export default function SavedEventsPage() {
           <img src="/images/no-event-image.png" alt="No Events" />
           <h3>No Saved Events</h3>
           <p>Save events to see them here</p>
-          <button onClick={() => router.push("/events")}>Explore Events</button>
+          <button onClick={() => router.push("/events")}>
+            Explore Events
+          </button>
         </div>
       </div>
     );
   }
-
-  console.log("kkkkkkkkkk", visibleEvents);
 
   /* ================= UI ================= */
   return (
@@ -92,7 +97,9 @@ export default function SavedEventsPage() {
                 src={e.bannerImages?.[0] || "/images/event.png"}
                 alt={e.title}
               />
-              {e.offers && <span className={styles.offer}>Offers</span>}
+              {e.offers && (
+                <span className={styles.offer}>Offers</span>
+              )}
             </div>
 
             <div className={styles.content}>
@@ -106,7 +113,7 @@ export default function SavedEventsPage() {
                   {LOCATION_ICON} {e.location?.city || "N/A"}
                 </span>
                 <span>
-                  {TICKET_ICON} {e.tickets[0].price || "Free"}
+                  {TICKET_ICON} {e.tickets?.[0]?.price || "Free"}
                 </span>
               </div>
 
@@ -114,7 +121,7 @@ export default function SavedEventsPage() {
                 <span>
                   {DATEICON}{" "}
                   {new Date(
-                    e.calendars?.[0]?.startDate || e.createdAt,
+                    e.calendars?.[0]?.startDate || e.createdAt
                   ).toLocaleDateString("en-IN", {
                     day: "2-digit",
                     month: "short",
@@ -135,7 +142,10 @@ export default function SavedEventsPage() {
       {/* PAGINATION */}
       {totalPages > 1 && (
         <div className={styles.pagination}>
-          <button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>
+          <button
+            disabled={page === 1}
+            onClick={() => setPage((p) => p - 1)}
+          >
             Prev
           </button>
 

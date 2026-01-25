@@ -45,7 +45,8 @@ export const API_ENDPOINTS = {
     DELETE: (orgId) => `/v1/organizations/${orgId}`,
     EVENTS: (orgId) => `/v1/organization/${orgId}/events`,
     APPROVEDEVENTS: (orgId) => `/v1/organizations/${orgId}/events`,
-    ORGEVENTS: (slug) => `/v1/organizations/${slug}/events`,
+    ORG_EVENTS_PUBLIC: (slug) => `/v1/organizations/${slug}/events`,
+    ORG_EVENTS_PRIVATE: (slug) => `/v1/organizations/${slug}/events_protec`,
   },
 
   /* ================= MASTER DATA ================= */

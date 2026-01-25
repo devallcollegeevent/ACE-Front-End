@@ -20,7 +20,8 @@ import ConfirmModal from "../../ui/Modal/ConfirmModal";
 import { addEventViewApi, likeEventApi } from "../../../lib/api/event.api";
 import { useLoading } from "../../../context/LoadingContext";
 import ShareModal from "../../ui/ShareModal/ShareModal";
-import { getUserData, isUserLoggedIn } from "../../../lib/auth";
+import { isUserLoggedIn } from "../../../lib/auth";
+import { toast } from "react-hot-toast";
 
 export default function EventDetailsView({ event = {}, onBack }) {
   const { setLoading } = useLoading();
@@ -79,7 +80,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
       return;
     }
 
-    const user = getUserData();
     const prevLiked = isLiked;
 
     // optimistic UI
@@ -87,7 +87,6 @@ export default function EventDetailsView({ event = {}, onBack }) {
 
     const res = await likeEventApi({
       eventIdentity: event.identity,
-      userIdentity: user.identity,
     });
 
     if (!res?.status) {

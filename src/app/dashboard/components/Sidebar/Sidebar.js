@@ -3,43 +3,55 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSelector, useDispatch } from "react-redux";
 import styles from "./Sidebar.module.css";
 
-import { getUserData } from "../../../../lib/auth";
 import { getOrganizationProfileApi } from "../../../../lib/api/organizer.api";
 import { getUserProfileApi } from "../../../../lib/api/user.api";
 import ConfirmModal from "../../../../components/ui/Modal/ConfirmModal";
-import { logoutOrganizer } from "../../../../lib/logout";
+import { logout } from "../../../../store/authSlice";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const dispatch = useDispatch();
+
   const [expanded, setExpanded] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
-  const [role, setRole] = useState("user");
 
-  // profile display-only data
+  // profile display-only
   const [profile, setProfile] = useState(null);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
-  /* ================= FALLBACK LETTER ================= */
-  const displayName = profile?.organizationName || profile?.name || "User";
-  const displayEmail = profile?.domainEmail || profile?.email || "User";
-  const firstLetter = displayName.charAt(0).toUpperCase();
-  /* ================= LOAD USER + PROFILE ================= */
+  // ✅ REDUX AUTH
+  const { user, organizer, role, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
+  /* ================= FALLBACK LETTER ================= */
+  const displayName =
+    profile?.organizationName || profile?.name || "User";
+  const displayEmail =
+    profile?.domainEmail || profile?.email || "User";
+  const firstLetter = displayName.charAt(0).toUpperCase();
+
+  /* ================= LOAD PROFILE ================= */
   useEffect(() => {
     async function loadProfile() {
-      const user = getUserData();
-      if (!user?.identity) return;
+      if (!isLoggedIn) return;
 
-      if (user.type === "org") setRole("org");
+      const identity =
+        role === "organizer"
+          ? organizer?.identity
+          : user?.identity;
+
+      if (!identity) return;
 
       try {
         let res;
-        if (user.type === "org") {
-          res = await getOrganizationProfileApi(user.identity);
+        if (role === "organizer") {
+          res = await getOrganizationProfileApi(identity);
         } else {
-          res = await getUserProfileApi(user.identity);
+          res = await getUserProfileApi(identity);
         }
 
         if (res?.status) {
@@ -51,7 +63,7 @@ export default function Sidebar() {
     }
 
     loadProfile();
-  }, []);
+  }, [isLoggedIn, role, user?.identity, organizer?.identity]);
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
@@ -68,7 +80,7 @@ export default function Sidebar() {
 
   const confirmLogout = () => {
     setShowLogoutConfirm(false);
-    logoutOrganizer();
+    dispatch(logout());
     window.location.href = "/";
   };
 
@@ -98,14 +110,14 @@ export default function Sidebar() {
       {expanded && openMenu === "profile" && (
         <div className={styles.dropdown}>
           <Link href="/dashboard/profile">My Profile</Link>
-          {role === "org" && (
+          {role === "organizer" && (
             <Link href="/dashboard/profile/manage">Manage</Link>
           )}
           <Link href="/dashboard/profile/delete">Delete</Link>
         </div>
       )}
 
-      {/* ================= ACTIVITIES ================= */}
+      {/* ACTIVITIES */}
       <div className={styles.menu} onClick={() => toggleMenu("activities")}>
         <img src="/images/myactivityes.png" alt="activities" />
         {expanded && (
@@ -118,14 +130,16 @@ export default function Sidebar() {
       {expanded && openMenu === "activities" && (
         <div className={styles.dropdown}>
           <Link href="/dashboard/activities/saved">Saved</Link>
-          {role === "org" && (
-            <Link href="/dashboard/activities/bookings">Bookings</Link>
+          {role === "organizer" && (
+            <Link href="/dashboard/activities/bookings">
+              Bookings
+            </Link>
           )}
         </div>
       )}
 
-      {/* ================= ORGANIZER SPACE ================= */}
-      {role === "org" && (
+      {/* ORGANIZER SPACE */}
+      {role === "organizer" && (
         <>
           <div className={styles.menu} onClick={() => toggleMenu("space")}>
             <img src="/images/myspace.png" alt="space" />
@@ -138,19 +152,21 @@ export default function Sidebar() {
 
           {expanded && openMenu === "space" && (
             <div className={styles.dropdown}>
-              <Link href="/dashboard/space/create">Create Event</Link>
-              {role === "org" && (
-                <Link href="/dashboard/space/overview-dashboard">
-                  Event Analytics
-                </Link>
-              )}
-              <Link href="/dashboard/space/my-events">My Events</Link>
+              <Link href="/dashboard/space/create">
+                Create Event
+              </Link>
+              <Link href="/dashboard/space/overview-dashboard">
+                Event Analytics
+              </Link>
+              <Link href="/dashboard/space/my-events">
+                My Events
+              </Link>
             </div>
           )}
         </>
       )}
 
-      {/* ================= SETTINGS ================= */}
+      {/* SETTINGS */}
       <div className={styles.menu} onClick={() => toggleMenu("settings")}>
         <img src="/images/Settings.png" alt="settings" />
         {expanded && (
@@ -162,19 +178,16 @@ export default function Sidebar() {
 
       {expanded && openMenu === "settings" && (
         <div className={styles.dropdown}>
-          <Link href="/dashboard/settings/notification">Notification</Link>
-
-          {role === "org" && (
+          <Link href="/dashboard/settings/notification">
+            Notification
+          </Link>
+          {role === "organizer" && (
             <Link href="/dashboard/settings/email">Email</Link>
           )}
         </div>
       )}
 
-      {/* =================================================== */}
-      {/* =============== BOTTOM PROFILE ==================== */}
-      {/* DISPLAY ONLY – NO CLICK – NO EDIT */}
-      {/* =================================================== */}
-
+      {/* BOTTOM PROFILE */}
       <div className={styles.bottomProfile}>
         {profile?.profileImage ? (
           <img
@@ -187,22 +200,23 @@ export default function Sidebar() {
         )}
 
         {expanded && (
-          <>
-            <div onClick={handleLogoutClick}>
-              <div className={styles.profileText}>{displayName}</div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div className={styles.profileTextEmail}>{displayEmail}</div>
-                <img
-                  src="/images/exit.png"
-                  alt="logout"
-                  className={styles.exitImage}
-                />
+          <div onClick={handleLogoutClick}>
+            <div className={styles.profileText}>{displayName}</div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div className={styles.profileTextEmail}>
+                {displayEmail}
               </div>
+              <img
+                src="/images/exit.png"
+                alt="logout"
+                className={styles.exitImage}
+              />
             </div>
-          </>
+          </div>
         )}
       </div>
-      {/* ================= LOGOUT CONFIRM MODAL ================= */}
+
+      {/* LOGOUT MODAL */}
       <ConfirmModal
         open={showLogoutConfirm}
         title="Confirm Logout"

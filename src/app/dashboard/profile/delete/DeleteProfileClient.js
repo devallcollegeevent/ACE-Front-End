@@ -1,10 +1,11 @@
 "use client";
 
-export const dynamic = "force-dynamic"; // THIS FIXES BUILD ERROR
+export const dynamic = "force-dynamic";
 
 import { useState } from "react";
 import styles from "./Delete.module.css";
 import toast from "react-hot-toast";
+import { useSelector, useDispatch } from "react-redux";
 
 import DeleteConfirmModal from "../../../../components/ui/DeleteConfirmModal/DeleteConfirmModal";
 import {
@@ -17,38 +18,64 @@ import {
   SUB_TITLE_DELETE_ACCOUNT_SUB_TEXT,
 } from "../../../../const-value/config-message/page";
 
-import { getUserData } from "../../../../lib/auth";
-// import api from "../../../../lib/api";
+import {
+  deleteOrganizationApi,
+} from "../../../../lib/api/organizer.api";
+import {
+  deleteUserApi,
+} from "../../../../lib/api/user.api";
+
+import { logout } from "../../../../store/authSlice";
 
 export default function DeleteProfilePage() {
   const [open, setOpen] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
+  const dispatch = useDispatch();
 
-  const userData = getUserData();
+  // ✅ REDUX AUTH
+  const { user, organizer, role, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
-  // SAFETY GUARD
-  if (!userData) return null;
+  if (!isLoggedIn) return null;
 
+  const identity =
+    role === "organizer"
+      ? organizer?.identity
+      : user?.identity;
+
+  const email =
+    role === "organizer"
+      ? organizer?.domainEmail
+      : user?.email;
+
+  if (!identity) return null;
+
+  /* ================= DELETE ACCOUNT ================= */
   const handleDelete = async () => {
-
     try {
-      const res = await api.delete(
-        `/v1/organizations/${userData.identity}`
-      );
+      let res;
 
-      if (res?.status === true) {
-        toast.success(res.message);
+      if (role === "organizer") {
+        res = await deleteOrganizationApi(identity);
+      } else {
+        res = await deleteUserApi(identity);
+      }
+
+      if (res?.status) {
+        toast.success(res.message || "Account deleted");
         setDeleted(true);
         setOpen(false);
+
+        dispatch(logout());
       } else {
-        toast.error(res.message);
+        toast.error(res?.message || "Delete failed");
       }
     } catch (err) {
       toast.error(
         err?.response?.data?.message || "Delete failed"
       );
-    } finally {
     }
   };
 
@@ -71,7 +98,10 @@ export default function DeleteProfilePage() {
           </p>
 
           <div className={styles.btnRow}>
-            <button className={styles.cancelBtn}>
+            <button
+              className={styles.cancelBtn}
+              onClick={() => setOpen(false)}
+            >
               {BTN_CANCEL}
             </button>
 
@@ -89,7 +119,7 @@ export default function DeleteProfilePage() {
         open={open}
         onClose={() => setOpen(false)}
         onConfirm={handleDelete}
-        userEmail={userData.email}
+        userEmail={email}
       />
 
       {deleted && (

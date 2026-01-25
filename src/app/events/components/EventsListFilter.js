@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { useSelector } from "react-redux";
 
 import {
   DATEICON,
@@ -13,11 +14,15 @@ import {
 
 import { useLoading } from "../../../context/LoadingContext";
 import { likeEventApi, saveEventApi } from "../../../lib/api/event.api";
-import { getUserData, isUserLoggedIn } from "../../../lib/auth";
 
 export default function EventsListFilter({ events = [] }) {
   const router = useRouter();
   const { setLoading } = useLoading();
+
+  // ✅ REDUX AUTH
+  const { user, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
   /* ================= STATES ================= */
   const [likedCards, setLikedCards] = useState({});
@@ -43,12 +48,11 @@ export default function EventsListFilter({ events = [] }) {
 
   /* ================= LIKE HANDLER ================= */
   const handleLike = async (e) => {
-    if (!isUserLoggedIn()) {
+    if (!isLoggedIn || !user?.identity) {
       toast("Please login to like events", { icon: "⚠️" });
       return;
     }
 
-    const user = getUserData();
     const eventId = e.identity;
     const wasLiked = likedCards[eventId];
 
@@ -65,7 +69,6 @@ export default function EventsListFilter({ events = [] }) {
 
     const res = await likeEventApi({
       eventIdentity: eventId,
-      userIdentity: user.identity,
     });
 
     if (!res?.status) {
@@ -86,12 +89,11 @@ export default function EventsListFilter({ events = [] }) {
 
   /* ================= SAVE HANDLER ================= */
   const handleSave = async (e) => {
-    if (!isUserLoggedIn()) {
+    if (!isLoggedIn || !user?.identity) {
       toast("Please login to save events", { icon: "⚠️" });
       return;
     }
 
-    const user = getUserData();
     const eventId = e.identity;
     const wasSaved = savedCards[eventId];
 
@@ -103,7 +105,6 @@ export default function EventsListFilter({ events = [] }) {
 
     const res = await saveEventApi({
       eventIdentity: eventId,
-      userIdentity: user.identity,
     });
 
     if (!res?.status) {
@@ -163,7 +164,7 @@ export default function EventsListFilter({ events = [] }) {
                   >
                     <div className="text-center">
                       <HEART_ICON active={likedCards[e.identity]} />
-                      <div> {likeCounts[e.identity] ?? 0}</div>
+                      <div>{likeCounts[e.identity] ?? 0}</div>
                     </div>
                   </span>
 

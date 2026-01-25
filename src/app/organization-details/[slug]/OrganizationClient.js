@@ -22,12 +22,19 @@ import {
   YOUTUBEICON,
 } from "../../../const-value/config-icons/page";
 import Footer from "../../../components/global/Footer/Footer";
+import { HEART_ICON, SAVEICON } from "../../../const-value/config-icons/page";
+import { likeEventApi, saveEventApi } from "../../../lib/api/event.api";
+import { isUserLoggedIn } from "../../../lib/auth";
+import toast from "react-hot-toast";
 
 export default function OrganizationClient({ slug }) {
   const router = useRouter();
 
   const [data, setData] = useState([]);
   const [currentBanner, setCurrentBanner] = useState(0);
+  const [likedMap, setLikedMap] = useState({});
+  const [savedMap, setSavedMap] = useState({});
+  const [likeCountMap, setLikeCountMap] = useState({});
 
   /* ================= FETCH EVENTS ================= */
   useEffect(() => {
@@ -72,6 +79,67 @@ export default function OrganizationClient({ slug }) {
 
     return () => clearInterval(interval);
   }, [bannerImages.length]);
+
+  useEffect(() => {
+    const liked = {};
+    const saved = {};
+    const counts = {};
+
+    data.forEach((e) => {
+      liked[e.identity] = !!e.isLiked;
+      saved[e.identity] = !!e.isSaved;
+      counts[e.identity] = e.likeCount || 0;
+    });
+
+    setLikedMap(liked);
+    setSavedMap(saved);
+    setLikeCountMap(counts);
+  }, [data]);
+
+  const handleLike = async (event) => {
+    if (!isUserLoggedIn()) {
+      toast("Please login to like events", { icon: "⚠️" });
+      return;
+    }
+
+    const eventId = event.identity;
+    const wasLiked = likedMap[eventId];
+
+    // optimistic UI
+    setLikedMap((p) => ({ ...p, [eventId]: !wasLiked }));
+    setLikeCountMap((p) => ({
+      ...p,
+      [eventId]: wasLiked ? p[eventId] - 1 : p[eventId] + 1,
+    }));
+
+    const res = await likeEventApi({ eventIdentity: eventId });
+
+    if (!res?.status) {
+      // rollback
+      setLikedMap((p) => ({ ...p, [eventId]: wasLiked }));
+      setLikeCountMap((p) => ({ ...p, [eventId]: p[eventId] }));
+      toast.error("Failed to like event");
+    }
+  };
+
+  const handleSave = async (event) => {
+    if (!isUserLoggedIn()) {
+      toast("Please login to save events", { icon: "⚠️" });
+      return;
+    }
+
+    const eventId = event.identity;
+    const wasSaved = savedMap[eventId];
+
+    setSavedMap((p) => ({ ...p, [eventId]: !wasSaved }));
+
+    const res = await saveEventApi({ eventIdentity: eventId });
+
+    if (!res?.status) {
+      setSavedMap((p) => ({ ...p, [eventId]: wasSaved }));
+      toast.error("Failed to save event");
+    }
+  };
 
   /* ================= UPCOMING / PAST ================= */
   const now = new Date();
@@ -144,7 +212,7 @@ export default function OrganizationClient({ slug }) {
         </p>
 
         <div className="upcoming-grid">
-          {upcomingEvents.map((e , index) => (
+          {upcomingEvents.map((e, index) => (
             <div key={e._id ?? `upcoming-${index}`} className="event-card-new">
               <img
                 src={e.bannerImages?.[0] || "/images/event.jpg"}
@@ -153,7 +221,30 @@ export default function OrganizationClient({ slug }) {
               />
 
               <div className="event-card-body">
-                <h6 className="event-title">{e.title}</h6>
+                <div className="d-flex justify-content-between align-items-center">
+                  <h6 className="event-title">{e.title}</h6>
+
+                  <div className="d-flex gap-3">
+                    {/* LIKE */}
+                    <span
+                      onClick={() => handleLike(e)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <div className="text-center">
+                        <HEART_ICON active={likedMap[e.identity]} />
+                        <small>{likeCountMap[e.identity] ?? 0}</small>
+                      </div>
+                    </span>
+
+                    {/* SAVE */}
+                    <span
+                      onClick={() => handleSave(e)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <SAVEICON active={savedMap[e.identity]} />
+                    </span>
+                  </div>
+                </div>
 
                 <p className="event-meta">
                   {LOCATION_ICON} {e.location?.city || "Location"}
@@ -189,8 +280,8 @@ export default function OrganizationClient({ slug }) {
         </div>
 
         <div className="past-grid">
-          {upcomingEvents.map((e , index) => (
-            <div  key={e._id ?? `past-${index}`} className="past-card">
+          {upcomingEvents.map((e, index) => (
+            <div key={e._id ?? `past-${index}`} className="past-card">
               <img
                 src={e.bannerImages?.[0] || "/images/event.jpg"}
                 alt={e.title}

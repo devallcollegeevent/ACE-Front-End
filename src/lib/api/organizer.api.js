@@ -2,6 +2,7 @@ import apiPrivate from "../axiosPrivate";
 import apiPublic from "../axiosPublic";
 import { API_ENDPOINTS } from "./endpoints";
 import { handleApi } from "./apiHelper";
+import { isUserLoggedIn } from "../auth";
 
 /* ================= ORGANIZATION ================= */
 
@@ -22,8 +23,21 @@ export const deleteOrganizationApi = (orgId) =>
 export const getApprovedOrganizerEventsApi = (orgId) =>
   handleApi(apiPublic.get(API_ENDPOINTS.ORGANIZER.APPROVEDEVENTS(orgId)));
 
-export const getOrganizationByEventsApi = (slug) =>
-  handleApi(apiPublic.get(API_ENDPOINTS.ORGANIZER.ORGEVENTS(slug)));
+/* ================= ORGANIZATION EVENTS (PUBLIC / PRIVATE) ================= */
+
+export const getOrganizationByEventsApi = async (slug) => {
+  // 👤 NOT LOGGED IN → PUBLIC
+  if (!isUserLoggedIn()) {
+    return handleApi(
+      apiPublic.get(API_ENDPOINTS.ORGANIZER.ORG_EVENTS_PUBLIC(slug)),
+    );
+  }
+
+  // 🔐 LOGGED IN → PRIVATE
+  return handleApi(
+    apiPrivate.get(API_ENDPOINTS.ORGANIZER.ORG_EVENTS_PRIVATE(slug)),
+  );
+};
 
 export const createOrganizerEventApi = (orgId, data) =>
   handleApi(apiPrivate.post(API_ENDPOINTS.ORGANIZER.EVENTS(orgId), data));

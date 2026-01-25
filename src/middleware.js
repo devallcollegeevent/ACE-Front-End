@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 
 /* ===============================
-   ROUTE CONFIG
+   ROUTES
 ================================ */
 
-const PUBLIC_ROUTES = [
-  "/",
+const PUBLIC_EXACT = ["/", "/unauthorized"];
+
+const PUBLIC_PREFIX = [
   "/about",
   "/contact",
   "/faq",
@@ -15,73 +16,64 @@ const PUBLIC_ROUTES = [
   "/explore-categories",
   "/organization-details",
   "/auth",
-  "/unauthorized",
 ];
 
-const PROTECTED_ROUTES = [
-  "/dashboard",
-  "/profile",
-  "/settings",
-  "/space",
-];
-
-const CONSENT_REQUIRED_ROUTES = [
-  "/",
-  "/events",
-  "/explore-events",
-  "/explore-categories",
-  "/organization-details",
-];
-
-/* ===============================
-   MIDDLEWARE
-================================ */
+const PROTECTED_PREFIX = ["/dashboard", "/profile", "/settings", "/space"];
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  // Ignore assets & internals
+  /* --------------------------------
+     Ignore assets
+  --------------------------------- */
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/images") ||
-    pathname.startsWith("/favicon") ||
     pathname.match(/\.(png|jpg|jpeg|svg|css|js|ico)$/)
   ) {
     return NextResponse.next();
   }
 
-  // ✅ CORRECT COOKIE NAME
-  const token = request.cookies.get("authToken")?.value;
-  const consent = request.cookies.get("user_consent")?.value;
+  /* --------------------------------
+     Always allow unauthorized page
+  --------------------------------- */
+  if (pathname === "/unauthorized") {
+    return NextResponse.next();
+  }
 
-  // Protected routes
-  if (PROTECTED_ROUTES.some((route) => pathname.startsWith(route))) {
+  /* --------------------------------
+     Read cookie (MATCH BACKEND)
+  --------------------------------- */
+  // src/middleware.js
+
+  const token = request.cookies.get("authToken")?.value; 
+
+  /* --------------------------------
+     Exact public
+  --------------------------------- */
+  if (PUBLIC_EXACT.includes(pathname)) {
+    return NextResponse.next();
+  }
+
+  /* --------------------------------
+     Public prefixes
+  --------------------------------- */
+  if (PUBLIC_PREFIX.some((route) => pathname.startsWith(route))) {
+    return NextResponse.next();
+  }
+
+  /* --------------------------------
+     Protected routes
+  --------------------------------- */
+  if (PROTECTED_PREFIX.some((route) => pathname.startsWith(route))) {
     if (!token) {
-      return NextResponse.redirect(
-        new URL("/unauthorized", request.url)
-      );
+      return NextResponse.redirect(new URL("/unauthorized", request.url));
     }
     return NextResponse.next();
   }
 
-  // Consent routes
-  if (
-    CONSENT_REQUIRED_ROUTES.some((route) => pathname.startsWith(route)) &&
-    !consent
-  ) {
-    return NextResponse.next();
-  }
-
-  // Public routes
-  if (PUBLIC_ROUTES.some((route) => pathname.startsWith(route))) {
-    return NextResponse.next();
-  }
-
-  // Fallback
-  return NextResponse.rewrite(
-    new URL("/not-found", request.url)
-  );
+  return NextResponse.next();
 }
 
 export const config = {

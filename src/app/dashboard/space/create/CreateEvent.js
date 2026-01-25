@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import styles from "./CreateEvent.module.css";
+import toast from "react-hot-toast";
 
 import Stepper from "./components/Stepper";
 import OrganizerDetails from "./steps/OrganizerDetails";
 import EventDetails from "./steps/EventDetails";
 import MediaTickets from "./steps/MediaTickets";
-import toast from "react-hot-toast";
 
 import {
   createEventStep1Schema,
@@ -16,7 +17,6 @@ import {
 } from "../../../../components/validation";
 
 import { createEventApi } from "../../../../lib/api/event.api";
-import { getUserData } from "../../../../lib/auth";
 import { useLoading } from "../../../../context/LoadingContext";
 
 /* ================= INITIAL STATE ================= */
@@ -68,8 +68,12 @@ export default function CreateEvent() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
 
-  //RESET SIGNAL
   const [resetSignal, setResetSignal] = useState(0);
+
+  // ✅ REDUX AUTH
+  const { organizer, role, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
   /* ================= STEP 1 ================= */
   const handleStep1Next = async () => {
@@ -104,29 +108,32 @@ export default function CreateEvent() {
   /* ================= FINAL SUBMIT ================= */
   const handleFinalSubmit = async () => {
     try {
+      if (!isLoggedIn || role !== "organizer") {
+        toast.error("Only organizers can create events");
+        return;
+      }
+
       setLoading(true);
       await createEventStep3Schema.validate(formData.media, {
         abortEarly: false,
       });
 
-      const user = getUserData();
-      const orgId = user?.identity;
+      const orgId = organizer?.identity;
 
       if (!orgId) {
         toast.error("Organization not found");
         return;
       }
 
-      const collaboratorsPayload = (formData.organizer.organizations || []).map(
-        (org) => ({
+      const collaboratorsPayload =
+        (formData.organizer.organizations || []).map((org) => ({
           hostIdentity: org.hostBy,
           organizationName: org.orgName,
           organizerNumber: org.organizerNumber,
           orgDept: org.department || "",
           organizerName: org.organizerName,
           location: org.location,
-        }),
-      );
+        }));
 
       const event = formData.event;
       const media = formData.media;
@@ -148,9 +155,7 @@ export default function CreateEvent() {
         .filter(Boolean);
 
       fd.append("eligibleDeptIdentities", JSON.stringify(deptList));
-
       fd.append("tags", JSON.stringify(event.tags || []));
-
       fd.append("collaborators", JSON.stringify(collaboratorsPayload));
 
       fd.append(
@@ -162,8 +167,8 @@ export default function CreateEvent() {
             endDate: c.endDate,
             startTime: c.startTime,
             endTime: c.endTime,
-          })),
-        ),
+          }))
+        )
       );
 
       fd.append(
@@ -177,8 +182,8 @@ export default function CreateEvent() {
             isPaid: t.type === "PAID",
             price: t.type === "PAID" ? Number(t.amount) : 0,
             totalQuantity: Number(t.total),
-          })),
-        ),
+          }))
+        )
       );
 
       fd.append("perkIdentities", JSON.stringify(media.perks || []));
@@ -186,7 +191,7 @@ export default function CreateEvent() {
       if (media.accommodation) {
         fd.append(
           "accommodationIdentities",
-          JSON.stringify(media.accommodation || []),
+          JSON.stringify(media.accommodation || [])
         );
       }
 
@@ -200,7 +205,7 @@ export default function CreateEvent() {
             mapLink: event.mapLink,
             offers: event.offers,
             venue: event.venue,
-          }),
+          })
         );
       }
 
@@ -213,7 +218,7 @@ export default function CreateEvent() {
           whatsapp: media.whatsapp,
           instagram: media.instagram,
           linkedin: media.linkedin,
-        }),
+        })
       );
 
       if (media.bannerImages?.length) {
@@ -222,16 +227,11 @@ export default function CreateEvent() {
         });
       }
 
-      for (let pair of fd.entries()) {
-        console.log(pair[0], "=>", pair[1]);
-      }
-
       const res = await createEventApi(orgId, fd);
 
       if (res?.status) {
         toast.success("Event created successfully");
 
-        //FULL NORMAL RESET
         setFormData(INITIAL_FORM_DATA);
         setStep(1);
         setResetSignal((s) => s + 1);
@@ -241,7 +241,7 @@ export default function CreateEvent() {
     } catch (err) {
       toast.error(err?.errors?.[0] || err?.message || "Invalid data");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 

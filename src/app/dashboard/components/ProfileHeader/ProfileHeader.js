@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 import styles from "./ProfileHeader.module.css";
 
 // GLOBAL LOADING
@@ -10,31 +11,38 @@ import { useLoading } from "../../../../context/LoadingContext";
 // USER API
 import { getOrganizationProfileApi } from "../../../../lib/api/organizer.api";
 import { getUserProfileApi } from "../../../../lib/api/user.api";
-import { getUserData } from "../../../../lib/auth";
 
 export default function ProfileHeader() {
   const router = useRouter();
-  const { setLoading } = useLoading(); // ✅ GLOBAL LOADER
+  const { setLoading } = useLoading();
 
   const [profile, setProfile] = useState({});
+
+  // ✅ REDUX AUTH
+  const { user, organizer, role, isLoggedIn } = useSelector(
+    (state) => state.auth
+  );
 
   /* ================= LOAD PROFILE ================= */
   useEffect(() => {
     async function loadProfile() {
       try {
-        setLoading(true); // 🔥 START GLOBAL LOADER
+        if (!isLoggedIn) return;
 
-        const user = getUserData();
-        if (!user?.identity) return;
+        const identity =
+          role === "organizer"
+            ? organizer?.identity
+            : user?.identity;
 
-        const role =
-          user.role || (user.type === "org" ? "organizer" : "user");
+        if (!identity) return;
+
+        setLoading(true);
 
         let res;
         if (role === "organizer") {
-          res = await getOrganizationProfileApi(user.identity);
+          res = await getOrganizationProfileApi(identity);
         } else {
-          res = await getUserProfileApi(user.identity);
+          res = await getUserProfileApi(identity);
         }
 
         if (res?.status && res.data) {
@@ -43,15 +51,16 @@ export default function ProfileHeader() {
       } catch (err) {
         console.error("ProfileHeader error:", err);
       } finally {
-        setLoading(false); // ✅ STOP GLOBAL LOADER (VERY IMPORTANT)
+        setLoading(false);
       }
     }
 
     loadProfile();
-  }, []);
+  }, [isLoggedIn, role, user?.identity, organizer?.identity]);
 
   /* ================= SAFE FALLBACK VALUES ================= */
-  const displayName = profile.organizationName || profile.name || "User";
+  const displayName =
+    profile.organizationName || profile.name || "User";
   const firstLetter = displayName.charAt(0).toUpperCase();
 
   const followersCount = profile.followersCount || 0;
@@ -74,7 +83,9 @@ export default function ProfileHeader() {
             className={styles.avatar}
           />
         ) : (
-          <div className={styles.avatarFallback}>{firstLetter}</div>
+          <div className={styles.avatarFallback}>
+            {firstLetter}
+          </div>
         )}
 
         {/* INFO */}
@@ -82,16 +93,24 @@ export default function ProfileHeader() {
           <h2 className={styles.name}>
             {displayName}
             <span className={styles.role}>
-              ({profile.domainEmail ? "Organization" : "User"})
+              ({role === "organizer" ? "Organization" : "User"})
             </span>
           </h2>
 
           <div className={styles.followInfo}>
-            <span onClick={() => router.push("/dashboard/profile/followers")}>
+            <span
+              onClick={() =>
+                router.push("/dashboard/profile/followers")
+              }
+            >
               {followersCount} Followers
             </span>
 
-            <span onClick={() => router.push("/dashboard/profile/following")}>
+            <span
+              onClick={() =>
+                router.push("/dashboard/profile/following")
+              }
+            >
               {followingCount} Following
             </span>
           </div>
