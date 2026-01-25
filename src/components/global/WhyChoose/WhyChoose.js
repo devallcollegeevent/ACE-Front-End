@@ -1,4 +1,5 @@
 "use client";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import "./WhyChoose.css";
 
 export default function WhyChoose() {
@@ -18,7 +19,7 @@ export default function WhyChoose() {
         {/* LEFT – TOP */}
         <div className="why-card horizontal">
           <div className="why-img-left">
-            <img src="/images/fast-secure-payments.png" alt="" />
+            <img src="/images/fast-secure-payments.png" alt={IMAGE_LOADING} />
           </div>
 
           <div className="why-text">
@@ -39,14 +40,14 @@ export default function WhyChoose() {
           </p>
 
           <div className="why-img-bottom">
-            <img src="/images/book-anytime.png" alt="" />
+            <img src="/images/book-anytime.png" alt={IMAGE_LOADING} />
           </div>
         </div>
 
         {/* LEFT – BOTTOM */}
         <div className="why-card horizontal">
           <div className="why-img-left">
-            <img src="/images/smart-deals.png" alt="" />
+            <img src="/images/smart-deals.png" alt={IMAGE_LOADING} />
           </div>
 
           <div className="why-text">

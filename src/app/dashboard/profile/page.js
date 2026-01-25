@@ -20,6 +20,7 @@ import { getUserData } from "../../../lib/auth";
 import ConfirmModal from "../../../components/ui/Modal/ConfirmModal";
 import { useRouter } from "next/navigation";
 import { useLoading } from "../../../context/LoadingContext";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 /* ================= ROLE BASED API ================= */
 const getProfileApis = (user) => {
@@ -163,7 +164,7 @@ export default function ProfilePage() {
             src="/images/Pen.png"
             className={styles.editIcon}
             onClick={() => setMode("edit")}
-            alt="edit"
+            alt={IMAGE_LOADING}
           />
         </div>
       )}
@@ -204,7 +205,7 @@ export default function ProfilePage() {
               >
                 <img
                   src={imagePreview}
-                  alt="preview"
+                  alt={IMAGE_LOADING}
                   className={styles.imgpreview}
                   style={{
                     width: "100%",

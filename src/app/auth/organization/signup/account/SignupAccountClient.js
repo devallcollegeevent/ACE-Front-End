@@ -23,6 +23,7 @@ import {
   INPUT_PASSWORD,
   MSG_ERR_SIGNUP_FAILED,
   MSG_SIGNUP_SUCCESS,
+  IMAGE_LOADING,
 } from "../../../../../const-value/config-message/page";
 
 import {
@@ -101,7 +102,7 @@ export default function SignupAccountClient() {
       >
         <img
           src="/images/organizer-rocket.png"
-          alt="rocket"
+          alt={IMAGE_LOADING}
           className="org-left-img"
         />
       </aside>

@@ -32,6 +32,7 @@ import OrganizersCarousel from "../../components/global/OrganizerCarousel/Organi
 import FloatingExploreButton from "../../components/global/FloatingExploreButton/FloatingExploreButton.js";
 
 import { useLoading } from "../../context/LoadingContext.js";
+import { IMAGE_LOADING } from "../../const-value/config-message/page.js";
 
 export default function LandingPage() {
   const { setLoading } = useLoading();
@@ -101,7 +102,7 @@ export default function LandingPage() {
         <HeroBanner text={apiText} />
 
         <div className="exp-btn">
-          <img src="/images/sparkles.png" alt="sparkles" />
+          <img src="/images/sparkles.png" alt={IMAGE_LOADING} />
           <button
             className="btn-explore"
             onClick={() => router.push("/explore-events")}

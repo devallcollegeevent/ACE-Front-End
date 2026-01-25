@@ -33,6 +33,7 @@ import {
   PH_USER_EMAIL,
   MSG_GOOGLE_LOGIN_FAILED,
   MSG_GOOGLE_LOGIN_SUCCESS_USER,
+  IMAGE_LOADING,
 } from "../../../../const-value/config-message/page";
 
 import { loginApi, googleAuthLoginApi } from "../../../../lib/api/auth.api";
@@ -127,7 +128,7 @@ export default function UserLoginPage() {
     <div className="auth-shell">
       {/* LEFT IMAGE */}
       <div className="auth-left d-none d-lg-flex">
-        <img src="/images/auth-login.png" alt="login" />
+        <img src="/images/auth-login.png" alt={IMAGE_LOADING} />
       </div>
 
       {/* RIGHT FORM */}

@@ -23,6 +23,7 @@ import {
   TITLE_ALREADY_HAVE_ACCOUNT,
   TEXT_SIGNIN,
   ROLE_USER,
+  IMAGE_LOADING,
 } from "../../../const-value/config-message/page";
 import { useLoading } from "../../../context/LoadingContext";
 
@@ -92,7 +93,7 @@ export default function ResetPasswordPage() {
     <div className="org-shell">
       {/* LEFT IMAGE */}
       <aside className="org-left">
-        <img src={ui.image} className="org-left-img" alt="reset" />
+        <img src={ui.image} className="org-left-img" alt={IMAGE_LOADING} />
       </aside>
 
       {/* RIGHT FORM */}

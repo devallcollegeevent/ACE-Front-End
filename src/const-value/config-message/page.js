@@ -54,6 +54,7 @@ export const MSG_EVENT_LOAD_FAILED = "Failed to load events";
 export const MSG_EVENT_LOAD_ERROR = "Something went wrong while loading events";
 export const MSG_LOGOUT_FAILED = "Failed to logout";
 export const MSG_NOIMAGE_FAILED = "No Image";
+export const IMAGE_LOADING = "Loading...";
 export const MSG_NO_EVENT_FOUND_FOR_ORGANIZER =
   "No events found for this organizer";
 export const MSG_NO_EVENT_FOUND_FOR_USER = "No events available at the moment";

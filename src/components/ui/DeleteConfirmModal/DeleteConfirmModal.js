@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import "./DeleteConfirmModal.css";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function DeleteConfirmModal({
   open,
@@ -21,7 +22,7 @@ export default function DeleteConfirmModal({
       <div className="delete-modal">
         <img
           src="/images/logo.png"
-          alt="logo"
+          alt={IMAGE_LOADING}
           className="delete-logo"
         />
 

@@ -1,6 +1,7 @@
 "use client";
 import Footer from "../../components/global/Footer/Footer";
 import { FACEBOOKICON, INSTAGRAMICON, LINKEDINICON, WHATSAPP } from "../../const-value/config-icons/page";
+import { IMAGE_LOADING } from "../../const-value/config-message/page";
 import styles from "./contact.module.css";
 
 export default function ContactPage() {
@@ -36,7 +37,7 @@ export default function ContactPage() {
         <div className={styles.right}>
           <img
             src="/images/contactImage.png"
-            alt="Contact support"
+            alt={IMAGE_LOADING}
           />
 
           <div className={styles.followBox}>

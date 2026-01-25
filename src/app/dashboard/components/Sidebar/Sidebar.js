@@ -10,6 +10,7 @@ import { getOrganizationProfileApi } from "../../../../lib/api/organizer.api";
 import { getUserProfileApi } from "../../../../lib/api/user.api";
 import ConfirmModal from "../../../../components/ui/Modal/ConfirmModal";
 import { logoutOrganizer } from "../../../../lib/logout";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -87,7 +88,7 @@ export default function Sidebar() {
     >
       {/* PROFILE */}
       <div className={styles.menu} onClick={() => toggleMenu("profile")}>
-        <img src="/images/User.png" alt="profile" />
+        <img src="/images/User.png" alt={IMAGE_LOADING} />
         {expanded && (
           <div className={styles.menuText}>
             Profile <Arrow open={openMenu === "profile"} />
@@ -107,7 +108,7 @@ export default function Sidebar() {
 
       {/* ================= ACTIVITIES ================= */}
       <div className={styles.menu} onClick={() => toggleMenu("activities")}>
-        <img src="/images/myactivityes.png" alt="activities" />
+        <img src="/images/myactivityes.png" alt={IMAGE_LOADING} />
         {expanded && (
           <div className={styles.menuText}>
             Activities <Arrow open={openMenu === "activities"} />
@@ -128,7 +129,7 @@ export default function Sidebar() {
       {role === "org" && (
         <>
           <div className={styles.menu} onClick={() => toggleMenu("space")}>
-            <img src="/images/myspace.png" alt="space" />
+            <img src="/images/myspace.png" alt={IMAGE_LOADING} />
             {expanded && (
               <div className={styles.menuText}>
                 My Space <Arrow open={openMenu === "space"} />
@@ -152,7 +153,7 @@ export default function Sidebar() {
 
       {/* ================= SETTINGS ================= */}
       <div className={styles.menu} onClick={() => toggleMenu("settings")}>
-        <img src="/images/Settings.png" alt="settings" />
+        <img src="/images/Settings.png" alt={IMAGE_LOADING} />
         {expanded && (
           <div className={styles.menuText}>
             Settings <Arrow open={openMenu === "settings"} />
@@ -179,7 +180,7 @@ export default function Sidebar() {
         {profile?.profileImage ? (
           <img
             src={profile.profileImage}
-            alt="profile"
+            alt={IMAGE_LOADING}
             className={styles.profileImg}
           />
         ) : (
@@ -194,7 +195,7 @@ export default function Sidebar() {
                 <div className={styles.profileTextEmail}>{displayEmail}</div>
                 <img
                   src="/images/exit.png"
-                  alt="logout"
+                  alt={IMAGE_LOADING}
                   className={styles.exitImage}
                 />
               </div>

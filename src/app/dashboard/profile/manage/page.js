@@ -11,6 +11,7 @@ import {
   YOUTUBEICON,
 } from "../../../../const-value/config-icons/page";
 import {
+  IMAGE_LOADING,
   MSG_EMAIL_VERIFY_SUCCESS,
   TITLE_MANAGE_PAGE,
 } from "../../../../const-value/config-message/page";
@@ -74,7 +75,7 @@ export default function ManagePage() {
         <h2 className={styles.title}>{TITLE_MANAGE_PAGE}</h2>
         <img
           src="/images/Pen.png"
-          alt="edit"
+          alt={IMAGE_LOADING}
           className={styles.editIcon}
           onClick={() => setMode("edit")}
         />
@@ -111,7 +112,7 @@ export default function ManagePage() {
           >
             {!coverImage && <p>Upload Cover Image</p>}
             {coverImage && (
-              <img src={coverImage} alt="cover" className={styles.previewImg} />
+              <img src={coverImage} alt={IMAGE_LOADING} className={styles.previewImg} />
             )}
             <input
               id="coverUpload"

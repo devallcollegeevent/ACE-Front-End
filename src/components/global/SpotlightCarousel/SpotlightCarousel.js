@@ -12,6 +12,7 @@ import {
 import { encodeId } from "../../../lib/utils/secureId";
 import { useRouter } from "next/navigation";
 import { useLoading } from "../../../context/LoadingContext";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 /* -------- DATE FORMAT -------- */
 function formatDate(date, time) {
@@ -102,7 +103,7 @@ export default function SpotlightCarousel({ data = [] }) {
                 >
                   <img
                     src={banner}
-                    alt={event.title}
+                    alt={IMAGE_LOADING}
                     className={styles.image}
                   />
                 </div>

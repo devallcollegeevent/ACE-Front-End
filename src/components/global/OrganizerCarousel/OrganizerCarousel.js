@@ -3,6 +3,7 @@
 import styles from "./OrganizerCarousel.module.css";
 import { useRouter } from "next/navigation";
 import { useLoading } from "../../../context/LoadingContext";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function OrganizersCarousel({ data = [] }) {
   const router = useRouter();
@@ -69,7 +70,7 @@ export default function OrganizersCarousel({ data = [] }) {
                 {org.profileImage ? (
                   <img
                     src={org.profileImage}
-                    alt={org.organizationName}
+                    alt={IMAGE_LOADING}
                     className={styles.avatar}
                   />
                 ) : (

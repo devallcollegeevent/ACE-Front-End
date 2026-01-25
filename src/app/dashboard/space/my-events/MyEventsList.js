@@ -8,6 +8,7 @@ import {
   LOCATION_ICON,
   TIMEICON,
 } from "../../../../const-value/config-icons/page";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function MyEventsList({ events = [] }) {
   const [deleteId, setDeleteId] = useState(null);
@@ -70,7 +71,7 @@ export default function MyEventsList({ events = [] }) {
                       e.bannerImages?.[0] ||
                       "https://cloudinary-marketing-res.cloudinary.com/images/w_1000,c_scale/v1679921049/Image_URL_header/Image_URL_header-png?_i=AA"
                     }
-                    alt={e.title}
+                    alt={IMAGE_LOADING}
                     style={{ width: 248, height: 132, objectFit: "cover" }}
                     className="rounded"
                   />

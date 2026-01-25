@@ -28,6 +28,7 @@ import {
   SUB_TITLE_OTP_NOT_RECEIVE,
   CONDITION_OTP_SEND,
   ROLE_USER,
+  IMAGE_LOADING,
 } from "../../../const-value/config-message/page";
 
 /* GLOBAL LOADING */
@@ -132,7 +133,7 @@ export default function EnterOtpClient() {
   return (
     <div className="org-shell">
       <aside className="org-left">
-        <img className="org-left-img" src={ui.image} alt="otp" />
+        <img className="org-left-img" src={ui.image} alt={IMAGE_LOADING} />
       </aside>
 
       <main className="org-right">

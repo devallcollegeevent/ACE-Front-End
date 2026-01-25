@@ -22,6 +22,7 @@ import ConfirmModal from "../../../../../components/ui/Modal/ConfirmModal";
 import { processImage } from "../../../../../lib/utils/imageProcessor";
 import { ticketSchema } from "../../../../../components/validation";
 import toast from "react-hot-toast";
+import { IMAGE_LOADING } from "../../../../../const-value/config-message/page";
 
 export default function MediaTickets({
   data,
@@ -240,7 +241,7 @@ export default function MediaTickets({
                 {images.length === 0 &&
                   [1, 2, 3, 4].map((i) => (
                     <div key={i} className={styles.previewImg}>
-                      <img src="/images/file.png" alt="preview" />
+                      <img src="/images/file.png" alt={IMAGE_LOADING} />
                     </div>
                   ))}
 
@@ -250,7 +251,7 @@ export default function MediaTickets({
                     className={styles.previewImg}
                     style={{ position: "relative" }}
                   >
-                    <img src={URL.createObjectURL(img)} alt="preview" />
+                    <img src={URL.createObjectURL(img)} alt={IMAGE_LOADING} />
 
                     <span
                       onClick={() => removeImage(index)}

@@ -10,7 +10,7 @@ import DeleteConfirmModal from "../../../../components/ui/DeleteConfirmModal/Del
 import {
   BTN_CANCEL,
   BTN_DELETE_ACCOUNT,
-  IMAGE_ALT,
+  IMAGE_LOADING,
   MSG_DELETE_ACCOUNT,
   MSG_DELETED_YOUR_ACCOUNT,
   SUB_TITLE_DELETE_ACCOUNT,
@@ -58,7 +58,7 @@ export default function DeleteProfilePage() {
         <div className={styles.confirmBox}>
           <img
             src="/images/deleteprofileimage.png"
-            alt={IMAGE_ALT}
+            alt={IMAGE_LOADING}
             className={styles.icon}
           />
 

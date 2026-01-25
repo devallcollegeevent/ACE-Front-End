@@ -39,6 +39,7 @@ import {
   MSG_INVALID_CREDENTIALS,
   MSG_LOGIN_SUCCESS_ORGANIZER,
   MSG_LOGIN_FAILED,
+  IMAGE_LOADING,
 } from "../../../../const-value/config-message/page";
 
 import { useLoading } from "../../../../context/LoadingContext";
@@ -115,7 +116,7 @@ export default function OrganizerLoginPage() {
     <div className="org-login-shell">
       {/* LEFT IMAGE */}
       <div className="org-login-left">
-        <img src="/images/or_login.png" alt="Organizer Login" />
+        <img src="/images/or_login.png" alt={IMAGE_LOADING} />
       </div>
 
       {/* RIGHT FORM */}

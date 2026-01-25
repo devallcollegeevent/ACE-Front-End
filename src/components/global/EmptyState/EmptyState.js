@@ -1,4 +1,5 @@
 "use client";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import "./EmptyState.css";
 
 export default function EmptyState({
@@ -8,7 +9,7 @@ export default function EmptyState({
 }) {
   return (
     <div className="empty-state">
-      <img src={image} alt="Empty" />
+      <img src={image} alt={IMAGE_LOADING} />
       <h6>{title}</h6>
       <p>{subtitle}</p>
     </div>

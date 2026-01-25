@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { DATEICON } from "../../../../const-value/config-icons/page";
 import styles from "./DashboardChart.module.css";
 import { FaArrowLeft, FaMousePointer, FaEye, FaHeart } from "react-icons/fa";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function DashboardChart({ event, onBack }) {
   const [selected, setSelected] = useState("Click");
@@ -69,9 +70,9 @@ export default function DashboardChart({ event, onBack }) {
       <div className={styles.cards}>
         <div className={`${styles.card} ${styles.click}`}>
           <div className={styles.cardTop}>
-           <img src="/images/mouse-pointer.png" alt="no image" />
+           <img src="/images/mouse-pointer.png" alt={IMAGE_LOADING} />
             <h3>Total Clicks</h3>
-            <img src="/images/trending_arrow.png" alt="no image" />
+            <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Since Last Week</p>
           <h3>{stats.view}</h3>
@@ -79,9 +80,9 @@ export default function DashboardChart({ event, onBack }) {
 
         <div className={`${styles.card} ${styles.view}`}>
           <div className={styles.cardTop}>
-            <img src="/images/eye.png" alt="no image" />
+            <img src="/images/eye.png" alt={IMAGE_LOADING} />
             <h3>Total Views</h3>
-             <img src="/images/trending_arrow.png" alt="no image" />
+             <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Since Last Week</p>
           <h3>{stats.view}</h3>
@@ -89,9 +90,9 @@ export default function DashboardChart({ event, onBack }) {
 
         <div className={`${styles.card} ${styles.like}`}>
           <div className={styles.cardTop}>
-            <img src="/images/mdi_heart.png" alt="no image" />
+            <img src="/images/mdi_heart.png" alt={IMAGE_LOADING} />
             <h3>Total Likes</h3>
-             <img src="/images/trending_arrow.png" alt="no image" />
+             <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Since Last Week</p>
           <h3>{stats.like}</h3>

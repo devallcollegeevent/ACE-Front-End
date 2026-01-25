@@ -16,6 +16,7 @@ import {
   VIEW_ICON,
 } from "../../../../const-value/config-icons/page";
 import { getSavedEventsApi } from "../../../../lib/api/auth.api";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 const PAGE_SIZE = 6;
 
@@ -82,7 +83,7 @@ export default function BookingEventsPage() {
     return (
       <div className={styles.wrapper}>
         <div className={styles.emptyState}>
-          <img src="/images/no-event-image.png" alt="No Events" />
+          <img src="/images/no-event-image.png" alt={IMAGE_LOADING} />
           <h3>No Booked Events</h3>
           <p>You haven’t booked any events yet</p>
           <button onClick={() => router.push("/events")}>Explore Events</button>
@@ -106,7 +107,7 @@ export default function BookingEventsPage() {
             <div className={styles.imageWrap}>
               <img
                 src={e.bannerImages?.[0] || "/images/event.png"}
-                alt={e.title}
+                alt={IMAGE_LOADING}
               />
               {e.offers && <span className={styles.offer}>Offers</span>}
             </div>

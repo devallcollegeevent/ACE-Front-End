@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getExploreEventTypes } from "../../lib/api/event.api";
 import { useLoading } from "../../context/LoadingContext";
+import { IMAGE_LOADING } from "../../const-value/config-message/page";
 
 export default function ExploreCategoriesPage() {
   const router = useRouter();
@@ -87,7 +88,7 @@ export default function ExploreCategoriesPage() {
               onClick={() => handleCardClick(item)}
             >
               <div className="icon-box">
-                <img src={item.imageUrl || ""} alt={item.name} />
+                <img src={item.imageUrl || ""} alt={IMAGE_LOADING} />
               </div>
               <p>{item.name}</p>
             </div>

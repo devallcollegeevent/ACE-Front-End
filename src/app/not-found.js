@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import "./not-found.css";
+import { IMAGE_LOADING } from "../const-value/config-message/page";
 
 export default function NotFound() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function NotFound() {
       <div className="nf-content">
         <img
           src="/images/page-not-found-image.png"
-          alt="Page Not Found"
+          alt={IMAGE_LOADING}
           className="nf-image"
         />
         <h2 className="nf-title">Page Not Found</h2>

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import {
   BTN_EMAIL_VERIFY_FAILED,
   BTN_EMAIL_VERIFY_SUCCESS,
+  IMAGE_LOADING,
   MSG_EMAIL_VERIFY_FAILED,
   MSG_EMAIL_VERIFY_LOADING,
   MSG_EMAIL_VERIFY_SUCCESS,
@@ -74,7 +75,7 @@ export default function EmailVerifyClient() {
       >
         {/* LOGO */}
         <div className="mb-3">
-          <img src="/images/logo.png" alt="logo" style={{ height: 60 }} />
+          <img src="/images/logo.png" alt={IMAGE_LOADING} style={{ height: 60 }} />
         </div>
 
         {/* LOADING */}

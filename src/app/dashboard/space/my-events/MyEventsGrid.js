@@ -10,6 +10,7 @@ import {
   LOCATION_ICON,
   TIMEICON,
 } from "../../../../const-value/config-icons/page";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function MyEventsGrid({ events = [] }) {
   const [deleteId, setDeleteId] = useState(null);
@@ -47,7 +48,7 @@ export default function MyEventsGrid({ events = [] }) {
                 <div className="event-img-wrapper">
                   <img
                     src={e.bannerImages?.[0] || "/images/event.png"}
-                    alt={e.title}
+                    alt={IMAGE_LOADING}
                     className="w-100 h-100"
                   />
                   <div className={`event-status ${e.status?.toLowerCase()}`}>

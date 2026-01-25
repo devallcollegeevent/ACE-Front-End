@@ -31,6 +31,7 @@ import {
   MSG_SIGNUP_SUCCESS,
   PH_USER_EMAIL,
   MSG_ERR_SIGNUP_FAILED,
+  IMAGE_LOADING,
 } from "../../../../const-value/config-message/page";
 
 import { useLoading } from "../../../../context/LoadingContext"; 
@@ -109,7 +110,7 @@ export default function UserSignupPage() {
     <div className="auth-shell">
       {/* LEFT IMAGE */}
       <div className="auth-left d-none d-lg-flex">
-        <img src="/images/auth-signup.png" alt="signup" />
+        <img src="/images/auth-signup.png" alt={IMAGE_LOADING} />
       </div>
 
       {/* FORM */}

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./LocationHighlights.module.css";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function PopularLocations() {
   const [activeTab, setActiveTab] = useState("cities");
@@ -56,7 +57,7 @@ export default function PopularLocations() {
       <div className={styles.grid}>
         {list.map((item, i) => (
           <div key={i} className={styles.card}>
-            <img src={item.img} className={styles.img} alt={item.name} />
+            <img src={item.img} className={styles.img} alt={IMAGE_LOADING} />
             <div className={styles.text}>
               <h3 className={styles.name}>{item.name}</h3>
               <p className={styles.events}>{item.events}</p>

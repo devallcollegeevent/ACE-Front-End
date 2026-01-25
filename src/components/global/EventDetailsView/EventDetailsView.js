@@ -21,6 +21,7 @@ import ConfirmModal from "../../ui/Modal/ConfirmModal";
 import { addEventViewApi } from "../../../lib/api/event.api";
 import { useLoading } from "../../../context/LoadingContext";
 import ShareModal from "../../ui/ShareModal/ShareModal";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function EventDetailsView({ event = {}, onBack }) {
   const { setLoading } = useLoading();
@@ -146,7 +147,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
           {/* CLEAR CENTER IMAGE */}
           <img
             className="event-img"
-            alt="event"
+            alt={IMAGE_LOADING}
             src={bannerImages[currentIndex]}
           />
 
@@ -427,7 +428,7 @@ export default function EventDetailsView({ event = {}, onBack }) {
                   <>
                     <h3>Discounts & Offers</h3>
                     <div className="discount-section">
-                      <img src="/images/discount.png" alt="Discount" />
+                      <img src="/images/discount.png" alt={IMAGE_LOADING} />
                       <span>{event.offers}</span>
                     </div>
                     <hr />

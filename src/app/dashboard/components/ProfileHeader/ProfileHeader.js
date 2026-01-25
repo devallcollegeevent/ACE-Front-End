@@ -11,6 +11,7 @@ import { useLoading } from "../../../../context/LoadingContext";
 import { getOrganizationProfileApi } from "../../../../lib/api/organizer.api";
 import { getUserProfileApi } from "../../../../lib/api/user.api";
 import { getUserData } from "../../../../lib/auth";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function ProfileHeader() {
   const router = useRouter();
@@ -70,7 +71,7 @@ export default function ProfileHeader() {
         {profile.profileImage ? (
           <img
             src={profile.profileImage}
-            alt="profile"
+            alt={IMAGE_LOADING}
             className={styles.avatar}
           />
         ) : (

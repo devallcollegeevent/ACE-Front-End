@@ -9,6 +9,7 @@ import {
   SAVEICON,
 } from "../../../const-value/config-icons/page";
 import { useLoading } from "../../../context/LoadingContext";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function EventsListFilter({ events = [] }) {
   const router = useRouter();
@@ -68,7 +69,7 @@ export default function EventsListFilter({ events = [] }) {
   if (!events.length) {
     return (
       <div className="events-empty">
-        <img src="/images/no-event-image.png" alt="no image" />
+        <img src="/images/no-event-image.png" alt={IMAGE_LOADING} />
         <p className="mt-5">No events found</p>
       </div>
     );
@@ -89,10 +90,10 @@ export default function EventsListFilter({ events = [] }) {
             {/* FLOATING IMAGE */}
             <div className="floating-image" onClick={() => handleClick(e.slug)}>
               {eventImage ? (
-                <img src={eventImage} alt={e.title} />
+                <img src={eventImage} alt={IMAGE_LOADING} />
               ) : (
                 <div className="no-image">
-                  <img src="/images/no-image.png" alt="no image" />
+                  <img src="/images/no-image.png" alt={IMAGE_LOADING} />
                 </div>
               )}
 

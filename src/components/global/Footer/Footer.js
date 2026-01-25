@@ -13,6 +13,7 @@ import {
 
 import styles from "./Footer.module.css";
 import { useRouter } from "next/navigation";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function Footer() {
   const router = useRouter();
@@ -20,7 +21,7 @@ export default function Footer() {
     <footer className={styles.root}>
       {/* Skyline */}
       <div className={styles.skyline}>
-        <img src="/images/footer.png" alt="Skyline" />
+        <img src="/images/footer.png" alt={IMAGE_LOADING} />
       </div>
 
       {/* Main */}
@@ -29,7 +30,7 @@ export default function Footer() {
         <div className={styles.top}>
           {/* Brand */}
           <div className={styles.brand}>
-            <img src="/images/logo.png" alt="ACE" className={styles.logo} />
+            <img src="/images/logo.png" alt={IMAGE_LOADING} className={styles.logo} />
 
             <p className={styles.text}>
               Life is Full of Events, don't Let them Pass Unnoticed,

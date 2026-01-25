@@ -1,5 +1,6 @@
 "use client";
 import { VIDEOICON } from "../../../const-value/config-icons/page";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import "./ExploreHero.css";
 
 export default function ExploreHero() {
@@ -33,32 +34,32 @@ export default function ExploreHero() {
           <div className="ace-image-grid">
             <img
               src="/images/concert-live-event.jpeg"
-              alt="Live Concert Event"
+              alt={IMAGE_LOADING}
               loading="lazy"
             />
             <img
               src="/images/conference-seminar-hall.jpeg"
-              alt="Conference Seminar Hall"
+              alt={IMAGE_LOADING}
               loading="lazy"
             />
             <img
               src="/images/coding-workshop-session.jpeg"
-              alt="Coding Workshop Session"
+              alt={IMAGE_LOADING}
               loading="lazy"
             />
             <img
               src="/images/marathon-sports-event.jpeg"
-              alt="Marathon Sports Event"
+              alt={IMAGE_LOADING}
               loading="lazy"
             />
             <img
               src="/images/college-sports-ground.jpeg"
-              alt="College Sports Ground"
+              alt={IMAGE_LOADING}
               loading="lazy"
             />
             <img
               src="/images/professional-networking-event.jpeg"
-              alt="Professional Networking Event"
+              alt={IMAGE_LOADING}
               loading="lazy"
             />
           </div>

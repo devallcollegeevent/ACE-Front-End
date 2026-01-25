@@ -1,5 +1,6 @@
 "use client";
 
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import styles from "./Modal.module.css";
 
 export default function ConfirmModal({
@@ -17,7 +18,7 @@ export default function ConfirmModal({
       <div className={styles.modal}>
         {image && (
           <div style={{ textAlign: "center", marginTop: 12 }} className="text-center">
-            <img src={image} alt="confirmation" style={{ width: 120 }} />
+            <img src={image} alt={IMAGE_LOADING} style={{ width: 120 }} />
           </div>
         )}
         {/* Header */}

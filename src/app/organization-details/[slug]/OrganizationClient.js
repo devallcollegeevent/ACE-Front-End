@@ -22,6 +22,7 @@ import {
   YOUTUBEICON,
 } from "../../../const-value/config-icons/page";
 import Footer from "../../../components/global/Footer/Footer";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function OrganizationClient({ slug }) {
   const router = useRouter();
@@ -98,7 +99,7 @@ export default function OrganizationClient({ slug }) {
         <img
           src={bannerImages[currentBanner]}
           className="w-100 org-hero-img"
-          alt={org?.organizationName || "Organization"}
+          alt={IMAGE_LOADING}
         />
 
         <div className="org-hero-dots">
@@ -148,7 +149,7 @@ export default function OrganizationClient({ slug }) {
             <div key={e._id ?? `upcoming-${index}`} className="event-card-new">
               <img
                 src={e.bannerImages?.[0] || "/images/event.jpg"}
-                alt={e.title}
+                alt={IMAGE_LOADING}
                 className="event-card-img"
               />
 
@@ -193,7 +194,7 @@ export default function OrganizationClient({ slug }) {
             <div  key={e._id ?? `past-${index}`} className="past-card">
               <img
                 src={e.bannerImages?.[0] || "/images/event.jpg"}
-                alt={e.title}
+                alt={IMAGE_LOADING}
               />
 
               <div className="past-overlay">

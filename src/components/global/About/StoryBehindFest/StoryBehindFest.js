@@ -1,4 +1,5 @@
 "use client";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 import styles from "./StoryBehindFest.module.css";
 
 export default function StoryBehindFest() {
@@ -40,7 +41,7 @@ export default function StoryBehindFest() {
           <img
             key={i}
             src={src}
-            alt="story"
+            alt={IMAGE_LOADING}
             className={`${styles.img} ${styles[`img${i}`]}`}
           />
         ))}

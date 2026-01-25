@@ -1,5 +1,6 @@
 "use client";
 
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import styles from "./TopThreeBoard.module.css";
 
 export default function TopThreeBoard({ data = [] }) {
@@ -18,7 +19,7 @@ export default function TopThreeBoard({ data = [] }) {
       return (
         <img
           src={org.profileImage}
-          alt={org.organizationName}
+          alt={IMAGE_LOADING}
           className={styles.avatarImg}
         />
       );

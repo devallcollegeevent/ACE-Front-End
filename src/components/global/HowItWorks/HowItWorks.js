@@ -1,5 +1,6 @@
 "use client";
 
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import styles from "./HowItWorks.module.css";
 
 export default function HowItWorks() {
@@ -11,7 +12,7 @@ export default function HowItWorks() {
 
       <img
         src="/images/animationImage.png"
-        alt="How All College Event Works"
+        alt={IMAGE_LOADING}
         className={styles.animation}
       />
     </section>

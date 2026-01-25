@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import "./BannerImageModal.css";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function BannerImageModal({
   images = [],
@@ -70,7 +71,7 @@ export default function BannerImageModal({
             <div className="preview-row">
               {previewImages.map((img, index) => (
                 <div key={index} className="preview-img">
-                  <img src={img.url || img} alt="preview" />
+                  <img src={img.url || img} alt={IMAGE_LOADING} />
                   <span onClick={(e) => {
                     e.stopPropagation();
                     removeImage(index);

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import styles from "./HeroBannerCarousel.module.css";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 export default function HeroBannerCarousel({ images = [], interval = 4500 }) {
   const n = images.length;
@@ -43,7 +44,7 @@ export default function HeroBannerCarousel({ images = [], interval = 4500 }) {
             key={idx}
             className={`${styles.cardItem} ${getPosClass(idx)}`}
           >
-            <img src={src} alt={`banner-${idx}`} draggable={false} />
+            <img src={src} alt={IMAGE_LOADING} draggable={false} />
           </div>
         ))}
       </div>

@@ -21,6 +21,7 @@ import {
   TITLE_ALREADY_HAVE_ACCOUNT,
   ROLE_USER,
   ROLE_ORGANIZER,
+  IMAGE_LOADING,
 } from "../../../const-value/config-message/page";
 
 /* API */
@@ -89,7 +90,7 @@ export default function ForgotPasswordClient() {
   return (
     <div className="org-shell">
       <aside className="org-left">
-        <img src={ui.image} className="org-left-img" alt="Forgot Password" />
+        <img src={ui.image} className="org-left-img" alt={IMAGE_LOADING} />
       </aside>
 
       <main className="org-right">

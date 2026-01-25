@@ -12,6 +12,7 @@ import {
   EXPLORE_ICON,
   LOCATION_ICON,
 } from "../../../const-value/config-icons/page";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 
 export default function Navbar() {
@@ -101,7 +102,7 @@ export default function Navbar() {
       <div className="nav-left">
         <img
           src="/images/logo.png"
-          alt="logo"
+          alt={IMAGE_LOADING}
           className="nav-logo"
           onClick={() => router.push("/")}
         />
@@ -142,7 +143,7 @@ export default function Navbar() {
             {profileImage ? (
               <img
                 src={profileImage}
-                alt="profile"
+                alt={IMAGE_LOADING}
                 className="nav-profile-image"
                 onError={() => setProfileImage(null)}
               />

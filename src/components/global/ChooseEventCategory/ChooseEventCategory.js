@@ -1,5 +1,6 @@
 "use client";
 
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import { useLoading } from "../../../context/LoadingContext";
 import styles from "./ChooseEventCategory.module.css";
 import { useRouter } from "next/navigation";
@@ -37,7 +38,7 @@ export default function ChooseEventCategory({ categories = [] }) {
             onClick={() => handleCardClick(c)}
           >
             <div className={styles.left}>
-              <img src={c.img} alt={c.name} />
+              <img src={c.img} alt={IMAGE_LOADING} />
             </div>
             <div className={styles.right}>{c.name}</div>
           </div>

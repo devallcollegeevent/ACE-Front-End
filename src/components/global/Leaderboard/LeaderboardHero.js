@@ -1,6 +1,7 @@
 "use client";
 
 import { SEARCH_ICON } from "../../../const-value/config-icons/page";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 import styles from "./LeaderboardHero.module.css";
 
 export default function LeaderboardHero({ search, onSearchChange }) {
@@ -14,9 +15,9 @@ export default function LeaderboardHero({ search, onSearchChange }) {
         <span className={styles.discover}>Discover</span>
 
         <span className={styles.avatarGroup}>
-          <img src="/images/avatar1.jpg" alt="" />
-          <img src="/images/avatar2.jpg" alt="" />
-          <img src="/images/avatar3.jpg" alt="" />
+          <img src="/images/avatar1.jpg" alt={IMAGE_LOADING} />
+          <img src="/images/avatar2.jpg" alt={IMAGE_LOADING} />
+          <img src="/images/avatar3.jpg" alt={IMAGE_LOADING} />
         </span>
 
         <span className={styles.amazing}>Amazing</span>
@@ -24,7 +25,7 @@ export default function LeaderboardHero({ search, onSearchChange }) {
 
       <h2 className={styles.subHeading}>
         Event Organizers
-        <img src="/images/sparkles.png" alt="no" />
+        <img src="/images/sparkles.png" alt={IMAGE_LOADING} />
       </h2>
 
       {/* 🔥 SEARCH */}
@@ -41,7 +42,7 @@ export default function LeaderboardHero({ search, onSearchChange }) {
       <h3 className={styles.boardTitle}>
         Star Organizers Board{" "}
         <span>
-          <img src="/images/sparkles_s.png" alt="no" />
+          <img src="/images/sparkles_s.png" alt={IMAGE_LOADING} />
         </span>
       </h3>
 

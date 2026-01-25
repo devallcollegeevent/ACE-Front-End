@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { DATEICON } from "../../../../const-value/config-icons/page";
 import styles from "./OverviewDashboardChart.module.css";
+import { IMAGE_LOADING } from "../../../../const-value/config-message/page";
 
 export default function OverviewDashboardChart({ events }) {
   /* ================= STATE ================= */
@@ -117,9 +118,9 @@ export default function OverviewDashboardChart({ events }) {
       <div className={styles.cards}>
         <div className={`${styles.card} ${styles.click}`}>
           <div className={styles.cardTop}>
-            <img src="/images/mouse-pointer.png" alt="" />
+            <img src="/images/mouse-pointer.png" alt={IMAGE_LOADING} />
             <h3>Total Clicks</h3>
-            <img src="/images/trending_arrow.png" alt="" />
+            <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Since Last Week</p>
           <h3 className="text-end">{stats.click}</h3>
@@ -127,9 +128,9 @@ export default function OverviewDashboardChart({ events }) {
 
         <div className={`${styles.card} ${styles.view}`}>
           <div className={styles.cardTop}>
-            <img src="/images/eye.png" alt="" />
+            <img src="/images/eye.png" alt={IMAGE_LOADING} />
             <h3>Total Views</h3>
-            <img src="/images/trending_arrow.png" alt="" />
+            <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Since Last Week</p>
           <h3 className="text-end">{stats.view}</h3>
@@ -137,18 +138,18 @@ export default function OverviewDashboardChart({ events }) {
 
         <div className={`${styles.card} ${styles.like}`}>
           <div className={styles.cardTop}>
-            <img src="/images/mdi_heart.png" alt="" />
+            <img src="/images/mdi_heart.png" alt={IMAGE_LOADING} />
             <h3>Total Likes</h3>
-            <img src="/images/trending_arrow.png" alt="" />
+            <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Since Last Week</p>
           <h3 className="text-end">{stats.like}</h3>
         </div>
         <div className={`${styles.card} ${styles.click}`}>
           <div className={styles.cardTop}>
-            <img src="/images/engagement.png" alt="engagement" />
+            <img src="/images/engagement.png" alt={IMAGE_LOADING} />
             <h3>Engagement</h3>
-            <img src="/images/trending_arrow.png" alt="" />
+            <img src="/images/trending_arrow.png" alt={IMAGE_LOADING} />
           </div>
           <p>Overall Performance</p>
           <h3 className="text-end">{stats.engagement}</h3>

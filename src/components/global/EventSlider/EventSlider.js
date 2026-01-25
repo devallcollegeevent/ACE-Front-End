@@ -18,6 +18,7 @@ import { useLoading } from "../../../context/LoadingContext";
 import { getUserData, isUserLoggedIn } from "../../../lib/auth";
 import { likeEventApi, saveEventApi } from "../../../lib/api/event.api";
 import toast from "react-hot-toast";
+import { IMAGE_LOADING } from "../../../const-value/config-message/page";
 
 /* ================= HELPER ================= */
 const getLowestTicketPrice = (tickets = []) => {
@@ -238,7 +239,7 @@ export default function EventSlider({
               <img
                 src={event.bannerImages?.[0] || "/images/event.png"}
                 className="event-img"
-                alt={event.title}
+                alt={IMAGE_LOADING}
                 onClick={() => handleClick(event.slug)}
               />
 

@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import "./success.css";
 import {
   BTN_EMAIL_VERIFY_SUCCESS,
-  IMAGE_ALT,
+  IMAGE_LOADING,
   ROLE_USER,
   SUB_TITLE_DOMAIN_MAIL_VERIFY,
   SUB_TITLE_PASSWORD_UPDATE_SUCCESS,
@@ -37,7 +37,7 @@ export default function SuccessClient() {
   return (
     <div className="org-shell">
       <aside className="org-left">
-        <img className="org-left-img" src={ui.image} alt={IMAGE_ALT} />
+        <img className="org-left-img" src={ui.image} alt={IMAGE_LOADING} />
       </aside>
 
       <main className="org-right">

@@ -24,6 +24,7 @@ import {
   MSG_ERR_FILL_ALL_FIELDS,
   MSG_ORG_SELECT_COUNTRY,
   MSG_ORG_SELECT_STATE,
+  IMAGE_LOADING,
 } from "../../../../../const-value/config-message/page";
 
 import {
@@ -147,7 +148,7 @@ export default function Page() {
       >
         <img
           src="/images/organizer-rocket.png"
-          alt="rocket"
+          alt={IMAGE_LOADING}
           className="org-left-img"
         />
       </aside>
