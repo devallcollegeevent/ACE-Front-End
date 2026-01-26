@@ -4,45 +4,56 @@ const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 async function handler(req) {
   try {
-    const pathname = req.nextUrl.pathname;
+    const { pathname, search } = req.nextUrl;
 
     // remove "/api/proxy" from path
     const backendPath = pathname.replace("/api/proxy", "");
 
-    // FINAL BACKEND URL
-    const backendUrl = `${BACKEND_BASE_URL}${backendPath}`;
+    // FINAL BACKEND URL (with query params)
+    const backendUrl = `${BACKEND_BASE_URL}${backendPath}${search}`;
 
-    const headers = new Headers();
-    headers.set("Content-Type", "application/json");
+    /* ================= FORWARD HEADERS ================= */
+    const headers = new Headers(req.headers);
 
-    // forward auth header
-    const auth = req.headers.get("authorization");
-    if (auth) headers.set("authorization", auth);
+    // Remove host & length related headers (fetch safety)
+    headers.delete("host");
+    headers.delete("content-length");
 
-    const body =
-      req.method === "GET" || req.method === "HEAD" ? null : await req.text();
+    /* ================= BODY ================= */
+    let body = null;
+    if (req.method !== "GET" && req.method !== "HEAD") {
+      body = await req.arrayBuffer();
+    }
 
+    /* ================= BACKEND FETCH ================= */
     const backendRes = await fetch(backendUrl, {
       method: req.method,
       headers,
       body,
-      credentials: "include",
+      credentials: "include", // 🔐 VERY IMPORTANT
       cache: "no-store",
     });
 
-    // forward response headers
+    /* ================= RESPONSE HEADERS ================= */
     const responseHeaders = new Headers();
 
-    const setCookie = backendRes.headers.get("set-cookie");
-    if (setCookie) responseHeaders.append("set-cookie", setCookie);
+    // 🔥 FORWARD ALL SET-COOKIE HEADERS
+    backendRes.headers.forEach((value, key) => {
+      if (key.toLowerCase() === "set-cookie") {
+        responseHeaders.append("set-cookie", value);
+      }
+    });
 
-    const contentType =
-      backendRes.headers.get("content-type") || "application/json";
-    responseHeaders.set("Content-Type", contentType);
+    // Forward content-type
+    const contentType = backendRes.headers.get("content-type");
+    if (contentType) {
+      responseHeaders.set("content-type", contentType);
+    }
 
-    const text = await backendRes.text();
+    /* ================= RESPONSE BODY ================= */
+    const responseBody = await backendRes.arrayBuffer();
 
-    return new NextResponse(text, {
+    return new NextResponse(responseBody, {
       status: backendRes.status,
       headers: responseHeaders,
     });
@@ -58,6 +69,7 @@ async function handler(req) {
   }
 }
 
+/* ================= EXPORT METHODS ================= */
 export const GET = handler;
 export const POST = handler;
 export const PUT = handler;

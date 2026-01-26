@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import styles from "./Saved.module.css";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
 
 import { getSavedEventsApi } from "../../../../lib/api/auth.api";
 import {
@@ -14,32 +13,50 @@ import {
   TICKET_ICON,
   VIEW_ICON,
 } from "../../../../const-value/config-icons/page";
+
 import { useLoading } from "../../../../context/LoadingContext";
+
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../../lib/auth";
 
 const PAGE_SIZE = 6;
 
 export default function SavedEventsPage() {
   const [events, setEvents] = useState([]);
   const [page, setPage] = useState(1);
+  const [localLoading, setLocalLoading] = useState(true); 
 
   const { setLoading } = useLoading();
   const router = useRouter();
 
-  const { user, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  /* ================= INIT AUTH ================= */
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
+
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
 
   /* ================= LOAD SAVED EVENTS ================= */
   const loadEvents = async () => {
     try {
+      setLocalLoading(true);
       setLoading(true);
 
-      if (!isLoggedIn || !user?.identity) {
+      if (!loggedIn || !auth?.identity) {
         setEvents([]);
         return;
       }
 
-      const res = await getSavedEventsApi(user.identity);
+      const res = await getSavedEventsApi(auth.identity);
 
       if (res?.status) {
         setEvents(res.data?.events || []);
@@ -51,20 +68,25 @@ export default function SavedEventsPage() {
       toast.error("Something went wrong");
       setEvents([]);
     } finally {
+      setLocalLoading(false); 
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    loadEvents();
-  }, [isLoggedIn, user?.identity]);
+    if (loggedIn) loadEvents();
+  }, [loggedIn, auth?.identity]);
 
-  /* ================= PAGINATION ================= */
-  const totalPages = Math.ceil(events.length / PAGE_SIZE);
-  const start = (page - 1) * PAGE_SIZE;
-  const visibleEvents = events.slice(start, start + PAGE_SIZE);
+  /* ================= LOADING STATE ================= */
+  if (localLoading) {
+    return (
+      <div className={styles.wrapper}>
+        <p className="text-center mt-5">Loading saved events...</p>
+      </div>
+    );
+  }
 
-  /* ================= EMPTY ================= */
+  /* ================= EMPTY STATE ================= */
   if (!events.length) {
     return (
       <div className={styles.wrapper}>
@@ -79,6 +101,11 @@ export default function SavedEventsPage() {
       </div>
     );
   }
+
+  /* ================= PAGINATION ================= */
+  const totalPages = Math.ceil(events.length / PAGE_SIZE);
+  const start = (page - 1) * PAGE_SIZE;
+  const visibleEvents = events.slice(start, start + PAGE_SIZE);
 
   /* ================= UI ================= */
   return (
@@ -139,7 +166,6 @@ export default function SavedEventsPage() {
         ))}
       </div>
 
-      {/* PAGINATION */}
       {totalPages > 1 && (
         <div className={styles.pagination}>
           <button

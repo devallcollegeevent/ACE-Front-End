@@ -15,6 +15,9 @@ import {
 /* API */
 import { loginApi } from "../../../../lib/api/auth.api";
 
+/* ✅ AUTH (SESSION) */
+import { setAuthSession } from "../../../../lib/auth";
+
 /* VALIDATION */
 import { organizerLoginSchema } from "../../../../components/validation";
 
@@ -52,10 +55,11 @@ export default function OrganizerLoginPage() {
   async function onSubmit(e) {
     e.preventDefault();
 
+    // 1️⃣ validation
     try {
       await organizerLoginSchema.validate(
         { email, password },
-        { abortEarly: false },
+        { abortEarly: false }
       );
     } catch (err) {
       toast.error(err.errors[0]);
@@ -65,21 +69,26 @@ export default function OrganizerLoginPage() {
     try {
       setLoading(true);
 
+      // 2️⃣ login API
       const res = await loginApi({
         email,
         password,
         type: ROLE_ORGANIZER,
       });
 
-      if (!res?.status) {
+      // 3️⃣ failure
+      if (!res?.status || !res?.token) {
         toast.error(res?.message || MSG_INVALID_CREDENTIALS);
         return;
       }
 
-      //NO token handling
+      // 4️⃣ ✅ SAVE AUTH TO SESSION (IMPORTANT)
+      setAuthSession(res.token);
+
+      // 5️⃣ success
       toast.success(MSG_LOGIN_SUCCESS_ORGANIZER);
       router.push("/dashboard");
-    } catch {
+    } catch (err) {
       toast.error(MSG_LOGIN_FAILED);
     } finally {
       setLoading(false);
@@ -88,12 +97,7 @@ export default function OrganizerLoginPage() {
 
   /* ================= SWITCH TO USER LOGIN ================= */
   const handleUserLogin = () => {
-    try {
-      setLoading(true);
-      router.push("/auth/user/login");
-    } catch (err) {
-      setLoading(false);
-    }
+    router.push("/auth/user/login");
   };
 
   useEffect(() => {
@@ -156,7 +160,9 @@ export default function OrganizerLoginPage() {
 
             <p className="org-foot">
               {TEXT_NO_ACCOUNT}{" "}
-              <a href="/auth/organization/signup/category">{TEXT_SIGNUP}</a>
+              <a href="/auth/organization/signup/category">
+                {TEXT_SIGNUP}
+              </a>
             </p>
           </form>
         </div>

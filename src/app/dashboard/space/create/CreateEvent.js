@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 import styles from "./CreateEvent.module.css";
 import toast from "react-hot-toast";
 
@@ -18,6 +17,12 @@ import {
 
 import { createEventApi } from "../../../../lib/api/event.api";
 import { useLoading } from "../../../../context/LoadingContext";
+
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../../lib/auth";
 
 /* ================= INITIAL STATE ================= */
 
@@ -65,15 +70,24 @@ const INITIAL_FORM_DATA = {
 
 export default function CreateEvent() {
   const { setLoading } = useLoading();
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
-
   const [resetSignal, setResetSignal] = useState(0);
 
-  // ✅ REDUX AUTH
-  const { organizer, role, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  // 🔐 SESSION STATE
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  /* ================= INIT AUTH ================= */
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
+
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
 
   /* ================= STEP 1 ================= */
   const handleStep1Next = async () => {
@@ -108,7 +122,7 @@ export default function CreateEvent() {
   /* ================= FINAL SUBMIT ================= */
   const handleFinalSubmit = async () => {
     try {
-      if (!isLoggedIn || role !== "organizer") {
+      if (!loggedIn || auth?.type !== "org") {
         toast.error("Only organizers can create events");
         return;
       }
@@ -118,7 +132,7 @@ export default function CreateEvent() {
         abortEarly: false,
       });
 
-      const orgId = organizer?.identity;
+      const orgId = auth.identity;
 
       if (!orgId) {
         toast.error("Organization not found");
@@ -245,6 +259,7 @@ export default function CreateEvent() {
     }
   };
 
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <div className={styles.wrapper}>
       <Stepper step={step} />

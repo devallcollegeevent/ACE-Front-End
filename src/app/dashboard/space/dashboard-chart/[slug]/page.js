@@ -22,14 +22,21 @@ export default function DashboardChartPage() {
       try {
         setLoading(true);
 
-        getEventBySlugApi(slug);
+        console.log("📡 Fetching event by slug:", slug);
 
-        if (res?.status) {
+        // ✅ FIX: await + res
+        const res = await getEventBySlugApi(slug);
+
+        console.log("✅ Event API response:", res);
+
+        if (res?.status && res.data) {
           setEvent(res.data);
         } else {
           toast.error("Event not found");
+          router.back();
         }
-      } catch {
+      } catch (err) {
+        console.error("❌ DashboardChartPage error:", err);
         toast.error("Something went wrong");
       } finally {
         setLoading(false);
@@ -39,7 +46,13 @@ export default function DashboardChartPage() {
     loadEvent();
   }, [slug]);
 
+  /* ================= SAFE GUARD ================= */
   if (!event) return null;
 
-  return <DashboardChart event={event} onBack={() => router.back()} />;
+  return (
+    <DashboardChart
+      event={event}
+      onBack={() => router.back()}
+    />
+  );
 }

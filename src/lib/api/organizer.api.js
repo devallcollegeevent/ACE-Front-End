@@ -38,6 +38,3 @@ export const getOrganizationByEventsApi = async (slug) => {
     apiPrivate.get(API_ENDPOINTS.ORGANIZER.ORG_EVENTS_PRIVATE(slug)),
   );
 };
-
-export const createOrganizerEventApi = (orgId, data) =>
-  handleApi(apiPrivate.post(API_ENDPOINTS.ORGANIZER.EVENTS(orgId), data));

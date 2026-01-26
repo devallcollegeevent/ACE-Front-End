@@ -4,30 +4,30 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Profile.module.css";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
 
 /* APIs */
-import {
-  getOrganizationProfileApi,
-} from "../../../lib/api/organizer.api";
-import {
-  getUserProfileApi,
-} from "../../../lib/api/user.api";
+import { getOrganizationProfileApi } from "../../../lib/api/organizer.api";
+import { getUserProfileApi } from "../../../lib/api/user.api";
 import { updateAuthProfile } from "../../../lib/api/auth.api";
 
 /* UI */
 import ConfirmModal from "../../../components/ui/Modal/ConfirmModal";
 import { useLoading } from "../../../context/LoadingContext";
 
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../lib/auth";
+
 export default function ProfilePage() {
   const fileRef = useRef(null);
   const router = useRouter();
   const { setLoading } = useLoading();
 
-  // ✅ REDUX AUTH
-  const { user, organizer, role, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  // 🔐 SESSION STATE
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const [profile, setProfile] = useState(null);
   const [mode, setMode] = useState("view");
@@ -41,37 +41,40 @@ export default function ProfilePage() {
 
   const [imagePreview, setImagePreview] = useState(null);
 
+  /* ================= INIT AUTH ================= */
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
+
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
+
   /* ================= LOAD PROFILE ================= */
   useEffect(() => {
     async function loadProfile() {
       try {
-        if (!isLoggedIn) return;
-
-        const identity =
-          role === "organizer"
-            ? organizer?.identity
-            : user?.identity;
-
-        if (!identity) return;
+        if (!loggedIn || !auth?.identity || !auth?.type) return;
 
         setLoading(true);
 
         let res;
-        if (role === "organizer") {
-          res = await getOrganizationProfileApi(identity);
+        if (auth.type === "org") {
+          res = await getOrganizationProfileApi(auth.identity);
         } else {
-          res = await getUserProfileApi(identity);
+          res = await getUserProfileApi(auth.identity);
         }
 
         if (res?.status) {
           setProfile(res.data);
           setForm({
             name:
-              role === "organizer"
+              auth.type === "org"
                 ? res.data.organizationName
                 : res.data.name,
             email:
-              role === "organizer"
+              auth.type === "org"
                 ? res.data.domainEmail
                 : res.data.email,
             image: null,
@@ -85,27 +88,20 @@ export default function ProfilePage() {
     }
 
     loadProfile();
-  }, [isLoggedIn, role, user?.identity, organizer?.identity]);
+  }, [loggedIn, auth?.identity, auth?.type]);
 
   /* ================= SAVE PROFILE ================= */
   const saveProfile = async () => {
     try {
-      if (!isLoggedIn) return;
-
-      const identity =
-        role === "organizer"
-          ? organizer?.identity
-          : user?.identity;
-
-      if (!identity) return;
+      if (!loggedIn || !auth?.identity || !auth?.type) return;
 
       setLoading(true);
 
       const payload = new FormData();
-      payload.append("identity", identity);
-      payload.append("type", role === "organizer" ? "org" : "user");
+      payload.append("identity", auth.identity);
+      payload.append("type", auth.type);
 
-      if (role === "organizer") {
+      if (auth.type === "org") {
         payload.append("organizationName", form.name);
       } else {
         payload.append("name", form.name);
@@ -139,6 +135,7 @@ export default function ProfilePage() {
 
   if (!profile) return null;
 
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <div className={styles.profileWrapper}>
       {mode === "view" && (

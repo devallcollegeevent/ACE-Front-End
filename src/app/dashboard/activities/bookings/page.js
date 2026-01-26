@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import styles from "./Booking.module.css";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
 
 import { useLoading } from "../../../../context/LoadingContext";
 import {
@@ -14,25 +13,39 @@ import {
   TICKET_ICON,
   VIEW_ICON,
 } from "../../../../const-value/config-icons/page";
+
 import { getSavedEventsApi } from "../../../../lib/api/auth.api";
+
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../../lib/auth";
 
 const PAGE_SIZE = 6;
 
 export default function BookingEventsPage() {
-  const { setLoading } = useLoading(); 
+  const { setLoading } = useLoading();
   const router = useRouter();
 
   const [events, setEvents] = useState([]);
   const [localLoading, setLocalLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  const { user, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  // 🔐 SESSION AUTH STATE
+  const [auth, setAuth] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   /* ================= STOP GLOBAL LOADER ON PAGE LOAD ================= */
   useEffect(() => {
     setLoading(false);
+
+    const loggedIn = isUserLoggedIn();
+    setIsLoggedIn(loggedIn);
+
+    if (loggedIn) {
+      setAuth(getAuthFromSession());
+    }
   }, []);
 
   /* ================= LOAD BOOKED EVENTS ================= */
@@ -40,12 +53,12 @@ export default function BookingEventsPage() {
     try {
       setLocalLoading(true);
 
-      if (!isLoggedIn || !user?.identity) {
+      if (!isLoggedIn || !auth?.identity) {
         setEvents([]);
         return;
       }
 
-      const res = await getSavedEventsApi(user.identity);
+      const res = await getSavedEventsApi(auth.identity);
 
       if (res?.status) {
         setEvents(res.data?.events || []);
@@ -63,7 +76,7 @@ export default function BookingEventsPage() {
 
   useEffect(() => {
     loadEvents();
-  }, [isLoggedIn, user?.identity]);
+  }, [isLoggedIn, auth?.identity]);
 
   /* ================= PAGINATION ================= */
   const totalPages = Math.ceil(events.length / PAGE_SIZE);
@@ -95,7 +108,7 @@ export default function BookingEventsPage() {
     );
   }
 
-  /* ================= UI ================= */
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.title}>Booked Events</h2>

@@ -2,7 +2,6 @@
 
 import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 
 import {
@@ -21,6 +20,12 @@ import {
   likeEventApi,
   saveEventApi,
 } from "../../../lib/api/event.api";
+
+/* 🔐 SESSION AUTH */
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../lib/auth";
 
 /* ================= HELPER ================= */
 const getLowestTicketPrice = (tickets = []) => {
@@ -43,8 +48,18 @@ export default function EventSlider({
   const sliderRef = useRef(null);
   const { setLoading } = useLoading();
 
-  /* ================= REDUX AUTH ================= */
-  const { isLoggedIn } = useSelector((state) => state.auth);
+  /* ================= AUTH (SESSION) ================= */
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
+
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
 
   /* ================= STATE ================= */
   const [likedCards, setLikedCards] = useState({});
@@ -70,7 +85,7 @@ export default function EventSlider({
 
   /* ================= LIKE ================= */
   const handleLike = async (event) => {
-    if (!isLoggedIn) {
+    if (!loggedIn || !auth?.identity) {
       toast("Please login to like events", {
         icon: "⚠️",
       });
@@ -89,8 +104,8 @@ export default function EventSlider({
     setLikeCounts((prev) => ({
       ...prev,
       [eventId]: wasLiked
-        ? prev[eventId] - 1
-        : prev[eventId] + 1,
+        ? (prev[eventId] || 1) - 1
+        : (prev[eventId] || 0) + 1,
     }));
 
     const res = await likeEventApi({
@@ -115,7 +130,7 @@ export default function EventSlider({
 
   /* ================= SAVE ================= */
   const handleSave = async (event) => {
-    if (!isLoggedIn) {
+    if (!loggedIn || !auth?.identity) {
       toast("Please login to save events", {
         icon: "⚠️",
       });
@@ -197,7 +212,7 @@ export default function EventSlider({
     );
   }
 
-  /* ================= UI ================= */
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <section className="container-fluid mt-4 px-5">
       {/* HEADER */}
@@ -279,8 +294,7 @@ export default function EventSlider({
                   >
                     <HEART_ICON active={isLiked} />
                     <p>
-                      {likeCounts[event.identity] ??
-                        0}
+                      {likeCounts[event.identity] ?? 0}
                     </p>
                   </div>
                 </div>
@@ -297,8 +311,8 @@ export default function EventSlider({
                       {lowestPrice === null
                         ? "N/A"
                         : lowestPrice === 0
-                          ? "Free"
-                          : `₹${lowestPrice}`}
+                        ? "Free"
+                        : `₹${lowestPrice}`}
                     </span>
                   </div>
 

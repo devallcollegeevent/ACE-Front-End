@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { useLoading } from "../../../../context/LoadingContext";
 import toast from "react-hot-toast";
 
@@ -11,27 +10,43 @@ import {
   getOrganizationProfileApi,
 } from "../../../../lib/api/organizer.api";
 
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../../lib/auth";
+
 export default function OverviewDashboardPage() {
   const { setLoading } = useLoading();
   const [events, setEvents] = useState([]);
 
-  // ✅ REDUX AUTH
-  const { organizer, role, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  // 🔐 SESSION STATE
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  /* ================= INIT AUTH ================= */
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
+
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
+
+  /* ================= LOAD EVENTS ================= */
   useEffect(() => {
     async function loadEvents() {
       try {
         setLoading(true);
 
         // 🔐 Organizer only
-        if (!isLoggedIn || role !== "organizer") {
+        if (!loggedIn || auth?.type !== "org") {
           setEvents([]);
           return;
         }
 
-        const orgId = organizer?.identity;
+        const orgId = auth.identity;
         if (!orgId) {
           setEvents([]);
           return;
@@ -63,9 +78,10 @@ export default function OverviewDashboardPage() {
     }
 
     loadEvents();
-  }, [isLoggedIn, role, organizer?.identity]);
+  }, [loggedIn, auth?.identity, auth?.type]);
 
   if (!events.length) return null;
 
+  /* ================= UI (UNCHANGED) ================= */
   return <OverviewDashboardChart events={events} />;
 }

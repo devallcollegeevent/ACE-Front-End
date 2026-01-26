@@ -2,10 +2,9 @@
 
 export const dynamic = "force-dynamic";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Delete.module.css";
 import toast from "react-hot-toast";
-import { useSelector, useDispatch } from "react-redux";
 
 import DeleteConfirmModal from "../../../../components/ui/DeleteConfirmModal/DeleteConfirmModal";
 import {
@@ -18,46 +17,45 @@ import {
   SUB_TITLE_DELETE_ACCOUNT_SUB_TEXT,
 } from "../../../../const-value/config-message/page";
 
-import {
-  deleteOrganizationApi,
-} from "../../../../lib/api/organizer.api";
-import {
-  deleteUserApi,
-} from "../../../../lib/api/user.api";
+import { deleteOrganizationApi } from "../../../../lib/api/organizer.api";
+import { deleteUserApi } from "../../../../lib/api/user.api";
 
-import { logout } from "../../../../store/authSlice";
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+  clearAuthSession,
+} from "../../../../lib/auth";
 
 export default function DeleteProfilePage() {
   const [open, setOpen] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
-  const dispatch = useDispatch();
+  // 🔐 SESSION STATE
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  // ✅ REDUX AUTH
-  const { user, organizer, role, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  /* ================= INIT AUTH ================= */
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
 
-  if (!isLoggedIn) return null;
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
 
-  const identity =
-    role === "organizer"
-      ? organizer?.identity
-      : user?.identity;
+  if (!loggedIn || !auth?.identity || !auth?.type) return null;
 
-  const email =
-    role === "organizer"
-      ? organizer?.domainEmail
-      : user?.email;
-
-  if (!identity) return null;
+  const identity = auth.identity;
+  const email = auth.email;
 
   /* ================= DELETE ACCOUNT ================= */
   const handleDelete = async () => {
     try {
       let res;
 
-      if (role === "organizer") {
+      if (auth.type === "org") {
         res = await deleteOrganizationApi(identity);
       } else {
         res = await deleteUserApi(identity);
@@ -68,7 +66,11 @@ export default function DeleteProfilePage() {
         setDeleted(true);
         setOpen(false);
 
-        dispatch(logout());
+        // 🔐 CLEAR SESSION + COOKIE
+        await clearAuthSession();
+
+        // redirect home
+        window.location.href = "/";
       } else {
         toast.error(res?.message || "Delete failed");
       }
@@ -79,6 +81,7 @@ export default function DeleteProfilePage() {
     }
   };
 
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <div className={styles.wrapper}>
       {!deleted && (

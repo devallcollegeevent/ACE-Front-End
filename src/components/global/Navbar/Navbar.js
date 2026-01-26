@@ -2,10 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
 
 import { getUserProfileApi } from "../../../lib/api/user.api";
 import { getOrganizationProfileApi } from "../../../lib/api/organizer.api";
+
+// 🔐 SESSION AUTH (NO REDUX)
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../lib/auth";
 
 import "./Navbar.css";
 import {
@@ -16,10 +21,9 @@ import {
 export default function Navbar() {
   const router = useRouter();
 
-  // 🔐 REDUX AUTH STATE
-  const { user, organizer, role, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  /* ================= SESSION AUTH STATE ================= */
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [auth, setAuth] = useState(null);
 
   const [mounted, setMounted] = useState(false);
   const [initial, setInitial] = useState("U");
@@ -29,34 +33,32 @@ export default function Navbar() {
   /* ================= INITIAL MOUNT ================= */
   useEffect(() => {
     setMounted(true);
-  }, []);
 
-  /* ================= SET INITIAL LETTER ================= */
-  useEffect(() => {
-    if (!isLoggedIn) return;
+    const loggedIn = isUserLoggedIn();
+    setIsLoggedIn(loggedIn);
 
-    const data = role === "organizer" ? organizer : user;
-    if (!data) return;
+    if (loggedIn) {
+      const sessionAuth = getAuthFromSession();
+      setAuth(sessionAuth);
 
-    if (data.email) {
-      setInitial(data.email.charAt(0).toUpperCase());
+      if (sessionAuth?.email) {
+        setInitial(sessionAuth.email.charAt(0).toUpperCase());
+      }
     }
-  }, [isLoggedIn, user, organizer, role]);
+  }, []);
 
   /* ================= LOAD PROFILE IMAGE ================= */
   useEffect(() => {
     async function loadProfile() {
-      if (!isLoggedIn) return;
+      if (!isLoggedIn || !auth?.identity || !auth?.type) return;
 
       try {
         let res;
 
-        if (role === "organizer" && organizer?.id) {
-          res = await getOrganizationProfileApi(organizer.id);
-        }
-
-        if (role !== "organizer" && user?.id) {
-          res = await getUserProfileApi(user.id);
+        if (auth.type === "org") {
+          res = await getOrganizationProfileApi(auth.identity);
+        } else {
+          res = await getUserProfileApi(auth.identity);
         }
 
         if (res?.status && res.data) {
@@ -76,7 +78,7 @@ export default function Navbar() {
     }
 
     loadProfile();
-  }, [isLoggedIn, role, user, organizer]);
+  }, [isLoggedIn, auth]);
 
   if (!mounted) return null;
 
@@ -92,7 +94,7 @@ export default function Navbar() {
     router.push("/dashboard");
   };
 
-  /* ================= UI ================= */
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <nav className="nav-container">
       {/* LEFT */}

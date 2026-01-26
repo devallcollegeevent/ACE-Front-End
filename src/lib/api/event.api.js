@@ -35,11 +35,11 @@ export const getEventBySlugApi = async (slug) => {
 ======================= */
 
 export const likeEventApi = async (payload) => {
-  return handleApi(apiPrivate.post("/v1/events/like", payload));
+  return handleApi(apiPrivate.get(API_ENDPOINTS.EVENTS.LIKE_EVENT , payload));
 };
 
 export const saveEventApi = async (payload) => {
-  return handleApi(apiPrivate.post("/v1/events/save", payload));
+ return handleApi(apiPrivate.get(API_ENDPOINTS.EVENTS.SAVE_EVENT , payload));
 };
 
 /* =======================

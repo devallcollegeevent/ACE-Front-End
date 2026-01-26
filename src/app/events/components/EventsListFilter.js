@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useSelector } from "react-redux";
 
 import {
   DATEICON,
@@ -15,14 +14,28 @@ import {
 import { useLoading } from "../../../context/LoadingContext";
 import { likeEventApi, saveEventApi } from "../../../lib/api/event.api";
 
+// 🔐 SESSION AUTH
+import {
+  getAuthFromSession,
+  isUserLoggedIn,
+} from "../../../lib/auth";
+
 export default function EventsListFilter({ events = [] }) {
   const router = useRouter();
   const { setLoading } = useLoading();
 
-  // ✅ REDUX AUTH
-  const { user, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
+  /* ================= AUTH (SESSION) ================= */
+  const [auth, setAuth] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const ok = isUserLoggedIn();
+    setLoggedIn(ok);
+
+    if (ok) {
+      setAuth(getAuthFromSession());
+    }
+  }, []);
 
   /* ================= STATES ================= */
   const [likedCards, setLikedCards] = useState({});
@@ -48,7 +61,7 @@ export default function EventsListFilter({ events = [] }) {
 
   /* ================= LIKE HANDLER ================= */
   const handleLike = async (e) => {
-    if (!isLoggedIn || !user?.identity) {
+    if (!loggedIn || !auth?.identity) {
       toast("Please login to like events", { icon: "⚠️" });
       return;
     }
@@ -64,7 +77,9 @@ export default function EventsListFilter({ events = [] }) {
 
     setLikeCounts((prev) => ({
       ...prev,
-      [eventId]: wasLiked ? prev[eventId] - 1 : prev[eventId] + 1,
+      [eventId]: wasLiked
+        ? (prev[eventId] || 1) - 1
+        : (prev[eventId] || 0) + 1,
     }));
 
     const res = await likeEventApi({
@@ -89,7 +104,7 @@ export default function EventsListFilter({ events = [] }) {
 
   /* ================= SAVE HANDLER ================= */
   const handleSave = async (e) => {
-    if (!isLoggedIn || !user?.identity) {
+    if (!loggedIn || !auth?.identity) {
       toast("Please login to save events", { icon: "⚠️" });
       return;
     }
@@ -135,7 +150,7 @@ export default function EventsListFilter({ events = [] }) {
     );
   }
 
-  /* ================= LIST ================= */
+  /* ================= UI (UNCHANGED) ================= */
   return (
     <div className="events-list">
       {events.map((e) => {
@@ -144,7 +159,10 @@ export default function EventsListFilter({ events = [] }) {
         return (
           <div key={e.identity} className="event-row-card floating-card">
             {/* IMAGE */}
-            <div className="floating-image" onClick={() => handleClick(e.slug)}>
+            <div
+              className="floating-image"
+              onClick={() => handleClick(e.slug)}
+            >
               <img
                 src={e.bannerImages?.[0] || "/images/no-image.png"}
                 alt={e.title}

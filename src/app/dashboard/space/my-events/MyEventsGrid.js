@@ -11,7 +11,7 @@ import {
   TIMEICON,
 } from "../../../../const-value/config-icons/page";
 
-export default function MyEventsGrid({ events = [] }) {
+export default function MyEventsGrid({ events = [], loading }) {
   const [deleteId, setDeleteId] = useState(null);
   const [openMenuId, setOpenMenuId] = useState(null);
   const router = useRouter();
@@ -19,6 +19,10 @@ export default function MyEventsGrid({ events = [] }) {
   const handleClick = (event) => {
     router.push(`/dashboard/space/dashboard-chart/${event.slug}`);
   };
+
+  if (loading) {
+    return <p className="text-center py-5">Loading events...</p>;
+  }
 
   if (!events.length) {
     return (

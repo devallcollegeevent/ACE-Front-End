@@ -146,7 +146,7 @@ export default function OverviewDashboardChart({ events }) {
         </div>
         <div className={`${styles.card} ${styles.click}`}>
           <div className={styles.cardTop}>
-            <img src="/images/engagement.png" alt="engagement" />
+            <img src="/images/mouse-pointer.png" alt="engagement" />
             <h3>Engagement</h3>
             <img src="/images/trending_arrow.png" alt="" />
           </div>

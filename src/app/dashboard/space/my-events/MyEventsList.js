@@ -8,9 +8,15 @@ import {
   LOCATION_ICON,
   TIMEICON,
 } from "../../../../const-value/config-icons/page";
+import { useRouter } from "next/navigation";
 
-export default function MyEventsList({ events = [] }) {
+export default function MyEventsList({ events = [], loading }) {
   const [deleteId, setDeleteId] = useState(null);
+  const router = useRouter();
+
+  if (loading) {
+    return <p className="text-center py-5">Loading events...</p>;
+  }
 
   if (!events.length) {
     return (
@@ -21,6 +27,7 @@ export default function MyEventsList({ events = [] }) {
       />
     );
   }
+
   const handleClick = (event) => {
     router.push(`/dashboard/space/dashboard-chart/${event.slug}`);
   };
@@ -71,7 +78,12 @@ export default function MyEventsList({ events = [] }) {
                       "https://cloudinary-marketing-res.cloudinary.com/images/w_1000,c_scale/v1679921049/Image_URL_header/Image_URL_header-png?_i=AA"
                     }
                     alt={e.title}
-                    style={{ width: 248, height: 132, objectFit: "cover" }}
+                    style={{
+                      width: 248,
+                      height: 132,
+                      objectFit: "cover",
+                      cursor: "pointer",
+                    }}
                     className="rounded"
                   />
 

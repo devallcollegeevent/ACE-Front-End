@@ -18,17 +18,21 @@ const PUBLIC_PREFIX = [
   "/auth",
 ];
 
-const PROTECTED_PREFIX = ["/dashboard", "/profile", "/settings", "/space"];
+const PROTECTED_PREFIX = ["/dashboard"];
+
+/* ===============================
+   MIDDLEWARE
+================================ */
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
   /* --------------------------------
-     Ignore assets
+     Ignore static & API completely
   --------------------------------- */
   if (
     pathname.startsWith("/_next") ||
-    pathname.startsWith("/api") ||
+    pathname.startsWith("/api/proxy") || // 🔥 IMPORTANT
     pathname.startsWith("/images") ||
     pathname.match(/\.(png|jpg|jpeg|svg|css|js|ico)$/)
   ) {
@@ -36,46 +40,46 @@ export function middleware(request) {
   }
 
   /* --------------------------------
-     Always allow unauthorized page
+     Always allow unauthorized
   --------------------------------- */
   if (pathname === "/unauthorized") {
     return NextResponse.next();
   }
 
   /* --------------------------------
-     Read cookie (MATCH BACKEND)
-  --------------------------------- */
-  // src/middleware.js
-
-  const token = request.cookies.get("authToken")?.value; 
-
-  /* --------------------------------
-     Exact public
+     Public exact
   --------------------------------- */
   if (PUBLIC_EXACT.includes(pathname)) {
     return NextResponse.next();
   }
 
   /* --------------------------------
-     Public prefixes
+     Public prefix
   --------------------------------- */
   if (PUBLIC_PREFIX.some((route) => pathname.startsWith(route))) {
     return NextResponse.next();
   }
 
   /* --------------------------------
-     Protected routes
+     Protected pages
   --------------------------------- */
   if (PROTECTED_PREFIX.some((route) => pathname.startsWith(route))) {
+    const token = request.cookies.get("authToken")?.value;
+
     if (!token) {
-      return NextResponse.redirect(new URL("/unauthorized", request.url));
+      return NextResponse.redirect(
+        new URL("/unauthorized", request.url),
+      );
     }
-    return NextResponse.next();
   }
 
   return NextResponse.next();
 }
 
+/* ===============================
+   MATCHER (PAGES ONLY)
+================================ */
+
 export const config = {
-  matcher: ["/:path*"],
+  matcher: ["/((?!api/proxy).*)"],
 };
