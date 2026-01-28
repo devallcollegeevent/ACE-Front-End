@@ -29,7 +29,7 @@ export default function LeaderboardHero({ search, onSearchChange }) {
         </div>
       </h2>
 
-      {/* 🔥 SEARCH */}
+      {/* SEARCH */}
       <div className={styles.searchWrapper}>
         <span className={styles.searchIcon}>{SEARCH_ICON}</span>
         <input

@@ -41,7 +41,7 @@ export default function DashboardChartPage() {
     loadEvent();
   }, [slug]);
 
-  // 🔐 VERY IMPORTANT – prevents build & runtime crash
+  // VERY IMPORTANT – prevents build & runtime crash
   if (!event) return null;
 
   return (

@@ -69,13 +69,13 @@
   transition: all 0.25s ease;
 }
 
-/* 🩶 HOVER STATE (IMAGE 1) */
+/* HOVER STATE (IMAGE 1) */
 .rateItem:hover {
   background: #e6e6e6;
   border-color: #cfcfcf;
 }
 
-/* 🟣 CLICK / ACTIVE STATE (IMAGE 2) */
+/* CLICK / ACTIVE STATE (IMAGE 2) */
 .active {
   background: #ebe1ff;
   border-color: #7c3aed;

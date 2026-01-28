@@ -14,7 +14,7 @@ import { updateAuthProfile } from "../../../lib/api/auth.api";
 import ConfirmModal from "../../../components/ui/Modal/ConfirmModal";
 import { useLoading } from "../../../context/LoadingContext";
 
-// 🔐 SESSION AUTH
+// SESSION AUTH
 import {
   getAuthFromSession,
   isUserLoggedIn,
@@ -25,7 +25,7 @@ export default function ProfilePage() {
   const router = useRouter();
   const { setLoading } = useLoading();
 
-  // 🔐 SESSION STATE
+  // SESSION STATE
   const [auth, setAuth] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
 

@@ -15,7 +15,7 @@ import {
 /* API */
 import { loginApi } from "../../../../lib/api/auth.api";
 
-/* ✅ AUTH (SESSION) */
+/* AUTH (SESSION) */
 import { setAuthSession } from "../../../../lib/auth";
 
 /* VALIDATION */
@@ -55,7 +55,7 @@ export default function OrganizerLoginPage() {
   async function onSubmit(e) {
     e.preventDefault();
 
-    // 1️⃣ validation
+    // validation
     try {
       await organizerLoginSchema.validate(
         { email, password },
@@ -69,23 +69,23 @@ export default function OrganizerLoginPage() {
     try {
       setLoading(true);
 
-      // 2️⃣ login API
+      // login API
       const res = await loginApi({
         email,
         password,
         type: ROLE_ORGANIZER,
       });
 
-      // 3️⃣ failure
+      // failure
       if (!res?.status || !res?.token) {
         toast.error(res?.message || MSG_INVALID_CREDENTIALS);
         return;
       }
 
-      // 4️⃣ ✅ SAVE AUTH TO SESSION (IMPORTANT)
+      // SAVE AUTH TO SESSION (IMPORTANT)
       setAuthSession(res.token);
 
-      // 5️⃣ success
+      // success
       toast.success(MSG_LOGIN_SUCCESS_ORGANIZER);
       router.push("/dashboard");
     } catch (err) {

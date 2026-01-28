@@ -18,7 +18,7 @@ import { useLoading } from "../../../context/LoadingContext";
 
 import { likeEventApi, saveEventApi } from "../../../lib/api/event.api";
 
-/* 🔐 SESSION AUTH */
+/* SESSION AUTH */
 import { getAuthFromSession, isUserLoggedIn } from "../../../lib/auth";
 
 /* ================= HELPER ================= */

@@ -30,14 +30,14 @@ async function handler(req) {
       method: req.method,
       headers,
       body,
-      credentials: "include", // 🔐 VERY IMPORTANT
+      credentials: "include", // VERY IMPORTANT
       cache: "no-store",
     });
 
     /* ================= RESPONSE HEADERS ================= */
     const responseHeaders = new Headers();
 
-    // 🔥 FORWARD ALL SET-COOKIE HEADERS
+    // FORWARD ALL SET-COOKIE HEADERS
     backendRes.headers.forEach((value, key) => {
       if (key.toLowerCase() === "set-cookie") {
         responseHeaders.append("set-cookie", value);

@@ -9,7 +9,7 @@ import { getOrganizationProfileApi } from "../../../../lib/api/organizer.api";
 import { getUserProfileApi } from "../../../../lib/api/user.api";
 import ConfirmModal from "../../../../components/ui/Modal/ConfirmModal";
 
-// 🔐 SESSION AUTH
+// SESSION AUTH
 import {
   getAuthFromSession,
   isUserLoggedIn,

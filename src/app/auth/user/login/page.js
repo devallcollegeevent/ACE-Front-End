@@ -72,7 +72,7 @@ export default function UserLoginPage() {
         return;
       }
 
-      // ✅ CALL AUTH FUNCTION
+      //  CALL AUTH FUNCTION
       setAuthSession(res.token);
 
       toast.success(MSG_LOGIN_SUCCESS_USER);
@@ -92,8 +92,6 @@ export default function UserLoginPage() {
       const googleToken = response.credential;
 
       const res = await googleAuthLoginApi({ googleToken });
-
-      console.log("============res",res)
 
       if (!res?.status) {
         toast.error(MSG_GOOGLE_LOGIN_FAILED);

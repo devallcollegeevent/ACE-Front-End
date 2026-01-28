@@ -8,7 +8,7 @@ import { FaArrowLeft } from "react-icons/fa";
 export default function DashboardChart({ event, onBack }) {
   const [selected, setSelected] = useState("Click");
 
-  // 🔐 SAFETY (extra)
+  // SAFETY (extra)
   if (!event) return null;
 
   const stats = {

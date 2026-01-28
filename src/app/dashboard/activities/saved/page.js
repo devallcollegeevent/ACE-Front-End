@@ -16,7 +16,7 @@ import {
 
 import { useLoading } from "../../../../context/LoadingContext";
 
-// 🔐 SESSION AUTH
+// SESSION AUTH
 import {
   getAuthFromSession,
   isUserLoggedIn,
