@@ -18,7 +18,7 @@ import {
 import { createEventApi } from "../../../../lib/api/event.api";
 import { useLoading } from "../../../../context/LoadingContext";
 
-// 🔐 SESSION AUTH
+// SESSION AUTH
 import {
   getAuthFromSession,
   isUserLoggedIn,
@@ -75,7 +75,7 @@ export default function CreateEvent() {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [resetSignal, setResetSignal] = useState(0);
 
-  // 🔐 SESSION STATE
+  // SESSION STATE
   const [auth, setAuth] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
 

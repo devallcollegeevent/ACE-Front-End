@@ -16,7 +16,7 @@ import {
 
 import { getSavedEventsApi } from "../../../../lib/api/auth.api";
 
-// 🔐 SESSION AUTH
+// SESSION AUTH
 import {
   getAuthFromSession,
   isUserLoggedIn,
@@ -32,7 +32,7 @@ export default function BookingEventsPage() {
   const [localLoading, setLocalLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  // 🔐 SESSION AUTH STATE
+  // SESSION AUTH STATE
   const [auth, setAuth] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

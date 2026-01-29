@@ -7,7 +7,7 @@ import { getUserProfileApi } from "../../../lib/api/user.api";
 import { getOrganizationProfileApi } from "../../../lib/api/organizer.api";
 import { usePathname, useSearchParams } from "next/navigation";
 
-// 🔐 SESSION AUTH (NO REDUX)
+// SESSION AUTH (NO REDUX)
 import { getAuthFromSession, isUserLoggedIn } from "../../../lib/auth";
 
 import "./Navbar.css";

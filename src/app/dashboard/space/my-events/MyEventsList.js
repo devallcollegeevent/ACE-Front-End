@@ -33,7 +33,6 @@ export default function MyEventsList({ events = [], loading }) {
   };
 
   const handleDelete = () => {
-    console.log("DELETE EVENT:", deleteId);
     setDeleteId(null);
   };
 

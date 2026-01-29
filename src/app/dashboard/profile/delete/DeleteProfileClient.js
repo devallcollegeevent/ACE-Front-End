@@ -20,7 +20,7 @@ import {
 import { deleteOrganizationApi } from "../../../../lib/api/organizer.api";
 import { deleteUserApi } from "../../../../lib/api/user.api";
 
-// 🔐 SESSION AUTH
+// SESSION AUTH
 import {
   getAuthFromSession,
   isUserLoggedIn,
@@ -31,7 +31,7 @@ export default function DeleteProfilePage() {
   const [open, setOpen] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
-  // 🔐 SESSION STATE
+  // SESSION STATE
   const [auth, setAuth] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
 
@@ -66,7 +66,7 @@ export default function DeleteProfilePage() {
         setDeleted(true);
         setOpen(false);
 
-        // 🔐 CLEAR SESSION + COOKIE
+        // CLEAR SESSION + COOKIE
         await clearAuthSession();
 
         // redirect home
